@@ -1,0 +1,856 @@
+
+
+Microchip MPLAB XC8 Assembler V2.05 build -831301201 
+                                                                                               Tue Jun 11 13:06:54 2019
+
+Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
+     1                           	processor	18F47J53
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	flic
+     5                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     6                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     8                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    12                           	psect	intcode,global,reloc=2,class=CODE,delta=1
+    13                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    14                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    15                           	psect	temp,global,ovrld,common,class=COMRAM,space=1,delta=1
+    16  0000                     
+    17                           ; Version 2.05
+    18                           ; Generated 20/12/2018 GMT
+    19                           ; 
+    20                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    21                           ; All rights reserved.
+    22                           ; 
+    23                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    24                           ; 
+    25                           ; Redistribution and use in source and binary forms, with or without modification, are
+    26                           ; permitted provided that the following conditions are met:
+    27                           ; 
+    28                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    29                           ;        conditions and the following disclaimer.
+    30                           ; 
+    31                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    32                           ;        of conditions and the following disclaimer in the documentation and/or other
+    33                           ;        materials provided with the distribution.
+    34                           ; 
+    35                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    36                           ;        software without specific prior written permission.
+    37                           ; 
+    38                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    39                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    40                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    41                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    42                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    43                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    44                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    45                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    46                           ; 
+    47                           ; 
+    48                           ; Code-generator required, PIC18F47J53 Definitions
+    49                           ; 
+    50                           ; SFR Addresses
+    51  0000                     _CCPR7L	set	3850
+    52  0000                     _CCPTMRS1bits	set	3921
+    53  0000                     _CCP7CONbits	set	3849
+    54  0000                     _ANCON1	set	3913
+    55  0000                     _ANCON0	set	3912
+    56  0000                     _TMR1	set	4046
+    57  0000                     _TMR2	set	4044
+    58  0000                     _T2CONbits	set	4042
+    59  0000                     _PR2	set	4043
+    60  0000                     _T2CON	set	4042
+    61  0000                     _T1CONbits	set	4045
+    62  0000                     _PIE1bits	set	3997
+    63  0000                     _INTCONbits	set	4082
+    64  0000                     _T1CON	set	4045
+    65  0000                     _TRISBbits	set	3987
+    66  0000                     _PORTBbits	set	3969
+    67  0000                     _PIR1bits	set	3998
+    68                           
+    69                           ; #config settings
+    70  0000                     
+    71                           	psect	cinit
+    72  0000C2                     __pcinit:
+    73                           	opt callstack 0
+    74  0000C2                     start_initialization:
+    75                           	opt callstack 0
+    76  0000C2                     __initialization:
+    77                           	opt callstack 0
+    78                           
+    79                           ; Clear objects allocated to COMRAM (1 bytes)
+    80  0000C2  6A04               	clrf	__pbssCOMRAM& (0+255),c
+    81  0000C4                     end_of_initialization:
+    82                           	opt callstack 0
+    83  0000C4                     __end_of__initialization:
+    84                           	opt callstack 0
+    85  0000C4  9005               	bcf	int$flags,0,c	;clear compiler interrupt flag (level 1)
+    86  0000C6  9205               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
+    87  0000C8  0100               	movlb	0
+    88  0000CA  EF53  F000         	goto	_main	;jump to C main() function
+    89                           
+    90                           	psect	bssCOMRAM
+    91  000004                     __pbssCOMRAM:
+    92                           	opt callstack 0
+    93  000004                     _contador:
+    94                           	opt callstack 0
+    95  000004                     	ds	1
+    96                           
+    97                           	psect	cstackCOMRAM
+    98  000001                     __pcstackCOMRAM:
+    99                           	opt callstack 0
+   100  000001                     ??_rutina_high:
+   101  000001                     
+   102                           ; 1 bytes @ 0x0
+   103  000001                     	ds	1
+   104  000002                     ??_configurarPWM7:
+   105                           
+   106                           ; 1 bytes @ 0x1
+   107  000002                     	ds	2
+   108  000004                     
+   109                           ; 1 bytes @ 0x3
+   110 ;;
+   111 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   112 ;;
+   113 ;; *************** function _main *****************
+   114 ;; Defined at:
+   115 ;;		line 37 in file "main.c"
+   116 ;; Parameters:    Size  Location     Type
+   117 ;;		None
+   118 ;; Auto vars:     Size  Location     Type
+   119 ;;		None
+   120 ;; Return value:  Size  Location     Type
+   121 ;;                  1    wreg      void 
+   122 ;; Registers used:
+   123 ;;		wreg, status,2, cstack
+   124 ;; Tracked objects:
+   125 ;;		On entry : 0/0
+   126 ;;		On exit  : 0/0
+   127 ;;		Unchanged: 0/0
+   128 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14
+   129 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   130 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   131 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   132 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   133 ;;Total ram usage:        0 bytes
+   134 ;; Hardware stack levels required when called:    2
+   135 ;; This function calls:
+   136 ;;		_configurarPWM7
+   137 ;;		_configurarPuertos
+   138 ;;		_configurarTMR1
+   139 ;; This function is called by:
+   140 ;;		Startup code after reset
+   141 ;; This function uses a non-reentrant model
+   142 ;;
+   143                           
+   144                           	psect	text0
+   145  0000A6                     __ptext0:
+   146                           	opt callstack 0
+   147  0000A6                     _main:
+   148                           	opt callstack 29
+   149                           
+   150                           ;main.c: 38:     configurarPuertos();
+   151                           
+   152                           ;incstack = 0
+   153  0000A6  EC5A  F000         	call	_configurarPuertos	;wreg free
+   154                           
+   155                           ;main.c: 39:     configurarTMR1();
+   156  0000AA  EC47  F000         	call	_configurarTMR1	;wreg free
+   157                           
+   158                           ;main.c: 40:     configurarPWM7();
+   159  0000AE  EC20  F000         	call	_configurarPWM7	;wreg free
+   160  0000B2                     l56:
+   161                           
+   162                           ;main.c: 42:     }
+   163  0000B2  D7FF               	goto	l56
+   164  0000B4                     __end_of_main:
+   165                           	opt callstack 0
+   166                           
+   167 ;; *************** function _configurarTMR1 *****************
+   168 ;; Defined at:
+   169 ;;		line 53 in file "main.c"
+   170 ;; Parameters:    Size  Location     Type
+   171 ;;		None
+   172 ;; Auto vars:     Size  Location     Type
+   173 ;;		None
+   174 ;; Return value:  Size  Location     Type
+   175 ;;                  1    wreg      void 
+   176 ;; Registers used:
+   177 ;;		wreg, status,2
+   178 ;; Tracked objects:
+   179 ;;		On entry : 0/0
+   180 ;;		On exit  : 0/0
+   181 ;;		Unchanged: 0/0
+   182 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14
+   183 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   184 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   185 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   186 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   187 ;;Total ram usage:        0 bytes
+   188 ;; Hardware stack levels used:    1
+   189 ;; Hardware stack levels required when called:    1
+   190 ;; This function calls:
+   191 ;;		Nothing
+   192 ;; This function is called by:
+   193 ;;		_main
+   194 ;; This function uses a non-reentrant model
+   195 ;;
+   196                           
+   197                           	psect	text1
+   198  00008E                     __ptext1:
+   199                           	opt callstack 0
+   200  00008E                     _configurarTMR1:
+   201                           	opt callstack 29
+   202                           
+   203                           ;main.c: 54:     T1CON = 0x30;
+   204                           
+   205                           ;incstack = 0
+   206  00008E  0E30               	movlw	48
+   207  000090  6ECD               	movwf	4045,c	;volatile
+   208                           
+   209                           ;main.c: 55:     TMR1 = 0x15A0;
+   210  000092  0E15               	movlw	21
+   211  000094  6ECF               	movwf	4047,c	;volatile
+   212  000096  0EA0               	movlw	160
+   213  000098  6ECE               	movwf	4046,c	;volatile
+   214                           
+   215                           ;main.c: 56:     INTCONbits.GIE = 1;
+   216  00009A  8EF2               	bsf	4082,7,c	;volatile
+   217                           
+   218                           ;main.c: 57:     INTCONbits.PEIE = 1;
+   219  00009C  8CF2               	bsf	4082,6,c	;volatile
+   220                           
+   221                           ;main.c: 58:     PIR1bits.TMR1IF = 0;
+   222  00009E  909E               	bcf	3998,0,c	;volatile
+   223                           
+   224                           ;main.c: 59:     PIE1bits.TMR1IE = 1;
+   225  0000A0  809D               	bsf	3997,0,c	;volatile
+   226                           
+   227                           ;main.c: 60:     T1CONbits.TMR1ON = 1;
+   228  0000A2  80CD               	bsf	4045,0,c	;volatile
+   229  0000A4  0012               	return		;funcret
+   230  0000A6                     __end_of_configurarTMR1:
+   231                           	opt callstack 0
+   232                           
+   233 ;; *************** function _configurarPuertos *****************
+   234 ;; Defined at:
+   235 ;;		line 46 in file "main.c"
+   236 ;; Parameters:    Size  Location     Type
+   237 ;;		None
+   238 ;; Auto vars:     Size  Location     Type
+   239 ;;		None
+   240 ;; Return value:  Size  Location     Type
+   241 ;;                  1    wreg      void 
+   242 ;; Registers used:
+   243 ;;		wreg, status,2
+   244 ;; Tracked objects:
+   245 ;;		On entry : 0/0
+   246 ;;		On exit  : 0/0
+   247 ;;		Unchanged: 0/0
+   248 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14
+   249 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   250 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   251 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   252 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   253 ;;Total ram usage:        0 bytes
+   254 ;; Hardware stack levels used:    1
+   255 ;; Hardware stack levels required when called:    1
+   256 ;; This function calls:
+   257 ;;		Nothing
+   258 ;; This function is called by:
+   259 ;;		_main
+   260 ;; This function uses a non-reentrant model
+   261 ;;
+   262                           
+   263                           	psect	text2
+   264  0000B4                     __ptext2:
+   265                           	opt callstack 0
+   266  0000B4                     _configurarPuertos:
+   267                           	opt callstack 29
+   268                           
+   269                           ;main.c: 47:     ANCON0 = 0xFF;
+   270                           
+   271                           ;incstack = 0
+   272  0000B4  010F               	movlb	15	; () banked
+   273  0000B6  6948               	setf	72,b	;volatile
+   274                           
+   275                           ; BSR set to: 15
+   276                           ;main.c: 48:     ANCON1 = 0x1F;
+   277  0000B8  0E1F               	movlw	31
+   278  0000BA  6F49               	movwf	73,b	;volatile
+   279                           
+   280                           ; BSR set to: 15
+   281                           ;main.c: 49:     TRISBbits.TRISB4 = 0;
+   282  0000BC  9893               	bcf	3987,4,c	;volatile
+   283                           
+   284                           ; BSR set to: 15
+   285                           ;main.c: 50:     TRISBbits.TRISB7 = 0;
+   286  0000BE  9E93               	bcf	3987,7,c	;volatile
+   287                           
+   288                           ; BSR set to: 15
+   289  0000C0  0012               	return		;funcret
+   290  0000C2                     __end_of_configurarPuertos:
+   291                           	opt callstack 0
+   292                           
+   293 ;; *************** function _configurarPWM7 *****************
+   294 ;; Defined at:
+   295 ;;		line 63 in file "main.c"
+   296 ;; Parameters:    Size  Location     Type
+   297 ;;		None
+   298 ;; Auto vars:     Size  Location     Type
+   299 ;;		None
+   300 ;; Return value:  Size  Location     Type
+   301 ;;                  1    wreg      void 
+   302 ;; Registers used:
+   303 ;;		wreg, status,2
+   304 ;; Tracked objects:
+   305 ;;		On entry : 0/0
+   306 ;;		On exit  : 0/0
+   307 ;;		Unchanged: 0/0
+   308 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14
+   309 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   310 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   311 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   312 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   313 ;;Total ram usage:        2 bytes
+   314 ;; Hardware stack levels used:    1
+   315 ;; Hardware stack levels required when called:    1
+   316 ;; This function calls:
+   317 ;;		Nothing
+   318 ;; This function is called by:
+   319 ;;		_main
+   320 ;; This function uses a non-reentrant model
+   321 ;;
+   322                           
+   323                           	psect	text3
+   324  000040                     __ptext3:
+   325                           	opt callstack 0
+   326  000040                     _configurarPWM7:
+   327                           	opt callstack 29
+   328                           
+   329                           ;main.c: 64:     TRISBbits.TRISB4 = 0;
+   330                           
+   331                           ; BSR set to: 15
+   332                           ;incstack = 0
+   333  000040  9893               	bcf	3987,4,c	;volatile
+   334                           
+   335                           ;main.c: 65:     TRISBbits.TRISB7 = 0;
+   336  000042  9E93               	bcf	3987,7,c	;volatile
+   337                           
+   338                           ;main.c: 66:     CCP7CONbits.CCP7M = 0xC;
+   339  000044  010F               	movlb	15	; () banked
+   340  000046  5109               	movf	9,w,b	;volatile
+   341  000048  0BF0               	andlw	-16
+   342  00004A  090C               	iorlw	12
+   343  00004C  6F09               	movwf	9,b	;volatile
+   344                           
+   345                           ;main.c: 67:     CCPTMRS1bits.C7TSEL = 0b00;
+   346  00004E  0E3F               	movlw	-193
+   347  000050  1751               	andwf	81,f,b	;volatile
+   348                           
+   349                           ;main.c: 69:     T2CON = 0x02;
+   350  000052  0E02               	movlw	2
+   351  000054  6ECA               	movwf	4042,c	;volatile
+   352                           
+   353                           ;main.c: 70:     PR2 = 124;
+   354  000056  0E7C               	movlw	124
+   355  000058  6ECB               	movwf	4043,c	;volatile
+   356                           
+   357                           ;main.c: 72:     CCPR7L = 0x70;
+   358  00005A  0E70               	movlw	112
+   359  00005C  6F0A               	movwf	10,b	;volatile
+   360                           
+   361                           ;main.c: 73:     CCP7CONbits.DC7B = 0b10;
+   362  00005E  5109               	movf	9,w,b	;volatile
+   363  000060  0BCF               	andlw	-49
+   364  000062  0920               	iorlw	32
+   365  000064  6F09               	movwf	9,b	;volatile
+   366                           
+   367                           ; BSR set to: 15
+   368                           ;main.c: 74:     T2CONbits.TMR2ON = 1;
+   369  000066  84CA               	bsf	4042,2,c	;volatile
+   370                           
+   371                           ; BSR set to: 15
+   372                           ;main.c: 75:     _delay((unsigned long)((50)*(48000000/4000.0)));
+   373  000068  0E04               	movlw	4
+   374  00006A  6E03               	movwf	(??_configurarPWM7+1)& (0+255),c
+   375  00006C  0E0C               	movlw	12
+   376  00006E  6E02               	movwf	??_configurarPWM7& (0+255),c
+   377  000070  0E34               	movlw	52
+   378  000072                     u47:
+   379  000072  2EE8               	decfsz	wreg,f,c
+   380  000074  D7FE               	bra	u47
+   381  000076  2E02               	decfsz	??_configurarPWM7& (0+255),f,c
+   382  000078  D7FC               	bra	u47
+   383  00007A  2E03               	decfsz	(??_configurarPWM7+1)& (0+255),f,c
+   384  00007C  D7FA               	bra	u47
+   385                           
+   386                           ;main.c: 76:     CCPR7L = 0x4B;
+   387  00007E  0E4B               	movlw	75
+   388  000080  010F               	movlb	15	; () banked
+   389  000082  6F0A               	movwf	10,b	;volatile
+   390                           
+   391                           ; BSR set to: 15
+   392                           ;main.c: 77:     CCP7CONbits.DC7B = 0b00;
+   393  000084  0ECF               	movlw	-49
+   394  000086  1709               	andwf	9,f,b	;volatile
+   395                           
+   396                           ; BSR set to: 15
+   397                           ;main.c: 78:     TMR2 = 0x00;
+   398  000088  0E00               	movlw	0
+   399  00008A  6ECC               	movwf	4044,c	;volatile
+   400                           
+   401                           ; BSR set to: 15
+   402  00008C  0012               	return		;funcret
+   403  00008E                     __end_of_configurarPWM7:
+   404                           	opt callstack 0
+   405                           
+   406 ;; *************** function _rutina_high *****************
+   407 ;; Defined at:
+   408 ;;		line 26 in file "main.c"
+   409 ;; Parameters:    Size  Location     Type
+   410 ;;		None
+   411 ;; Auto vars:     Size  Location     Type
+   412 ;;		None
+   413 ;; Return value:  Size  Location     Type
+   414 ;;                  1    wreg      void 
+   415 ;; Registers used:
+   416 ;;		wreg, status,2, status,0
+   417 ;; Tracked objects:
+   418 ;;		On entry : 0/0
+   419 ;;		On exit  : 0/0
+   420 ;;		Unchanged: 0/0
+   421 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14
+   422 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   423 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   424 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   425 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   426 ;;Total ram usage:        1 bytes
+   427 ;; Hardware stack levels used:    1
+   428 ;; This function calls:
+   429 ;;		Nothing
+   430 ;; This function is called by:
+   431 ;;		Interrupt level 2
+   432 ;; This function uses a non-reentrant model
+   433 ;;
+   434                           
+   435                           	psect	intcode
+   436  000008                     __pintcode:
+   437                           	opt callstack 0
+   438  000008                     _rutina_high:
+   439                           	opt callstack 29
+   440                           
+   441                           ; BSR set to: 15
+   442                           ;incstack = 0
+   443  000008  8205               	bsf	btemp,1,c	;set compiler interrupt flag (level 2)
+   444                           
+   445                           ;main.c: 27:     if(PIR1bits.TMR1IF == 1){
+   446  00000A  A09E               	btfss	3998,0,c	;volatile
+   447  00000C  D015               	goto	i2l51
+   448                           
+   449                           ;main.c: 28:         PIR1bits.TMR1IF = 0;
+   450  00000E  909E               	bcf	3998,0,c	;volatile
+   451                           
+   452                           ;main.c: 29:         contador ++;
+   453  000010  2A04               	incf	_contador,f,c
+   454                           
+   455                           ;main.c: 30:         if(contador == 30){
+   456  000012  0E1E               	movlw	30
+   457  000014  1804               	xorwf	_contador,w,c
+   458  000016  A4D8               	btfss	status,2,c
+   459  000018  D00F               	goto	i2l51
+   460                           
+   461                           ;main.c: 31:             contador = 0;
+   462  00001A  0E00               	movlw	0
+   463  00001C  6E04               	movwf	_contador,c
+   464                           
+   465                           ;main.c: 32:             PORTBbits.RB4 = ~PORTBbits.RB4;
+   466  00001E  A881               	btfss	3969,4,c	;volatile
+   467  000020  D002               	goto	i2u3_40
+   468  000022  0E01               	movlw	1
+   469  000024  D001               	goto	i2u3_46
+   470  000026                     i2u3_40:
+   471  000026  0E00               	movlw	0
+   472  000028                     i2u3_46:
+   473  000028  0AFF               	xorlw	255
+   474  00002A  6E01               	movwf	??_rutina_high& (0+255),c
+   475  00002C  3A01               	swapf	??_rutina_high,f,c
+   476  00002E  5081               	movf	3969,w,c	;volatile
+   477  000030  1801               	xorwf	??_rutina_high,w,c
+   478  000032  0BEF               	andlw	-17
+   479  000034  1801               	xorwf	??_rutina_high,w,c
+   480  000036  6E81               	movwf	3969,c	;volatile
+   481  000038                     i2l51:
+   482  000038  9205               	bcf	btemp,1,c	;clear compiler interrupt flag (level 2)
+   483  00003A  0011               	retfie		f
+   484  00003C                     __end_of_rutina_high:
+   485                           	opt callstack 0
+   486  0000                     
+   487                           	psect	rparam
+   488  0000                     
+   489                           	psect	temp
+   490  000005                     btemp:
+   491                           	opt callstack 0
+   492  000005                     	ds	1
+   493  0000                     int$flags	set	btemp
+   494  0000                     wtemp8	set	btemp+1
+   495  0000                     ttemp5	set	btemp+1
+   496  0000                     ttemp6	set	btemp+4
+   497  0000                     ttemp7	set	btemp+8
+   498                           tosu	equ	0xFFF
+   499                           tosh	equ	0xFFE
+   500                           tosl	equ	0xFFD
+   501                           stkptr	equ	0xFFC
+   502                           pclatu	equ	0xFFB
+   503                           pclath	equ	0xFFA
+   504                           pcl	equ	0xFF9
+   505                           tblptru	equ	0xFF8
+   506                           tblptrh	equ	0xFF7
+   507                           tblptrl	equ	0xFF6
+   508                           tablat	equ	0xFF5
+   509                           prodh	equ	0xFF4
+   510                           prodl	equ	0xFF3
+   511                           indf0	equ	0xFEF
+   512                           postinc0	equ	0xFEE
+   513                           postdec0	equ	0xFED
+   514                           preinc0	equ	0xFEC
+   515                           plusw0	equ	0xFEB
+   516                           fsr0h	equ	0xFEA
+   517                           fsr0l	equ	0xFE9
+   518                           wreg	equ	0xFE8
+   519                           indf1	equ	0xFE7
+   520                           postinc1	equ	0xFE6
+   521                           postdec1	equ	0xFE5
+   522                           preinc1	equ	0xFE4
+   523                           plusw1	equ	0xFE3
+   524                           fsr1h	equ	0xFE2
+   525                           fsr1l	equ	0xFE1
+   526                           bsr	equ	0xFE0
+   527                           indf2	equ	0xFDF
+   528                           postinc2	equ	0xFDE
+   529                           postdec2	equ	0xFDD
+   530                           preinc2	equ	0xFDC
+   531                           plusw2	equ	0xFDB
+   532                           fsr2h	equ	0xFDA
+   533                           fsr2l	equ	0xFD9
+   534                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         1
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           94      3       4
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          176      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_configurarPWM7
+
+Critical Paths under _rutina_high in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _rutina_high in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _rutina_high in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _rutina_high in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _rutina_high in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _rutina_high in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _rutina_high in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _rutina_high in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _rutina_high in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _rutina_high in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _rutina_high in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _rutina_high in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _rutina_high in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _rutina_high in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _rutina_high in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _rutina_high in BANK14
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                     _configurarPWM7
+                  _configurarPuertos
+                     _configurarTMR1
+ ---------------------------------------------------------------------------------
+ (1) _configurarTMR1                                       0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _configurarPuertos                                    0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _configurarPWM7                                       2     2      0       0
+                                              1 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _rutina_high                                          1     1      0       0
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _configurarPWM7
+   _configurarPuertos
+   _configurarTMR1
+
+ _rutina_high (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             EAF      0       0      35        0.0%
+BITBANK13          100      0       0      31        0.0%
+BANK13             100      0       0      32        0.0%
+BITBANK12          100      0       0      29        0.0%
+BANK12             100      0       0      30        0.0%
+BITBANK11          100      0       0      27        0.0%
+BANK11             100      0       0      28        0.0%
+BITBANK10          100      0       0      25        0.0%
+BANK10             100      0       0      26        0.0%
+BITBANK9           100      0       0      23        0.0%
+BANK9              100      0       0      24        0.0%
+BITBANK8           100      0       0      21        0.0%
+BANK8              100      0       0      22        0.0%
+BITBANK7           100      0       0      19        0.0%
+BANK7              100      0       0      20        0.0%
+BITBANK6           100      0       0      17        0.0%
+BANK6              100      0       0      18        0.0%
+BITBANK5           100      0       0      15        0.0%
+BANK5              100      0       0      16        0.0%
+BITBANK4           100      0       0      13        0.0%
+BANK4              100      0       0      14        0.0%
+BITBANK3           100      0       0      11        0.0%
+BANK3              100      0       0      12        0.0%
+BITBANK2           100      0       0       9        0.0%
+BANK2              100      0       0      10        0.0%
+BITBANK1           100      0       0       7        0.0%
+BANK1              100      0       0       8        0.0%
+BITBANK14           B0      0       0      33        0.0%
+BANK14              B0      0       0      34        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5E      0       0       0        0.0%
+COMRAM              5E      3       4       1        4.3%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0       4       6        0.0%
+DATA                 0      0       4       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.05 build -831301201 
+Symbol Table                                                                                   Tue Jun 11 13:06:54 2019
+
+                        l56 00B2                          u47 0072                __CFG_CP0$OFF 000000  
+                       _PR2 000FCB             ?_configurarTMR1 0001             ?_configurarPWM7 0001  
+                       wreg 000FE8                __CFG_IESO$ON 000000          __CFG_WPFP$PAGE_127 000000  
+                      i2l51 0038                        _TMR1 000FCE                        _TMR2 000FCC  
+             __CFG_FCMEN$ON 000000                        _main 00A6                        btemp 0005  
+                      start 003C                ___param_bank 000000                 _rutina_high 0008  
+             __CFG_PLLDIV$3 000000                       ?_main 0001                       _T1CON 000FCD  
+                     _T2CON 000FCA              __CFG_CLKOEC$ON 000000                       ttemp5 0006  
+                     ttemp6 0009                       ttemp7 000D                       status 000FD8  
+                     wtemp8 0006     __CFG_DSWDTOSC$INTOSCREF 000000             __initialization 00C2  
+              __end_of_main 00B4              __CFG_OSC$HSPLL 000000                      ??_main 0004  
+             __activetblptr 000000                      _CCPR7L 000F0A                      _ANCON0 000F48  
+                    _ANCON1 000F49              __CFG_WDTEN$OFF 000000                      i2u3_40 0026  
+                    i2u3_46 0028              __CFG_WPCFG$OFF 000000              __CFG_WPDIS$OFF 000000  
+            __CFG_XINST$OFF 000000                _CCPTMRS1bits 000F51              __CFG_STVREN$ON 000000  
+         _configurarPuertos 00B4          ?_configurarPuertos 0001         ??_configurarPuertos 0002  
+      __CFG_LS48MHZ$SYS48X8 000000                  __accesstop 0060     __end_of__initialization 00C4  
+             ___rparam_used 000001             __CFG_IOL1WAY$ON 000000        __CFG_WPEND$PAGE_WPFP 000000  
+            __pcstackCOMRAM 0001            ??_configurarTMR1 0002            ??_configurarPWM7 0002  
+ __end_of_configurarPuertos 00C2             __CFG_DSWDTPS$G2 000000                ?_rutina_high 0001  
+          __CFG_CFGPLLEN$ON 000000                     __Hparam 0000                     __Lparam 0000  
+__size_of_configurarPuertos 000E                     __pcinit 00C2                     __ramtop 0F00  
+                   __ptext0 00A6                     __ptext1 008E                     __ptext2 00B4  
+                   __ptext3 0040                   _T1CONbits 000FCD                   _T2CONbits 000FCA  
+      end_of_initialization 00C4                   _PORTBbits 000F81            __CFG_DSBOREN$OFF 000000  
+          __CFG_CPUDIV$OSC1 000000                   _TRISBbits 000F93           __CFG_SOSCSEL$HIGH 000000  
+               _CCP7CONbits 000F09         __CFG_MSSP7B_EN$MSK7 000000        __size_of_rutina_high 0034  
+          __CFG_DSWDTEN$OFF 000000         start_initialization 00C2           __CFG_ADCSEL$BIT12 000000  
+               __pbssCOMRAM 0004                   __pintcode 0008        __CFG_RTCOSC$T1OSCREF 000000  
+   __size_of_configurarTMR1 0018     __size_of_configurarPWM7 004E                    _PIE1bits 000F9D  
+                  _PIR1bits 000F9E            __CFG_WDTPS$32768 000000                    __Hrparam 0000  
+                  __Lrparam 0000                    _contador 0004               __size_of_main 000E  
+             ??_rutina_high 0001                    int$flags 0005                  _INTCONbits 000FF2  
+            _configurarTMR1 008E              _configurarPWM7 0040                    intlevel2 0000  
+       __end_of_rutina_high 003C      __end_of_configurarTMR1 00A6      __end_of_configurarPWM7 008E  
