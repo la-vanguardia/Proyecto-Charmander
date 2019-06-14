@@ -1,7 +1,7 @@
 #include <xc.h>
 
 void configurarPuertos(){
-    ANCON0 = 0xFF;
+    ANCON0 = 0x7F;
     ANCON1 = 0x1F;
 }
 
@@ -33,3 +33,12 @@ void configurarRS232(){
     PIE1bits.RC1IE = 1;
 }
 
+void configurarTMR5(){
+    TRISDbits.TRISD4 = 0;
+    PORTDbits.RD4 = 0;
+    T5CON = 0x32;
+    TMR5H = 0xFF;
+    TMR5L = 0x6A;
+    PIE5bits.TMR5IE = 1;
+    PIR5bits.TMR5IF = 0;
+}

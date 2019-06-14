@@ -1,4 +1,4 @@
-# 1 "Test_PWM_bluethoot.c"
+# 1 "sensores.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Test_PWM_bluethoot.c" 2
-# 10 "Test_PWM_bluethoot.c"
+# 1 "sensores.c" 2
+# 10 "sensores.c"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11514,7 +11514,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 10 "Test_PWM_bluethoot.c" 2
+# 10 "sensores.c" 2
 
 
 
@@ -11654,8 +11654,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 13 "Test_PWM_bluethoot.c" 2
-
+# 13 "sensores.c" 2
 
 
 # 1 "./../../LIBRERIAS/CONFIG.h" 1
@@ -11700,15 +11699,14 @@ char *tempnam(const char *, const char *);
 #pragma config WPDIS = OFF
 #pragma config WPEND = PAGE_WPFP
 #pragma config LS48MHZ = SYS48X8
-# 16 "Test_PWM_bluethoot.c" 2
+# 15 "sensores.c" 2
 
 # 1 "./../../LIBRERIAS/configuracion_auto.h" 1
 
 
 void configurarPuertos(){
-    ANCON0 = 0xFF;
+    ANCON0 = 0x7F;
     ANCON1 = 0x1F;
-    TRISDbits.TRISD5 = 1;
 }
 
 void configurarInterrupciones(){
@@ -11738,10 +11736,20 @@ void configurarRS232(){
     PIR1bits.RC1IF = 0;
     PIE1bits.RC1IE = 1;
 }
-# 17 "Test_PWM_bluethoot.c" 2
+
+void configurarTMR5(){
+    TRISDbits.TRISD4 = 0;
+    PORTDbits.RD4 = 0;
+    T5CON = 0x32;
+    TMR5H = 0xFF;
+    TMR5L = 0x6A;
+    PIE5bits.TMR5IE = 1;
+    PIR5bits.TMR5IF = 0;
+}
+# 16 "sensores.c" 2
 
 # 1 "./../../LIBRERIAS/funciones_auto.h" 1
-# 12 "./../../LIBRERIAS/funciones_auto.h"
+# 10 "./../../LIBRERIAS/funciones_auto.h"
 unsigned int cicle_90 = 0x01C2;
 unsigned int velocidad = 0;
 
@@ -11770,8 +11778,6 @@ void enviarRS232(unsigned char *valores, unsigned char numero_valores){
     }
 }
 
-
-
 int length(unsigned char *text){
     unsigned char dato = text[0], i = 1;
     int longitud = 0;
@@ -11782,10 +11788,100 @@ int length(unsigned char *text){
     }
     return longitud;
 }
-# 18 "Test_PWM_bluethoot.c" 2
+# 17 "sensores.c" 2
+# 29 "sensores.c"
+unsigned char bandera = 0, indicador = 0, datos[10]={0};
+unsigned int medicion_adc = 0, bandera_adc = 0;
+unsigned contador_timer_5 = 0, TIME_MAX = 185, bandera_servo = 0;
 
-# 1 "./../../LIBRERIAS/Estados.h" 1
-# 12 "./../../LIBRERIAS/Estados.h"
+void logicaEstadoSiguiente();
+void configuracionInicial();
+void configuracionADC();
+void dirreccion(unsigned char degree);
+
+void __attribute__((picinterrupt(("")))) rutina(){
+    if(PIR1bits.RC1IF == 1){
+        unsigned char dato = RCREG1;
+        if(dato == 'P'){
+            bandera = 1;
+            indicador = 0;
+        }
+        else{
+            TXREG1 = dato;
+            datos[indicador] = dato;
+            indicador++;
+        }
+    }
+    if(PIR1bits.ADIF == 1){
+        PIR1bits.ADIF = 0;
+        medicion_adc = ADRES;
+        bandera_adc = 1;
+    }
+    if(PIR5bits.TMR5IF == 1){
+        PIR5bits.TMR5IF = 0;
+        contador_timer_5++;
+        TMR5H = 0xFF;
+        TMR5L = 0x6A;
+        if(contador_timer_5 == TIME_MAX){
+            contador_timer_5 = 0;
+            bandera_servo = 1;
+        }
+    }
+}
+
+void main(void){
+    unsigned char text_adc[20] = {'\0'}, tiempo_anterior_1 = 15;
+    configuracionInicial();
+    TXREG = 'H';
+    T5CONbits.TMR5ON = 1;
+    while(1){
+        if(bandera == 1){
+            bandera = 0;
+            logicaEstadoSiguiente(datos);
+        }
+        if(bandera_adc == 1){
+            bandera_adc = 0;
+            sprintf(text_adc, "%04u%c", medicion_adc,0x0D);
+            enviarRS232(text_adc, 4);
+            _delay((unsigned long)((500)*(48000000/4000.0)));
+            ADCON0bits.GO_DONE = 1;
+        }
+        if(bandera_servo == 1){
+            bandera_servo = 0;
+            if(PORTDbits.RD4 == 1){
+                PORTDbits.RD4 = 0;
+                tiempo_anterior_1 = TIME_MAX;
+                TIME_MAX = 200 - tiempo_anterior_1;
+            }
+            else{
+                PORTDbits.RD4 = 1;
+                TIME_MAX = tiempo_anterior_1;
+
+            }
+
+        }
+    }
+    return;
+}
+
+void configuracionInicial(){
+    configurarPuertos();
+    configurarPWM7();
+    configurarRS232();
+    configurarInterrupciones();
+    configuracionADC();
+    configurarTMR5();
+}
+
+void configuracionADC(){
+    TRISEbits.TRISE2 = 1;
+    ANCON0bits.PCFG7 = 0;
+    ADCON0 = 0x1D;
+    ADCON1 = 0xB6;
+    PIR1bits.ADIF = 0;
+    PIE1bits.ADIE = 0;
+}
+
 void logicaEstadoSiguiente(unsigned char *comand){
     unsigned int medicion = 0;
     unsigned char texto[20] = {'\0'};
@@ -11799,11 +11895,10 @@ void logicaEstadoSiguiente(unsigned char *comand){
             encenderMotor();
             break;
         case 'a':
-            sprintf(texto,"SERVO ++");
-            enviarRS232(texto, 8);
+            dirreccion(180);
             break;
         case 'd':
-
+            dirreccion(0);
             break;
         case 'c':
             sprintf(texto, "STOP ++");
@@ -11818,52 +11913,28 @@ void logicaEstadoSiguiente(unsigned char *comand){
             break;
     }
 }
-# 19 "Test_PWM_bluethoot.c" 2
 
-
-unsigned char bandera = 0, datos[10] = {'\0'}, indicador = 0, fuego=1;
-
-void __attribute__((picinterrupt(("")))) rutina(){
-    if(PIR1bits.RC1IF == 1){
-        unsigned char dato = RCREG1;
-        if(dato == 'P'){
-            bandera = 1;
-            indicador = 0;
-        }
-        else{
-            datos[indicador] = dato;
-            indicador++;
-            TXREG1 = dato;
-            _delay((unsigned long)((5)*(48000000/4000.0)));
-            TXREG1 = '-';
-        }
+void dirreccion(unsigned char degree){
+    unsigned char tiempo_1 = 15;
+    switch(degree){
+        case 90:
+            tiempo_1 = 15;
+            break;
+        case 0:
+            tiempo_1 = 23;
+            break;
+        case 180:
+            tiempo_1 = 5;
+            break;
     }
-}
-
-void main(void) {
-    configurarPuertos();
-    configurarPWM7();
-    configurarRS232();
-    configurarInterrupciones();
-    TRISDbits.TRISD4 = 0;
-    TXREG1 = 'H';
-    PORTD = 0x00;
-    CCP7CONbits.DC7B = 0b10;
-    CCPR7L = 0x07;
-    T2CONbits.TMR2ON = 1;
-    while(1){
-        if(bandera == 1){
-            bandera = 0;
-            logicaEstadoSiguiente(datos);
-        }
-        if(PORTDbits.RD5 == 1 && fuego==1){
-            enviarRS232("FUEGO!", 6);
-            fuego = 0;
-        }
-        if(PORTDbits.RD5 == 0 && fuego==0){
-            enviarRS232("APAGADO", 7);
-            fuego = 1;
-        }
+    if(PORTDbits.RD4 != 1){
+        TIME_MAX = tiempo_1;
+        PORTDbits.RD4 = 1;
     }
-    return;
+    else{
+        TIME_MAX = 200 - tiempo_1;
+        PORTDbits.RD4 = 0;
+    }
+    contador_timer_5 = 0;
+    T5CONbits.TMR5ON = 1;
 }

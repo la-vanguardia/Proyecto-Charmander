@@ -12,20 +12,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "../PIC18F47J53/CONFIG.h"
-#include "../PIC18F47J53/configuracion_auto.h"
-#include "../PIC18F47J53/funciones_auto.h"
 
+#include "../../LIBRERIAS/CONFIG.h"
+#include "../../LIBRERIAS/configuracion_auto.h"
+#include "../../LIBRERIAS/funciones_auto.h"
+#include "../../LIBRERIAS/Estados.h"
 
-
-unsigned char bandera = 0, datos[10] = {0}, indicador = 0;
-
-void logicaEstadoSiguiente();
+unsigned char bandera = 0, datos[10] = {'\0'}, indicador = 0, fuego=1;
 
 void __interrupt() rutina(){
     if(PIR1bits.RC1IF == 1){
         unsigned char dato = RCREG1;
-        if(dato == 'c'){
+        if(dato == 'P'){
             bandera = 1;
             indicador = 0;
         }
@@ -38,47 +36,31 @@ void __interrupt() rutina(){
 
 void main(void) {
     configurarPuertos();
-    //configurarPWM7();
+    configurarPWM7();
     configurarRS232();
     configurarInterrupciones();
     TRISDbits.TRISD4 = 0;
     TXREG1 = 'H';
-    
+    PORTD = 0x00;
+    CCP7CONbits.DC7B = 0b10;
+    CCPR7L = 0x07;
+    T2CONbits.TMR2ON = 1;
     while(1){
         if(bandera == 1){
             bandera = 0;
-            logicaEstadoSiguiente();
+            logicaEstadoSiguiente(datos);
+        }   
+        if(PORTDbits.RD5 == 1 && fuego==1){
+            enviarRS232("FUEGO!", 6);
+            fuego = 0;
         }
-        
+        if(PORTDbits.RD5 == 0 && fuego==0){
+            enviarRS232("APAGADO", 7);
+            fuego = 1;
+        }
     }
     return;
 }
 
-void logicaEstadoSiguiente(){
-    unsigned char texto[20] = {'\0'};
-    switch (datos[0]){
-        case ADELANTE:
-            PORTDbits.RD4 = ~PORTDbits.RD4;
-            sprintf(texto, "GIRO ++");
-            enviarRS232(texto, 7);
-            break;
-        case ATRAS:
-            sprintf(texto, "GIRO --");
-            enviarRS232(texto, 7);
-            break;
-        case IZQUIERDA:
-            
-            break;
-        case DERECHA:
-            
-            break;
-        case STOP:
-            sprintf(texto, "STOP ++");
-            enviarRS232(texto, 7);
-            break;
-        case VELOCIDAD:
-            sprintf(texto, "VELOCIDAD");
-            enviarRS232(texto, 7);
-            break;
-    }
-}
+
+

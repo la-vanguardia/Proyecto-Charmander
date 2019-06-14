@@ -1,11 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
 
-//Definicion de los estados de los vehiculos
-#define ADELANTE 'w'
-#define ATRAS 's'
-#define DERECHA 'd'
-#define IZQUIERDA 'a'
-#define STOP ' '
-#define VELOCIDAD 'F'
+#define CENTER 90
+#define RIGHT 0
+#define LEFT 180
+#define SERVO PORTDbits.RD4
+#define TOTAL_CICLE 200
 
 unsigned int cicle_90 = 0x01C2;
 unsigned int velocidad = 0;
@@ -22,13 +22,28 @@ void fijarVelocidad(unsigned char speed){
     velocidad = 4 * DC * 125;
 }
 
-
+void encenderMotor(){
+    rutinaArranque();
+    CCP7CONbits.DC7B = velocidad & 0x0003;
+    CCPR7L = velocidad>>2;
+}
 
 void enviarRS232(unsigned char *valores, unsigned char numero_valores){
     for(unsigned char i = 0; i<numero_valores; i++){
         TXREG1 = valores[i];
-        __delay_ms(10);
+        __delay_ms(3);
     }
+}
+
+int length(unsigned char *text){
+    unsigned char dato = text[0], i = 1;
+    int longitud = 0;
+    while(dato != '\0'){
+        dato = text[i];
+        i++;
+        longitud++;
+    }
+    return longitud;
 }
 
 
