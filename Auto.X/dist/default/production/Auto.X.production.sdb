@@ -13,14 +13,42 @@
 [v _configurarRS232 configurarRS232 `(v  1 e 1 0 ]
 "41
 [v _configurarTMR5 configurarTMR5 `(v  1 e 1 0 ]
-"13 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+"20 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _rutinaArranque rutinaArranque `(v  1 e 1 0 ]
-"20
+"27
 [v _fijarVelocidad fijarVelocidad `(v  1 e 1 0 ]
-"31
+"32
+[v _encenderMotor encenderMotor `(v  1 e 1 0 ]
+"38
 [v _frenarMotor frenarMotor `(v  1 e 1 0 ]
-"37
+"44
 [v _enviarRS232 enviarRS232 `(v  1 e 1 0 ]
+"53
+[v _length length `(i  1 e 2 0 ]
+"45 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+[v _rutina rutina `IIH(v  1 e 1 0 ]
+"79
+[v _main main `(v  1 e 1 0 ]
+"105
+[v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
+"113
+[v _terminal terminal `(v  1 e 1 0 ]
+"150
+[v _estadoDirreccion estadoDirreccion `(uc  1 e 1 0 ]
+"179
+[v _dirreccion dirreccion `(v  1 e 1 0 ]
+"204
+[v _PWMServo PWMServo `(v  1 e 1 0 ]
+"216
+[v _adelante adelante `(v  1 e 1 0 ]
+"220
+[v _atras atras `(v  1 e 1 0 ]
+"26 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__cosdf.c
+[v ___cosdf __cosdf `(f  1 e 4 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__rem_pio2f.c
+[v ___rem_pio2f __rem_pio2f `(i  1 e 2 0 ]
+"26 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__sindf.c
+[v ___sindf __sindf `(f  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\atoi.c
 [v _atoi atoi `(i  1 e 2 0 ]
 "72 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
@@ -33,8 +61,12 @@
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 "1368
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fabsf.c
+[v _fabsf fabsf `(f  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
 "43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fltol.c
@@ -63,6 +95,8 @@
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
 [v _putch putch `(v  1 e 1 0 ]
+"26 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sinf.c
+[v _sinf sinf `(f  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -81,20 +115,24 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"36 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\TEST\senroesBluetooht.X\sensores.c
-[v _rutina rutina `IIH(v  1 e 1 0 ]
-"70
-[v _main main `(v  1 e 1 0 ]
-"107
-[v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
-"116
-[v _configuracionADC configuracionADC `(v  1 e 1 0 ]
-"125
-[v _terminal terminal `(v  1 e 1 0 ]
-"153
-[v _dirreccion dirreccion `(v  1 e 1 0 ]
 "11 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _velocidad velocidad `ui  1 e 2 0 ]
+"31 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+[v _TIME_MAX TIME_MAX `ui  1 e 2 0 ]
+"32
+[v _medicion_adc medicion_adc `ui  1 e 2 0 ]
+"33
+[v _tiempo_anterior_1 tiempo_anterior_1 `uc  1 e 1 0 ]
+[v _indicador indicador `uc  1 e 1 0 ]
+[v _contador_timer_5 contador_timer_5 `uc  1 e 1 0 ]
+[v _servo_dirreccion servo_dirreccion `uc  1 e 1 0 ]
+"34
+[v _bandera bandera `uc  1 e 1 0 ]
+[v _bandera_adc bandera_adc `uc  1 e 1 0 ]
+[v _bandera_servo bandera_servo `uc  1 e 1 0 ]
+[v _obstaculo obstaculo `uc  1 e 1 0 ]
+"35
+[v _datos datos `[10]uc  1 e 10 0 ]
 [s S137 . 1 `uc 1 CCP7M 1 0 :4:0 
 `uc 1 DC7B 1 0 :2:4 
 ]
@@ -112,48 +150,36 @@
 [v _CCPR7L CCPR7L `VEuc  1 e 1 @3850 ]
 "2848
 [v _T5CON T5CON `VEuc  1 e 1 @3874 ]
-[s S541 . 1 `uc 1 . 1 0 :2:0 
+[s S584 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T5SYNC 1 0 :1:2 
 ]
 "2880
-[s S544 . 1 `uc 1 TMR5ON 1 0 :1:0 
+[s S587 . 1 `uc 1 TMR5ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nT5SYNC 1 0 :1:2 
 `uc 1 T5OSCEN 1 0 :1:3 
 `uc 1 T5CKPS 1 0 :2:4 
 `uc 1 TMR5CS 1 0 :2:6 
 ]
-[s S551 . 1 `uc 1 . 1 0 :4:0 
+[s S594 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T5CKPS0 1 0 :1:4 
 `uc 1 T5CKPS1 1 0 :1:5 
 `uc 1 TMR5CS0 1 0 :1:6 
 `uc 1 TMR5CS1 1 0 :1:7 
 ]
-[s S557 . 1 `uc 1 . 1 0 :1:0 
+[s S600 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD165 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SOSCEN5 1 0 :1:3 
 ]
-[u S562 . 1 `S541 1 . 1 0 `S544 1 . 1 0 `S551 1 . 1 0 `S557 1 . 1 0 ]
-[v _T5CONbits T5CONbits `VES562  1 e 1 @3874 ]
+[u S605 . 1 `S584 1 . 1 0 `S587 1 . 1 0 `S594 1 . 1 0 `S600 1 . 1 0 ]
+[v _T5CONbits T5CONbits `VES605  1 e 1 @3874 ]
 "2950
 [v _TMR5L TMR5L `VEuc  1 e 1 @3875 ]
 "2970
 [v _TMR5H TMR5H `VEuc  1 e 1 @3876 ]
 "5457
 [v _ANCON0 ANCON0 `VEuc  1 e 1 @3912 ]
-[s S699 . 1 `uc 1 PCFG0 1 0 :1:0 
-`uc 1 PCFG1 1 0 :1:1 
-`uc 1 PCFG2 1 0 :1:2 
-`uc 1 PCFG3 1 0 :1:3 
-`uc 1 PCFG4 1 0 :1:4 
-`uc 1 PCFG5 1 0 :1:5 
-`uc 1 PCFG6 1 0 :1:6 
-`uc 1 PCFG7 1 0 :1:7 
-]
-"5474
-[u S708 . 1 `S699 1 . 1 0 ]
-[v _ANCON0bits ANCON0bits `VES708  1 e 1 @3912 ]
 "5519
 [v _ANCON1 ANCON1 `VEuc  1 e 1 @3913 ]
 [s S161 . 1 `uc 1 C4TSEL 1 0 :2:0 
@@ -289,16 +315,6 @@
 "11305
 [u S384 . 1 `S375 1 . 1 0 ]
 [v _TRISDbits TRISDbits `VES384  1 e 1 @3989 ]
-[s S682 . 1 `uc 1 TRISE0 1 0 :1:0 
-`uc 1 TRISE1 1 0 :1:1 
-`uc 1 TRISE2 1 0 :1:2 
-`uc 1 . 1 0 :3:3 
-`uc 1 REPU 1 0 :1:6 
-`uc 1 RDPU 1 0 :1:7 
-]
-"11365
-[u S689 . 1 `S682 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES689  1 e 1 @3990 ]
 [s S482 . 1 `uc 1 TMR1GIF 1 0 :1:0 
 `uc 1 TMR5GIF 1 0 :1:1 
 `uc 1 TMR5IF 1 0 :1:2 
@@ -359,20 +375,16 @@
 [v _RCREG1 RCREG1 `VEuc  1 e 1 @4015 ]
 "13678
 [v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4016 ]
-"15198
-[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-"15295
-[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S600 . 1 `uc 1 . 1 0 :1:0 
+[s S632 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "15344
-[s S603 . 1 `uc 1 ADON 1 0 :1:0 
+[s S635 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 VCFG 1 0 :2:6 
 ]
-[s S608 . 1 `uc 1 . 1 0 :1:0 
+[s S640 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -381,25 +393,25 @@
 `uc 1 VCFG0 1 0 :1:6 
 `uc 1 VCFG1 1 0 :1:7 
 ]
-[s S617 . 1 `uc 1 . 1 0 :1:0 
+[s S649 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S620 . 1 `uc 1 . 1 0 :1:0 
+[s S652 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S623 . 1 `uc 1 . 1 0 :1:0 
+[s S655 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S626 . 1 `uc 1 . 1 0 :1:0 
+[s S658 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S629 . 1 `uc 1 . 1 0 :1:0 
+[s S661 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 `uc 1 . 1 0 :5:2 
 `uc 1 ADCAL 1 0 :1:7 
 ]
-[u S634 . 1 `S600 1 . 1 0 `S603 1 . 1 0 `S608 1 . 1 0 `S617 1 . 1 0 `S620 1 . 1 0 `S623 1 . 1 0 `S626 1 . 1 0 `S629 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES634  1 e 1 @4034 ]
+[u S666 . 1 `S632 1 . 1 0 `S635 1 . 1 0 `S640 1 . 1 0 `S649 1 . 1 0 `S652 1 . 1 0 `S655 1 . 1 0 `S658 1 . 1 0 `S661 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES666  1 e 1 @4034 ]
 "15439
 [v _ADRES ADRES `VEus  1 e 2 @4035 ]
 "17014
@@ -477,261 +489,158 @@
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"25 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\TEST\senroesBluetooht.X\sensores.c
-[v _bandera bandera `uc  1 e 1 0 ]
-[v _indicador indicador `uc  1 e 1 0 ]
-[v _datos datos `[10]uc  1 e 10 0 ]
-"26
-[v _medicion_adc medicion_adc `ui  1 e 2 0 ]
-[v _bandera_adc bandera_adc `ui  1 e 2 0 ]
-"27
-[v _contador_timer_5 contador_timer_5 `ui  1 e 2 0 ]
-[v _TIME_MAX TIME_MAX `ui  1 e 2 0 ]
-[v _bandera_servo bandera_servo `ui  1 e 2 0 ]
-"28
-[v _obstaculo obstaculo `uc  1 e 1 0 ]
-"70
+"79 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _main main `(v  1 e 1 0 ]
 {
-"71
-[v main@text_adc text_adc `[20]uc  1 a 20 26 ]
-[v main@tiempo_anterior_1 tiempo_anterior_1 `uc  1 a 1 46 ]
-"105
+"80
+[v main@text text `[6]uc  1 a 6 68 ]
+"79
+[v main@F7560 F7560 `[6]uc  1 s 6 F7560 ]
+"103
 } 0
-"125
+"113
 [v _terminal terminal `(v  1 e 1 0 ]
 {
-"127
-[v terminal@texto texto `[20]uc  1 a 20 0 ]
-"126
-[v terminal@medicion medicion `ui  1 a 2 20 ]
-"125
-[v terminal@comand comand `*.39uc  1 p 2 67 ]
-"151
-} 0
-"31 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-[v _frenarMotor frenarMotor `(v  1 e 1 0 ]
-{
-"35
-} 0
-"20
-[v _fijarVelocidad fijarVelocidad `(v  1 e 1 0 ]
-{
-[v fijarVelocidad@speed speed `uc  1 a 1 wreg ]
-"21
-[v fijarVelocidad@DC DC `f  1 a 4 58 ]
-"20
-[v fijarVelocidad@speed speed `uc  1 a 1 wreg ]
-[v fijarVelocidad@speed speed `uc  1 a 1 66 ]
-"23
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 13 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 12 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 3 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 11 ]
-"44
-} 0
-"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 51 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 50 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 42 ]
-"70
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-{
-[s S1294 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S1299 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1302 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1294 1 fAsBytes 4 0 `S1299 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1302  1 a 4 36 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 30 ]
-[s S1370 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S1373 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1370 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1373  1 a 2 40 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 35 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 34 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 29 ]
-"8
-[v ___flmul@b b `d  1 p 4 17 ]
-[v ___flmul@a a `d  1 p 4 21 ]
-"205
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 57 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 56 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 55 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 54 ]
-"10
-[v ___fladd@b b `d  1 p 4 42 ]
-[v ___fladd@a a `d  1 p 4 46 ]
-"237
-} 0
-"153 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\TEST\senroesBluetooht.X\sensores.c
-[v _dirreccion dirreccion `(v  1 e 1 0 ]
-{
-[v dirreccion@degree degree `uc  1 a 1 wreg ]
-"154
-[v dirreccion@tiempo_1 tiempo_1 `uc  1 a 1 6 ]
-"153
-[v dirreccion@degree degree `uc  1 a 1 wreg ]
-[v dirreccion@degree degree `uc  1 a 1 5 ]
-"176
+"116
+[v terminal@texto texto `[20]uc  1 a 20 39 ]
+"114
+[v terminal@medicion medicion `ui  1 a 2 59 ]
+"115
+[v terminal@degree degree `uc  1 a 1 61 ]
+"113
+[v terminal@comand comand `*.39uc  1 p 2 37 ]
+"148
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S1461 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S1447 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S1461  1 a 6 18 ]
+[v sprintf@f f `S1447  1 a 6 31 ]
 "12
-[v sprintf@ap ap `[1]*.39v  1 a 2 16 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 29 ]
 "9
-[v sprintf@s s `*.39uc  1 p 2 6 ]
-[v sprintf@fmt fmt `*.32Cuc  1 p 2 8 ]
+[v sprintf@s s `*.39uc  1 p 2 19 ]
+[v sprintf@fmt fmt `*.32Cuc  1 p 2 21 ]
 "23
 } 0
 "1368 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
 "1371
-[v vfprintf@cfmt cfmt `*.32uc  1 a 2 85 ]
-[s S913 _IO_FILE 0 ]
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 74 ]
+[s S899 _IO_FILE 0 ]
 "1368
-[v vfprintf@fp fp `*.39S913  1 p 2 0 ]
-[v vfprintf@fmt fmt `*.32Cuc  1 p 2 2 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 4 ]
+[v vfprintf@fp fp `*.39S899  1 p 2 13 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 15 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 17 ]
 "1382
 } 0
 "670
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
 "675
-[v vfpfcnvrt@llu llu `uo  1 a 8 72 ]
+[v vfpfcnvrt@llu llu `uo  1 a 8 0 ]
 "673
-[v vfpfcnvrt@done done `i  1 a 2 81 ]
+[v vfpfcnvrt@done done `i  1 a 2 9 ]
 "672
-[v vfpfcnvrt@c c `uc  1 a 1 80 ]
-[s S913 _IO_FILE 0 ]
+[v vfpfcnvrt@c c `uc  1 a 1 8 ]
+[s S899 _IO_FILE 0 ]
 "670
-[v vfpfcnvrt@fp fp `*.39S913  1 p 2 62 ]
-[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 64 ]
-[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 66 ]
+[v vfpfcnvrt@fp fp `*.39S899  1 p 2 64 ]
+[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 66 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 68 ]
 "1365
 } 0
 "593
 [v _utoa utoa `(i  1 s 2 utoa ]
 {
 "596
-[v utoa@n n `uo  1 a 8 52 ]
+[v utoa@n n `uo  1 a 8 54 ]
 "595
-[v utoa@i i `i  1 a 2 60 ]
-[v utoa@w w `i  1 a 2 50 ]
-[v utoa@p p `i  1 a 2 48 ]
-[s S913 _IO_FILE 0 ]
+[v utoa@i i `i  1 a 2 62 ]
+[v utoa@w w `i  1 a 2 52 ]
+[v utoa@p p `i  1 a 2 50 ]
+[s S899 _IO_FILE 0 ]
 "593
-[v utoa@fp fp `*.39S913  1 p 2 30 ]
-[v utoa@d d `uo  1 p 8 32 ]
+[v utoa@fp fp `*.39S899  1 p 2 32 ]
+[v utoa@d d `uo  1 p 8 34 ]
 "619
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\lomod.c
 [v ___lomod __lomod `(uo  1 e 8 0 ]
 {
 "12
-[v ___lomod@counter counter `uc  1 a 1 19 ]
+[v ___lomod@counter counter `uc  1 a 1 21 ]
 "9
-[v ___lomod@dividend dividend `uo  1 p 8 3 ]
-[v ___lomod@divisor divisor `uo  1 p 8 11 ]
+[v ___lomod@dividend dividend `uo  1 p 8 5 ]
+[v ___lomod@divisor divisor `uo  1 p 8 13 ]
 "27
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\lodiv.c
 [v ___lodiv __lodiv `(uo  1 e 8 0 ]
 {
 "12
-[v ___lodiv@quotient quotient `uo  1 a 8 19 ]
+[v ___lodiv@quotient quotient `uo  1 a 8 21 ]
 "13
-[v ___lodiv@counter counter `uc  1 a 1 27 ]
+[v ___lodiv@counter counter `uc  1 a 1 29 ]
 "9
-[v ___lodiv@dividend dividend `uo  1 p 8 3 ]
-[v ___lodiv@divisor divisor `uo  1 p 8 11 ]
+[v ___lodiv@dividend dividend `uo  1 p 8 5 ]
+[v ___lodiv@divisor divisor `uo  1 p 8 13 ]
 "32
 } 0
 "259 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
 [v _ctoa ctoa `(i  1 s 2 ctoa ]
 {
 "261
-[v ctoa@w w `i  1 a 2 33 ]
-[s S913 _IO_FILE 0 ]
+[v ctoa@w w `i  1 a 2 35 ]
+[s S899 _IO_FILE 0 ]
 "259
-[v ctoa@fp fp `*.39S913  1 p 2 30 ]
-[v ctoa@c c `uc  1 p 1 32 ]
+[v ctoa@fp fp `*.39S899  1 p 2 32 ]
+[v ctoa@c c `uc  1 p 1 34 ]
 "270
 } 0
 "72
 [v _pad pad `(i  1 s 2 pad ]
 {
 "74
-[v pad@w w `i  1 a 2 28 ]
-[v pad@i i `i  1 a 2 26 ]
-[s S913 _IO_FILE 0 ]
+[v pad@w w `i  1 a 2 30 ]
+[v pad@i i `i  1 a 2 28 ]
+[s S899 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S913  1 p 2 19 ]
-[v pad@buf buf `*.39uc  1 p 2 21 ]
-[v pad@p p `i  1 p 2 23 ]
+[v pad@fp fp `*.39S899  1 p 2 21 ]
+[v pad@buf buf `*.39uc  1 p 2 23 ]
+[v pad@p p `i  1 p 2 25 ]
 "95
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 {
 "14
-[v strlen@a a `*.39Cuc  1 a 2 5 ]
+[v strlen@a a `*.39Cuc  1 a 2 7 ]
 "12
-[v strlen@s s `*.39Cuc  1 p 2 3 ]
+[v strlen@s s `*.39Cuc  1 p 2 5 ]
 "26
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
 [v _fputs fputs `(i  1 e 2 0 ]
 {
 "11
-[v fputs@i i `i  1 a 2 17 ]
+[v fputs@i i `i  1 a 2 19 ]
 "10
-[v fputs@c c `uc  1 a 1 16 ]
+[v fputs@c c `uc  1 a 1 18 ]
 "8
-[v fputs@s s `*.39Cuc  1 p 2 12 ]
-[s S1461 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S1461  1 p 2 14 ]
+[v fputs@s s `*.39Cuc  1 p 2 14 ]
+[s S1447 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S1447  1 p 2 16 ]
 "19
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
-[v fputc@c c `i  1 p 2 3 ]
-[s S1461 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S1461  1 p 2 5 ]
+[v fputc@c c `i  1 p 2 5 ]
+[s S1447 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S1447  1 p 2 7 ]
 "21
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
@@ -743,48 +652,276 @@
 [v _atoi atoi `(i  1 e 2 0 ]
 {
 "6
-[v atoi@n n `i  1 a 2 23 ]
-[v atoi@neg neg `i  1 a 2 16 ]
+[v atoi@n n `i  1 a 2 25 ]
+[v atoi@neg neg `i  1 a 2 18 ]
 "4
-[v atoi@s s `*.32Cuc  1 p 2 10 ]
+[v atoi@s s `*.32Cuc  1 p 2 12 ]
 "16
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\isspace.c
 [v _isspace isspace `(i  1 e 2 0 ]
 {
-[v isspace@c c `i  1 p 2 3 ]
+[v isspace@c c `i  1 p 2 5 ]
 "8
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\isdigit.c
 [v _isdigit isdigit `(i  1 e 2 0 ]
 {
-[v isdigit@c c `i  1 p 2 3 ]
+[v isdigit@c c `i  1 p 2 5 ]
 "8
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 7 ]
+[v ___wmul@product product `ui  1 a 2 9 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 3 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 5 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 5 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 7 ]
 "53
 } 0
-"37 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-[v _enviarRS232 enviarRS232 `(v  1 e 1 0 ]
+"38 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+[v _frenarMotor frenarMotor `(v  1 e 1 0 ]
 {
-"38
-[v enviarRS232@i i `uc  1 a 1 7 ]
-"37
-[v enviarRS232@valores valores `*.39uc  1 p 2 3 ]
-[v enviarRS232@numero_valores numero_valores `uc  1 p 1 5 ]
 "42
 } 0
-"107 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\TEST\senroesBluetooht.X\sensores.c
+"27
+[v _fijarVelocidad fijarVelocidad `(v  1 e 1 0 ]
+{
+[v fijarVelocidad@speed speed `uc  1 a 1 wreg ]
+"28
+[v fijarVelocidad@DC DC `f  1 a 4 70 ]
+"27
+[v fijarVelocidad@speed speed `uc  1 a 1 wreg ]
+[v fijarVelocidad@speed speed `uc  1 a 1 78 ]
+"30
+} 0
+"150 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+[v _estadoDirreccion estadoDirreccion `(uc  1 e 1 0 ]
+{
+[v estadoDirreccion@valor valor `uc  1 a 1 wreg ]
+"151
+[v estadoDirreccion@angulo angulo `uc  1 a 1 7 ]
+"150
+[v estadoDirreccion@valor valor `uc  1 a 1 wreg ]
+[v estadoDirreccion@valor valor `uc  1 a 1 8 ]
+"177
+} 0
+"32 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+[v _encenderMotor encenderMotor `(v  1 e 1 0 ]
+{
+"36
+} 0
+"20
+[v _rutinaArranque rutinaArranque `(v  1 e 1 0 ]
+{
+"25
+} 0
+"179 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+[v _dirreccion dirreccion `(v  1 e 1 0 ]
+{
+[v dirreccion@degree degree `uc  1 a 1 wreg ]
+"180
+[v dirreccion@tiempo_1 tiempo_1 `uc  1 a 1 8 ]
+"179
+[v dirreccion@degree degree `uc  1 a 1 wreg ]
+[v dirreccion@degree degree `uc  1 a 1 7 ]
+"202
+} 0
+"220
+[v _atras atras `(v  1 e 1 0 ]
+{
+"222
+} 0
+"216
+[v _adelante adelante `(v  1 e 1 0 ]
+{
+"218
+} 0
+"44 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+[v _enviarRS232 enviarRS232 `(v  1 e 1 0 ]
+{
+"46
+[v enviarRS232@i i `uc  1 a 1 19 ]
+"45
+[v enviarRS232@longitud_texto longitud_texto `ui  1 a 2 17 ]
+"44
+[v enviarRS232@valores valores `*.34uc  1 p 2 13 ]
+"50
+} 0
+"53
+[v _length length `(i  1 e 2 0 ]
+{
+"55
+[v length@longitud longitud `i  1 a 2 9 ]
+"54
+[v length@i i `uc  1 a 1 12 ]
+[v length@dato dato `uc  1 a 1 11 ]
+"53
+[v length@text text `*.34uc  1 p 2 5 ]
+"62
+} 0
+"26 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sinf.c
+[v _sinf sinf `(f  1 e 4 0 ]
+{
+"30
+[v sinf@ix ix `ul  1 a 4 26 ]
+"28
+[v sinf@y y `d  1 a 4 22 ]
+[u S1496 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"33
+[v sinf@__xc8_float_word __xc8_float_word `S1496  1 a 4 4 ]
+"29
+[v sinf@n n `l  1 a 4 0 ]
+"31
+[v sinf@sign sign `i  1 a 2 16 ]
+"26
+[v sinf@x x `f  1 p 4 64 ]
+"80
+} 0
+"26 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__sindf.c
+[v ___sindf __sindf `(f  1 e 4 0 ]
+{
+"28
+[v ___sindf@z z `d  1 a 4 56 ]
+[v ___sindf@s s `d  1 a 4 52 ]
+[v ___sindf@w w `d  1 a 4 36 ]
+[v ___sindf@r r `d  1 a 4 32 ]
+"26
+[v ___sindf@x x `d  1 p 4 28 ]
+"36
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__rem_pio2f.c
+[v ___rem_pio2f __rem_pio2f `(i  1 e 2 0 ]
+{
+"49
+[v ___rem_pio2f@n n `l  1 a 4 60 ]
+"54
+[v ___rem_pio2f@t t `f  1 a 4 56 ]
+"47
+[v ___rem_pio2f@fn fn `d  1 a 4 52 ]
+[u S1496 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"45
+[v ___rem_pio2f@u u `S1496  1 a 4 44 ]
+"48
+[v ___rem_pio2f@ix ix `ul  1 a 4 38 ]
+"46
+[v ___rem_pio2f@ty ty `[1]d  1 a 4 34 ]
+"50
+[v ___rem_pio2f@sign sign `i  1 a 2 42 ]
+"43
+[v ___rem_pio2f@x x `f  1 p 4 28 ]
+[v ___rem_pio2f@y y `*.39d  1 p 2 32 ]
+"44
+[v ___rem_pio2f@F530 F530 `S1496  1 s 4 F530 ]
+"94
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fabsf.c
+[v _fabsf fabsf `(f  1 e 4 0 ]
+{
+[u S1496 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"6
+[v fabsf@u u `S1496  1 a 4 9 ]
+"4
+[v fabsf@x x `f  1 p 4 5 ]
+"5
+[v fabsf@F463 F463 `S1496  1 s 4 F463 ]
+"9
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 15 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 14 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 5 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 13 ]
+"44
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 69 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 68 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 60 ]
+"70
+} 0
+"245 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@b b `d  1 p 4 60 ]
+[v ___flsub@a a `d  1 p 4 64 ]
+"250
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+{
+[v ___flneg@f1 f1 `d  1 p 4 24 ]
+"20
+} 0
+"26 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__cosdf.c
+[v ___cosdf __cosdf `(f  1 e 4 0 ]
+{
+"28
+[v ___cosdf@z z `d  1 a 4 20 ]
+[v ___cosdf@w w `d  1 a 4 16 ]
+[v ___cosdf@r r `d  1 a 4 0 ]
+"26
+[v ___cosdf@x x `d  1 p 4 60 ]
+"35
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1280 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1285 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1288 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1280 1 fAsBytes 4 0 `S1285 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1288  1 a 4 38 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 33 ]
+[s S1356 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1359 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1356 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1359  1 a 2 42 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 37 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 32 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 31 ]
+"8
+[v ___flmul@b b `d  1 p 4 19 ]
+[v ___flmul@a a `d  1 p 4 23 ]
+"205
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 59 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 58 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 57 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 56 ]
+"10
+[v ___fladd@b b `d  1 p 4 44 ]
+[v ___fladd@a a `d  1 p 4 48 ]
+"237
+} 0
+"105 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
 {
-"114
+"111
 } 0
 "41 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
 [v _configurarTMR5 configurarTMR5 `(v  1 e 1 0 ]
@@ -811,15 +948,15 @@
 {
 "16
 } 0
-"116 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\TEST\senroesBluetooht.X\sensores.c
-[v _configuracionADC configuracionADC `(v  1 e 1 0 ]
+"204 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+[v _PWMServo PWMServo `(v  1 e 1 0 ]
 {
-"123
+"214
 } 0
-"36
+"45
 [v _rutina rutina `IIH(v  1 e 1 0 ]
 {
-"38
-[v rutina@dato dato `uc  1 a 1 2 ]
-"68
+"47
+[v rutina@dato dato `uc  1 a 1 4 ]
+"77
 } 0

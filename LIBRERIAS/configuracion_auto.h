@@ -6,8 +6,13 @@ void configurarPuertos(){
 }
 
 void configurarInterrupciones(){
+    TRISBbits.TRISB0 = 1;
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+    INTCON2bits.INTEDG0=0;
+    INTCONbits.INT0F = 0;
+    INTCONbits.INT0E = 1;
+    
 }
 
 void configurarPWM7(){

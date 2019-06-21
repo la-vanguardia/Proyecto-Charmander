@@ -10,6 +10,13 @@
 unsigned int cicle_90 = 0x01C2;
 unsigned int velocidad = 0;
 
+void rutinaArranque();
+void fijarVelocidad(unsigned char speed);
+void encenderMotor();
+void frenarMotor();
+void enviarRS232(unsigned char *valores);
+int length(unsigned char *text);
+
 void rutinaArranque(){
     CCP7CONbits.DC7B = cicle_90 & 0x0003;
     CCPR7L = cicle_90>>2;
@@ -28,12 +35,20 @@ void encenderMotor(){
     CCPR7L = velocidad>>2;
 }
 
-void enviarRS232(unsigned char *valores, unsigned char numero_valores){
-    for(unsigned char i = 0; i<numero_valores; i++){
+void frenarMotor(){
+    CCP7CONbits.DC7B = 0b00;
+    CCPR7L = 0x00;
+    T2CONbits.TMR2ON = 0;
+}
+
+void enviarRS232(unsigned char *valores){
+    unsigned int longitud_texto = length(valores);
+    for(unsigned char i = 0; i<longitud_texto; i++){
         TXREG1 = valores[i];
         __delay_ms(3);
     }
 }
+
 
 int length(unsigned char *text){
     unsigned char dato = text[0], i = 1;

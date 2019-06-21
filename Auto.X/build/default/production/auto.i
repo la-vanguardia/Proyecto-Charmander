@@ -1,4 +1,4 @@
-# 1 "sensores.c"
+# 1 "auto.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "sensores.c" 2
+# 1 "auto.c" 2
 
 
 
@@ -11521,9 +11521,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 9 "sensores.c" 2
-
-
+# 9 "auto.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdio.h" 3
@@ -11661,10 +11659,576 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 12 "sensores.c" 2
+# 10 "auto.c" 2
 
 
-# 1 "./../../LIBRERIAS/CONFIG.h" 1
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 135 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 150 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 166 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+# 181 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 196 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 217 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 237 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 155 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 155 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 2 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 2 3
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 37 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef float float_t;
+
+
+
+
+typedef double double_t;
+# 15 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 2 3
+# 46 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 3
+int __fpclassifyf(float);
+# 97 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 3
+int __signbitf(float);
+# 149 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 3
+double acos(double);
+float acosf(float);
+long double acosl(long double);
+
+
+
+
+
+double acosh(double);
+float acoshf(float);
+long double acoshl(long double);
+
+
+
+
+
+double asin(double);
+float asinf(float);
+long double asinl(long double);
+
+
+
+
+
+double asinh(double);
+float asinhf(float);
+long double asinhl(long double);
+
+
+
+
+
+double atan(double);
+float atanf(float);
+long double atanl(long double);
+
+
+
+
+
+double atan2(double, double);
+float atan2f(float, float);
+long double atan2l(long double, long double);
+
+
+
+
+
+double atanh(double);
+float atanhf(float);
+long double atanhl(long double);
+
+
+
+
+
+double cbrt(double);
+float cbrtf(float);
+long double cbrtl(long double);
+
+
+
+
+
+double ceil(double);
+float ceilf(float);
+long double ceill(long double);
+
+
+
+
+
+double copysign(double, double);
+float copysignf(float, float);
+long double copysignl(long double, long double);
+
+
+
+
+
+double cos(double);
+float cosf(float);
+long double cosl(long double);
+
+
+
+
+
+double cosh(double);
+float coshf(float);
+long double coshl(long double);
+
+
+
+
+
+double erf(double);
+float erff(float);
+long double erfl(long double);
+
+
+
+
+
+double erfc(double);
+float erfcf(float);
+long double erfcl(long double);
+
+
+
+
+
+double exp(double);
+float expf(float);
+long double expl(long double);
+
+
+
+
+
+double exp2(double);
+float exp2f(float);
+long double exp2l(long double);
+
+
+
+
+
+double expm1(double);
+float expm1f(float);
+long double expm1l(long double);
+
+
+
+
+
+double fabs(double);
+float fabsf(float);
+long double fabsl(long double);
+
+
+
+
+
+double fdim(double, double);
+float fdimf(float, float);
+long double fdiml(long double, long double);
+
+
+
+
+
+double floor(double);
+float floorf(float);
+long double floorl(long double);
+
+
+
+
+
+double fma(double, double, double);
+float fmaf(float, float, float);
+long double fmal(long double, long double, long double);
+
+
+
+
+
+double fmax(double, double);
+float fmaxf(float, float);
+long double fmaxl(long double, long double);
+
+
+
+
+
+double fmin(double, double);
+float fminf(float, float);
+long double fminl(long double, long double);
+
+
+
+
+
+double fmod(double, double);
+float fmodf(float, float);
+long double fmodl(long double, long double);
+
+
+
+
+
+double frexp(double, int *);
+float frexpf(float, int *);
+long double frexpl(long double, int *);
+
+
+
+
+
+double hypot(double, double);
+float hypotf(float, float);
+long double hypotl(long double, long double);
+
+
+
+
+
+int ilogb(double);
+int ilogbf(float);
+int ilogbl(long double);
+
+
+
+
+
+double ldexp(double, int);
+float ldexpf(float, int);
+long double ldexpl(long double, int);
+
+
+
+
+
+double lgamma(double);
+float lgammaf(float);
+long double lgammal(long double);
+
+
+
+
+
+long long llrint(double);
+long long llrintf(float);
+long long llrintl(long double);
+
+
+
+
+
+long long llround(double);
+long long llroundf(float);
+long long llroundl(long double);
+
+
+
+
+
+double log(double);
+float logf(float);
+long double logl(long double);
+
+
+
+
+
+double log10(double);
+float log10f(float);
+long double log10l(long double);
+
+
+
+
+
+double log1p(double);
+float log1pf(float);
+long double log1pl(long double);
+
+
+
+
+
+double log2(double);
+float log2f(float);
+long double log2l(long double);
+
+
+
+
+
+double logb(double);
+float logbf(float);
+long double logbl(long double);
+
+
+
+
+
+long lrint(double);
+long lrintf(float);
+long lrintl(long double);
+
+
+
+
+
+long lround(double);
+long lroundf(float);
+long lroundl(long double);
+
+
+
+
+
+double modf(double, double *);
+float modff(float, float *);
+long double modfl(long double, long double *);
+
+
+
+
+
+double nan(const char *);
+float nanf(const char *);
+long double nanl(const char *);
+
+
+
+
+
+double nearbyint(double);
+float nearbyintf(float);
+long double nearbyintl(long double);
+
+
+
+
+
+double nextafter(double, double);
+float nextafterf(float, float);
+long double nextafterl(long double, long double);
+
+
+
+
+
+double nexttoward(double, long double);
+float nexttowardf(float, long double);
+long double nexttowardl(long double, long double);
+# 498 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 3
+double pow(double, double);
+__attribute__((nonreentrant)) float powf(float, float);
+long double powl(long double, long double);
+
+
+
+
+
+double remainder(double, double);
+float remainderf(float, float);
+long double remainderl(long double, long double);
+
+
+
+
+
+double remquo(double, double, int *);
+float remquof(float, float, int *);
+long double remquol(long double, long double, int *);
+
+
+
+
+
+double rint(double);
+float rintf(float);
+long double rintl(long double);
+
+
+
+
+
+double round(double);
+float roundf(float);
+long double roundl(long double);
+
+
+
+
+
+double scalbln(double, long);
+float scalblnf(float, long);
+long double scalblnl(long double, long);
+
+
+
+
+
+double scalbn(double, int);
+float scalbnf(float, int);
+long double scalbnl(long double, int);
+
+
+
+
+
+double sin(double);
+float sinf(float);
+long double sinl(long double);
+
+
+
+
+
+double sinh(double);
+float sinhf(float);
+long double sinhl(long double);
+
+
+
+
+
+double sqrt(double);
+float sqrtf(float);
+long double sqrtl(long double);
+
+
+
+
+
+double tan(double);
+float tanf(float);
+long double tanl(long double);
+
+
+
+
+
+double tanh(double);
+float tanhf(float);
+long double tanhl(long double);
+
+
+
+
+
+double tgamma(double);
+float tgammaf(float);
+long double tgammal(long double);
+
+
+
+
+
+double trunc(double);
+float truncf(float);
+long double truncl(long double);
+# 631 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\math.h" 3
+extern int signgam;
+
+double j0(double);
+double j1(double);
+double jn(int, double);
+
+double y0(double);
+double y1(double);
+double yn(int, double);
+# 13 "auto.c" 2
+
+
+# 1 "./../LIBRERIAS/CONFIG.h" 1
 
 #pragma config WDTEN = OFF
 #pragma config PLLDIV = 3
@@ -11706,9 +12270,9 @@ char *tempnam(const char *, const char *);
 #pragma config WPDIS = OFF
 #pragma config WPEND = PAGE_WPFP
 #pragma config LS48MHZ = SYS48X8
-# 14 "sensores.c" 2
+# 15 "auto.c" 2
 
-# 1 "./../../LIBRERIAS/configuracion_auto.h" 1
+# 1 "./../LIBRERIAS/configuracion_auto.h" 1
 
 
 void configurarPuertos(){
@@ -11758,12 +12322,19 @@ void configurarTMR5(){
     PIE5bits.TMR5IE = 1;
     PIR5bits.TMR5IF = 0;
 }
-# 15 "sensores.c" 2
+# 16 "auto.c" 2
 
-# 1 "./../../LIBRERIAS/funciones_auto.h" 1
-# 10 "./../../LIBRERIAS/funciones_auto.h"
+# 1 "./../LIBRERIAS/funciones_auto.h" 1
+# 10 "./../LIBRERIAS/funciones_auto.h"
 unsigned int cicle_90 = 0x01C2;
 unsigned int velocidad = 0;
+
+void rutinaArranque();
+void fijarVelocidad(unsigned char speed);
+void encenderMotor();
+void frenarMotor();
+void enviarRS232(unsigned char *valores);
+int length(unsigned char *text);
 
 void rutinaArranque(){
     CCP7CONbits.DC7B = cicle_90 & 0x0003;
@@ -11789,12 +12360,14 @@ void frenarMotor(){
     T2CONbits.TMR2ON = 0;
 }
 
-void enviarRS232(unsigned char *valores, unsigned char numero_valores){
-    for(unsigned char i = 0; i<numero_valores; i++){
+void enviarRS232(unsigned char *valores){
+    unsigned int longitud_texto = length(valores);
+    for(unsigned char i = 0; i<longitud_texto; i++){
         TXREG1 = valores[i];
         _delay((unsigned long)((3)*(48000000/4000.0)));
     }
 }
+
 
 int length(unsigned char *text){
     unsigned char dato = text[0], i = 1;
@@ -11806,18 +12379,21 @@ int length(unsigned char *text){
     }
     return longitud;
 }
-# 16 "sensores.c" 2
-# 25 "sensores.c"
-unsigned char bandera = 0, indicador = 0, datos[10]={0};
-unsigned int medicion_adc = 0, bandera_adc = 0;
-unsigned contador_timer_5 = 0, TIME_MAX = 185, bandera_servo = 0;
-unsigned char obstaculo = 0;
+# 17 "auto.c" 2
+# 31 "auto.c"
+unsigned int TIME_MAX = 185;
+unsigned int medicion_adc = 0;
+unsigned char tiempo_anterior_1 = 15, indicador = 0, contador_timer_5 = 0, servo_dirreccion = 0;
+unsigned char bandera = 0, bandera_adc = 0, bandera_servo = 0 ,obstaculo = 0;
+unsigned char datos[10] = {'\0'};
 
-
-void terminal(unsigned char *command);
 void configuracionInicial();
-void configuracionADC();
+void terminal(unsigned char *command);
+unsigned char estadoDirreccion(unsigned char valor);
 void dirreccion(unsigned char degree);
+void PWMServo();
+void adelante();
+void atras();
 
 void __attribute__((picinterrupt(("")))) rutina(){
     if(PIR1bits.RC1IF == 1){
@@ -11853,39 +12429,28 @@ void __attribute__((picinterrupt(("")))) rutina(){
     }
 }
 
-void main(void){
-    unsigned char text_adc[20] = {'\0'}, tiempo_anterior_1 = 15;
+void main(void) {
+    unsigned char text[] = "HOLA!";
     configuracionInicial();
-    T5CONbits.TMR5ON = 1;
+    enviarRS232(text);
+    float caca = sinf(36.05465);
     while(1){
         if(bandera == 1){
             bandera = 0;
             terminal(datos);
         }
-        if(bandera_adc == 1){
-            bandera_adc = 0;
-            sprintf(text_adc, "%04u%c", medicion_adc,0x0D);
-            enviarRS232(text_adc, 4);
-            _delay((unsigned long)((500)*(48000000/4000.0)));
-            ADCON0bits.GO_DONE = 1;
-        }
         if(bandera_servo == 1){
             bandera_servo = 0;
-            if(PORTDbits.RD4 == 1){
-                PORTDbits.RD4 = 0;
-                tiempo_anterior_1 = TIME_MAX;
-                TIME_MAX = 200 - tiempo_anterior_1;
-            }
-            else{
-                PORTDbits.RD4 = 1;
-                TIME_MAX = tiempo_anterior_1;
-            }
+            PWMServo();
+        }
+        if(bandera_adc == 1){
+            bandera_adc = 0;
+
         }
         if(obstaculo == 1){
             obstaculo = 0;
-            TXREG1 = 'K';
-            frenarMotor();
         }
+
     }
     return;
 }
@@ -11893,36 +12458,33 @@ void main(void){
 void configuracionInicial(){
     configurarPuertos();
     configurarPWM7();
-    configurarRS232();
     configurarInterrupciones();
-    configuracionADC();
+    configurarRS232();
     configurarTMR5();
-}
-
-void configuracionADC(){
-    TRISEbits.TRISE2 = 1;
-    ANCON0bits.PCFG7 = 0;
-    ADCON0 = 0x1D;
-    ADCON1 = 0xB6;
-    PIR1bits.ADIF = 0;
-    PIE1bits.ADIE = 0;
 }
 
 void terminal(unsigned char *comand){
     unsigned int medicion = 0;
+    unsigned char degree;
     unsigned char texto[20] = {'\0'};
     switch (comand[0]){
         case 'w':
-
+            adelante();
+            encenderMotor();
+            enviarRS232("Motores encendidos!");
             break;
         case 's':
-
+            atras();
+            encenderMotor();
+            enviarRS232("Vehiculo en reversa!");
             break;
         case 'a':
-            dirreccion(180);
+            degree = estadoDirreccion(1);
+            dirreccion(degree);
             break;
         case 'd':
-            dirreccion(0);
+            degree = estadoDirreccion(0);
+            dirreccion(degree);
             break;
         case 'c':
             frenarMotor();
@@ -11930,10 +12492,41 @@ void terminal(unsigned char *comand){
         case 'F':
             medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
             fijarVelocidad(medicion);
+            sprintf(texto, "Velocidad fijada al: %03u%c", medicion, '%');
+            enviarRS232(texto);
             break;
         default:
             break;
     }
+}
+
+unsigned char estadoDirreccion(unsigned char valor){
+    unsigned char angulo = 0;
+    switch(servo_dirreccion){
+        case 0:
+            if(valor == 1){
+                servo_dirreccion = 1;
+                angulo = 180;
+            }
+            else{
+                servo_dirreccion = 1;
+                angulo = 180;
+            }
+            break;
+        case 1:
+            if(valor != 1){
+                servo_dirreccion = 0;
+                angulo = 90;
+            }
+            break;
+        case 2:
+            if(valor == 1){
+                servo_dirreccion = 0;
+                angulo = 90;
+            }
+            break;
+    }
+    return angulo;
 }
 
 void dirreccion(unsigned char degree){
@@ -11959,4 +12552,51 @@ void dirreccion(unsigned char degree){
     }
     contador_timer_5 = 0;
     T5CONbits.TMR5ON = 1;
+}
+
+void PWMServo(){
+    if(PORTDbits.RD4 == 1){
+        PORTDbits.RD4 = 0;
+        tiempo_anterior_1 = TIME_MAX;
+        TIME_MAX = 200 - tiempo_anterior_1;
+    }
+    else{
+        PORTDbits.RD4 = 1;
+        TIME_MAX = tiempo_anterior_1;
+    }
+}
+
+void adelante(){
+    enviarRS232("FALTA IMPLEMENTAR!");
+}
+
+void atras(){
+    enviarRS232("FALTA IMPLEMETAR!");
+}
+
+void rutinaEscape(unsigned char type){
+    frenarMotor();
+    unsigned int medicion_1 = 0, medicion_2 = 0;
+    switch(type){
+        case 1:
+            ADCON0bits.GO_DONE = 1;
+            while(ADCON0bits.GO_DONE);
+            bandera_adc = 0;
+            medicion_1 = medicion_adc;
+            ADCON0bits.GO_DONE = 1;
+            while(ADCON0bits.GO_DONE);
+            bandera_adc = 0;
+            if(medicion_1 > medicion_2){
+                fijarVelocidad(100);
+            }
+            else{
+                fijarVelocidad(50);
+            }
+            break;
+        case 2:
+            fijarVelocidad(80);
+            break;
+    }
+    atras();
+    encenderMotor();
 }
