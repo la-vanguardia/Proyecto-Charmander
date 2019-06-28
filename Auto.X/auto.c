@@ -31,10 +31,10 @@
 
 #define SENSOR_FUEGO PORTBbits.RB0
 
-unsigned int TIME_MAX = 185;
-unsigned char tiempo_anterior_1 = 15, indicador = 0, contador_timer_5 = 0, servo_dirreccion = 0;
+unsigned int TIME_MAX = 1000-65, parar= 0, tiempo_anterior_1 = 65, contador_timer_5 = 0;
+unsigned char indicador = 0,  servo_dirreccion = 0;
 unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
-unsigned char datos[10] = {'\0'}, parar = 0;
+unsigned char datos[10] = {'\0'};
 unsigned char bandera_distancia = 0, contador_datos = 0;
 unsigned char estadoFuego = 0;
 float distancia = 0;
@@ -42,8 +42,8 @@ float distancia = 0;
 void configuracionInicial();
 void terminal(unsigned char *command);
 void cambiarPWM();
-unsigned char estadoDirreccion(unsigned char valor);
-void dirreccion(unsigned char degree);
+unsigned int estadoDirreccion(unsigned char valor);
+void dirreccion(unsigned int degree);
 void PWMServo();
 void adelante();
 void atras();
@@ -57,7 +57,6 @@ void __interrupt() rutina(){
             indicador = 0;
         }
         else{
-            TXREG1 = dato;
             datos[indicador] = dato;
             indicador++;
         }
@@ -66,7 +65,7 @@ void __interrupt() rutina(){
         PIR5bits.TMR5IF = 0;
         contador_timer_5++;
         TMR5H = 0xFF;
-        TMR5L = 0x6A;
+        TMR5L = 0xE2;
         if(contador_timer_5 == TIME_MAX){
             contador_timer_5 = 0;
             bandera_servo = 1;
@@ -127,7 +126,7 @@ void configuracionInicial(){
 
 void terminal(unsigned char *comand){
     unsigned int medicion = 0;
-    unsigned char degree;
+    unsigned int degree;
     unsigned char texto[20] = {'\0'};
     TXREG2 = LEER_DISTANCIA;
     switch (comand[0]){
@@ -170,8 +169,8 @@ void cambiarPWM(){
     }
 }
 
-unsigned char estadoDirreccion(unsigned char valor){
-    unsigned char angulo = 90;
+unsigned int estadoDirreccion(unsigned char valor){
+    unsigned int angulo = 90;
     switch(servo_dirreccion){
         case SERVO_CENTRO: 
             if(valor == 1){
@@ -195,27 +194,40 @@ unsigned char estadoDirreccion(unsigned char valor){
         case SERVO_IZQUIERDA:
             if(valor == 1){
                 servo_dirreccion = SERVO_CENTRO;
-                angulo = 90;
+                angulo = 85;
             }
             else{
                 angulo = 180;
             }
             break;
     }
+//    if(valor == 1){
+//        servo_dirreccion = SERVO_DERECHA;
+//        angulo = 0;
+//    }
+//    else{
+//        servo_dirreccion = SERVO_IZQUIERDA;
+//        angulo = 180;
+//    }
     return angulo;
 }
 
-void dirreccion(unsigned char degree){
-    unsigned char tiempo_1 = 14;
+void dirreccion(unsigned int degree){
+    unsigned char tiempo_1 = 61;
+    contador_timer_5 = 0;
+    parar = 0;
     switch(degree){
+        case CENTER_2:
+            tiempo_1 = 60;
+            break;
         case CENTER:
-            tiempo_1 = 14;
+            tiempo_1 = 57;
             break;
         case RIGHT:
-            tiempo_1 = 15;
+            tiempo_1 = 67;
             break;
         case LEFT:
-            tiempo_1 = 13;
+            tiempo_1 = 50;
             break;
     }
     if(SERVO != 1){
@@ -223,7 +235,7 @@ void dirreccion(unsigned char degree){
         SERVO = 1;
     }
     else{
-        TIME_MAX = 200 - tiempo_1;
+        TIME_MAX = 1000 - tiempo_1;
         SERVO = 0;
     }
     contador_timer_5 = 0;
@@ -232,16 +244,18 @@ void dirreccion(unsigned char degree){
 }
 
 void PWMServo(){
+    contador_timer_5 = 0;
     if(SERVO == 1){
+        parar++;
         SERVO = 0;
         tiempo_anterior_1 = TIME_MAX;
-        TIME_MAX = 200 - tiempo_anterior_1;
+        TIME_MAX = 1000 - tiempo_anterior_1;
     }
     else{
         SERVO = 1;
         TIME_MAX = tiempo_anterior_1;   
     }
-    if(parar == 30){
+    if(parar == 300){
         T5CONbits.TMR5ON = 0;
         SERVO = 0;
         parar = 0;

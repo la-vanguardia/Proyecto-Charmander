@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define CENTER_2 85
 #define CENTER 90
 #define RIGHT 0
 #define LEFT 180

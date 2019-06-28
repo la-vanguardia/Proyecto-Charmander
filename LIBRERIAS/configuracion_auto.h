@@ -45,7 +45,7 @@ void configurarTMR5(){
     PORTDbits.RD4 = 0;
     T5CON = 0x32;
     TMR5H = 0xFF;
-    TMR5L = 0x6A;
+    TMR5L = 0xE2;
     PIE5bits.TMR5IE = 1;
     PIR5bits.TMR5IF = 0;
 }
