@@ -36,7 +36,7 @@ unsigned char indicador = 0, bandera_fuego = 0,  servo_dirreccion = 0;
 unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
 unsigned char datos[10] = {'\0'};
 unsigned char bandera_distancia = 0, contador_datos = 0;
-unsigned char estadoFuego = 0;
+unsigned char estadoFuego = 0, contador_distancia = 0;
 float distancia = 0;
 
 void configuracionInicial();
@@ -91,6 +91,15 @@ void __interrupt() rutina(){
         INTCON3bits.INT1E = 0;
         INTCON3bits.INT1F = 0;
     }
+    else if(PIR3bits.TMR4IF == 1){
+        PIR3bits.TMR4IF = 0;
+        TMR4 = 181;
+        contador_distancia ++;
+        if(contador_distancia == 100){
+           TXREG2 = LEER_DISTANCIA; 
+           contador_distancia = 0;
+        }
+    }
 }
 
 void main(void) {
@@ -129,6 +138,7 @@ void configuracionInicial(){
     configurarPWM7();
     configurarInterrupciones();
     configurarRS232();
+    configurarTMR4();
     configurarTMR5();
     configurarRS232US100();
 }

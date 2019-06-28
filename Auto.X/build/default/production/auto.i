@@ -11766,6 +11766,12 @@ void configurarTMR5(){
     PIR5bits.TMR5IF = 0;
 }
 
+void configurarTMR4(){
+    T4CONbits.T4CKPS = 0b11;
+    TMR4 = 181;
+    PIR3bits.TMR4IF = 0;
+    PIE3bits.TMR4IE= 1;
+}
 
 void configurarRS232US100(){
     TRISDbits.TRISD6 = 0;
@@ -11849,7 +11855,7 @@ unsigned char indicador = 0, bandera_fuego = 0, servo_dirreccion = 0;
 unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
 unsigned char datos[10] = {'\0'};
 unsigned char bandera_distancia = 0, contador_datos = 0;
-unsigned char estadoFuego = 0;
+unsigned char estadoFuego = 0, contador_distancia = 0;
 float distancia = 0;
 
 void configuracionInicial();
@@ -11904,6 +11910,15 @@ void __attribute__((picinterrupt(("")))) rutina(){
         INTCON3bits.INT1E = 0;
         INTCON3bits.INT1F = 0;
     }
+    else if(PIR3bits.TMR4IF == 1){
+        PIR3bits.TMR4IF = 0;
+        TMR4 = 181;
+        contador_distancia ++;
+        if(contador_distancia == 100){
+           TXREG2 = 0x55;
+           contador_distancia = 0;
+        }
+    }
 }
 
 void main(void) {
@@ -11942,6 +11957,7 @@ void configuracionInicial(){
     configurarPWM7();
     configurarInterrupciones();
     configurarRS232();
+    configurarTMR4();
     configurarTMR5();
     configurarRS232US100();
 }
@@ -12023,7 +12039,7 @@ unsigned int estadoDirreccion(unsigned char valor){
             }
             break;
     }
-# 221 "auto.c"
+# 231 "auto.c"
     return angulo;
 }
 

@@ -13,7 +13,9 @@
 [v _configurarRS232 configurarRS232 `(v  1 e 1 0 ]
 "48
 [v _configurarTMR5 configurarTMR5 `(v  1 e 1 0 ]
-"59
+"58
+[v _configurarTMR4 configurarTMR4 `(v  1 e 1 0 ]
+"65
 [v _configurarRS232US100 configurarRS232US100 `(v  1 e 1 0 ]
 "23 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _rutinaArranque rutinaArranque `(v  1 e 1 0 ]
@@ -31,23 +33,23 @@
 [v _length length `(i  1 e 2 0 ]
 "52 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _rutina rutina `IIH(v  1 e 1 0 ]
-"96
+"105
 [v _main main `(v  1 e 1 0 ]
-"127
-[v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
 "136
+[v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
+"146
 [v _terminal terminal `(v  1 e 1 0 ]
-"175
+"185
 [v _cambiarPWM cambiarPWM `(v  1 e 1 0 ]
-"181
+"191
 [v _estadoDirreccion estadoDirreccion `(ui  1 e 2 0 ]
-"224
+"234
 [v _dirreccion dirreccion `(v  1 e 1 0 ]
-"255
+"265
 [v _PWMServo PWMServo `(v  1 e 1 0 ]
-"274
+"284
 [v _adelante adelante `(v  1 e 1 0 ]
-"281
+"291
 [v _atras atras `(v  1 e 1 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
@@ -156,6 +158,8 @@
 "38
 [v _bandera_distancia bandera_distancia `uc  1 e 1 0 ]
 [v _contador_datos contador_datos `uc  1 e 1 0 ]
+"39
+[v _contador_distancia contador_distancia `uc  1 e 1 0 ]
 "40
 [v _distancia distancia `f  1 e 4 0 ]
 "1100 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
@@ -183,30 +187,30 @@
 [v _CCPR7L CCPR7L `VEuc  1 e 1 @3850 ]
 "2848
 [v _T5CON T5CON `VEuc  1 e 1 @3874 ]
-[s S784 . 1 `uc 1 . 1 0 :2:0 
+[s S813 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T5SYNC 1 0 :1:2 
 ]
 "2880
-[s S787 . 1 `uc 1 TMR5ON 1 0 :1:0 
+[s S816 . 1 `uc 1 TMR5ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nT5SYNC 1 0 :1:2 
 `uc 1 T5OSCEN 1 0 :1:3 
 `uc 1 T5CKPS 1 0 :2:4 
 `uc 1 TMR5CS 1 0 :2:6 
 ]
-[s S794 . 1 `uc 1 . 1 0 :4:0 
+[s S823 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T5CKPS0 1 0 :1:4 
 `uc 1 T5CKPS1 1 0 :1:5 
 `uc 1 TMR5CS0 1 0 :1:6 
 `uc 1 TMR5CS1 1 0 :1:7 
 ]
-[s S800 . 1 `uc 1 . 1 0 :1:0 
+[s S829 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD165 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SOSCEN5 1 0 :1:3 
 ]
-[u S805 . 1 `S784 1 . 1 0 `S787 1 . 1 0 `S794 1 . 1 0 `S800 1 . 1 0 ]
-[v _T5CONbits T5CONbits `VES805  1 e 1 @3874 ]
+[u S834 . 1 `S813 1 . 1 0 `S816 1 . 1 0 `S823 1 . 1 0 `S829 1 . 1 0 ]
+[v _T5CONbits T5CONbits `VES834  1 e 1 @3874 ]
 "2950
 [v _TMR5L TMR5L `VEuc  1 e 1 @3875 ]
 "2970
@@ -231,6 +235,23 @@
 ]
 [u S237 . 1 `S224 1 . 1 0 `S231 1 . 1 0 ]
 [v _CCPTMRS1bits CCPTMRS1bits `VES237  1 e 1 @3921 ]
+[s S562 . 1 `uc 1 T4CKPS 1 0 :2:0 
+`uc 1 TMR4ON 1 0 :1:2 
+`uc 1 T4OUTPS 1 0 :4:3 
+]
+"8035
+[s S566 . 1 `uc 1 T4CKPS0 1 0 :1:0 
+`uc 1 T4CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T4OUTPS0 1 0 :1:3 
+`uc 1 T4OUTPS1 1 0 :1:4 
+`uc 1 T4OUTPS2 1 0 :1:5 
+`uc 1 T4OUTPS3 1 0 :1:6 
+]
+[u S574 . 1 `S562 1 . 1 0 `S566 1 . 1 0 ]
+[v _T4CONbits T4CONbits `VES574  1 e 1 @3958 ]
+"8105
+[v _TMR4 TMR4 `VEuc  1 e 1 @3960 ]
 [s S276 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
@@ -241,7 +262,7 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "8316
-[s S575 . 1 `uc 1 ABDEN2 1 0 :1:0 
+[s S681 . 1 `uc 1 ABDEN2 1 0 :1:0 
 `uc 1 WUE2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG162 1 0 :1:3 
@@ -250,13 +271,13 @@
 `uc 1 RCIDL2 1 0 :1:6 
 `uc 1 ABDOVF2 1 0 :1:7 
 ]
-[s S584 . 1 `uc 1 . 1 0 :4:0 
+[s S690 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXCKP2 1 0 :1:4 
 `uc 1 RXDTP2 1 0 :1:5 
 `uc 1 RCMT2 1 0 :1:6 
 ]
-[u S589 . 1 `S276 1 . 1 0 `S575 1 . 1 0 `S584 1 . 1 0 ]
-[v _BAUDCON2bits BAUDCON2bits `VES589  1 e 1 @3964 ]
+[u S695 . 1 `S276 1 . 1 0 `S681 1 . 1 0 `S690 1 . 1 0 ]
+[v _BAUDCON2bits BAUDCON2bits `VES695  1 e 1 @3964 ]
 "8486
 [s S285 . 1 `uc 1 ABDEN1 1 0 :1:0 
 `uc 1 WUE1 1 0 :1:1 
@@ -288,7 +309,7 @@
 ]
 [u S313 . 1 `S276 1 . 1 0 `S285 1 . 1 0 `S294 1 . 1 0 `S299 1 . 1 0 `S304 1 . 1 0 `S307 1 . 1 0 `S310 1 . 1 0 ]
 [v _BAUDCON1bits BAUDCON1bits `VES313  1 e 1 @3966 ]
-[s S832 . 1 `uc 1 RA0 1 0 :1:0 
+[s S861 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -298,7 +319,7 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "9047
-[s S841 . 1 `uc 1 AN0 1 0 :1:0 
+[s S870 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
@@ -307,10 +328,10 @@
 `uc 1 OSC2 1 0 :1:6 
 `uc 1 OSC1 1 0 :1:7 
 ]
-[s S850 . 1 `uc 1 . 1 0 :5:0 
+[s S879 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_SS1 1 0 :1:5 
 ]
-[s S853 . 1 `uc 1 C1INA 1 0 :1:0 
+[s S882 . 1 `uc 1 C1INA 1 0 :1:0 
 `uc 1 C2INA 1 0 :1:1 
 `uc 1 VREF_MINUS 1 0 :1:2 
 `uc 1 VREF_PLUS 1 0 :1:3 
@@ -319,38 +340,38 @@
 `uc 1 CLKO 1 0 :1:6 
 `uc 1 CLKI 1 0 :1:7 
 ]
-[s S862 . 1 `uc 1 PMA6 1 0 :1:0 
+[s S891 . 1 `uc 1 PMA6 1 0 :1:0 
 `uc 1 PMA7 1 0 :1:1 
 `uc 1 CVREF 1 0 :1:2 
 `uc 1 C1INB 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 HLVDIN 1 0 :1:5 
 ]
-[s S869 . 1 `uc 1 RP0 1 0 :1:0 
+[s S898 . 1 `uc 1 RP0 1 0 :1:0 
 `uc 1 RP1 1 0 :1:1 
 `uc 1 C2INB 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 RCV 1 0 :1:5 
 ]
-[s S875 . 1 `uc 1 ULPWU 1 0 :1:0 
+[s S904 . 1 `uc 1 ULPWU 1 0 :1:0 
 `uc 1 VBG 1 0 :1:1 
 `uc 1 C1IND 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 RP2 1 0 :1:5 
 ]
-[s S881 . 1 `uc 1 . 1 0 :2:0 
+[s S910 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 C3INB 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 C1INC 1 0 :1:5 
 ]
-[s S886 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S915 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 LVDIN 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[u S892 . 1 `S832 1 . 1 0 `S841 1 . 1 0 `S850 1 . 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 `S875 1 . 1 0 `S881 1 . 1 0 `S886 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES892  1 e 1 @3968 ]
+[u S921 . 1 `S861 1 . 1 0 `S870 1 . 1 0 `S879 1 . 1 0 `S882 1 . 1 0 `S891 1 . 1 0 `S898 1 . 1 0 `S904 1 . 1 0 `S910 1 . 1 0 `S915 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES921  1 e 1 @3968 ]
 [s S459 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -492,7 +513,7 @@
 ]
 [u S377 . 1 `S360 1 . 1 0 `S369 1 . 1 0 `S374 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES377  1 e 1 @3998 ]
-[s S650 . 1 `uc 1 RTCCIE 1 0 :1:0 
+[s S623 . 1 `uc 1 RTCCIE 1 0 :1:0 
 `uc 1 TMR3GIE 1 0 :1:1 
 `uc 1 CTMUIE 1 0 :1:2 
 `uc 1 TMR4IE 1 0 :1:3 
@@ -502,20 +523,20 @@
 `uc 1 SSP2IE 1 0 :1:7 
 ]
 "12488
-[s S659 . 1 `uc 1 RXB0IE 1 0 :1:0 
+[s S632 . 1 `uc 1 RXB0IE 1 0 :1:0 
 `uc 1 RXB1IE 1 0 :1:1 
 `uc 1 TXB0IE 1 0 :1:2 
 `uc 1 TXB1IE 1 0 :1:3 
 `uc 1 TXB2IE 1 0 :1:4 
 ]
-[s S665 . 1 `uc 1 . 1 0 :1:0 
+[s S638 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIE 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIE 1 0 :1:4 
 ]
-[u S670 . 1 `S650 1 . 1 0 `S659 1 . 1 0 `S665 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES670  1 e 1 @4003 ]
-[s S618 . 1 `uc 1 RTCCIF 1 0 :1:0 
+[u S643 . 1 `S623 1 . 1 0 `S632 1 . 1 0 `S638 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES643  1 e 1 @4003 ]
+[s S591 . 1 `uc 1 RTCCIF 1 0 :1:0 
 `uc 1 TMR3GIF 1 0 :1:1 
 `uc 1 CTMUIF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -525,13 +546,13 @@
 `uc 1 SSP2IF 1 0 :1:7 
 ]
 "12591
-[s S627 . 1 `uc 1 . 1 0 :1:0 
+[s S600 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIF 1 0 :1:4 
 ]
-[u S632 . 1 `S618 1 . 1 0 `S627 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES632  1 e 1 @4004 ]
+[u S605 . 1 `S591 1 . 1 0 `S600 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES605  1 e 1 @4004 ]
 "12789
 [v _TXSTA2 TXSTA2 `VEuc  1 e 1 @4008 ]
 "12916
@@ -552,12 +573,12 @@
 [v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4016 ]
 "17014
 [v _T2CON T2CON `VEuc  1 e 1 @4042 ]
-[s S696 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S725 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "17035
-[s S700 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S729 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -565,8 +586,8 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S708 . 1 `S696 1 . 1 0 `S700 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES708  1 e 1 @4042 ]
+[u S737 . 1 `S725 1 . 1 0 `S729 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES737  1 e 1 @4042 ]
 "17085
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "17211
@@ -646,36 +667,36 @@
 [v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"96 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"105 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _main main `(v  1 e 1 0 ]
 {
-"98
+"107
 [v main@texto texto `[8]uc  1 a 8 69 ]
-"97
+"106
 [v main@text text `[6]uc  1 a 6 63 ]
-"96
-[v main@F7117 F7117 `[6]uc  1 s 6 F7117 ]
-"125
+"105
+[v main@F7119 F7119 `[6]uc  1 s 6 F7119 ]
+"134
 } 0
-"136
+"146
 [v _terminal terminal `(v  1 e 1 0 ]
 {
-"139
+"149
 [v terminal@texto texto `[20]uc  1 a 20 39 ]
-"138
+"148
 [v terminal@degree degree `ui  1 a 2 61 ]
-"137
+"147
 [v terminal@medicion medicion `ui  1 a 2 59 ]
-"136
+"146
 [v terminal@comand comand `*.39uc  1 p 2 32 ]
-"173
+"183
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S1860 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S1895 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S1860  1 a 6 153 ]
+[v sprintf@f f `S1895  1 a 6 153 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 151 ]
 "9
@@ -688,9 +709,9 @@
 {
 "1371
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 147 ]
-[s S1201 _IO_FILE 0 ]
+[s S1236 _IO_FILE 0 ]
 "1368
-[v vfprintf@fp fp `*.39S1201  1 p 2 141 ]
+[v vfprintf@fp fp `*.39S1236  1 p 2 141 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 143 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 145 ]
 "1382
@@ -708,9 +729,9 @@
 [v vfpfcnvrt@done done `i  1 a 2 8 ]
 "672
 [v vfpfcnvrt@c c `uc  1 a 1 23 ]
-[s S1201 _IO_FILE 0 ]
+[s S1236 _IO_FILE 0 ]
 "670
-[v vfpfcnvrt@fp fp `*.39S1201  1 p 2 131 ]
+[v vfpfcnvrt@fp fp `*.39S1236  1 p 2 131 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 133 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 135 ]
 "1365
@@ -724,9 +745,9 @@
 [v utoa@i i `i  1 a 2 57 ]
 [v utoa@w w `i  1 a 2 47 ]
 [v utoa@p p `i  1 a 2 45 ]
-[s S1201 _IO_FILE 0 ]
+[s S1236 _IO_FILE 0 ]
 "593
-[v utoa@fp fp `*.39S1201  1 p 2 27 ]
+[v utoa@fp fp `*.39S1236  1 p 2 27 ]
 [v utoa@d d `uo  1 p 8 29 ]
 "619
 } 0
@@ -788,9 +809,9 @@
 "321
 [v efgtoa@mode mode `uc  1 a 1 108 ]
 [v efgtoa@nmode nmode `uc  1 a 1 105 ]
-[s S1201 _IO_FILE 0 ]
+[s S1236 _IO_FILE 0 ]
 "319
-[v efgtoa@fp fp `*.39S1201  1 p 2 63 ]
+[v efgtoa@fp fp `*.39S1236  1 p 2 63 ]
 [v efgtoa@f f `d  1 p 4 65 ]
 [v efgtoa@c c `uc  1 p 1 69 ]
 "503
@@ -822,9 +843,9 @@
 "3 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1794 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1829 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1794  1 a 4 41 ]
+[v floorf@u u `S1829  1 a 4 41 ]
 "7
 [v floorf@m m `ul  1 a 4 35 ]
 "6
@@ -832,21 +853,21 @@
 "3
 [v floorf@x x `f  1 p 4 25 ]
 "4
-[v floorf@F524 F524 `S1794  1 s 4 F524 ]
+[v floorf@F524 F524 `S1829  1 s 4 F524 ]
 "27
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1794 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1829 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1794  1 a 4 10 ]
+[v ___fpclassifyf@u u `S1829  1 a 4 10 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 8 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 0 ]
 "5
-[v ___fpclassifyf@F463 F463 `S1794  1 s 4 F463 ]
+[v ___fpclassifyf@F463 F463 `S1829  1 s 4 F463 ]
 "11
 } 0
 "245 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
@@ -925,9 +946,9 @@
 {
 "261
 [v ctoa@w w `i  1 a 2 30 ]
-[s S1201 _IO_FILE 0 ]
+[s S1236 _IO_FILE 0 ]
 "259
-[v ctoa@fp fp `*.39S1201  1 p 2 27 ]
+[v ctoa@fp fp `*.39S1236  1 p 2 27 ]
 [v ctoa@c c `uc  1 p 1 29 ]
 "270
 } 0
@@ -937,9 +958,9 @@
 "74
 [v pad@w w `i  1 a 2 25 ]
 [v pad@i i `i  1 a 2 23 ]
-[s S1201 _IO_FILE 0 ]
+[s S1236 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S1201  1 p 2 16 ]
+[v pad@fp fp `*.39S1236  1 p 2 16 ]
 [v pad@buf buf `*.39uc  1 p 2 18 ]
 [v pad@p p `i  1 p 2 20 ]
 "95
@@ -962,16 +983,16 @@
 [v fputs@c c `uc  1 a 1 13 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 9 ]
-[s S1860 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S1860  1 p 2 11 ]
+[s S1895 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S1895  1 p 2 11 ]
 "19
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S1860 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S1860  1 p 2 2 ]
+[s S1895 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S1895  1 p 2 2 ]
 "21
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
@@ -1055,17 +1076,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1659 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1694 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1664 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1667 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1659 1 fAsBytes 4 0 `S1664 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1667  1 a 4 33 ]
+[s S1699 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1702 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1694 1 fAsBytes 4 0 `S1699 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1702  1 a 4 33 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 28 ]
-[s S1735 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1770 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1738 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1735 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1738  1 a 2 37 ]
+[u S1773 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1770 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1773  1 a 2 37 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
@@ -1093,16 +1114,16 @@
 [v ___fladd@a a `d  1 p 4 43 ]
 "237
 } 0
-"181 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"191 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _estadoDirreccion estadoDirreccion `(ui  1 e 2 0 ]
 {
 [v estadoDirreccion@valor valor `uc  1 a 1 wreg ]
-"182
+"192
 [v estadoDirreccion@angulo angulo `ui  1 a 2 4 ]
-"181
+"191
 [v estadoDirreccion@valor valor `uc  1 a 1 wreg ]
 [v estadoDirreccion@valor valor `uc  1 a 1 6 ]
-"222
+"232
 } 0
 "52 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _enviarRS232 enviarRS232 `(v  1 e 1 0 ]
@@ -1137,49 +1158,54 @@
 {
 "28
 } 0
-"224 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"234 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _dirreccion dirreccion `(v  1 e 1 0 ]
 {
-"225
+"235
 [v dirreccion@tiempo_1 tiempo_1 `uc  1 a 1 4 ]
-"224
+"234
 [v dirreccion@degree degree `ui  1 p 2 0 ]
-"253
+"263
 } 0
-"175
+"185
 [v _cambiarPWM cambiarPWM `(v  1 e 1 0 ]
 {
-"179
+"189
 } 0
 "41 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _definirVelocidad definirVelocidad `(v  1 e 1 0 ]
 {
 "44
 } 0
-"281 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"291 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _atras atras `(v  1 e 1 0 ]
 {
-"286
+"296
 } 0
-"274
+"284
 [v _adelante adelante `(v  1 e 1 0 ]
 {
-"279
+"289
 } 0
-"127
+"136
 [v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
 {
-"134
+"144
 } 0
 "48 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
 [v _configurarTMR5 configurarTMR5 `(v  1 e 1 0 ]
 {
 "56
 } 0
-"59
+"58
+[v _configurarTMR4 configurarTMR4 `(v  1 e 1 0 ]
+{
+"63
+} 0
+"65
 [v _configurarRS232US100 configurarRS232US100 `(v  1 e 1 0 ]
 {
-"70
+"76
 } 0
 "37
 [v _configurarRS232 configurarRS232 `(v  1 e 1 0 ]
@@ -1201,17 +1227,17 @@
 {
 "23
 } 0
-"255 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"265 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _PWMServo PWMServo `(v  1 e 1 0 ]
 {
-"272
+"282
 } 0
 "52
 [v _rutina rutina `IIH(v  1 e 1 0 ]
 {
 "54
 [v rutina@dato dato `uc  1 a 1 40 ]
-"94
+"103
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
 [v i2___xxtofl __xxtofl `(d  1 e 4 0 ]

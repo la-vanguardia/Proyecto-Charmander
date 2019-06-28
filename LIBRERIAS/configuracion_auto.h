@@ -56,7 +56,10 @@ void configurarTMR5(){
 }
 
 void configurarTMR4(){
-    
+    T4CONbits.T4CKPS = 0b11;
+    TMR4 = 181;
+    PIR3bits.TMR4IF = 0;
+    PIE3bits.TMR4IE= 1;
 }
 
 void configurarRS232US100(){

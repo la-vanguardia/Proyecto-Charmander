@@ -11,8 +11,8 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
-init CODE 0 14E 14E 4 1
+$C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
+init CODE 0 16C 16C 4 1
 reset_vec CODE 0 0 0 4 1
 config CONFIG 0 1FFF8 1FFF8 8 1
 $dist/default/production\Auto.X.production.o
@@ -44,12 +44,12 @@ text23 CODE 0 3AEE 3AEE 9C 1
 text24 CODE 0 4382 4382 2E 1
 text25 CODE 0 4278 4278 3C 1
 text26 CODE 0 3A4C 3A4C A2 1
-text27 CODE 0 450A 450A 2 1
+text27 CODE 0 451C 451C 2 1
 text28 CODE 0 3038 3038 158 1
 text29 CODE 0 4238 4238 40 1
 text30 CODE 0 4320 4320 32 1
 text31 CODE 0 43DC 43DC 28 1
-text32 CODE 0 44AE 44AE 10 1
+text32 CODE 0 44B2 44B2 10 1
 text33 CODE 0 3414 3414 EA 1
 text34 CODE 0 3190 3190 144 1
 text35 CODE 0 3830 3830 BC 1
@@ -58,36 +58,37 @@ text37 CODE 0 22C8 22C8 30E 1
 text38 CODE 0 3DA8 3DA8 82 1
 text39 CODE 0 3EA6 3EA6 76 1
 text40 CODE 0 3E2A 3E2A 7C 1
-text41 CODE 0 44CE 44CE E 1
+text41 CODE 0 44D2 44D2 E 1
 text42 CODE 0 43B0 43B0 2C 1
 text43 CODE 0 3C16 3C16 88 1
-text44 CODE 0 44DC 44DC C 1
+text44 CODE 0 44EE 44EE C 1
 text45 CODE 0 42B4 42B4 3A 1
-text46 CODE 0 44E8 44E8 A 1
-text47 CODE 0 44F2 44F2 A 1
-text48 CODE 0 4466 4466 1A 1
-text49 CODE 0 4498 4498 16 1
-text50 CODE 0 4404 4404 22 1
-text51 CODE 0 4480 4480 18 1
-text52 CODE 0 44BE 44BE 10 1
-text53 CODE 0 4426 4426 20 1
-text54 CODE 0 4446 4446 20 1
-text55 CODE 0 4152 4152 50 1
-text57 CODE 0 32D4 32D4 140 1
-text58 CODE 0 25D6 25D6 30C 1
-text59 CODE 0 3D24 3D24 84 1
-idataCOMRAM CODE 0 44FC 44FC 8 1
+text46 CODE 0 44FA 44FA A 1
+text47 CODE 0 4504 4504 A 1
+text48 CODE 0 4466 4466 1E 1
+text49 CODE 0 449C 449C 16 1
+text50 CODE 0 44E0 44E0 E 1
+text51 CODE 0 4404 4404 22 1
+text52 CODE 0 4484 4484 18 1
+text53 CODE 0 44C2 44C2 10 1
+text54 CODE 0 4426 4426 20 1
+text55 CODE 0 4446 4446 20 1
+text56 CODE 0 4152 4152 50 1
+text58 CODE 0 32D4 32D4 140 1
+text59 CODE 0 25D6 25D6 30C 1
+text60 CODE 0 3D24 3D24 84 1
+idataCOMRAM CODE 0 450E 450E 8 1
 cstackCOMRAM COMRAM 1 1 1 29 1
 cstackBANK0 BANK0 1 60 60 9F 1
 cstackBANK1 BANK1 1 17D 17D 4D 1
-temp COMRAM 1 4D 4D 1 1
+temp COMRAM 1 4E 4E 1 1
 bssBANK1 BANK1 1 100 100 7D 1
-intcode CODE 0 8 8 146 1
+intcode CODE 0 8 8 164 1
 smallconst SMALLCONST 0 F00 F00 88 1
-idataBANK1 CODE 0 4504 4504 6 1
+idataBANK1 CODE 0 4516 4516 6 1
 dataBANK1 BANK1 1 1CA 1CA 6 1
-dataCOMRAM COMRAM 1 45 45 8 1
-bssCOMRAM COMRAM 1 2A 2A 1B 1
+dataCOMRAM COMRAM 1 46 46 8 1
+bssCOMRAM COMRAM 1 2A 2A 1C 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -108,23 +109,23 @@ BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
-CONST 152-EFF 1
-CONST 450C-1FFF7 1
+CONST 170-EFF 1
+CONST 451E-1FFF7 1
 STACK 1D0-EAF 1
-SMALLCONST 450C-1FFF7 1
+SMALLCONST 451E-1FFF7 1
 CODE 4-7 1
-CODE 152-EFF 1
-CODE 450C-1FFF7 1
+CODE 170-EFF 1
+CODE 451E-1FFF7 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DFF 1
 BANK14 E00-EAF 1
-BIGRAM 4E-5F 1
+BIGRAM 4F-5F 1
 BIGRAM FF-FF 1
 BIGRAM 1D0-EAF 1
-COMRAM 4E-5F 1
-MEDIUMCONST 450C-FFFF 1
+COMRAM 4F-5F 1
+MEDIUMCONST 451E-FFFF 1
 MEDIUMCONST 10F00-1FFF7 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -141,7 +142,7 @@ MEDIUMCONST 10F00-1FFF7 1
 %LINETAB
 $dist/default/production\Auto.X.production.o
 8 intcode CODE >52:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-8 intcode CODE >272:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+8 intcode CODE >282:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 12 intcode CODE >53:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 16 intcode CODE >54:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 1A intcode CODE >55:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
@@ -174,314 +175,329 @@ F4 intcode CODE >85:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\L
 138 intcode CODE >90:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 13E intcode CODE >91:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 140 intcode CODE >92:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-142 intcode CODE >94:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3D24 text59 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D24 text59 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D28 text59 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D2C text59 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D34 text59 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D38 text59 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D3C text59 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D44 text59 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D48 text59 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D50 text59 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D58 text59 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D5C text59 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D5E text59 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D64 text59 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D66 text59 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D6A text59 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D70 text59 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D7C text59 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D84 text59 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D86 text59 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D8C text59 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D90 text59 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D96 text59 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3D9E text59 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-3DA6 text59 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
-25D6 text58 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-25D6 text58 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-25DC text58 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-25E2 text58 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-25E4 text58 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-25E6 text58 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-25EC text58 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-25F2 text58 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2602 text58 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2604 text58 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2606 text58 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2616 text58 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-261C text58 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2622 text58 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2624 text58 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-262A text58 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-262C text58 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-262E text58 CODE >55:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2634 text58 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-263A text58 CODE >59:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-264A text58 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-264C text58 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-264E text58 CODE >68:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-265E text58 CODE >75:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2666 text58 CODE >77:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-266A text58 CODE >78:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-266E text58 CODE >81:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2672 text58 CODE >82:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2676 text58 CODE >83:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-267A text58 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-267E text58 CODE >85:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2682 text58 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2686 text58 CODE >87:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-268A text58 CODE >88:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-268E text58 CODE >89:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2692 text58 CODE >90:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2696 text58 CODE >91:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-269A text58 CODE >92:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-269E text58 CODE >93:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26A2 text58 CODE >94:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26A6 text58 CODE >95:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26AA text58 CODE >98:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26AE text58 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26CC text58 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26E0 text58 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26F0 text58 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26F4 text58 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26F6 text58 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26F6 text58 CODE >109:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-26FA text58 CODE >110:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2702 text58 CODE >111:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2704 text58 CODE >113:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2708 text58 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-270A text58 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-270C text58 CODE >118:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2716 text58 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2718 text58 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2718 text58 CODE >120:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2720 text58 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2724 text58 CODE >127:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-272A text58 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-273C text58 CODE >132:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-274C text58 CODE >134:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2750 text58 CODE >135:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2754 text58 CODE >136:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-275C text58 CODE >137:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-275E text58 CODE >139:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2762 text58 CODE >141:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2764 text58 CODE >142:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2766 text58 CODE >144:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2770 text58 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2774 text58 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2790 text58 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27C0 text58 CODE >155:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27C4 text58 CODE >156:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27C6 text58 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27CC text58 CODE >158:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27DA text58 CODE >162:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27EA text58 CODE >163:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27EA text58 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-27FC text58 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-280E text58 CODE >172:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2818 text58 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-281A text58 CODE >174:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-281C text58 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2820 text58 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2824 text58 CODE >180:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2828 text58 CODE >182:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-282C text58 CODE >183:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-282E text58 CODE >171:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2832 text58 CODE >192:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2836 text58 CODE >193:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-283A text58 CODE >194:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2846 text58 CODE >195:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-284A text58 CODE >196:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-284C text58 CODE >197:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-284C text58 CODE >198:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2850 text58 CODE >202:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2850 text58 CODE >203:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2856 text58 CODE >204:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2862 text58 CODE >205:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2866 text58 CODE >206:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2890 text58 CODE >207:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2894 text58 CODE >208:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-2896 text58 CODE >215:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28A2 text58 CODE >216:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28B2 text58 CODE >218:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28B8 text58 CODE >219:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28BC text58 CODE >225:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28C0 text58 CODE >226:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28C2 text58 CODE >227:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28C4 text58 CODE >230:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28C6 text58 CODE >232:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28CC text58 CODE >233:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28CE text58 CODE >234:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28D0 text58 CODE >236:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-28E0 text58 CODE >237:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
-32D4 text57 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-32D6 text57 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-32DE text57 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3310 text57 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3312 text57 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3312 text57 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3322 text57 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-332E text57 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3340 text57 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3344 text57 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3346 text57 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3348 text57 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3352 text57 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3378 text57 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-337A text57 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3386 text57 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3390 text57 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3390 text57 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33B6 text57 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33B8 text57 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33C2 text57 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33CC text57 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33CE text57 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33D0 text57 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33D4 text57 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-33F8 text57 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3400 text57 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3402 text57 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-3412 text57 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
-4152 text55 CODE >255:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4152 text55 CODE >256:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-415A text55 CODE >257:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-415E text55 CODE >258:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4162 text55 CODE >259:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4164 text55 CODE >260:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-416C text55 CODE >261:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-417C text55 CODE >262:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-417E text55 CODE >263:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-417E text55 CODE >264:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4180 text55 CODE >265:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4188 text55 CODE >267:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4192 text55 CODE >268:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4196 text55 CODE >269:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4198 text55 CODE >270:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-41A0 text55 CODE >272:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4446 text54 CODE >10:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4446 text54 CODE >11:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-444C text54 CODE >12:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4450 text54 CODE >13:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4452 text54 CODE >14:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4454 text54 CODE >15:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4456 text54 CODE >16:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4458 text54 CODE >17:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-445A text54 CODE >18:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-445C text54 CODE >19:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-445E text54 CODE >20:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4460 text54 CODE >21:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4462 text54 CODE >22:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4464 text54 CODE >23:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4426 text53 CODE >25:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4426 text53 CODE >26:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4428 text53 CODE >27:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-442A text53 CODE >28:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4434 text53 CODE >29:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4438 text53 CODE >31:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-443C text53 CODE >32:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4440 text53 CODE >34:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4444 text53 CODE >35:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44BE text52 CODE >3:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44BE text52 CODE >4:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44C4 text52 CODE >5:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44C8 text52 CODE >6:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44CA text52 CODE >7:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44CC text52 CODE >8:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4480 text51 CODE >37:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4480 text51 CODE >38:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4482 text51 CODE >39:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4484 text51 CODE >40:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4488 text51 CODE >41:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-448C text51 CODE >42:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-448E text51 CODE >43:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4492 text51 CODE >44:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4494 text51 CODE >45:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4496 text51 CODE >46:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4404 text50 CODE >59:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4404 text50 CODE >60:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4406 text50 CODE >61:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4408 text50 CODE >62:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-440E text50 CODE >63:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4412 text50 CODE >64:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4416 text50 CODE >65:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-441A text50 CODE >66:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-441C text50 CODE >67:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4420 text50 CODE >68:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4422 text50 CODE >69:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4424 text50 CODE >70:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4498 text49 CODE >48:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4498 text49 CODE >49:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-449A text49 CODE >50:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-449C text49 CODE >51:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44A2 text49 CODE >52:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44A4 text49 CODE >53:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44A8 text49 CODE >54:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44AA text49 CODE >55:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-44AC text49 CODE >56:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
-4466 text48 CODE >127:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4466 text48 CODE >128:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-446A text48 CODE >129:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-446E text48 CODE >130:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4472 text48 CODE >131:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-4476 text48 CODE >132:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-447A text48 CODE >133:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-447E text48 CODE >134:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44F2 text47 CODE >274:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44F2 text47 CODE >275:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44F4 text47 CODE >276:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44F6 text47 CODE >277:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44F8 text47 CODE >278:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44FA text47 CODE >279:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44E8 text46 CODE >281:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44E8 text46 CODE >282:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44EA text46 CODE >283:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44EC text46 CODE >284:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44EE text46 CODE >285:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44F0 text46 CODE >286:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+142 intcode CODE >93:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+144 intcode CODE >94:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+148 intcode CODE >95:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+14A intcode CODE >96:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+14E intcode CODE >97:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+150 intcode CODE >98:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+158 intcode CODE >99:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+15C intcode CODE >100:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+160 intcode CODE >103:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3D24 text60 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D24 text60 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D28 text60 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D2C text60 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D34 text60 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D38 text60 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D3C text60 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D44 text60 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D48 text60 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D50 text60 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D58 text60 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D5C text60 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D5E text60 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D64 text60 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D66 text60 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D6A text60 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D70 text60 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D7C text60 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D84 text60 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D86 text60 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D8C text60 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D90 text60 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D96 text60 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3D9E text60 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+3DA6 text60 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+25D6 text59 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+25D6 text59 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+25DC text59 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+25E2 text59 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+25E4 text59 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+25E6 text59 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+25EC text59 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+25F2 text59 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2602 text59 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2604 text59 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2606 text59 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2616 text59 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+261C text59 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2622 text59 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2624 text59 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+262A text59 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+262C text59 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+262E text59 CODE >55:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2634 text59 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+263A text59 CODE >59:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+264A text59 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+264C text59 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+264E text59 CODE >68:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+265E text59 CODE >75:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2666 text59 CODE >77:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+266A text59 CODE >78:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+266E text59 CODE >81:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2672 text59 CODE >82:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2676 text59 CODE >83:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+267A text59 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+267E text59 CODE >85:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2682 text59 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2686 text59 CODE >87:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+268A text59 CODE >88:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+268E text59 CODE >89:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2692 text59 CODE >90:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2696 text59 CODE >91:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+269A text59 CODE >92:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+269E text59 CODE >93:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26A2 text59 CODE >94:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26A6 text59 CODE >95:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26AA text59 CODE >98:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26AE text59 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26CC text59 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26E0 text59 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26F0 text59 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26F4 text59 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26F6 text59 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26F6 text59 CODE >109:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+26FA text59 CODE >110:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2702 text59 CODE >111:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2704 text59 CODE >113:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2708 text59 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+270A text59 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+270C text59 CODE >118:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2716 text59 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2718 text59 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2718 text59 CODE >120:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2720 text59 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2724 text59 CODE >127:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+272A text59 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+273C text59 CODE >132:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+274C text59 CODE >134:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2750 text59 CODE >135:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2754 text59 CODE >136:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+275C text59 CODE >137:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+275E text59 CODE >139:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2762 text59 CODE >141:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2764 text59 CODE >142:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2766 text59 CODE >144:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2770 text59 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2774 text59 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2790 text59 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27C0 text59 CODE >155:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27C4 text59 CODE >156:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27C6 text59 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27CC text59 CODE >158:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27DA text59 CODE >162:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27EA text59 CODE >163:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27EA text59 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+27FC text59 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+280E text59 CODE >172:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2818 text59 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+281A text59 CODE >174:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+281C text59 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2820 text59 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2824 text59 CODE >180:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2828 text59 CODE >182:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+282C text59 CODE >183:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+282E text59 CODE >171:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2832 text59 CODE >192:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2836 text59 CODE >193:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+283A text59 CODE >194:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2846 text59 CODE >195:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+284A text59 CODE >196:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+284C text59 CODE >197:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+284C text59 CODE >198:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2850 text59 CODE >202:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2850 text59 CODE >203:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2856 text59 CODE >204:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2862 text59 CODE >205:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2866 text59 CODE >206:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2890 text59 CODE >207:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2894 text59 CODE >208:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+2896 text59 CODE >215:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28A2 text59 CODE >216:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28B2 text59 CODE >218:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28B8 text59 CODE >219:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28BC text59 CODE >225:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28C0 text59 CODE >226:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28C2 text59 CODE >227:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28C4 text59 CODE >230:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28C6 text59 CODE >232:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28CC text59 CODE >233:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28CE text59 CODE >234:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28D0 text59 CODE >236:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+28E0 text59 CODE >237:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+32D4 text58 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+32D6 text58 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+32DE text58 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3310 text58 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3312 text58 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3312 text58 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3322 text58 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+332E text58 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3340 text58 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3344 text58 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3346 text58 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3348 text58 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3352 text58 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3378 text58 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+337A text58 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3386 text58 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3390 text58 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3390 text58 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33B6 text58 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33B8 text58 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33C2 text58 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33CC text58 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33CE text58 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33D0 text58 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33D4 text58 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+33F8 text58 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3400 text58 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3402 text58 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+3412 text58 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
+4152 text56 CODE >265:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4152 text56 CODE >266:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+415A text56 CODE >267:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+415E text56 CODE >268:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4162 text56 CODE >269:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4164 text56 CODE >270:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+416C text56 CODE >271:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+417C text56 CODE >272:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+417E text56 CODE >273:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+417E text56 CODE >274:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4180 text56 CODE >275:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4188 text56 CODE >277:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4192 text56 CODE >278:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4196 text56 CODE >279:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4198 text56 CODE >280:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+41A0 text56 CODE >282:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4446 text55 CODE >10:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4446 text55 CODE >11:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+444C text55 CODE >12:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4450 text55 CODE >13:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4452 text55 CODE >14:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4454 text55 CODE >15:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4456 text55 CODE >16:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4458 text55 CODE >17:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+445A text55 CODE >18:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+445C text55 CODE >19:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+445E text55 CODE >20:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4460 text55 CODE >21:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4462 text55 CODE >22:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4464 text55 CODE >23:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4426 text54 CODE >25:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4426 text54 CODE >26:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4428 text54 CODE >27:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+442A text54 CODE >28:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4434 text54 CODE >29:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4438 text54 CODE >31:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+443C text54 CODE >32:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4440 text54 CODE >34:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4444 text54 CODE >35:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44C2 text53 CODE >3:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44C2 text53 CODE >4:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44C8 text53 CODE >5:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44CC text53 CODE >6:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44CE text53 CODE >7:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44D0 text53 CODE >8:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4484 text52 CODE >37:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4484 text52 CODE >38:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4486 text52 CODE >39:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4488 text52 CODE >40:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+448C text52 CODE >41:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4490 text52 CODE >42:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4492 text52 CODE >43:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4496 text52 CODE >44:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4498 text52 CODE >45:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+449A text52 CODE >46:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4404 text51 CODE >65:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4404 text51 CODE >66:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4406 text51 CODE >67:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4408 text51 CODE >68:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+440E text51 CODE >69:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4412 text51 CODE >70:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4416 text51 CODE >71:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+441A text51 CODE >72:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+441C text51 CODE >73:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4420 text51 CODE >74:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4422 text51 CODE >75:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4424 text51 CODE >76:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44E0 text50 CODE >58:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44E0 text50 CODE >59:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44E4 text50 CODE >60:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44E8 text50 CODE >61:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44EA text50 CODE >62:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44EC text50 CODE >63:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+449C text49 CODE >48:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+449C text49 CODE >49:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+449E text49 CODE >50:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44A0 text49 CODE >51:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44A6 text49 CODE >52:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44A8 text49 CODE >53:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44AC text49 CODE >54:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44AE text49 CODE >55:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+44B0 text49 CODE >56:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
+4466 text48 CODE >136:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4466 text48 CODE >137:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+446A text48 CODE >138:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+446E text48 CODE >139:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4472 text48 CODE >140:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4476 text48 CODE >141:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+447A text48 CODE >142:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+447E text48 CODE >143:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4482 text48 CODE >144:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4504 text47 CODE >284:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4504 text47 CODE >285:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4506 text47 CODE >286:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4508 text47 CODE >287:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+450A text47 CODE >288:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+450C text47 CODE >289:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44FA text46 CODE >291:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44FA text46 CODE >292:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44FC text46 CODE >293:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44FE text46 CODE >294:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4500 text46 CODE >295:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+4502 text46 CODE >296:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 42B4 text45 CODE >41:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 42B4 text45 CODE >42:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 42D0 text45 CODE >43:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 42EC text45 CODE >44:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44DC text44 CODE >175:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44DC text44 CODE >176:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44E2 text44 CODE >177:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-44E6 text44 CODE >179:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C16 text43 CODE >224:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C16 text43 CODE >225:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C1C text43 CODE >226:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C24 text43 CODE >227:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C2C text43 CODE >228:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C2E text43 CODE >230:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C32 text43 CODE >233:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C36 text43 CODE >236:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C3A text43 CODE >239:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C3E text43 CODE >240:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C40 text43 CODE >241:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C6A text43 CODE >242:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C6E text43 CODE >243:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C74 text43 CODE >244:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C76 text43 CODE >245:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C78 text43 CODE >247:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C88 text43 CODE >248:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C8A text43 CODE >250:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C92 text43 CODE >251:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C98 text43 CODE >252:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3C9C text43 CODE >253:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44EE text44 CODE >185:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44EE text44 CODE >186:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44F4 text44 CODE >187:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+44F8 text44 CODE >189:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C16 text43 CODE >234:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C16 text43 CODE >235:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C1C text43 CODE >236:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C24 text43 CODE >237:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C2C text43 CODE >238:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C2E text43 CODE >240:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C32 text43 CODE >243:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C36 text43 CODE >246:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C3A text43 CODE >249:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C3E text43 CODE >250:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C40 text43 CODE >251:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C6A text43 CODE >252:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C6E text43 CODE >253:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C74 text43 CODE >254:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C76 text43 CODE >255:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C78 text43 CODE >257:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C88 text43 CODE >258:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C8A text43 CODE >260:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C92 text43 CODE >261:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C98 text43 CODE >262:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3C9C text43 CODE >263:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 43B0 text42 CODE >23:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 43B0 text42 CODE >24:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 43BA text42 CODE >25:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 43BE text42 CODE >26:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 43C0 text42 CODE >27:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 43DA text42 CODE >28:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44CE text41 CODE >35:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44CE text41 CODE >36:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44D2 text41 CODE >37:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44D6 text41 CODE >38:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44DA text41 CODE >39:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44D2 text41 CODE >35:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44D2 text41 CODE >36:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44D6 text41 CODE >37:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44DA text41 CODE >38:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44DE text41 CODE >39:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 3E2A text40 CODE >60:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 3E2A text40 CODE >61:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 3E54 text40 CODE >62:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
@@ -498,23 +514,23 @@ F4 intcode CODE >85:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\L
 3EC2 text39 CODE >55:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 3EF2 text39 CODE >56:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 3F04 text39 CODE >57:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-3DA8 text38 CODE >181:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DAC text38 CODE >182:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DB6 text38 CODE >183:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DB8 text38 CODE >185:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DBE text38 CODE >186:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DC2 text38 CODE >187:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DCA text38 CODE >190:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DD0 text38 CODE >195:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DD6 text38 CODE >196:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DDA text38 CODE >197:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DE2 text38 CODE >204:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DE8 text38 CODE >205:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DEC text38 CODE >206:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DF4 text38 CODE >209:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3DFE text38 CODE >212:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3E20 text38 CODE >221:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3E28 text38 CODE >222:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DA8 text38 CODE >191:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DAC text38 CODE >192:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DB6 text38 CODE >193:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DB8 text38 CODE >195:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DBE text38 CODE >196:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DC2 text38 CODE >197:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DCA text38 CODE >200:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DD0 text38 CODE >205:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DD6 text38 CODE >206:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DDA text38 CODE >207:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DE2 text38 CODE >214:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DE8 text38 CODE >215:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DEC text38 CODE >216:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DF4 text38 CODE >219:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3DFE text38 CODE >222:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3E20 text38 CODE >231:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3E28 text38 CODE >232:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 22C8 text37 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 22C8 text37 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 22D0 text37 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
@@ -768,11 +784,11 @@ F4 intcode CODE >85:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\L
 3418 text33 CODE >31:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 3484 text33 CODE >32:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 34FC text33 CODE >33:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44AE text32 CODE >46:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44AE text32 CODE >47:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44B4 text32 CODE >48:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44B8 text32 CODE >49:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
-44BC text32 CODE >50:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44B2 text32 CODE >46:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44B2 text32 CODE >47:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44B8 text32 CODE >48:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44BC text32 CODE >49:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+44C0 text32 CODE >50:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 43DC text31 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
 43DC text31 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
 43EA text31 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul16.c
@@ -795,8 +811,8 @@ F4 intcode CODE >85:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\L
 3122 text28 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\atoi.c
 3164 text28 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\atoi.c
 318E text28 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\atoi.c
-450A text27 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
-450A text27 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
+451C text27 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
+451C text27 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
 3A4C text26 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
 3A4C text26 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
 3A5E text26 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
@@ -1289,102 +1305,102 @@ FF0 text9 CODE >337:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\c
 4074 text2 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
 4090 text2 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
 40A8 text2 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
-2EDC text1 CODE >136:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2EDC text1 CODE >139:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2EE8 text1 CODE >140:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2EEC text1 CODE >141:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2EEE text1 CODE >143:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2EF2 text1 CODE >144:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2EF6 text1 CODE >145:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F04 text1 CODE >146:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F06 text1 CODE >148:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F0A text1 CODE >149:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F0E text1 CODE >150:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F1C text1 CODE >151:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F1E text1 CODE >153:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F2C text1 CODE >154:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F38 text1 CODE >155:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F3A text1 CODE >157:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F48 text1 CODE >158:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F54 text1 CODE >159:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F56 text1 CODE >161:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F5A text1 CODE >162:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2F5C text1 CODE >164:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2FB8 text1 CODE >165:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2FBE text1 CODE >166:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2FC2 text1 CODE >167:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2FE8 text1 CODE >168:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2FF6 text1 CODE >169:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-2FF8 text1 CODE >172:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-376E text0 CODE >96:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-376E text0 CODE >97:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3780 text0 CODE >98:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-378C text0 CODE >99:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3790 text0 CODE >100:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-379E text0 CODE >102:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37A6 text0 CODE >103:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37AA text0 CODE >104:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37B6 text0 CODE >106:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37BE text0 CODE >107:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37C2 text0 CODE >108:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37C6 text0 CODE >110:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37CE text0 CODE >111:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37D2 text0 CODE >112:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37D6 text0 CODE >114:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37DE text0 CODE >115:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-37E2 text0 CODE >116:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3806 text0 CODE >117:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3814 text0 CODE >119:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-381C text0 CODE >120:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3820 text0 CODE >121:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
-3F8E cinit CODE >1243:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F8E cinit CODE >1245:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F8E cinit CODE >1248:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F8E cinit CODE >1355:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F90 cinit CODE >1356:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F92 cinit CODE >1357:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F94 cinit CODE >1358:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F96 cinit CODE >1359:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F98 cinit CODE >1360:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F9A cinit CODE >1361:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3F9E cinit CODE >1362:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FA2 cinit CODE >1363:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FA2 cinit CODE >1364:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FA4 cinit CODE >1365:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FA8 cinit CODE >1366:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FAA cinit CODE >1367:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FAC cinit CODE >1368:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FAE cinit CODE >1372:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FB0 cinit CODE >1373:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FB2 cinit CODE >1374:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FB4 cinit CODE >1375:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FB6 cinit CODE >1376:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FB8 cinit CODE >1377:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FBA cinit CODE >1378:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FBE cinit CODE >1379:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FC2 cinit CODE >1380:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FC2 cinit CODE >1381:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FC4 cinit CODE >1382:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FC8 cinit CODE >1383:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FCA cinit CODE >1384:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FCC cinit CODE >1385:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FCE cinit CODE >1389:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FD2 cinit CODE >1390:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FD4 cinit CODE >1391:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FD4 cinit CODE >1392:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FD6 cinit CODE >1393:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FD8 cinit CODE >1394:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FDA cinit CODE >1397:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FDE cinit CODE >1398:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FE0 cinit CODE >1399:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FE0 cinit CODE >1400:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FE2 cinit CODE >1401:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FE4 cinit CODE >1402:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FE6 cinit CODE >1408:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FE6 cinit CODE >1410:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FE8 cinit CODE >1411:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FEA cinit CODE >1412:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
-3FEC cinit CODE >1413:C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.
+2EDC text1 CODE >146:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2EDC text1 CODE >149:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2EE8 text1 CODE >150:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2EEC text1 CODE >151:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2EEE text1 CODE >153:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2EF2 text1 CODE >154:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2EF6 text1 CODE >155:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F04 text1 CODE >156:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F06 text1 CODE >158:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F0A text1 CODE >159:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F0E text1 CODE >160:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F1C text1 CODE >161:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F1E text1 CODE >163:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F2C text1 CODE >164:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F38 text1 CODE >165:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F3A text1 CODE >167:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F48 text1 CODE >168:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F54 text1 CODE >169:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F56 text1 CODE >171:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F5A text1 CODE >172:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2F5C text1 CODE >174:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2FB8 text1 CODE >175:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2FBE text1 CODE >176:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2FC2 text1 CODE >177:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2FE8 text1 CODE >178:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2FF6 text1 CODE >179:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+2FF8 text1 CODE >182:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+376E text0 CODE >105:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+376E text0 CODE >106:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3780 text0 CODE >107:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+378C text0 CODE >108:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3790 text0 CODE >109:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+379E text0 CODE >111:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37A6 text0 CODE >112:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37AA text0 CODE >113:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37B6 text0 CODE >115:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37BE text0 CODE >116:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37C2 text0 CODE >117:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37C6 text0 CODE >119:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37CE text0 CODE >120:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37D2 text0 CODE >121:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37D6 text0 CODE >123:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37DE text0 CODE >124:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+37E2 text0 CODE >125:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3806 text0 CODE >126:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3814 text0 CODE >128:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+381C text0 CODE >129:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3820 text0 CODE >130:C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+3F8E cinit CODE >1249:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F8E cinit CODE >1251:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F8E cinit CODE >1254:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F8E cinit CODE >1364:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F90 cinit CODE >1365:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F92 cinit CODE >1366:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F94 cinit CODE >1367:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F96 cinit CODE >1368:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F98 cinit CODE >1369:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F9A cinit CODE >1370:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3F9E cinit CODE >1371:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FA2 cinit CODE >1372:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FA2 cinit CODE >1373:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FA4 cinit CODE >1374:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FA8 cinit CODE >1375:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FAA cinit CODE >1376:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FAC cinit CODE >1377:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FAE cinit CODE >1381:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FB0 cinit CODE >1382:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FB2 cinit CODE >1383:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FB4 cinit CODE >1384:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FB6 cinit CODE >1385:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FB8 cinit CODE >1386:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FBA cinit CODE >1387:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FBE cinit CODE >1388:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FC2 cinit CODE >1389:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FC2 cinit CODE >1390:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FC4 cinit CODE >1391:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FC8 cinit CODE >1392:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FCA cinit CODE >1393:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FCC cinit CODE >1394:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FCE cinit CODE >1398:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FD2 cinit CODE >1399:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FD4 cinit CODE >1400:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FD4 cinit CODE >1401:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FD6 cinit CODE >1402:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FD8 cinit CODE >1403:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FDA cinit CODE >1406:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FDE cinit CODE >1407:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FE0 cinit CODE >1408:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FE0 cinit CODE >1409:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FE2 cinit CODE >1410:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FE4 cinit CODE >1411:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FE6 cinit CODE >1417:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FE6 cinit CODE >1419:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FE8 cinit CODE >1420:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FEA cinit CODE >1421:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
+3FEC cinit CODE >1422:C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1398,7 +1414,7 @@ FF0 text9 CODE >337:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___awdiv@counter 64 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-i2___xxtofl 32D4 0 CODE 0 text57 dist/default/production\Auto.X.production.o
+i2___xxtofl 32D4 0 CODE 0 text58 dist/default/production\Auto.X.production.o
 ___fpclassifyf@e 68 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___fpclassifyf@u 6A 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___fpclassifyf@x 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1411,16 +1427,17 @@ __HidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production\Auto.X.production.o
 strncmp@_l 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 strncmp@_r 62 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Auto.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
-_cicle_90 4B 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
+_cicle_90 4C 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
 __CFG_WPCFG$OFF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 ?_pad 70 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __end_of_rutinaArranque 43DC 0 CODE 0 text42 dist/default/production\Auto.X.production.o
 ?_vfprintf ED 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __Lsmallconst F00 0 SMALLCONST 0 smallconst dist/default/production\Auto.X.production.o
-_indicador 43 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
+_indicador 44 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 _TMR2 FCC 0 ABS 0 - dist/default/production\Auto.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+_TMR4 F78 0 ABS 0 - dist/default/production\Auto.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 _atoi 3038 0 CODE 0 text28 dist/default/production\Auto.X.production.o
 _ctoa 4100 0 CODE 0 text22 dist/default/production\Auto.X.production.o
 _dbuf 123 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
@@ -1428,11 +1445,11 @@ _main 376E 0 CODE 0 text0 dist/default/production\Auto.X.production.o
 _nout 11C 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
 _prec 38 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 _utoa 2D26 0 CODE 0 text5 dist/default/production\Auto.X.production.o
-btemp 4D 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+btemp 4E 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
 pad@i 77 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 pad@p 74 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 pad@w 79 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-start 14E 0 CODE 0 init C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+start 16C 0 CODE 0 init C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 fijarVelocidad@speed 9F 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___flmul@aexp 7B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___flmul@bexp 80 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1441,7 +1458,7 @@ ___flmul@sign 7A 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production
 ___flmul@temp 85 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-_configurarPuertos 44BE 0 CODE 0 text52 dist/default/production\Auto.X.production.o
+_configurarPuertos 44C2 0 CODE 0 text53 dist/default/production\Auto.X.production.o
 __size_of___fladd 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __size_of___fldiv 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __size_of___flmul 0 0 ABS 0 - dist/default/production\Auto.X.production.o
@@ -1458,7 +1475,7 @@ enviarRS232@longitud_texto 6C 0 BANK0 1 cstackBANK0 dist/default/production\Auto
 __CFG_WDTEN$OFF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Auto.X.production.o
 _bandera_fuego 122 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
-_fijarVelocidad$2157 9B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_fijarVelocidad$2194 9B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 pad@fp 70 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _tolower 41A2 0 CODE 0 text10 dist/default/production\Auto.X.production.o
 _bandera_distancia 11E 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
@@ -1471,49 +1488,49 @@ efgtoa@ne C1 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 efgtoa@ou AB 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 efgtoa@pp BD 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __LidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production\Auto.X.production.o
-__Hpowerup 14E 0 CODE 0 powerup dist/default/production\Auto.X.production.o
+__Hpowerup 16C 0 CODE 0 powerup dist/default/production\Auto.X.production.o
 terminal@texto 1A4 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
 __end_of_vfpfcnvrt 1F74 0 CODE 0 text4 dist/default/production\Auto.X.production.o
 ___awmod@sign 65 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-ttemp5 4E 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
-ttemp6 51 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
-ttemp7 55 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+ttemp5 4F 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+ttemp6 52 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+ttemp7 56 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Auto.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-_velocidad 49 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
+_velocidad 4A 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
 ___lodiv@divisor 68 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 utoa@d 7D 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 utoa@i 99 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 utoa@n 91 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 utoa@p 8D 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 utoa@w 8F 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+__accesstop 60 0 ABS 0 - C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 dirreccion@tiempo_1 64 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-intlevel0 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
-intlevel1 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
-intlevel2 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
-intlevel3 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+intlevel0 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
+intlevel1 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
+intlevel2 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
+intlevel3 0 0 CODE 0 text C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 floorf@e 87 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 floorf@m 83 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 floorf@u 89 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 floorf@x 79 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-__end_ofi2___xxtofl 3414 0 CODE 0 text57 dist/default/production\Auto.X.production.o
+__end_ofi2___xxtofl 3414 0 CODE 0 text58 dist/default/production\Auto.X.production.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Auto.X.production.o
 i2___xxtofl@arg 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 i2___xxtofl@exp 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 i2___xxtofl@val 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 ?_efgtoa 9F 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Auto.X.production.o
-wtemp8 4E 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
-_frenarMotor 44AE 0 CODE 0 text32 dist/default/production\Auto.X.production.o
+wtemp8 4F 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+_frenarMotor 44B2 0 CODE 0 text32 dist/default/production\Auto.X.production.o
 ?_floorf 79 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __CFG_RTCOSC$T1OSCREF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-_cambiarPWM 44DC 0 CODE 0 text44 dist/default/production\Auto.X.production.o
+_cambiarPWM 44EE 0 CODE 0 text44 dist/default/production\Auto.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Auto.X.production.o
 ___awdiv@sign 65 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Auto.X.production.o
 _vfpfcnvrt 190C 0 CODE 0 text4 dist/default/production\Auto.X.production.o
-__pidataCOMRAM 44FC 0 CODE 0 idataCOMRAM dist/default/production\Auto.X.production.o
+__pidataCOMRAM 450E 0 CODE 0 idataCOMRAM dist/default/production\Auto.X.production.o
 ___wmul@multiplicand 62 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _ANCON0 F48 0 ABS 0 - dist/default/production\Auto.X.production.o
 _ANCON1 F49 0 ABS 0 - dist/default/production\Auto.X.production.o
@@ -1521,8 +1538,8 @@ i2___fladd@grs 26 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.product
 i2___fladd@signs 23 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 ___awdiv@dividend 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _dirreccion 3C16 0 CODE 0 text43 dist/default/production\Auto.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 ?_length 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Auto.X.production.o
 ?_tolower 66 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1538,10 +1555,10 @@ ___fldiv@aexp 78 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production
 ___fldiv@bexp 77 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___fldiv@sign 70 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Auto.X.production.o
-_atoi$1816 6F 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_atoi$1817 73 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_atoi$1818 71 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-__Hintcodelo 14E 0 CODE 0 intcodelo dist/default/production\Auto.X.production.o
+_atoi$1851 6F 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_atoi$1852 73 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_atoi$1853 71 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+__Hintcodelo 16C 0 CODE 0 intcodelo dist/default/production\Auto.X.production.o
 ___awdiv@divisor 62 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __end_of___awdiv 3D24 0 CODE 0 text21 dist/default/production\Auto.X.production.o
 __end_of___awmod 3F8E 0 CODE 0 text20 dist/default/production\Auto.X.production.o
@@ -1566,7 +1583,7 @@ _estadoDirreccion 3DA8 0 CODE 0 text38 dist/default/production\Auto.X.production
 ?i2___fladd 17 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 utoa@fp 7B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __end_of_floorf 2D26 0 CODE 0 text13 dist/default/production\Auto.X.production.o
-__end_of_cambiarPWM 44E8 0 CODE 0 text44 dist/default/production\Auto.X.production.o
+__end_of_cambiarPWM 44FA 0 CODE 0 text44 dist/default/production\Auto.X.production.o
 __size_of_atras 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Auto.X.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\Auto.X.production.o
@@ -1582,11 +1599,11 @@ ___flsub@a 9B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___flsub@b 97 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\Auto.X.production.o
 _INTCON3bits FF0 0 ABS 0 - dist/default/production\Auto.X.production.o
-__Lintcodelo 14E 0 CODE 0 intcodelo dist/default/production\Auto.X.production.o
+__Lintcodelo 16C 0 CODE 0 intcodelo dist/default/production\Auto.X.production.o
 __CFG_CFGPLLEN$ON 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 start_initialization 3F8E 0 CODE 0 cinit dist/default/production\Auto.X.production.o
 _obstaculo 11F 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
-_encenderMotor 44CE 0 CODE 0 text41 dist/default/production\Auto.X.production.o
+_encenderMotor 44D2 0 CODE 0 text41 dist/default/production\Auto.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Auto.X.production.o
 _PPSCON EBF 0 ABS 0 - dist/default/production\Auto.X.production.o
 _TRISAbits F92 0 ABS 0 - dist/default/production\Auto.X.production.o
@@ -1609,11 +1626,11 @@ efgtoa@p C7 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 efgtoa@t BB 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 efgtoa@u DF 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 efgtoa@w CA 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_tolower$1932 6C 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_tolower$1967 6C 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __end_of_length 3EA6 0 CODE 0 text40 dist/default/production\Auto.X.production.o
-_servo_dirreccion 42 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
+_servo_dirreccion 43 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\Auto.X.production.o
-_estadoFuego 40 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
+_estadoFuego 41 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 efgtoa@mode CC 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 efgtoa@sign C5 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _RCREG1 FAF 0 ABS 0 - dist/default/production\Auto.X.production.o
@@ -1629,18 +1646,19 @@ _SPBRG2 FAB 0 ABS 0 - dist/default/production\Auto.X.production.o
 __pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __pcstackBANK1 17D 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
 __size_of_fijarVelocidad 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-_TIME_MAX 47 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
+_TIME_MAX 48 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
 _TXREG1 FAE 0 ABS 0 - dist/default/production\Auto.X.production.o
 _TXREG2 FA9 0 ABS 0 - dist/default/production\Auto.X.production.o
 _TXSTA1 FAD 0 ABS 0 - dist/default/production\Auto.X.production.o
 _TXSTA2 FA8 0 ABS 0 - dist/default/production\Auto.X.production.o
 __CFG_WPDIS$OFF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-__end_of_configuracionInicial 4480 0 CODE 0 text48 dist/default/production\Auto.X.production.o
-_configurarPWM7 4426 0 CODE 0 text53 dist/default/production\Auto.X.production.o
-_configurarTMR5 4498 0 CODE 0 text49 dist/default/production\Auto.X.production.o
+__end_of_configuracionInicial 4484 0 CODE 0 text48 dist/default/production\Auto.X.production.o
+_configurarPWM7 4426 0 CODE 0 text54 dist/default/production\Auto.X.production.o
+_configurarTMR4 44E0 0 CODE 0 text50 dist/default/production\Auto.X.production.o
+_configurarTMR5 449C 0 CODE 0 text49 dist/default/production\Auto.X.production.o
 fputc@fp 62 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 fputs@fp 6B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-__end_of_rutina 14E 0 CODE 0 intcode dist/default/production\Auto.X.production.o
+__end_of_rutina 16C 0 CODE 0 intcode dist/default/production\Auto.X.production.o
 vfpfcnvrt@done 185 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\Auto.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\Auto.X.production.o
@@ -1681,7 +1699,7 @@ __Hbank14 0 0 ABS 0 bank14 dist/default/production\Auto.X.production.o
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Auto.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\Auto.X.production.o
-__smallconst F00 0 SMALLCONST 0 smallconst C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+__smallconst F00 0 SMALLCONST 0 smallconst C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 ___xxtofl@arg 6A 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___xxtofl@exp 69 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___xxtofl@val 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1689,7 +1707,7 @@ efgtoa@nmode C9 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.
 __end_of_sprintf 40AA 0 CODE 0 text2 dist/default/production\Auto.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\Auto.X.production.o
 __Hconfig 20000 0 CONFIG 0 config dist/default/production\Auto.X.production.o
-_tiempo_anterior_1 45 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
+_tiempo_anterior_1 46 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\Auto.X.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\Auto.X.production.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/production\Auto.X.production.o
@@ -1703,6 +1721,7 @@ __Lbank9 0 0 ABS 0 bank9 dist/default/production\Auto.X.production.o
 __end_of_isdigit 4352 0 CODE 0 text30 dist/default/production\Auto.X.production.o
 __Lcinit 0 0 ABS 0 cinit dist/default/production\Auto.X.production.o
 __Lconst 0 0 CONST 0 const dist/default/production\Auto.X.production.o
+_contador_distancia 40 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 __Lidata 0 0 CODE 0 idata dist/default/production\Auto.X.production.o
 __Lidloc 0 0 IDLOC 0 idloc dist/default/production\Auto.X.production.o
 __Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Auto.X.production.o
@@ -1733,17 +1752,17 @@ __end_of_strncmp 3A4C 0 CODE 0 text8 dist/default/production\Auto.X.production.o
 _INTCONbits FF2 0 ABS 0 - dist/default/production\Auto.X.production.o
 __Habs1 0 0 ABS 0 abs1 dist/default/production\Auto.X.production.o
 __Hdata 0 0 ABS 0 data dist/default/production\Auto.X.production.o
-__Hinit 152 0 CODE 0 init dist/default/production\Auto.X.production.o
+__Hinit 170 0 CODE 0 init dist/default/production\Auto.X.production.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production\Auto.X.production.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production\Auto.X.production.o
-__Htemp 4E 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+__Htemp 4F 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
 __Htext 0 0 ABS 0 text dist/default/production\Auto.X.production.o
 __Labs1 0 0 ABS 0 abs1 dist/default/production\Auto.X.production.o
 __Ldata 0 0 ABS 0 data dist/default/production\Auto.X.production.o
-__Linit 14E 0 CODE 0 init dist/default/production\Auto.X.production.o
+__Linit 16C 0 CODE 0 init dist/default/production\Auto.X.production.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production\Auto.X.production.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\Auto.X.production.o
-__Ltemp 4D 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+__Ltemp 4E 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\Auto.X.production.o
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 ___fleq 3B8A 0 CODE 0 text18 dist/default/production\Auto.X.production.o
@@ -1753,7 +1772,7 @@ ___wmul 43DC 0 CODE 0 text31 dist/default/production\Auto.X.production.o
 ___lomod@counter 70 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Auto.X.production.o
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\Auto.X.production.o
-int$flags 4D 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
+int$flags 4E 0 COMRAM 1 temp dist/default/production\Auto.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Auto.X.production.o
 __size_of_estadoDirreccion 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 isspace@c 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1767,12 +1786,13 @@ _pad 3AEE 0 CODE 0 text23 dist/default/production\Auto.X.production.o
 __size_of_rutinaArranque 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __Hjflash_buffer 1F800 0 CODE 0 jflash_buffer dist/default/production\Auto.X.production.o
 __CFG_ADCSEL$BIT12 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-__end_of_configurarPWM7 4446 0 CODE 0 text53 dist/default/production\Auto.X.production.o
-__end_of_configurarTMR5 44AE 0 CODE 0 text49 dist/default/production\Auto.X.production.o
+__end_of_configurarPWM7 4446 0 CODE 0 text54 dist/default/production\Auto.X.production.o
+__end_of_configurarTMR4 44EE 0 CODE 0 text50 dist/default/production\Auto.X.production.o
+__end_of_configurarTMR5 44B2 0 CODE 0 text49 dist/default/production\Auto.X.production.o
 __CFG_DSWDTPS$G2 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __size_of_configurarRS232US100 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __CFG_PLLDIV$3 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-_configurarInterrupciones 4446 0 CODE 0 text54 dist/default/production\Auto.X.production.o
+_configurarInterrupciones 4446 0 CODE 0 text55 dist/default/production\Auto.X.production.o
 i2___awdiv@quotient 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 i2___fladd@aexp 24 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 i2___fladd@bexp 25 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
@@ -1786,17 +1806,17 @@ __size_of_tolower 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Auto.X.production.o
 sprintf@fmt 197 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
 fijarVelocidad@DC 97 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_vfpfcnvrt$1338 187 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
-_vfpfcnvrt$1339 189 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
-_vfpfcnvrt$1344 18B 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
+_vfpfcnvrt$1373 187 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
+_vfpfcnvrt$1374 189 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
+_vfpfcnvrt$1379 18B 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
 _bandera 121 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
 ___xxtofl 3190 0 CODE 0 text34 dist/default/production\Auto.X.production.o
 _floorf 2B6C 0 CODE 0 text13 dist/default/production\Auto.X.production.o
 __end_of_pad 3B8A 0 CODE 0 text23 dist/default/production\Auto.X.production.o
 __size_of_terminal 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-__end_of_frenarMotor 44BE 0 CODE 0 text32 dist/default/production\Auto.X.production.o
+__end_of_frenarMotor 44C2 0 CODE 0 text32 dist/default/production\Auto.X.production.o
 i2___xxtofl@sign 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
-__end_of_configurarRS232US100 4426 0 CODE 0 text50 dist/default/production\Auto.X.production.o
+__end_of_configurarRS232US100 4426 0 CODE 0 text51 dist/default/production\Auto.X.production.o
 i2___fladd@a 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 i2___fladd@b 17 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\Auto.X.production.o
@@ -1866,9 +1886,10 @@ __Htext52 0 0 ABS 0 text52 dist/default/production\Auto.X.production.o
 __Htext53 0 0 ABS 0 text53 dist/default/production\Auto.X.production.o
 __Htext54 0 0 ABS 0 text54 dist/default/production\Auto.X.production.o
 __Htext55 0 0 ABS 0 text55 dist/default/production\Auto.X.production.o
-__Htext57 0 0 ABS 0 text57 dist/default/production\Auto.X.production.o
+__Htext56 0 0 ABS 0 text56 dist/default/production\Auto.X.production.o
 __Htext58 0 0 ABS 0 text58 dist/default/production\Auto.X.production.o
 __Htext59 0 0 ABS 0 text59 dist/default/production\Auto.X.production.o
+__Htext60 0 0 ABS 0 text60 dist/default/production\Auto.X.production.o
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __CFG_DSBOREN$OFF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 enviarRS232@valores 68 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1882,8 +1903,8 @@ ___awmod@counter 64 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.product
 _PIE1bits F9D 0 ABS 0 - dist/default/production\Auto.X.production.o
 _PIE3bits FA3 0 ABS 0 - dist/default/production\Auto.X.production.o
 _PIE5bits F91 0 ABS 0 - dist/default/production\Auto.X.production.o
-__end_of_configurarRS232 4498 0 CODE 0 text51 dist/default/production\Auto.X.production.o
-__end_of_encenderMotor 44DC 0 CODE 0 text41 dist/default/production\Auto.X.production.o
+__end_of_configurarRS232 449C 0 CODE 0 text52 dist/default/production\Auto.X.production.o
+__end_of_encenderMotor 44E0 0 CODE 0 text41 dist/default/production\Auto.X.production.o
 __size_of_cambiarPWM 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 pad@buf 72 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___fladd@signs 93 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1904,12 +1925,12 @@ __ptext23 3AEE 0 CODE 0 text23 dist/default/production\Auto.X.production.o
 __ptext24 4382 0 CODE 0 text24 dist/default/production\Auto.X.production.o
 __ptext25 4278 0 CODE 0 text25 dist/default/production\Auto.X.production.o
 __ptext26 3A4C 0 CODE 0 text26 dist/default/production\Auto.X.production.o
-__ptext27 450A 0 CODE 0 text27 dist/default/production\Auto.X.production.o
+__ptext27 451C 0 CODE 0 text27 dist/default/production\Auto.X.production.o
 __ptext28 3038 0 CODE 0 text28 dist/default/production\Auto.X.production.o
 __ptext29 4238 0 CODE 0 text29 dist/default/production\Auto.X.production.o
 __ptext30 4320 0 CODE 0 text30 dist/default/production\Auto.X.production.o
 __ptext31 43DC 0 CODE 0 text31 dist/default/production\Auto.X.production.o
-__ptext32 44AE 0 CODE 0 text32 dist/default/production\Auto.X.production.o
+__ptext32 44B2 0 CODE 0 text32 dist/default/production\Auto.X.production.o
 __ptext33 3414 0 CODE 0 text33 dist/default/production\Auto.X.production.o
 __ptext34 3190 0 CODE 0 text34 dist/default/production\Auto.X.production.o
 __ptext35 3830 0 CODE 0 text35 dist/default/production\Auto.X.production.o
@@ -1918,24 +1939,25 @@ __ptext37 22C8 0 CODE 0 text37 dist/default/production\Auto.X.production.o
 __ptext38 3DA8 0 CODE 0 text38 dist/default/production\Auto.X.production.o
 __ptext39 3EA6 0 CODE 0 text39 dist/default/production\Auto.X.production.o
 __ptext40 3E2A 0 CODE 0 text40 dist/default/production\Auto.X.production.o
-__ptext41 44CE 0 CODE 0 text41 dist/default/production\Auto.X.production.o
+__ptext41 44D2 0 CODE 0 text41 dist/default/production\Auto.X.production.o
 __ptext42 43B0 0 CODE 0 text42 dist/default/production\Auto.X.production.o
 __ptext43 3C16 0 CODE 0 text43 dist/default/production\Auto.X.production.o
-__ptext44 44DC 0 CODE 0 text44 dist/default/production\Auto.X.production.o
+__ptext44 44EE 0 CODE 0 text44 dist/default/production\Auto.X.production.o
 __ptext45 42B4 0 CODE 0 text45 dist/default/production\Auto.X.production.o
-__ptext46 44E8 0 CODE 0 text46 dist/default/production\Auto.X.production.o
-__ptext47 44F2 0 CODE 0 text47 dist/default/production\Auto.X.production.o
+__ptext46 44FA 0 CODE 0 text46 dist/default/production\Auto.X.production.o
+__ptext47 4504 0 CODE 0 text47 dist/default/production\Auto.X.production.o
 __ptext48 4466 0 CODE 0 text48 dist/default/production\Auto.X.production.o
-__ptext49 4498 0 CODE 0 text49 dist/default/production\Auto.X.production.o
-__ptext50 4404 0 CODE 0 text50 dist/default/production\Auto.X.production.o
-__ptext51 4480 0 CODE 0 text51 dist/default/production\Auto.X.production.o
-__ptext52 44BE 0 CODE 0 text52 dist/default/production\Auto.X.production.o
-__ptext53 4426 0 CODE 0 text53 dist/default/production\Auto.X.production.o
-__ptext54 4446 0 CODE 0 text54 dist/default/production\Auto.X.production.o
-__ptext55 4152 0 CODE 0 text55 dist/default/production\Auto.X.production.o
-__ptext57 32D4 0 CODE 0 text57 dist/default/production\Auto.X.production.o
-__ptext58 25D6 0 CODE 0 text58 dist/default/production\Auto.X.production.o
-__ptext59 3D24 0 CODE 0 text59 dist/default/production\Auto.X.production.o
+__ptext49 449C 0 CODE 0 text49 dist/default/production\Auto.X.production.o
+__ptext50 44E0 0 CODE 0 text50 dist/default/production\Auto.X.production.o
+__ptext51 4404 0 CODE 0 text51 dist/default/production\Auto.X.production.o
+__ptext52 4484 0 CODE 0 text52 dist/default/production\Auto.X.production.o
+__ptext53 44C2 0 CODE 0 text53 dist/default/production\Auto.X.production.o
+__ptext54 4426 0 CODE 0 text54 dist/default/production\Auto.X.production.o
+__ptext55 4446 0 CODE 0 text55 dist/default/production\Auto.X.production.o
+__ptext56 4152 0 CODE 0 text56 dist/default/production\Auto.X.production.o
+__ptext58 32D4 0 CODE 0 text58 dist/default/production\Auto.X.production.o
+__ptext59 25D6 0 CODE 0 text59 dist/default/production\Auto.X.production.o
+__ptext60 3D24 0 CODE 0 text60 dist/default/production\Auto.X.production.o
 terminal@medicion 1B8 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
 ___awdiv 3C9E 0 CODE 0 text21 dist/default/production\Auto.X.production.o
 ___awmod 3F1C 0 CODE 0 text20 dist/default/production\Auto.X.production.o
@@ -1956,7 +1978,7 @@ __Lbank14 0 0 ABS 0 bank14 dist/default/production\Auto.X.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Auto.X.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\Auto.X.production.o
 __CFG_MSSP7B_EN$MSK7 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-_contador_datos 41 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
+_contador_datos 42 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 ?_atoi 67 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ?_ctoa 7B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ?_utoa 7B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -1972,7 +1994,7 @@ ___fldiv@grs 73 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.
 ___fldiv@rem 6C 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __size_of_floorf 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __size_of_dirreccion 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-main@F7117 1CA 0 BANK1 1 dataBANK1 dist/default/production\Auto.X.production.o
+main@F7119 1CA 0 BANK1 1 dataBANK1 dist/default/production\Auto.X.production.o
 __CFG_WPFP$PAGE_127 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 _rutina 8 0 CODE 0 intcode dist/default/production\Auto.X.production.o
 __size_of_configurarPuertos 0 0 ABS 0 - dist/default/production\Auto.X.production.o
@@ -1986,17 +2008,17 @@ ___fldiv@new_exp 71 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.product
 _terminal 2EDC 0 CODE 0 text1 dist/default/production\Auto.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 enviarRS232@i 6E 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-stackhi EAF 0 ABS 0 - C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
-stacklo 1D0 0 ABS 0 - C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+stackhi EAF 0 ABS 0 - C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
+stacklo 1D0 0 ABS 0 - C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\Auto.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\Auto.X.production.o
 _enviarRS232 3EA6 0 CODE 0 text39 dist/default/production\Auto.X.production.o
 tolower@c 66 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\Auto.X.production.o
 ___fladd@grs 96 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-__end_ofi2___awdiv 3DA8 0 CODE 0 text59 dist/default/production\Auto.X.production.o
+__end_ofi2___awdiv 3DA8 0 CODE 0 text60 dist/default/production\Auto.X.production.o
 __end_of_terminal 3038 0 CODE 0 text1 dist/default/production\Auto.X.production.o
-__end_ofi2___fladd 28E2 0 CODE 0 text58 dist/default/production\Auto.X.production.o
+__end_ofi2___fladd 28E2 0 CODE 0 text59 dist/default/production\Auto.X.production.o
 strcpy@dest 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___fleq@ff1 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___fleq@ff2 64 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -2014,9 +2036,9 @@ __HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\Auto.X.production.o
 ___flge@ff1 87 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___flge@ff2 8B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _contador_timer_5 3C 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
-_adelante 44F2 0 CODE 0 text47 dist/default/production\Auto.X.production.o
+_adelante 4504 0 CODE 0 text47 dist/default/production\Auto.X.production.o
 __CFG_DSWDTOSC$INTOSCREF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-_configurarRS232 4480 0 CODE 0 text51 dist/default/production\Auto.X.production.o
+_configurarRS232 4484 0 CODE 0 text52 dist/default/production\Auto.X.production.o
 _PIR1bits F9E 0 ABS 0 - dist/default/production\Auto.X.production.o
 _PIR3bits FA4 0 ABS 0 - dist/default/production\Auto.X.production.o
 __end_of_tolower 41F0 0 CODE 0 text10 dist/default/production\Auto.X.production.o
@@ -2037,7 +2059,7 @@ fputs@c 6D 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 fputs@i 6E 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 fputs@s 69 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __CFG_CLKOEC$ON 0 0 ABS 0 - dist/default/production\Auto.X.production.o
-__end_of_adelante 44FC 0 CODE 0 text47 dist/default/production\Auto.X.production.o
+__end_of_adelante 450E 0 CODE 0 text47 dist/default/production\Auto.X.production.o
 ___awdiv@quotient 66 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ?___awdiv 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ?___awmod 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -2051,8 +2073,8 @@ ___awdiv@quotient 66 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.produc
 ?___lomod 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __size_of_configurarInterrupciones 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 vfprintf@fmt EF 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-i2___awdiv 3D24 0 CODE 0 text59 dist/default/production\Auto.X.production.o
-i2___fladd 25D6 0 CODE 0 text58 dist/default/production\Auto.X.production.o
+i2___awdiv 3D24 0 CODE 0 text60 dist/default/production\Auto.X.production.o
+i2___fladd 25D6 0 CODE 0 text59 dist/default/production\Auto.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Auto.X.production.o
 __size_of_rutina 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\Auto.X.production.o
@@ -2129,13 +2151,14 @@ __Ltext52 0 0 ABS 0 text52 dist/default/production\Auto.X.production.o
 __Ltext53 0 0 ABS 0 text53 dist/default/production\Auto.X.production.o
 __Ltext54 0 0 ABS 0 text54 dist/default/production\Auto.X.production.o
 __Ltext55 0 0 ABS 0 text55 dist/default/production\Auto.X.production.o
-__Ltext57 0 0 ABS 0 text57 dist/default/production\Auto.X.production.o
+__Ltext56 0 0 ABS 0 text56 dist/default/production\Auto.X.production.o
 __Ltext58 0 0 ABS 0 text58 dist/default/production\Auto.X.production.o
 __Ltext59 0 0 ABS 0 text59 dist/default/production\Auto.X.production.o
-__ramtop F00 0 RAM 0 ramtop C:\Users\LAUTAR~1\AppData\Local\Temp\sarg.o
+__Ltext60 0 0 ABS 0 text60 dist/default/production\Auto.X.production.o
+__ramtop F00 0 RAM 0 ramtop C:\Users\LAUTAR~1\AppData\Local\Temp\sb88.o
 _sprintf 4052 0 CODE 0 text2 dist/default/production\Auto.X.production.o
 _vfprintf 3FF0 0 CODE 0 text3 dist/default/production\Auto.X.production.o
-__Lpowerup 14E 0 CODE 0 powerup dist/default/production\Auto.X.production.o
+__Lpowerup 16C 0 CODE 0 powerup dist/default/production\Auto.X.production.o
 ?___xxtofl 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __end_of___fpclassifyf 376E 0 CODE 0 text14 dist/default/production\Auto.X.production.o
 sprintf@ap F7 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -2143,6 +2166,7 @@ _isdigit 4320 0 CODE 0 text30 dist/default/production\Auto.X.production.o
 ___fladd@aexp 94 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 ___fladd@bexp 95 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _configuracionInicial 4466 0 CODE 0 text48 dist/default/production\Auto.X.production.o
+_T4CONbits F76 0 ABS 0 - dist/default/production\Auto.X.production.o
 _fijarVelocidad 3414 0 CODE 0 text33 dist/default/production\Auto.X.production.o
 ___fltol@sign1 8F 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _isspace 4238 0 CODE 0 text29 dist/default/production\Auto.X.production.o
@@ -2163,18 +2187,18 @@ strcpy@src 62 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __end_of__initialization 3FE6 0 CODE 0 cinit dist/default/production\Auto.X.production.o
 ___awmod@divisor 62 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\Auto.X.production.o
-__pidataBANK1 4504 0 CODE 0 idataBANK1 dist/default/production\Auto.X.production.o
+__pidataBANK1 4516 0 CODE 0 idataBANK1 dist/default/production\Auto.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\Auto.X.production.o
 estadoDirreccion@angulo 64 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_isspace$1847 66 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_isspace$1882 66 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __CFG_OSC$HSPLL 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 ctoa@fp 7B 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __end_of_definirVelocidad 42EE 0 CODE 0 text45 dist/default/production\Auto.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 ___lodiv@counter 78 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-__end_of_configurarPuertos 44CE 0 CODE 0 text52 dist/default/production\Auto.X.production.o
+__end_of_configurarPuertos 44D2 0 CODE 0 text53 dist/default/production\Auto.X.production.o
 i2___awdiv@sign 6 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
-_PWMServo 4152 0 CODE 0 text55 dist/default/production\Auto.X.production.o
+_PWMServo 4152 0 CODE 0 text56 dist/default/production\Auto.X.production.o
 ___fpclassifyf@F463 2E 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 __size_of_definirVelocidad 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 vfpfcnvrt@c 194 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
@@ -2188,8 +2212,8 @@ __end_of_main 3830 0 CODE 0 text0 dist/default/production\Auto.X.production.o
 __end_of_utoa 2EDC 0 CODE 0 text5 dist/default/production\Auto.X.production.o
 __pintcode 8 0 CODE 0 intcode dist/default/production\Auto.X.production.o
 isdigit@c 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-__end_of_atras 44F2 0 CODE 0 text46 dist/default/production\Auto.X.production.o
-__end_of_PWMServo 41A2 0 CODE 0 text55 dist/default/production\Auto.X.production.o
+__end_of_atras 4504 0 CODE 0 text46 dist/default/production\Auto.X.production.o
+__end_of_PWMServo 41A2 0 CODE 0 text56 dist/default/production\Auto.X.production.o
 __end_of_fputc 3AEE 0 CODE 0 text26 dist/default/production\Auto.X.production.o
 __end_of_fputs 42B4 0 CODE 0 text25 dist/default/production\Auto.X.production.o
 ?_sprintf 195 0 BANK1 1 cstackBANK1 dist/default/production\Auto.X.production.o
@@ -2197,7 +2221,7 @@ _T2CON FCA 0 ABS 0 - dist/default/production\Auto.X.production.o
 _T5CON F22 0 ABS 0 - dist/default/production\Auto.X.production.o
 _TMR5H F24 0 ABS 0 - dist/default/production\Auto.X.production.o
 _TMR5L F23 0 ABS 0 - dist/default/production\Auto.X.production.o
-__end_of_putch 450C 0 CODE 0 text27 dist/default/production\Auto.X.production.o
+__end_of_putch 451E 0 CODE 0 text27 dist/default/production\Auto.X.production.o
 __CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __CFG_IOL1WAY$ON 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __HRAM 0 0 ABS 0 - dist/default/production\Auto.X.production.o
@@ -2209,27 +2233,28 @@ __Lbss 0 0 RAM 1 bss dist/default/production\Auto.X.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\Auto.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\Auto.X.production.o
 atoi@neg 6D 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_atras 44E8 0 CODE 0 text46 dist/default/production\Auto.X.production.o
+_atras 44FA 0 CODE 0 text46 dist/default/production\Auto.X.production.o
 _datos 173 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
 _flags 3A 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 _fputc 3A4C 0 CODE 0 text26 dist/default/production\Auto.X.production.o
 _fputs 4278 0 CODE 0 text25 dist/default/production\Auto.X.production.o
-__end_of_configurarInterrupciones 4466 0 CODE 0 text54 dist/default/production\Auto.X.production.o
-_motor 44 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
+__end_of_configurarInterrupciones 4466 0 CODE 0 text55 dist/default/production\Auto.X.production.o
+_motor 45 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 __end_of_fijarVelocidad 34FE 0 CODE 0 text33 dist/default/production\Auto.X.production.o
 _parar 3E 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
-_putch 450A 0 CODE 0 text27 dist/default/production\Auto.X.production.o
-_efgtoa$1306 AF 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_efgtoa$1307 B1 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_efgtoa$1311 B3 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_efgtoa$1315 B5 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_efgtoa$1316 B7 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
-_efgtoa$1317 B9 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_putch 451C 0 CODE 0 text27 dist/default/production\Auto.X.production.o
+_efgtoa$1341 AF 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_efgtoa$1342 B1 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_efgtoa$1346 B3 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_efgtoa$1350 B5 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_efgtoa$1351 B7 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
+_efgtoa$1352 B9 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 _width 36 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 length@longitud 64 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 floorf@F524 2A 0 COMRAM 1 bssCOMRAM dist/default/production\Auto.X.production.o
 ?_isdigit 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __size_of_configurarPWM7 0 0 ABS 0 - dist/default/production\Auto.X.production.o
+__size_of_configurarTMR4 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 __size_of_configurarTMR5 0 0 ABS 0 - dist/default/production\Auto.X.production.o
 _rutinaArranque 43B0 0 CODE 0 text42 dist/default/production\Auto.X.production.o
 ?_isspace 60 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -2245,7 +2270,7 @@ _BAUDCON1bits F7E 0 ABS 0 - dist/default/production\Auto.X.production.o
 _BAUDCON2bits F7C 0 ABS 0 - dist/default/production\Auto.X.production.o
 ___xxtofl@sign 68 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\Auto.X.production.o
-__pdataCOMRAM 45 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
+__pdataCOMRAM 46 0 COMRAM 1 dataCOMRAM dist/default/production\Auto.X.production.o
 _T2CONbits FCA 0 ABS 0 - dist/default/production\Auto.X.production.o
 i2___awdiv@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
 ctoa@c 7D 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
@@ -2254,10 +2279,10 @@ __Hfardata 0 0 FARRAM 0 fardata dist/default/production\Auto.X.production.o
 ___wmul@product 64 0 BANK0 1 cstackBANK0 dist/default/production\Auto.X.production.o
 __Hsmallconst F88 0 SMALLCONST 0 smallconst dist/default/production\Auto.X.production.o
 i2___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Auto.X.production.o
-_configurarRS232US100 4404 0 CODE 0 text50 dist/default/production\Auto.X.production.o
+_configurarRS232US100 4404 0 CODE 0 text51 dist/default/production\Auto.X.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\Auto.X.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Auto.X.production.o
-__Hintcode 14E 0 CODE 0 intcode dist/default/production\Auto.X.production.o
+__Hintcode 16C 0 CODE 0 intcode dist/default/production\Auto.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -2282,11 +2307,11 @@ __Hintcode 14E 0 CODE 0 intcode dist/default/production\Auto.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text9 0 F88 F88 3584 1
-cstackCOMRAM 1 1 1 4D 1
+text9 0 F88 F88 3596 1
+cstackCOMRAM 1 1 1 4E 1
 cstackBANK0 1 60 60 9F 1
 reset_vec 0 0 0 4 1
 bssBANK1 1 100 100 D0 1
-intcode 0 8 8 14A 1
+intcode 0 8 8 168 1
 smallconst 0 F00 F00 88 1
 config 0 1FFF8 1FFF8 8 1
