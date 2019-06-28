@@ -28,7 +28,7 @@ void rutinaArranque(){
 }
 
 void fijarVelocidad(unsigned char speed){
-    float DC = 0.006 * speed + 0.6; //DC - CCPR / (4*(PR2+1))
+    float DC = 0.006 * speed + 0.5; //DC - CCPR / (4*(PR2+1))
     velocidad = 4 * DC * 125;
 }
 

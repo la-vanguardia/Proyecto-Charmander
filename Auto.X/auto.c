@@ -29,10 +29,10 @@
 #define LEER_DISTANCIA 0x55 //codigo para leer la distancia del us-100
 #define LEER_TEMPERATURA 0x50 //codigo para leer la temperatura del us-100
 
-#define SENSOR_FUEGO PORTBbits.RB0
+#define SENSOR_OBSTACULOS PORTBbits.RB0
 
 unsigned int TIME_MAX = 1000-65, parar= 0, tiempo_anterior_1 = 65, contador_timer_5 = 0;
-unsigned char indicador = 0,  servo_dirreccion = 0;
+unsigned char indicador = 0, bandera_fuego = 0,  servo_dirreccion = 0;
 unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
 unsigned char datos[10] = {'\0'};
 unsigned char bandera_distancia = 0, contador_datos = 0;
@@ -86,6 +86,11 @@ void __interrupt() rutina(){
             contador_datos ++;
         }
     }
+    else if(INTCON3bits.INT1F == 1 && INTCON3bits.INT1E == 1){
+        bandera_fuego = 1;
+        INTCON3bits.INT1E = 0;
+        INTCON3bits.INT1F = 0;
+    }
 }
 
 void main(void) {
@@ -104,12 +109,16 @@ void main(void) {
         }
         if(obstaculo == 1){
             obstaculo = 0;
-            rutinaEscape(OBSTACULO);
+            frenarMotor();
         }
         if(bandera_distancia == 1){
             bandera_distancia = 0;
             sprintf(texto,"%03.1f cm",distancia);
             enviarRS232(texto);
+        }
+        if(bandera_fuego == 1){
+            bandera_fuego = 0;
+            enviarRS232("LLAMEN A LOS BOMBEROS PLS!");
         }
     }
     return;
@@ -255,7 +264,7 @@ void PWMServo(){
         SERVO = 1;
         TIME_MAX = tiempo_anterior_1;   
     }
-    if(parar == 300){
+    if(parar == 30){
         T5CONbits.TMR5ON = 0;
         SERVO = 0;
         parar = 0;
@@ -279,9 +288,7 @@ void atras(){
 void rutinaEscape(unsigned char type){
     frenarMotor();
     switch(type){
-        case FUEGO:
-            
-           
+        case FUEGO:           
             break;
         case OBSTACULO:
             fijarVelocidad(0);
@@ -296,37 +303,3 @@ void rutinaEscape(unsigned char type){
     }
 }
 
-void cambiarEstadoEscapeFuego(){
-    switch(estadoFuego){
-        case 0: //estado inicial indica deteccion de fuego
-            dirreccion(60);
-            if(SENSOR_FUEGO == 1){
-                dirreccion(120);
-                estadoFuego = 1;
-            }
-            else{
-                estadoFuego = 2;
-            }
-            break;
-        case 1: //giro hacia la izquierda
-            if(SENSOR_FUEGO == 1){
-                estadoFuego = 3;
-            }
-            else{
-                estadoFuego = 4;
-            }
-            break;
-        case 2: //giro hacia la derecha
-            dirreccion(45);
-            //encender motor tiempo x y doblar
-            break;
-        case 3: //gire izquierda y no habia fuego
-            enviarRS232("No puedo esquivar el fuego! llame a los bomberos");
-            //hacer marcha atras y irse a la puta
-            break;
-        case 4: //gire derecha y no habia fuego
-            dirreccion(135);
-            //enceder motores y doblar
-            break;   
-    }
-}

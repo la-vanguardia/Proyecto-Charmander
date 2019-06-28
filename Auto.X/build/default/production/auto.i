@@ -11719,13 +11719,18 @@ void configurarPuertos(){
 }
 
 void configurarInterrupciones(){
+    PPSCON = 0;
+    RPINR1 = 4;
+    TRISBbits.TRISB1 = 1;
     TRISBbits.TRISB0 = 1;
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     INTCON2bits.INTEDG0=0;
+    INTCON2bits.INTEDG1 = 0;
     INTCONbits.INT0F = 0;
     INTCONbits.INT0E = 1;
-
+    INTCON3bits.INT1E = 1;
+    INTCON3bits.INT1F = 0;
 }
 
 void configurarPWM7(){
@@ -11765,7 +11770,6 @@ void configurarTMR5(){
 void configurarRS232US100(){
     TRISDbits.TRISD6 = 0;
     TRISDbits.TRISD7 = 1;
-    PPSCON = 0;
     RPOR23 = 6;
     RPINR16 = 24;
     TXSTA2 = 0x22;
@@ -11799,7 +11803,7 @@ void rutinaArranque(){
 }
 
 void fijarVelocidad(unsigned char speed){
-    float DC = 0.006 * speed + 0.6;
+    float DC = 0.006 * speed + 0.5;
     velocidad = 4 * DC * 125;
 }
 
@@ -11841,7 +11845,7 @@ int length(unsigned char *text){
 # 16 "auto.c" 2
 # 34 "auto.c"
 unsigned int TIME_MAX = 1000-65, parar= 0, tiempo_anterior_1 = 65, contador_timer_5 = 0;
-unsigned char indicador = 0, servo_dirreccion = 0;
+unsigned char indicador = 0, bandera_fuego = 0, servo_dirreccion = 0;
 unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
 unsigned char datos[10] = {'\0'};
 unsigned char bandera_distancia = 0, contador_datos = 0;
@@ -11895,6 +11899,11 @@ void __attribute__((picinterrupt(("")))) rutina(){
             contador_datos ++;
         }
     }
+    else if(INTCON3bits.INT1F == 1 && INTCON3bits.INT1E == 1){
+        bandera_fuego = 1;
+        INTCON3bits.INT1E = 0;
+        INTCON3bits.INT1F = 0;
+    }
 }
 
 void main(void) {
@@ -11913,12 +11922,16 @@ void main(void) {
         }
         if(obstaculo == 1){
             obstaculo = 0;
-            rutinaEscape(2);
+            frenarMotor();
         }
         if(bandera_distancia == 1){
             bandera_distancia = 0;
             sprintf(texto,"%03.1f cm",distancia);
             enviarRS232(texto);
+        }
+        if(bandera_fuego == 1){
+            bandera_fuego = 0;
+            enviarRS232("LLAMEN A LOS BOMBEROS PLS!");
         }
     }
     return;
@@ -12010,7 +12023,7 @@ unsigned int estadoDirreccion(unsigned char valor){
             }
             break;
     }
-# 212 "auto.c"
+# 221 "auto.c"
     return angulo;
 }
 
@@ -12057,7 +12070,7 @@ void PWMServo(){
         PORTDbits.RD4 = 1;
         TIME_MAX = tiempo_anterior_1;
     }
-    if(parar == 300){
+    if(parar == 30){
         T5CONbits.TMR5ON = 0;
         PORTDbits.RD4 = 0;
         parar = 0;
@@ -12082,8 +12095,6 @@ void rutinaEscape(unsigned char type){
     frenarMotor();
     switch(type){
         case 1:
-
-
             break;
         case 2:
             fijarVelocidad(0);
@@ -12094,41 +12105,6 @@ void rutinaEscape(unsigned char type){
             enviarRS232("Girando");
             fijarVelocidad(50);
             definirVelocidad();
-            break;
-    }
-}
-
-void cambiarEstadoEscapeFuego(){
-    switch(estadoFuego){
-        case 0:
-            dirreccion(60);
-            if(PORTBbits.RB0 == 1){
-                dirreccion(120);
-                estadoFuego = 1;
-            }
-            else{
-                estadoFuego = 2;
-            }
-            break;
-        case 1:
-            if(PORTBbits.RB0 == 1){
-                estadoFuego = 3;
-            }
-            else{
-                estadoFuego = 4;
-            }
-            break;
-        case 2:
-            dirreccion(45);
-
-            break;
-        case 3:
-            enviarRS232("No puedo esquivar el fuego! llame a los bomberos");
-
-            break;
-        case 4:
-            dirreccion(135);
-
             break;
     }
 }

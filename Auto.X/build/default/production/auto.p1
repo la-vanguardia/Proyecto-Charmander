@@ -16,6 +16,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11141
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 11141: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
 [v _TRISAbits `VS513 ~T0 @X0 0 e@3986 ]
+"1100
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1100: extern volatile unsigned char PPSCON __attribute__((address(0xEBF)));
+[v _PPSCON `Vuc ~T0 @X0 0 e@3775 ]
+"1274
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1274: extern volatile unsigned char RPINR1 __attribute__((address(0xEE1)));
+[v _RPINR1 `Vuc ~T0 @X0 0 e@3809 ]
 "11187
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 11187:     struct {
 [s S516 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -65,6 +71,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18894
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 18894: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
 [v _INTCON2bits `VS888 ~T0 @X0 0 e@4081 ]
+"18760
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 18760:     struct {
+[s S886 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S886 . INT1IF INT2IF INT3IF INT1IE INT2IE INT3IE INT1IP INT2IP ]
+"18770
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 18770:     struct {
+[s S887 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S887 . INT1F INT2F INT3F INT1E INT2E INT3E INT1P INT2P ]
+"18759
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 18759: typedef union {
+[u S885 `S886 1 `S887 1 ]
+[n S885 . . . ]
+"18781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 18781: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
+[v _INTCON3bits `VS885 ~T0 @X0 0 e@4080 ]
 "1718
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1718:     struct {
 [s S75 :4 `uc 1 :2 `uc 1 ]
@@ -262,9 +283,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11499
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 11499: extern volatile PIR5bits_t PIR5bits __attribute__((address(0xF98)));
 [v _PIR5bits `VS528 ~T0 @X0 0 e@3992 ]
-"1100
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1100: extern volatile unsigned char PPSCON __attribute__((address(0xEBF)));
-[v _PPSCON `Vuc ~T0 @X0 0 e@3775 ]
 "1260
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1260: extern volatile unsigned char RPOR23 __attribute__((address(0xED7)));
 [v _RPOR23 `Vuc ~T0 @X0 0 e@3799 ]
@@ -382,9 +400,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47
 [; ;auto.c: 47: void PWMServo();
 [v _PWMServo `(v ~T0 @X0 0 e? ]
-"50
-[; ;auto.c: 50: void rutinaEscape(unsigned char type);
-[v _rutinaEscape `(v ~T0 @X0 0 ef1`uc ]
 "115 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "12916 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
@@ -471,49 +486,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9047
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9047: extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
 [v _PORTAbits `VS435 ~T0 @X0 0 e@3968 ]
-"9258
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9258:     struct {
-[s S446 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S446 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"9268
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9268:     struct {
-[s S447 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S447 . AN12 AN10 AN8 AN9 PMA1 PMA0 KBI2 KBI3 ]
-"9278
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9278:     struct {
-[s S448 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S448 . INT0 PMPBE CTED1 CTED2 KBI0 KBI1 PGC PGD ]
-"9288
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9288:     struct {
-[s S449 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S449 . RP3 RTCC PMA3 PMA2 SCK1 SDI1 RP9 RP10 ]
-"9298
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9298:     struct {
-[s S450 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S450 . . RP4 VMO VPO SCL1 SDA1 ]
-"9306
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9306:     struct {
-[s S451 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S451 . . REFO RP6 RP7 RP8 ]
-"9313
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9313:     struct {
-[s S452 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S452 . . C3INC RP5 C3INA CCP4 CCP5 CCP6 CCP7 ]
-"9323
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9323:     struct {
-[s S453 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S453 . C3IND PMBE C2INC ]
-"9328
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9328:     struct {
-[s S454 :3 `uc 1 :1 `uc 1 ]
-[n S454 . . CCP2_PA2 ]
-"9257
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9257: typedef union {
-[u S445 `S446 1 `S447 1 `S448 1 `S449 1 `S450 1 `S451 1 `S452 1 `S453 1 `S454 1 ]
-[n S445 . . . . . . . . . . ]
-"9333
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9333: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
-[v _PORTBbits `VS445 ~T0 @X0 0 e@3969 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 54: __asm("ADCTRIG equ 0EB8h");
 [; <" ADCTRIG equ 0EB8h ;# ">
@@ -1627,164 +1599,179 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _configurarInterrupciones ]
 [f ]
 "11
-[; ;./../LIBRERIAS/configuracion_auto.h: 11:     TRISBbits.TRISB0 = 1;
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 11:     PPSCON = 0;
+[e = _PPSCON -> -> 0 `i `uc ]
 "12
-[; ;./../LIBRERIAS/configuracion_auto.h: 12:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 12:     RPINR1 = 4;
+[e = _RPINR1 -> -> 4 `i `uc ]
 "13
-[; ;./../LIBRERIAS/configuracion_auto.h: 13:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 13:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
 "14
-[; ;./../LIBRERIAS/configuracion_auto.h: 14:     INTCON2bits.INTEDG0=0;
-[e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 14:     TRISBbits.TRISB0 = 1;
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
 "15
-[; ;./../LIBRERIAS/configuracion_auto.h: 15:     INTCONbits.INT0F = 0;
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 15:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "16
-[; ;./../LIBRERIAS/configuracion_auto.h: 16:     INTCONbits.INT0E = 1;
-[e = . . _INTCONbits 1 4 -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 16:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"17
+[; ;./../LIBRERIAS/configuracion_auto.h: 17:     INTCON2bits.INTEDG0=0;
+[e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
 "18
-[; ;./../LIBRERIAS/configuracion_auto.h: 18: }
+[; ;./../LIBRERIAS/configuracion_auto.h: 18:     INTCON2bits.INTEDG1 = 0;
+[e = . . _INTCON2bits 1 5 -> -> 0 `i `uc ]
+"19
+[; ;./../LIBRERIAS/configuracion_auto.h: 19:     INTCONbits.INT0F = 0;
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+"20
+[; ;./../LIBRERIAS/configuracion_auto.h: 20:     INTCONbits.INT0E = 1;
+[e = . . _INTCONbits 1 4 -> -> 1 `i `uc ]
+"21
+[; ;./../LIBRERIAS/configuracion_auto.h: 21:     INTCON3bits.INT1E = 1;
+[e = . . _INTCON3bits 1 3 -> -> 1 `i `uc ]
+"22
+[; ;./../LIBRERIAS/configuracion_auto.h: 22:     INTCON3bits.INT1F = 0;
+[e = . . _INTCON3bits 1 0 -> -> 0 `i `uc ]
+"23
+[; ;./../LIBRERIAS/configuracion_auto.h: 23: }
 [e :UE 920 ]
 }
-"20
-[; ;./../LIBRERIAS/configuracion_auto.h: 20: void configurarPWM7(){
+"25
+[; ;./../LIBRERIAS/configuracion_auto.h: 25: void configurarPWM7(){
 [v _configurarPWM7 `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarPWM7 ]
 [f ]
-"21
-[; ;./../LIBRERIAS/configuracion_auto.h: 21:     TRISBbits.TRISB4 = 0;
-[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
-"22
-[; ;./../LIBRERIAS/configuracion_auto.h: 22:     TRISBbits.TRISB7 = 0;
-[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
-"23
-[; ;./../LIBRERIAS/configuracion_auto.h: 23:     CCP7CONbits.CCP7M = 0xC;
-[e = . . _CCP7CONbits 0 0 -> -> 12 `i `uc ]
-"24
-[; ;./../LIBRERIAS/configuracion_auto.h: 24:     CCPTMRS1bits.C7TSEL = 0b00;
-[e = . . _CCPTMRS1bits 0 5 -> -> 0 `i `uc ]
 "26
-[; ;./../LIBRERIAS/configuracion_auto.h: 26:     T2CON = 0x02;
-[e = _T2CON -> -> 2 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 26:     TRISBbits.TRISB4 = 0;
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
 "27
-[; ;./../LIBRERIAS/configuracion_auto.h: 27:     PR2 = 124;
-[e = _PR2 -> -> 124 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 27:     TRISBbits.TRISB7 = 0;
+[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
+"28
+[; ;./../LIBRERIAS/configuracion_auto.h: 28:     CCP7CONbits.CCP7M = 0xC;
+[e = . . _CCP7CONbits 0 0 -> -> 12 `i `uc ]
 "29
-[; ;./../LIBRERIAS/configuracion_auto.h: 29:     TMR2 = 0x00;
+[; ;./../LIBRERIAS/configuracion_auto.h: 29:     CCPTMRS1bits.C7TSEL = 0b00;
+[e = . . _CCPTMRS1bits 0 5 -> -> 0 `i `uc ]
+"31
+[; ;./../LIBRERIAS/configuracion_auto.h: 31:     T2CON = 0x02;
+[e = _T2CON -> -> 2 `i `uc ]
+"32
+[; ;./../LIBRERIAS/configuracion_auto.h: 32:     PR2 = 124;
+[e = _PR2 -> -> 124 `i `uc ]
+"34
+[; ;./../LIBRERIAS/configuracion_auto.h: 34:     TMR2 = 0x00;
 [e = _TMR2 -> -> 0 `i `uc ]
-"30
-[; ;./../LIBRERIAS/configuracion_auto.h: 30: }
+"35
+[; ;./../LIBRERIAS/configuracion_auto.h: 35: }
 [e :UE 921 ]
 }
-"32
-[; ;./../LIBRERIAS/configuracion_auto.h: 32: void configurarRS232(){
+"37
+[; ;./../LIBRERIAS/configuracion_auto.h: 37: void configurarRS232(){
 [v _configurarRS232 `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarRS232 ]
 [f ]
-"33
-[; ;./../LIBRERIAS/configuracion_auto.h: 33:     TRISCbits.TRISC7 = 1;
-[e = . . _TRISCbits 0 5 -> -> 1 `i `uc ]
-"34
-[; ;./../LIBRERIAS/configuracion_auto.h: 34:     TRISCbits.TRISC6 = 0;
-[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
-"35
-[; ;./../LIBRERIAS/configuracion_auto.h: 35:     TXSTA1 = 0x22;
-[e = _TXSTA1 -> -> 34 `i `uc ]
-"36
-[; ;./../LIBRERIAS/configuracion_auto.h: 36:     RCSTA1 = 0x90;
-[e = _RCSTA1 -> -> 144 `i `uc ]
-"37
-[; ;./../LIBRERIAS/configuracion_auto.h: 37:     BAUDCON1bits.BRG16 = 0;
-[e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
 "38
-[; ;./../LIBRERIAS/configuracion_auto.h: 38:     SPBRG1 = 77;
-[e = _SPBRG1 -> -> 77 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 38:     TRISCbits.TRISC7 = 1;
+[e = . . _TRISCbits 0 5 -> -> 1 `i `uc ]
 "39
-[; ;./../LIBRERIAS/configuracion_auto.h: 39:     PIR1bits.RC1IF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 39:     TRISCbits.TRISC6 = 0;
+[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
 "40
-[; ;./../LIBRERIAS/configuracion_auto.h: 40:     PIE1bits.RC1IE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 40:     TXSTA1 = 0x22;
+[e = _TXSTA1 -> -> 34 `i `uc ]
 "41
-[; ;./../LIBRERIAS/configuracion_auto.h: 41: }
+[; ;./../LIBRERIAS/configuracion_auto.h: 41:     RCSTA1 = 0x90;
+[e = _RCSTA1 -> -> 144 `i `uc ]
+"42
+[; ;./../LIBRERIAS/configuracion_auto.h: 42:     BAUDCON1bits.BRG16 = 0;
+[e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
+"43
+[; ;./../LIBRERIAS/configuracion_auto.h: 43:     SPBRG1 = 77;
+[e = _SPBRG1 -> -> 77 `i `uc ]
+"44
+[; ;./../LIBRERIAS/configuracion_auto.h: 44:     PIR1bits.RC1IF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"45
+[; ;./../LIBRERIAS/configuracion_auto.h: 45:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"46
+[; ;./../LIBRERIAS/configuracion_auto.h: 46: }
 [e :UE 922 ]
 }
-"43
-[; ;./../LIBRERIAS/configuracion_auto.h: 43: void configurarTMR5(){
+"48
+[; ;./../LIBRERIAS/configuracion_auto.h: 48: void configurarTMR5(){
 [v _configurarTMR5 `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarTMR5 ]
 [f ]
-"44
-[; ;./../LIBRERIAS/configuracion_auto.h: 44:     TRISDbits.TRISD4 = 0;
-[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-"45
-[; ;./../LIBRERIAS/configuracion_auto.h: 45:     PORTDbits.RD4 = 0;
-[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
-"46
-[; ;./../LIBRERIAS/configuracion_auto.h: 46:     T5CON = 0x32;
-[e = _T5CON -> -> 50 `i `uc ]
-"47
-[; ;./../LIBRERIAS/configuracion_auto.h: 47:     TMR5H = 0xFF;
-[e = _TMR5H -> -> 255 `i `uc ]
-"48
-[; ;./../LIBRERIAS/configuracion_auto.h: 48:     TMR5L = 0xE2;
-[e = _TMR5L -> -> 226 `i `uc ]
 "49
-[; ;./../LIBRERIAS/configuracion_auto.h: 49:     PIE5bits.TMR5IE = 1;
-[e = . . _PIE5bits 0 2 -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 49:     TRISDbits.TRISD4 = 0;
+[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
 "50
-[; ;./../LIBRERIAS/configuracion_auto.h: 50:     PIR5bits.TMR5IF = 0;
-[e = . . _PIR5bits 0 2 -> -> 0 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 50:     PORTDbits.RD4 = 0;
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
 "51
-[; ;./../LIBRERIAS/configuracion_auto.h: 51: }
+[; ;./../LIBRERIAS/configuracion_auto.h: 51:     T5CON = 0x32;
+[e = _T5CON -> -> 50 `i `uc ]
+"52
+[; ;./../LIBRERIAS/configuracion_auto.h: 52:     TMR5H = 0xFF;
+[e = _TMR5H -> -> 255 `i `uc ]
+"53
+[; ;./../LIBRERIAS/configuracion_auto.h: 53:     TMR5L = 0xE2;
+[e = _TMR5L -> -> 226 `i `uc ]
+"54
+[; ;./../LIBRERIAS/configuracion_auto.h: 54:     PIE5bits.TMR5IE = 1;
+[e = . . _PIE5bits 0 2 -> -> 1 `i `uc ]
+"55
+[; ;./../LIBRERIAS/configuracion_auto.h: 55:     PIR5bits.TMR5IF = 0;
+[e = . . _PIR5bits 0 2 -> -> 0 `i `uc ]
+"56
+[; ;./../LIBRERIAS/configuracion_auto.h: 56: }
 [e :UE 923 ]
 }
-"54
-[; ;./../LIBRERIAS/configuracion_auto.h: 54: void configurarRS232US100(){
+"59
+[; ;./../LIBRERIAS/configuracion_auto.h: 59: void configurarRS232US100(){
 [v _configurarRS232US100 `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarRS232US100 ]
 [f ]
-"55
-[; ;./../LIBRERIAS/configuracion_auto.h: 55:     TRISDbits.TRISD6 = 0;
-[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
-"56
-[; ;./../LIBRERIAS/configuracion_auto.h: 56:     TRISDbits.TRISD7 = 1;
-[e = . . _TRISDbits 0 7 -> -> 1 `i `uc ]
-"57
-[; ;./../LIBRERIAS/configuracion_auto.h: 57:     PPSCON = 0;
-[e = _PPSCON -> -> 0 `i `uc ]
-"58
-[; ;./../LIBRERIAS/configuracion_auto.h: 58:     RPOR23 = 6;
-[e = _RPOR23 -> -> 6 `i `uc ]
-"59
-[; ;./../LIBRERIAS/configuracion_auto.h: 59:     RPINR16 = 24;
-[e = _RPINR16 -> -> 24 `i `uc ]
 "60
-[; ;./../LIBRERIAS/configuracion_auto.h: 60:     TXSTA2 = 0x22;
-[e = _TXSTA2 -> -> 34 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 60:     TRISDbits.TRISD6 = 0;
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
 "61
-[; ;./../LIBRERIAS/configuracion_auto.h: 61:     RCSTA2 = 0x90;
-[e = _RCSTA2 -> -> 144 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 61:     TRISDbits.TRISD7 = 1;
+[e = . . _TRISDbits 0 7 -> -> 1 `i `uc ]
 "62
-[; ;./../LIBRERIAS/configuracion_auto.h: 62:     BAUDCON2bits.BRG16 = 0;
-[e = . . _BAUDCON2bits 0 3 -> -> 0 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 62:     RPOR23 = 6;
+[e = _RPOR23 -> -> 6 `i `uc ]
 "63
-[; ;./../LIBRERIAS/configuracion_auto.h: 63:     SPBRG2 = 77;
-[e = _SPBRG2 -> -> 77 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 63:     RPINR16 = 24;
+[e = _RPINR16 -> -> 24 `i `uc ]
 "64
-[; ;./../LIBRERIAS/configuracion_auto.h: 64:     PIR3bits.RC2IF = 0;
-[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 64:     TXSTA2 = 0x22;
+[e = _TXSTA2 -> -> 34 `i `uc ]
 "65
-[; ;./../LIBRERIAS/configuracion_auto.h: 65:     PIE3bits.RC2IE = 1;
-[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/configuracion_auto.h: 65:     RCSTA2 = 0x90;
+[e = _RCSTA2 -> -> 144 `i `uc ]
 "66
-[; ;./../LIBRERIAS/configuracion_auto.h: 66: }
+[; ;./../LIBRERIAS/configuracion_auto.h: 66:     BAUDCON2bits.BRG16 = 0;
+[e = . . _BAUDCON2bits 0 3 -> -> 0 `i `uc ]
+"67
+[; ;./../LIBRERIAS/configuracion_auto.h: 67:     SPBRG2 = 77;
+[e = _SPBRG2 -> -> 77 `i `uc ]
+"68
+[; ;./../LIBRERIAS/configuracion_auto.h: 68:     PIR3bits.RC2IF = 0;
+[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
+"69
+[; ;./../LIBRERIAS/configuracion_auto.h: 69:     PIE3bits.RC2IE = 1;
+[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
+"70
+[; ;./../LIBRERIAS/configuracion_auto.h: 70: }
 [e :UE 924 ]
 }
 "11 ./../LIBRERIAS/funciones_auto.h
@@ -1835,9 +1822,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _speed `uc ~T0 @X0 1 r1 ]
 [f ]
 "31
-[; ;./../LIBRERIAS/funciones_auto.h: 31:     float DC = 0.006 * speed + 0.6;
+[; ;./../LIBRERIAS/funciones_auto.h: 31:     float DC = 0.006 * speed + 0.5;
 [v _DC `f ~T0 @X0 1 a ]
-[e = _DC -> + * .0.006 -> -> _speed `i `d .0.6 `f ]
+[e = _DC -> + * .0.006 -> -> _speed `i `d .0.5 `f ]
 "32
 [; ;./../LIBRERIAS/funciones_auto.h: 32:     velocidad = 4 * DC * 125;
 [e = _velocidad -> * * -> -> 4 `i `f _DC -> -> 125 `i `f `ui ]
@@ -2002,9 +1989,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 ]
 "35
-[; ;auto.c: 35: unsigned char indicador = 0, servo_dirreccion = 0;
+[; ;auto.c: 35: unsigned char indicador = 0, bandera_fuego = 0, servo_dirreccion = 0;
 [v _indicador `uc ~T0 @X0 1 e ]
 [i _indicador
+-> -> 0 `i `uc
+]
+[v _bandera_fuego `uc ~T0 @X0 1 e ]
+[i _bandera_fuego
 -> -> 0 `i `uc
 ]
 [v _servo_dirreccion `uc ~T0 @X0 1 e ]
@@ -2191,26 +2182,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 "88
 [; ;auto.c: 88:     }
 }
+[e $U 952  ]
+"89
+[; ;auto.c: 89:     else if(INTCON3bits.INT1F == 1 && INTCON3bits.INT1E == 1){
 [e :U 949 ]
+[e $ ! && == -> . . _INTCON3bits 1 0 `i -> 1 `i == -> . . _INTCON3bits 1 3 `i -> 1 `i 953  ]
+{
+"90
+[; ;auto.c: 90:         bandera_fuego = 1;
+[e = _bandera_fuego -> -> 1 `i `uc ]
+"91
+[; ;auto.c: 91:         INTCON3bits.INT1E = 0;
+[e = . . _INTCON3bits 1 3 -> -> 0 `i `uc ]
+"92
+[; ;auto.c: 92:         INTCON3bits.INT1F = 0;
+[e = . . _INTCON3bits 1 0 -> -> 0 `i `uc ]
+"93
+[; ;auto.c: 93:     }
+}
+[e :U 953 ]
+[e :U 952 ]
 [e :U 948 ]
 [e :U 946 ]
 [e :U 943 ]
-"89
-[; ;auto.c: 89: }
+"94
+[; ;auto.c: 94: }
 [e :UE 939 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"91
-[; ;auto.c: 91: void main(void) {
+"96
+[; ;auto.c: 96: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-[v F7116 `uc ~T0 @X0 -> 6 `i s ]
-[i F7116
+[v F7117 `uc ~T0 @X0 -> 6 `i s ]
+[i F7117
 :U ..
-"92
-[; ;auto.c: 92:     unsigned char text[] = "HOLA!";
+"97
+[; ;auto.c: 97:     unsigned char text[] = "HOLA!";
 -> 72 `c
 -> 79 `c
 -> 76 `c
@@ -2220,379 +2230,362 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _text `uc ~T0 @X0 -> 6 `i a ]
-[e = _text F7116 ]
-[v F7118 `uc ~T0 @X0 -> 8 `i s ]
-[i F7118
+[e = _text F7117 ]
+[v F7119 `uc ~T0 @X0 -> 8 `i s ]
+[i F7119
 :U ..
-"93
-[; ;auto.c: 93:     unsigned char texto[8] = {'\0'};
+"98
+[; ;auto.c: 98:     unsigned char texto[8] = {'\0'};
 -> -> 0 `ui `uc
 ..
 ]
 [v _texto `uc ~T0 @X0 -> 8 `i a ]
-[e = _texto F7118 ]
-"94
-[; ;auto.c: 94:     configuracionInicial();
-[e ( _configuracionInicial ..  ]
-"95
-[; ;auto.c: 95:     enviarRS232(text);
-[e ( _enviarRS232 (1 &U _text ]
-"96
-[; ;auto.c: 96:     while(1){
-[e :U 954 ]
-{
-"97
-[; ;auto.c: 97:         if(bandera == 1){
-[e $ ! == -> _bandera `i -> 1 `i 956  ]
-{
-"98
-[; ;auto.c: 98:             bandera = 0;
-[e = _bandera -> -> 0 `i `uc ]
+[e = _texto F7119 ]
 "99
-[; ;auto.c: 99:             terminal(datos);
-[e ( _terminal (1 &U _datos ]
+[; ;auto.c: 99:     configuracionInicial();
+[e ( _configuracionInicial ..  ]
 "100
-[; ;auto.c: 100:         }
-}
-[e :U 956 ]
+[; ;auto.c: 100:     enviarRS232(text);
+[e ( _enviarRS232 (1 &U _text ]
 "101
-[; ;auto.c: 101:         if(bandera_servo == 1){
-[e $ ! == -> _bandera_servo `i -> 1 `i 957  ]
+[; ;auto.c: 101:     while(1){
+[e :U 956 ]
 {
 "102
-[; ;auto.c: 102:             bandera_servo = 0;
-[e = _bandera_servo -> -> 0 `i `uc ]
-"103
-[; ;auto.c: 103:             PWMServo();
-[e ( _PWMServo ..  ]
-"104
-[; ;auto.c: 104:         }
-}
-[e :U 957 ]
-"105
-[; ;auto.c: 105:         if(obstaculo == 1){
-[e $ ! == -> _obstaculo `i -> 1 `i 958  ]
+[; ;auto.c: 102:         if(bandera == 1){
+[e $ ! == -> _bandera `i -> 1 `i 958  ]
 {
-"106
-[; ;auto.c: 106:             obstaculo = 0;
-[e = _obstaculo -> -> 0 `i `uc ]
-"107
-[; ;auto.c: 107:             rutinaEscape(2);
-[e ( _rutinaEscape (1 -> -> 2 `i `uc ]
-"108
-[; ;auto.c: 108:         }
+"103
+[; ;auto.c: 103:             bandera = 0;
+[e = _bandera -> -> 0 `i `uc ]
+"104
+[; ;auto.c: 104:             terminal(datos);
+[e ( _terminal (1 &U _datos ]
+"105
+[; ;auto.c: 105:         }
 }
 [e :U 958 ]
-"109
-[; ;auto.c: 109:         if(bandera_distancia == 1){
-[e $ ! == -> _bandera_distancia `i -> 1 `i 959  ]
+"106
+[; ;auto.c: 106:         if(bandera_servo == 1){
+[e $ ! == -> _bandera_servo `i -> 1 `i 959  ]
 {
+"107
+[; ;auto.c: 107:             bandera_servo = 0;
+[e = _bandera_servo -> -> 0 `i `uc ]
+"108
+[; ;auto.c: 108:             PWMServo();
+[e ( _PWMServo ..  ]
+"109
+[; ;auto.c: 109:         }
+}
+[e :U 959 ]
 "110
-[; ;auto.c: 110:             bandera_distancia = 0;
-[e = _bandera_distancia -> -> 0 `i `uc ]
+[; ;auto.c: 110:         if(obstaculo == 1){
+[e $ ! == -> _obstaculo `i -> 1 `i 960  ]
+{
 "111
-[; ;auto.c: 111:             sprintf(texto,"%03.1f cm",distancia);
-[e ( _sprintf (1 , (. , -> &U _texto `*uc :s 1C -> _distancia `d ]
+[; ;auto.c: 111:             obstaculo = 0;
+[e = _obstaculo -> -> 0 `i `uc ]
 "112
-[; ;auto.c: 112:             enviarRS232(texto);
-[e ( _enviarRS232 (1 &U _texto ]
+[; ;auto.c: 112:             frenarMotor();
+[e ( _frenarMotor ..  ]
 "113
 [; ;auto.c: 113:         }
 }
-[e :U 959 ]
+[e :U 960 ]
 "114
-[; ;auto.c: 114:     }
-}
-[e :U 953 ]
-[e $U 954  ]
-[e :U 955 ]
+[; ;auto.c: 114:         if(bandera_distancia == 1){
+[e $ ! == -> _bandera_distancia `i -> 1 `i 961  ]
+{
 "115
-[; ;auto.c: 115:     return;
-[e $UE 952  ]
+[; ;auto.c: 115:             bandera_distancia = 0;
+[e = _bandera_distancia -> -> 0 `i `uc ]
 "116
-[; ;auto.c: 116: }
-[e :UE 952 ]
-}
+[; ;auto.c: 116:             sprintf(texto,"%03.1f cm",distancia);
+[e ( _sprintf (1 , (. , -> &U _texto `*uc :s 1C -> _distancia `d ]
+"117
+[; ;auto.c: 117:             enviarRS232(texto);
+[e ( _enviarRS232 (1 &U _texto ]
 "118
-[; ;auto.c: 118: void configuracionInicial(){
+[; ;auto.c: 118:         }
+}
+[e :U 961 ]
+"119
+[; ;auto.c: 119:         if(bandera_fuego == 1){
+[e $ ! == -> _bandera_fuego `i -> 1 `i 962  ]
+{
+"120
+[; ;auto.c: 120:             bandera_fuego = 0;
+[e = _bandera_fuego -> -> 0 `i `uc ]
+"121
+[; ;auto.c: 121:             enviarRS232("LLAMEN A LOS BOMBEROS PLS!");
+[e ( _enviarRS232 (1 :s 2C ]
+"122
+[; ;auto.c: 122:         }
+}
+[e :U 962 ]
+"123
+[; ;auto.c: 123:     }
+}
+[e :U 955 ]
+[e $U 956  ]
+[e :U 957 ]
+"124
+[; ;auto.c: 124:     return;
+[e $UE 954  ]
+"125
+[; ;auto.c: 125: }
+[e :UE 954 ]
+}
+"127
+[; ;auto.c: 127: void configuracionInicial(){
 [v _configuracionInicial `(v ~T0 @X0 1 ef ]
 {
 [e :U _configuracionInicial ]
 [f ]
-"119
-[; ;auto.c: 119:     configurarPuertos();
+"128
+[; ;auto.c: 128:     configurarPuertos();
 [e ( _configurarPuertos ..  ]
-"120
-[; ;auto.c: 120:     configurarPWM7();
+"129
+[; ;auto.c: 129:     configurarPWM7();
 [e ( _configurarPWM7 ..  ]
-"121
-[; ;auto.c: 121:     configurarInterrupciones();
+"130
+[; ;auto.c: 130:     configurarInterrupciones();
 [e ( _configurarInterrupciones ..  ]
-"122
-[; ;auto.c: 122:     configurarRS232();
+"131
+[; ;auto.c: 131:     configurarRS232();
 [e ( _configurarRS232 ..  ]
-"123
-[; ;auto.c: 123:     configurarTMR5();
+"132
+[; ;auto.c: 132:     configurarTMR5();
 [e ( _configurarTMR5 ..  ]
-"124
-[; ;auto.c: 124:     configurarRS232US100();
+"133
+[; ;auto.c: 133:     configurarRS232US100();
 [e ( _configurarRS232US100 ..  ]
-"125
-[; ;auto.c: 125: }
-[e :UE 960 ]
+"134
+[; ;auto.c: 134: }
+[e :UE 963 ]
 }
-"127
-[; ;auto.c: 127: void terminal(unsigned char *comand){
+"136
+[; ;auto.c: 136: void terminal(unsigned char *comand){
 [v _terminal `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _terminal ]
 [v _comand `*uc ~T0 @X0 1 r1 ]
 [f ]
-"128
-[; ;auto.c: 128:     unsigned int medicion = 0;
+"137
+[; ;auto.c: 137:     unsigned int medicion = 0;
 [v _medicion `ui ~T0 @X0 1 a ]
 [e = _medicion -> -> 0 `i `ui ]
-"129
-[; ;auto.c: 129:     unsigned int degree;
+"138
+[; ;auto.c: 138:     unsigned int degree;
 [v _degree `ui ~T0 @X0 1 a ]
-[v F7125 `uc ~T0 @X0 -> 20 `i s ]
-[i F7125
+[v F7126 `uc ~T0 @X0 -> 20 `i s ]
+[i F7126
 :U ..
-"130
-[; ;auto.c: 130:     unsigned char texto[20] = {'\0'};
+"139
+[; ;auto.c: 139:     unsigned char texto[20] = {'\0'};
 -> -> 0 `ui `uc
 ..
 ]
 [v _texto `uc ~T0 @X0 -> 20 `i a ]
-[e = _texto F7125 ]
-"131
-[; ;auto.c: 131:     TXREG2 = 0x55;
-[e = _TXREG2 -> -> 85 `i `uc ]
-"132
-[; ;auto.c: 132:     switch (comand[0]){
-[e $U 963  ]
-{
-"133
-[; ;auto.c: 133:         case 'w':
-[e :U 964 ]
-"134
-[; ;auto.c: 134:             adelante();
-[e ( _adelante ..  ]
-"135
-[; ;auto.c: 135:             encenderMotor();
-[e ( _encenderMotor ..  ]
-"136
-[; ;auto.c: 136:             enviarRS232("Motores encendidos!");
-[e ( _enviarRS232 (1 :s 2C ]
-"137
-[; ;auto.c: 137:             break;
-[e $U 962  ]
-"138
-[; ;auto.c: 138:         case 's':
-[e :U 965 ]
-"139
-[; ;auto.c: 139:             atras();
-[e ( _atras ..  ]
+[e = _texto F7126 ]
 "140
-[; ;auto.c: 140:             encenderMotor();
-[e ( _encenderMotor ..  ]
+[; ;auto.c: 140:     TXREG2 = 0x55;
+[e = _TXREG2 -> -> 85 `i `uc ]
 "141
-[; ;auto.c: 141:             enviarRS232("Vehiculo en reversa!");
-[e ( _enviarRS232 (1 :s 3C ]
+[; ;auto.c: 141:     switch (comand[0]){
+[e $U 966  ]
+{
 "142
-[; ;auto.c: 142:             break;
-[e $U 962  ]
+[; ;auto.c: 142:         case 'w':
+[e :U 967 ]
 "143
-[; ;auto.c: 143:         case 'a':
-[e :U 966 ]
+[; ;auto.c: 143:             adelante();
+[e ( _adelante ..  ]
 "144
-[; ;auto.c: 144:             degree = estadoDirreccion(2);
-[e = _degree ( _estadoDirreccion (1 -> -> 2 `i `uc ]
+[; ;auto.c: 144:             encenderMotor();
+[e ( _encenderMotor ..  ]
 "145
-[; ;auto.c: 145:             dirreccion(degree);
-[e ( _dirreccion (1 _degree ]
+[; ;auto.c: 145:             enviarRS232("Motores encendidos!");
+[e ( _enviarRS232 (1 :s 3C ]
 "146
 [; ;auto.c: 146:             break;
-[e $U 962  ]
+[e $U 965  ]
 "147
-[; ;auto.c: 147:         case 'd':
-[e :U 967 ]
-"148
-[; ;auto.c: 148:             degree = estadoDirreccion(1);
-[e = _degree ( _estadoDirreccion (1 -> -> 1 `i `uc ]
-"149
-[; ;auto.c: 149:             dirreccion(degree);
-[e ( _dirreccion (1 _degree ]
-"150
-[; ;auto.c: 150:             break;
-[e $U 962  ]
-"151
-[; ;auto.c: 151:         case 'c':
+[; ;auto.c: 147:         case 's':
 [e :U 968 ]
+"148
+[; ;auto.c: 148:             atras();
+[e ( _atras ..  ]
+"149
+[; ;auto.c: 149:             encenderMotor();
+[e ( _encenderMotor ..  ]
+"150
+[; ;auto.c: 150:             enviarRS232("Vehiculo en reversa!");
+[e ( _enviarRS232 (1 :s 4C ]
+"151
+[; ;auto.c: 151:             break;
+[e $U 965  ]
 "152
-[; ;auto.c: 152:             frenarMotor();
-[e ( _frenarMotor ..  ]
-"153
-[; ;auto.c: 153:             break;
-[e $U 962  ]
-"154
-[; ;auto.c: 154:         case 'F':
+[; ;auto.c: 152:         case 'a':
 [e :U 969 ]
+"153
+[; ;auto.c: 153:             degree = estadoDirreccion(2);
+[e = _degree ( _estadoDirreccion (1 -> -> 2 `i `uc ]
+"154
+[; ;auto.c: 154:             dirreccion(degree);
+[e ( _dirreccion (1 _degree ]
 "155
-[; ;auto.c: 155:             medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
-[e = _medicion -> - + + * - -> *U + _comand * -> -> 1 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 100 `i * - -> *U + _comand * -> -> 2 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 10 `i -> *U + _comand * -> -> 3 `i `x -> -> # *U _comand `i `x `i -> 48 `i `ui ]
+[; ;auto.c: 155:             break;
+[e $U 965  ]
 "156
-[; ;auto.c: 156:             fijarVelocidad(medicion);
-[e ( _fijarVelocidad (1 -> _medicion `uc ]
-"157
-[; ;auto.c: 157:             cambiarPWM();
-[e ( _cambiarPWM ..  ]
-"158
-[; ;auto.c: 158:             sprintf(texto, "Velocidad fijada al: %03u%c", medicion, '%');
-[e ( _sprintf (1 , , (. , -> &U _texto `*uc :s 4C _medicion -> 37 `ui ]
-"159
-[; ;auto.c: 159:             enviarRS232(texto);
-[e ( _enviarRS232 (1 &U _texto ]
-"160
-[; ;auto.c: 160:             break;
-[e $U 962  ]
-"161
-[; ;auto.c: 161:         default:
+[; ;auto.c: 156:         case 'd':
 [e :U 970 ]
+"157
+[; ;auto.c: 157:             degree = estadoDirreccion(1);
+[e = _degree ( _estadoDirreccion (1 -> -> 1 `i `uc ]
+"158
+[; ;auto.c: 158:             dirreccion(degree);
+[e ( _dirreccion (1 _degree ]
+"159
+[; ;auto.c: 159:             break;
+[e $U 965  ]
+"160
+[; ;auto.c: 160:         case 'c':
+[e :U 971 ]
+"161
+[; ;auto.c: 161:             frenarMotor();
+[e ( _frenarMotor ..  ]
 "162
 [; ;auto.c: 162:             break;
-[e $U 962  ]
+[e $U 965  ]
 "163
-[; ;auto.c: 163:     }
-}
-[e $U 962  ]
-[e :U 963 ]
-[e [\ -> *U + _comand * -> -> 0 `i `x -> -> # *U _comand `i `x `i , $ -> -> 119 `ui `i 964
- , $ -> -> 115 `ui `i 965
- , $ -> -> 97 `ui `i 966
- , $ -> -> 100 `ui `i 967
- , $ -> -> 99 `ui `i 968
- , $ -> -> 70 `ui `i 969
- 970 ]
-[e :U 962 ]
+[; ;auto.c: 163:         case 'F':
+[e :U 972 ]
 "164
-[; ;auto.c: 164: }
-[e :UE 961 ]
-}
+[; ;auto.c: 164:             medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
+[e = _medicion -> - + + * - -> *U + _comand * -> -> 1 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 100 `i * - -> *U + _comand * -> -> 2 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 10 `i -> *U + _comand * -> -> 3 `i `x -> -> # *U _comand `i `x `i -> 48 `i `ui ]
+"165
+[; ;auto.c: 165:             fijarVelocidad(medicion);
+[e ( _fijarVelocidad (1 -> _medicion `uc ]
 "166
-[; ;auto.c: 166: void cambiarPWM(){
+[; ;auto.c: 166:             cambiarPWM();
+[e ( _cambiarPWM ..  ]
+"167
+[; ;auto.c: 167:             sprintf(texto, "Velocidad fijada al: %03u%c", medicion, '%');
+[e ( _sprintf (1 , , (. , -> &U _texto `*uc :s 5C _medicion -> 37 `ui ]
+"168
+[; ;auto.c: 168:             enviarRS232(texto);
+[e ( _enviarRS232 (1 &U _texto ]
+"169
+[; ;auto.c: 169:             break;
+[e $U 965  ]
+"170
+[; ;auto.c: 170:         default:
+[e :U 973 ]
+"171
+[; ;auto.c: 171:             break;
+[e $U 965  ]
+"172
+[; ;auto.c: 172:     }
+}
+[e $U 965  ]
+[e :U 966 ]
+[e [\ -> *U + _comand * -> -> 0 `i `x -> -> # *U _comand `i `x `i , $ -> -> 119 `ui `i 967
+ , $ -> -> 115 `ui `i 968
+ , $ -> -> 97 `ui `i 969
+ , $ -> -> 100 `ui `i 970
+ , $ -> -> 99 `ui `i 971
+ , $ -> -> 70 `ui `i 972
+ 973 ]
+[e :U 965 ]
+"173
+[; ;auto.c: 173: }
+[e :UE 964 ]
+}
+"175
+[; ;auto.c: 175: void cambiarPWM(){
 [v _cambiarPWM `(v ~T0 @X0 1 ef ]
 {
 [e :U _cambiarPWM ]
 [f ]
-"167
-[; ;auto.c: 167:     if(motor == 1){
-[e $ ! == -> _motor `i -> 1 `i 972  ]
+"176
+[; ;auto.c: 176:     if(motor == 1){
+[e $ ! == -> _motor `i -> 1 `i 975  ]
 {
-"168
-[; ;auto.c: 168:         definirVelocidad();
+"177
+[; ;auto.c: 177:         definirVelocidad();
 [e ( _definirVelocidad ..  ]
-"169
-[; ;auto.c: 169:     }
+"178
+[; ;auto.c: 178:     }
 }
-[e :U 972 ]
-"170
-[; ;auto.c: 170: }
-[e :UE 971 ]
+[e :U 975 ]
+"179
+[; ;auto.c: 179: }
+[e :UE 974 ]
 }
-"172
-[; ;auto.c: 172: unsigned int estadoDirreccion(unsigned char valor){
+"181
+[; ;auto.c: 181: unsigned int estadoDirreccion(unsigned char valor){
 [v _estadoDirreccion `(ui ~T0 @X0 1 ef1`uc ]
 {
 [e :U _estadoDirreccion ]
 [v _valor `uc ~T0 @X0 1 r1 ]
 [f ]
-"173
-[; ;auto.c: 173:     unsigned int angulo = 90;
+"182
+[; ;auto.c: 182:     unsigned int angulo = 90;
 [v _angulo `ui ~T0 @X0 1 a ]
 [e = _angulo -> -> 90 `i `ui ]
-"174
-[; ;auto.c: 174:     switch(servo_dirreccion){
-[e $U 975  ]
-{
-"175
-[; ;auto.c: 175:         case 0:
-[e :U 976 ]
-"176
-[; ;auto.c: 176:             if(valor == 1){
-[e $ ! == -> _valor `i -> 1 `i 977  ]
-{
-"177
-[; ;auto.c: 177:                 servo_dirreccion = 1;
-[e = _servo_dirreccion -> -> 1 `i `uc ]
-"178
-[; ;auto.c: 178:                 angulo = 0;
-[e = _angulo -> -> 0 `i `ui ]
-"179
-[; ;auto.c: 179:             }
-}
-[e $U 978  ]
-"180
-[; ;auto.c: 180:             else{
-[e :U 977 ]
-{
-"181
-[; ;auto.c: 181:                 servo_dirreccion = 2;
-[e = _servo_dirreccion -> -> 2 `i `uc ]
-"182
-[; ;auto.c: 182:                 angulo = 180;
-[e = _angulo -> -> 180 `i `ui ]
 "183
-[; ;auto.c: 183:             }
-}
-[e :U 978 ]
-"184
-[; ;auto.c: 184:             break;
-[e $U 974  ]
-"185
-[; ;auto.c: 185:         case 1:
-[e :U 979 ]
-"186
-[; ;auto.c: 186:             if(valor != 1){
-[e $ ! != -> _valor `i -> 1 `i 980  ]
+[; ;auto.c: 183:     switch(servo_dirreccion){
+[e $U 978  ]
 {
+"184
+[; ;auto.c: 184:         case 0:
+[e :U 979 ]
+"185
+[; ;auto.c: 185:             if(valor == 1){
+[e $ ! == -> _valor `i -> 1 `i 980  ]
+{
+"186
+[; ;auto.c: 186:                 servo_dirreccion = 1;
+[e = _servo_dirreccion -> -> 1 `i `uc ]
 "187
-[; ;auto.c: 187:                 servo_dirreccion = 0;
-[e = _servo_dirreccion -> -> 0 `i `uc ]
+[; ;auto.c: 187:                 angulo = 0;
+[e = _angulo -> -> 0 `i `ui ]
 "188
-[; ;auto.c: 188:                 angulo = 90;
-[e = _angulo -> -> 90 `i `ui ]
-"189
-[; ;auto.c: 189:             }
+[; ;auto.c: 188:             }
 }
 [e $U 981  ]
-"190
-[; ;auto.c: 190:             else{
+"189
+[; ;auto.c: 189:             else{
 [e :U 980 ]
 {
+"190
+[; ;auto.c: 190:                 servo_dirreccion = 2;
+[e = _servo_dirreccion -> -> 2 `i `uc ]
 "191
-[; ;auto.c: 191:                 angulo = 0;
-[e = _angulo -> -> 0 `i `ui ]
+[; ;auto.c: 191:                 angulo = 180;
+[e = _angulo -> -> 180 `i `ui ]
 "192
 [; ;auto.c: 192:             }
 }
 [e :U 981 ]
 "193
 [; ;auto.c: 193:             break;
-[e $U 974  ]
+[e $U 977  ]
 "194
-[; ;auto.c: 194:         case 2:
+[; ;auto.c: 194:         case 1:
 [e :U 982 ]
 "195
-[; ;auto.c: 195:             if(valor == 1){
-[e $ ! == -> _valor `i -> 1 `i 983  ]
+[; ;auto.c: 195:             if(valor != 1){
+[e $ ! != -> _valor `i -> 1 `i 983  ]
 {
 "196
 [; ;auto.c: 196:                 servo_dirreccion = 0;
 [e = _servo_dirreccion -> -> 0 `i `uc ]
 "197
-[; ;auto.c: 197:                 angulo = 85;
-[e = _angulo -> -> 85 `i `ui ]
+[; ;auto.c: 197:                 angulo = 90;
+[e = _angulo -> -> 90 `i `ui ]
 "198
 [; ;auto.c: 198:             }
 }
@@ -2602,432 +2595,348 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 983 ]
 {
 "200
-[; ;auto.c: 200:                 angulo = 180;
-[e = _angulo -> -> 180 `i `ui ]
+[; ;auto.c: 200:                 angulo = 0;
+[e = _angulo -> -> 0 `i `ui ]
 "201
 [; ;auto.c: 201:             }
 }
 [e :U 984 ]
 "202
 [; ;auto.c: 202:             break;
-[e $U 974  ]
+[e $U 977  ]
 "203
-[; ;auto.c: 203:     }
+[; ;auto.c: 203:         case 2:
+[e :U 985 ]
+"204
+[; ;auto.c: 204:             if(valor == 1){
+[e $ ! == -> _valor `i -> 1 `i 986  ]
+{
+"205
+[; ;auto.c: 205:                 servo_dirreccion = 0;
+[e = _servo_dirreccion -> -> 0 `i `uc ]
+"206
+[; ;auto.c: 206:                 angulo = 85;
+[e = _angulo -> -> 85 `i `ui ]
+"207
+[; ;auto.c: 207:             }
 }
-[e $U 974  ]
-[e :U 975 ]
-[e [\ -> _servo_dirreccion `i , $ -> 0 `i 976
- , $ -> 1 `i 979
- , $ -> 2 `i 982
- 974 ]
-[e :U 974 ]
+[e $U 987  ]
+"208
+[; ;auto.c: 208:             else{
+[e :U 986 ]
+{
+"209
+[; ;auto.c: 209:                 angulo = 180;
+[e = _angulo -> -> 180 `i `ui ]
+"210
+[; ;auto.c: 210:             }
+}
+[e :U 987 ]
+"211
+[; ;auto.c: 211:             break;
+[e $U 977  ]
 "212
-[; ;auto.c: 212:     return angulo;
-[e ) _angulo ]
-[e $UE 973  ]
-"213
-[; ;auto.c: 213: }
-[e :UE 973 ]
+[; ;auto.c: 212:     }
 }
-"215
-[; ;auto.c: 215: void dirreccion(unsigned int degree){
+[e $U 977  ]
+[e :U 978 ]
+[e [\ -> _servo_dirreccion `i , $ -> 0 `i 979
+ , $ -> 1 `i 982
+ , $ -> 2 `i 985
+ 977 ]
+[e :U 977 ]
+"221
+[; ;auto.c: 221:     return angulo;
+[e ) _angulo ]
+[e $UE 976  ]
+"222
+[; ;auto.c: 222: }
+[e :UE 976 ]
+}
+"224
+[; ;auto.c: 224: void dirreccion(unsigned int degree){
 [v _dirreccion `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _dirreccion ]
 [v _degree `ui ~T0 @X0 1 r1 ]
 [f ]
-"216
-[; ;auto.c: 216:     unsigned char tiempo_1 = 61;
+"225
+[; ;auto.c: 225:     unsigned char tiempo_1 = 61;
 [v _tiempo_1 `uc ~T0 @X0 1 a ]
 [e = _tiempo_1 -> -> 61 `i `uc ]
-"217
-[; ;auto.c: 217:     contador_timer_5 = 0;
-[e = _contador_timer_5 -> -> 0 `i `ui ]
-"218
-[; ;auto.c: 218:     parar = 0;
-[e = _parar -> -> 0 `i `ui ]
-"219
-[; ;auto.c: 219:     switch(degree){
-[e $U 987  ]
-{
-"220
-[; ;auto.c: 220:         case 85:
-[e :U 988 ]
-"221
-[; ;auto.c: 221:             tiempo_1 = 60;
-[e = _tiempo_1 -> -> 60 `i `uc ]
-"222
-[; ;auto.c: 222:             break;
-[e $U 986  ]
-"223
-[; ;auto.c: 223:         case 90:
-[e :U 989 ]
-"224
-[; ;auto.c: 224:             tiempo_1 = 57;
-[e = _tiempo_1 -> -> 57 `i `uc ]
-"225
-[; ;auto.c: 225:             break;
-[e $U 986  ]
 "226
-[; ;auto.c: 226:         case 0:
-[e :U 990 ]
+[; ;auto.c: 226:     contador_timer_5 = 0;
+[e = _contador_timer_5 -> -> 0 `i `ui ]
 "227
-[; ;auto.c: 227:             tiempo_1 = 67;
-[e = _tiempo_1 -> -> 67 `i `uc ]
+[; ;auto.c: 227:     parar = 0;
+[e = _parar -> -> 0 `i `ui ]
 "228
-[; ;auto.c: 228:             break;
-[e $U 986  ]
+[; ;auto.c: 228:     switch(degree){
+[e $U 990  ]
+{
 "229
-[; ;auto.c: 229:         case 180:
+[; ;auto.c: 229:         case 85:
 [e :U 991 ]
 "230
-[; ;auto.c: 230:             tiempo_1 = 50;
-[e = _tiempo_1 -> -> 50 `i `uc ]
+[; ;auto.c: 230:             tiempo_1 = 60;
+[e = _tiempo_1 -> -> 60 `i `uc ]
 "231
 [; ;auto.c: 231:             break;
-[e $U 986  ]
+[e $U 989  ]
 "232
-[; ;auto.c: 232:     }
-}
-[e $U 986  ]
-[e :U 987 ]
-[e [\ _degree , $ -> -> 85 `i `ui 988
- , $ -> -> 90 `i `ui 989
- , $ -> -> 0 `i `ui 990
- , $ -> -> 180 `i `ui 991
- 986 ]
-[e :U 986 ]
-"233
-[; ;auto.c: 233:     if(PORTDbits.RD4 != 1){
-[e $ ! != -> . . _PORTDbits 0 4 `i -> 1 `i 992  ]
-{
-"234
-[; ;auto.c: 234:         TIME_MAX = tiempo_1;
-[e = _TIME_MAX -> _tiempo_1 `ui ]
-"235
-[; ;auto.c: 235:         PORTDbits.RD4 = 1;
-[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
-"236
-[; ;auto.c: 236:     }
-}
-[e $U 993  ]
-"237
-[; ;auto.c: 237:     else{
+[; ;auto.c: 232:         case 90:
 [e :U 992 ]
-{
-"238
-[; ;auto.c: 238:         TIME_MAX = 1000 - tiempo_1;
-[e = _TIME_MAX -> - -> 1000 `i -> _tiempo_1 `i `ui ]
-"239
-[; ;auto.c: 239:         PORTDbits.RD4 = 0;
-[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
-"240
-[; ;auto.c: 240:     }
-}
+"233
+[; ;auto.c: 233:             tiempo_1 = 57;
+[e = _tiempo_1 -> -> 57 `i `uc ]
+"234
+[; ;auto.c: 234:             break;
+[e $U 989  ]
+"235
+[; ;auto.c: 235:         case 0:
 [e :U 993 ]
+"236
+[; ;auto.c: 236:             tiempo_1 = 67;
+[e = _tiempo_1 -> -> 67 `i `uc ]
+"237
+[; ;auto.c: 237:             break;
+[e $U 989  ]
+"238
+[; ;auto.c: 238:         case 180:
+[e :U 994 ]
+"239
+[; ;auto.c: 239:             tiempo_1 = 50;
+[e = _tiempo_1 -> -> 50 `i `uc ]
+"240
+[; ;auto.c: 240:             break;
+[e $U 989  ]
 "241
-[; ;auto.c: 241:     contador_timer_5 = 0;
-[e = _contador_timer_5 -> -> 0 `i `ui ]
-"242
-[; ;auto.c: 242:     bandera_servo = 0;
-[e = _bandera_servo -> -> 0 `i `uc ]
-"243
-[; ;auto.c: 243:     T5CONbits.TMR5ON = 1;
-[e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
-"244
-[; ;auto.c: 244: }
-[e :UE 985 ]
+[; ;auto.c: 241:     }
 }
+[e $U 989  ]
+[e :U 990 ]
+[e [\ _degree , $ -> -> 85 `i `ui 991
+ , $ -> -> 90 `i `ui 992
+ , $ -> -> 0 `i `ui 993
+ , $ -> -> 180 `i `ui 994
+ 989 ]
+[e :U 989 ]
+"242
+[; ;auto.c: 242:     if(PORTDbits.RD4 != 1){
+[e $ ! != -> . . _PORTDbits 0 4 `i -> 1 `i 995  ]
+{
+"243
+[; ;auto.c: 243:         TIME_MAX = tiempo_1;
+[e = _TIME_MAX -> _tiempo_1 `ui ]
+"244
+[; ;auto.c: 244:         PORTDbits.RD4 = 1;
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
+"245
+[; ;auto.c: 245:     }
+}
+[e $U 996  ]
 "246
-[; ;auto.c: 246: void PWMServo(){
+[; ;auto.c: 246:     else{
+[e :U 995 ]
+{
+"247
+[; ;auto.c: 247:         TIME_MAX = 1000 - tiempo_1;
+[e = _TIME_MAX -> - -> 1000 `i -> _tiempo_1 `i `ui ]
+"248
+[; ;auto.c: 248:         PORTDbits.RD4 = 0;
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"249
+[; ;auto.c: 249:     }
+}
+[e :U 996 ]
+"250
+[; ;auto.c: 250:     contador_timer_5 = 0;
+[e = _contador_timer_5 -> -> 0 `i `ui ]
+"251
+[; ;auto.c: 251:     bandera_servo = 0;
+[e = _bandera_servo -> -> 0 `i `uc ]
+"252
+[; ;auto.c: 252:     T5CONbits.TMR5ON = 1;
+[e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
+"253
+[; ;auto.c: 253: }
+[e :UE 988 ]
+}
+"255
+[; ;auto.c: 255: void PWMServo(){
 [v _PWMServo `(v ~T0 @X0 1 ef ]
 {
 [e :U _PWMServo ]
 [f ]
-"247
-[; ;auto.c: 247:     contador_timer_5 = 0;
-[e = _contador_timer_5 -> -> 0 `i `ui ]
-"248
-[; ;auto.c: 248:     if(PORTDbits.RD4 == 1){
-[e $ ! == -> . . _PORTDbits 0 4 `i -> 1 `i 995  ]
-{
-"249
-[; ;auto.c: 249:         parar++;
-[e ++ _parar -> -> 1 `i `ui ]
-"250
-[; ;auto.c: 250:         PORTDbits.RD4 = 0;
-[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
-"251
-[; ;auto.c: 251:         tiempo_anterior_1 = TIME_MAX;
-[e = _tiempo_anterior_1 _TIME_MAX ]
-"252
-[; ;auto.c: 252:         TIME_MAX = 1000 - tiempo_anterior_1;
-[e = _TIME_MAX - -> -> 1000 `i `ui _tiempo_anterior_1 ]
-"253
-[; ;auto.c: 253:     }
-}
-[e $U 996  ]
-"254
-[; ;auto.c: 254:     else{
-[e :U 995 ]
-{
-"255
-[; ;auto.c: 255:         PORTDbits.RD4 = 1;
-[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
 "256
-[; ;auto.c: 256:         TIME_MAX = tiempo_anterior_1;
-[e = _TIME_MAX _tiempo_anterior_1 ]
+[; ;auto.c: 256:     contador_timer_5 = 0;
+[e = _contador_timer_5 -> -> 0 `i `ui ]
 "257
-[; ;auto.c: 257:     }
-}
-[e :U 996 ]
-"258
-[; ;auto.c: 258:     if(parar == 300){
-[e $ ! == _parar -> -> 300 `i `ui 997  ]
+[; ;auto.c: 257:     if(PORTDbits.RD4 == 1){
+[e $ ! == -> . . _PORTDbits 0 4 `i -> 1 `i 998  ]
 {
+"258
+[; ;auto.c: 258:         parar++;
+[e ++ _parar -> -> 1 `i `ui ]
 "259
-[; ;auto.c: 259:         T5CONbits.TMR5ON = 0;
-[e = . . _T5CONbits 1 0 -> -> 0 `i `uc ]
-"260
-[; ;auto.c: 260:         PORTDbits.RD4 = 0;
+[; ;auto.c: 259:         PORTDbits.RD4 = 0;
 [e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"260
+[; ;auto.c: 260:         tiempo_anterior_1 = TIME_MAX;
+[e = _tiempo_anterior_1 _TIME_MAX ]
 "261
-[; ;auto.c: 261:         parar = 0;
-[e = _parar -> -> 0 `i `ui ]
+[; ;auto.c: 261:         TIME_MAX = 1000 - tiempo_anterior_1;
+[e = _TIME_MAX - -> -> 1000 `i `ui _tiempo_anterior_1 ]
 "262
 [; ;auto.c: 262:     }
 }
-[e :U 997 ]
+[e $U 999  ]
 "263
-[; ;auto.c: 263: }
-[e :UE 994 ]
-}
+[; ;auto.c: 263:     else{
+[e :U 998 ]
+{
+"264
+[; ;auto.c: 264:         PORTDbits.RD4 = 1;
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
 "265
-[; ;auto.c: 265: void adelante(){
+[; ;auto.c: 265:         TIME_MAX = tiempo_anterior_1;
+[e = _TIME_MAX _tiempo_anterior_1 ]
+"266
+[; ;auto.c: 266:     }
+}
+[e :U 999 ]
+"267
+[; ;auto.c: 267:     if(parar == 30){
+[e $ ! == _parar -> -> 30 `i `ui 1000  ]
+{
+"268
+[; ;auto.c: 268:         T5CONbits.TMR5ON = 0;
+[e = . . _T5CONbits 1 0 -> -> 0 `i `uc ]
+"269
+[; ;auto.c: 269:         PORTDbits.RD4 = 0;
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"270
+[; ;auto.c: 270:         parar = 0;
+[e = _parar -> -> 0 `i `ui ]
+"271
+[; ;auto.c: 271:     }
+}
+[e :U 1000 ]
+"272
+[; ;auto.c: 272: }
+[e :UE 997 ]
+}
+"274
+[; ;auto.c: 274: void adelante(){
 [v _adelante `(v ~T0 @X0 1 ef ]
 {
 [e :U _adelante ]
 [f ]
-"266
-[; ;auto.c: 266:     PORTAbits.RA0 = 0;
-[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
-"267
-[; ;auto.c: 267:     PORTAbits.RA1 = 0;
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
-"268
-[; ;auto.c: 268:     PORTAbits.RA0 = 1;
-[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
-"269
-[; ;auto.c: 269:     PORTAbits.RA1 = 0;
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
-"270
-[; ;auto.c: 270: }
-[e :UE 998 ]
-}
-"272
-[; ;auto.c: 272: void atras(){
-[v _atras `(v ~T0 @X0 1 ef ]
-{
-[e :U _atras ]
-[f ]
-"273
-[; ;auto.c: 273:     PORTAbits.RA0 = 0;
-[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
-"274
-[; ;auto.c: 274:     PORTAbits.RA1 = 0;
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
 "275
 [; ;auto.c: 275:     PORTAbits.RA0 = 0;
 [e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
 "276
-[; ;auto.c: 276:     PORTAbits.RA1 = 1;
-[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
+[; ;auto.c: 276:     PORTAbits.RA1 = 0;
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
 "277
-[; ;auto.c: 277: }
-[e :UE 999 ]
-}
+[; ;auto.c: 277:     PORTAbits.RA0 = 1;
+[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
+"278
+[; ;auto.c: 278:     PORTAbits.RA1 = 0;
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
 "279
-[; ;auto.c: 279: void rutinaEscape(unsigned char type){
+[; ;auto.c: 279: }
+[e :UE 1001 ]
+}
+"281
+[; ;auto.c: 281: void atras(){
+[v _atras `(v ~T0 @X0 1 ef ]
+{
+[e :U _atras ]
+[f ]
+"282
+[; ;auto.c: 282:     PORTAbits.RA0 = 0;
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+"283
+[; ;auto.c: 283:     PORTAbits.RA1 = 0;
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
+"284
+[; ;auto.c: 284:     PORTAbits.RA0 = 0;
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+"285
+[; ;auto.c: 285:     PORTAbits.RA1 = 1;
+[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
+"286
+[; ;auto.c: 286: }
+[e :UE 1002 ]
+}
+"288
+[; ;auto.c: 288: void rutinaEscape(unsigned char type){
 [v _rutinaEscape `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _rutinaEscape ]
 [v _type `uc ~T0 @X0 1 r1 ]
 [f ]
-"280
-[; ;auto.c: 280:     frenarMotor();
-[e ( _frenarMotor ..  ]
-"281
-[; ;auto.c: 281:     switch(type){
-[e $U 1002  ]
-{
-"282
-[; ;auto.c: 282:         case 1:
-[e :U 1003 ]
-"285
-[; ;auto.c: 285:             break;
-[e $U 1001  ]
-"286
-[; ;auto.c: 286:         case 2:
-[e :U 1004 ]
-"287
-[; ;auto.c: 287:             fijarVelocidad(0);
-[e ( _fijarVelocidad (1 -> -> 0 `i `uc ]
-"288
-[; ;auto.c: 288:             atras();
-[e ( _atras ..  ]
 "289
-[; ;auto.c: 289:             encenderMotor();
-[e ( _encenderMotor ..  ]
+[; ;auto.c: 289:     frenarMotor();
+[e ( _frenarMotor ..  ]
 "290
-[; ;auto.c: 290:             _delay((unsigned long)((1000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;auto.c: 290:     switch(type){
+[e $U 1005  ]
+{
 "291
-[; ;auto.c: 291:             adelante();
-[e ( _adelante ..  ]
-"292
-[; ;auto.c: 292:             enviarRS232("Girando");
-[e ( _enviarRS232 (1 :s 5C ]
-"293
-[; ;auto.c: 293:             fijarVelocidad(50);
-[e ( _fijarVelocidad (1 -> -> 50 `i `uc ]
-"294
-[; ;auto.c: 294:             definirVelocidad();
-[e ( _definirVelocidad ..  ]
-"295
-[; ;auto.c: 295:             break;
-[e $U 1001  ]
-"296
-[; ;auto.c: 296:     }
-}
-[e $U 1001  ]
-[e :U 1002 ]
-[e [\ -> _type `i , $ -> 1 `i 1003
- , $ -> 2 `i 1004
- 1001 ]
-[e :U 1001 ]
-"297
-[; ;auto.c: 297: }
-[e :UE 1000 ]
-}
-"299
-[; ;auto.c: 299: void cambiarEstadoEscapeFuego(){
-[v _cambiarEstadoEscapeFuego `(v ~T0 @X0 1 ef ]
-{
-[e :U _cambiarEstadoEscapeFuego ]
-[f ]
-"300
-[; ;auto.c: 300:     switch(estadoFuego){
-[e $U 1007  ]
-{
-"301
-[; ;auto.c: 301:         case 0:
-[e :U 1008 ]
-"302
-[; ;auto.c: 302:             dirreccion(60);
-[e ( _dirreccion (1 -> -> 60 `i `ui ]
-"303
-[; ;auto.c: 303:             if(PORTBbits.RB0 == 1){
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 1009  ]
-{
-"304
-[; ;auto.c: 304:                 dirreccion(120);
-[e ( _dirreccion (1 -> -> 120 `i `ui ]
-"305
-[; ;auto.c: 305:                 estadoFuego = 1;
-[e = _estadoFuego -> -> 1 `i `uc ]
-"306
-[; ;auto.c: 306:             }
-}
-[e $U 1010  ]
-"307
-[; ;auto.c: 307:             else{
-[e :U 1009 ]
-{
-"308
-[; ;auto.c: 308:                 estadoFuego = 2;
-[e = _estadoFuego -> -> 2 `i `uc ]
-"309
-[; ;auto.c: 309:             }
-}
-[e :U 1010 ]
-"310
-[; ;auto.c: 310:             break;
-[e $U 1006  ]
-"311
-[; ;auto.c: 311:         case 1:
-[e :U 1011 ]
-"312
-[; ;auto.c: 312:             if(PORTBbits.RB0 == 1){
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 1012  ]
-{
-"313
-[; ;auto.c: 313:                 estadoFuego = 3;
-[e = _estadoFuego -> -> 3 `i `uc ]
-"314
-[; ;auto.c: 314:             }
-}
-[e $U 1013  ]
-"315
-[; ;auto.c: 315:             else{
-[e :U 1012 ]
-{
-"316
-[; ;auto.c: 316:                 estadoFuego = 4;
-[e = _estadoFuego -> -> 4 `i `uc ]
-"317
-[; ;auto.c: 317:             }
-}
-[e :U 1013 ]
-"318
-[; ;auto.c: 318:             break;
-[e $U 1006  ]
-"319
-[; ;auto.c: 319:         case 2:
-[e :U 1014 ]
-"320
-[; ;auto.c: 320:             dirreccion(45);
-[e ( _dirreccion (1 -> -> 45 `i `ui ]
-"322
-[; ;auto.c: 322:             break;
-[e $U 1006  ]
-"323
-[; ;auto.c: 323:         case 3:
-[e :U 1015 ]
-"324
-[; ;auto.c: 324:             enviarRS232("No puedo esquivar el fuego! llame a los bomberos");
-[e ( _enviarRS232 (1 :s 6C ]
-"326
-[; ;auto.c: 326:             break;
-[e $U 1006  ]
-"327
-[; ;auto.c: 327:         case 4:
-[e :U 1016 ]
-"328
-[; ;auto.c: 328:             dirreccion(135);
-[e ( _dirreccion (1 -> -> 135 `i `ui ]
-"330
-[; ;auto.c: 330:             break;
-[e $U 1006  ]
-"331
-[; ;auto.c: 331:     }
-}
-[e $U 1006  ]
-[e :U 1007 ]
-[e [\ -> _estadoFuego `i , $ -> 0 `i 1008
- , $ -> 1 `i 1011
- , $ -> 2 `i 1014
- , $ -> 3 `i 1015
- , $ -> 4 `i 1016
- 1006 ]
+[; ;auto.c: 291:         case 1:
 [e :U 1006 ]
-"332
-[; ;auto.c: 332: }
-[e :UE 1005 ]
+"292
+[; ;auto.c: 292:             break;
+[e $U 1004  ]
+"293
+[; ;auto.c: 293:         case 2:
+[e :U 1007 ]
+"294
+[; ;auto.c: 294:             fijarVelocidad(0);
+[e ( _fijarVelocidad (1 -> -> 0 `i `uc ]
+"295
+[; ;auto.c: 295:             atras();
+[e ( _atras ..  ]
+"296
+[; ;auto.c: 296:             encenderMotor();
+[e ( _encenderMotor ..  ]
+"297
+[; ;auto.c: 297:             _delay((unsigned long)((1000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"298
+[; ;auto.c: 298:             adelante();
+[e ( _adelante ..  ]
+"299
+[; ;auto.c: 299:             enviarRS232("Girando");
+[e ( _enviarRS232 (1 :s 6C ]
+"300
+[; ;auto.c: 300:             fijarVelocidad(50);
+[e ( _fijarVelocidad (1 -> -> 50 `i `uc ]
+"301
+[; ;auto.c: 301:             definirVelocidad();
+[e ( _definirVelocidad ..  ]
+"302
+[; ;auto.c: 302:             break;
+[e $U 1004  ]
+"303
+[; ;auto.c: 303:     }
+}
+[e $U 1004  ]
+[e :U 1005 ]
+[e [\ -> _type `i , $ -> 1 `i 1006
+ , $ -> 2 `i 1007
+ 1004 ]
+[e :U 1004 ]
+"304
+[; ;auto.c: 304: }
+[e :UE 1003 ]
 }
 [p f _sprintf 9020420 ]
-[a 6C 78 111 32 112 117 101 100 111 32 101 115 113 117 105 118 97 114 32 101 108 32 102 117 101 103 111 33 32 108 108 97 109 101 32 97 32 108 111 115 32 98 111 109 98 101 114 111 115 0 ]
-[a 5C 71 105 114 97 110 100 111 0 ]
+[a 6C 71 105 114 97 110 100 111 0 ]
 [a 1C 37 48 51 46 49 102 32 99 109 0 ]
-[a 4C 86 101 108 111 99 105 100 97 100 32 102 105 106 97 100 97 32 97 108 58 32 37 48 51 117 37 99 0 ]
-[a 2C 77 111 116 111 114 101 115 32 101 110 99 101 110 100 105 100 111 115 33 0 ]
-[a 3C 86 101 104 105 99 117 108 111 32 101 110 32 114 101 118 101 114 115 97 33 0 ]
+[a 5C 86 101 108 111 99 105 100 97 100 32 102 105 106 97 100 97 32 97 108 58 32 37 48 51 117 37 99 0 ]
+[a 3C 77 111 116 111 114 101 115 32 101 110 99 101 110 100 105 100 111 115 33 0 ]
+[a 4C 86 101 104 105 99 117 108 111 32 101 110 32 114 101 118 101 114 115 97 33 0 ]
+[a 2C 76 76 65 77 69 78 32 65 32 76 79 83 32 66 79 77 66 69 82 79 83 32 80 76 83 33 0 ]
