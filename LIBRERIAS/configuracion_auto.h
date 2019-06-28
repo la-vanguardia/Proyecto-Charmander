@@ -3,6 +3,8 @@
 void configurarPuertos(){
     ANCON0 = 0x7F;
     ANCON1 = 0x1F;
+    TRISAbits.TRISA0 = 0;
+    TRISAbits.TRISA1 = 0;
 }
 
 void configurarInterrupciones(){
@@ -46,4 +48,19 @@ void configurarTMR5(){
     TMR5L = 0x6A;
     PIE5bits.TMR5IE = 1;
     PIR5bits.TMR5IF = 0;
+}
+
+
+void configurarRS232US100(){
+    TRISDbits.TRISD6 = 0;
+    TRISDbits.TRISD7 = 1;
+    PPSCON = 0;
+    RPOR23 = 6; //defino RD6 como TX2
+    RPINR16  = 24; //defino RD7 como Rx2
+    TXSTA2 = 0x22;
+    RCSTA2 = 0x90;
+    BAUDCON2bits.BRG16 = 0;
+    SPBRG2 = 77;
+    PIR3bits.RC2IF = 0;
+    PIE3bits.RC2IE = 1;
 }

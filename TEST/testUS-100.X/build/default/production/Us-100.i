@@ -1,4 +1,4 @@
-# 1 "auto.c"
+# 1 "Us-100.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,15 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "auto.c" 2
-
-
-
-
-
-
-
-
+# 1 "Us-100.c" 2
+# 11 "Us-100.c"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11521,8 +11514,108 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 9 "auto.c" 2
+# 11 "Us-100.c" 2
 
+
+# 1 "./../../LIBRERIAS/CONFIG.h" 1
+
+#pragma config WDTEN = OFF
+#pragma config PLLDIV = 3
+#pragma config CFGPLLEN = ON
+#pragma config STVREN = ON
+#pragma config XINST = OFF
+
+
+#pragma config CPUDIV = OSC1
+#pragma config CP0 = OFF
+
+
+#pragma config OSC = HSPLL
+#pragma config SOSCSEL = HIGH
+#pragma config CLKOEC = ON
+#pragma config FCMEN = ON
+#pragma config IESO = ON
+
+
+#pragma config WDTPS = 32768
+
+
+#pragma config DSWDTOSC = INTOSCREF
+#pragma config RTCOSC = T1OSCREF
+#pragma config DSBOREN = OFF
+#pragma config DSWDTEN = OFF
+#pragma config DSWDTPS = G2
+
+
+#pragma config IOL1WAY = ON
+#pragma config ADCSEL = BIT12
+#pragma config MSSP7B_EN = MSK7
+
+
+#pragma config WPFP = PAGE_127
+#pragma config WPCFG = OFF
+
+
+#pragma config WPDIS = OFF
+#pragma config WPEND = PAGE_WPFP
+#pragma config LS48MHZ = SYS48X8
+# 13 "Us-100.c" 2
+
+# 1 "./../../LIBRERIAS/configuracion_auto.h" 1
+
+
+void configurarPuertos(){
+    ANCON0 = 0x7F;
+    ANCON1 = 0x1F;
+    TRISAbits.TRISA0 = 0;
+    TRISAbits.TRISA1 = 0;
+}
+
+void configurarInterrupciones(){
+    TRISBbits.TRISB0 = 1;
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    INTCON2bits.INTEDG0=0;
+    INTCONbits.INT0F = 0;
+    INTCONbits.INT0E = 1;
+
+}
+
+void configurarPWM7(){
+    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB7 = 0;
+    CCP7CONbits.CCP7M = 0xC;
+    CCPTMRS1bits.C7TSEL = 0b00;
+
+    T2CON = 0x02;
+    PR2 = 124;
+
+    TMR2 = 0x00;
+}
+
+void configurarRS232(){
+    TRISCbits.TRISC7 = 1;
+    TRISCbits.TRISC6 = 0;
+    TXSTA1 = 0x22;
+    RCSTA1 = 0x90;
+    BAUDCON1bits.BRG16 = 0;
+    SPBRG1 = 77;
+    PIR1bits.RC1IF = 0;
+    PIE1bits.RC1IE = 1;
+}
+
+void configurarTMR5(){
+    TRISDbits.TRISD4 = 0;
+    PORTDbits.RD4 = 0;
+    T5CON = 0x32;
+    TMR5H = 0xFF;
+    TMR5L = 0x6A;
+    PIE5bits.TMR5IE = 1;
+    PIR5bits.TMR5IF = 0;
+}
+# 14 "Us-100.c" 2
+
+# 1 "./../../LIBRERIAS/funciones_auto.h" 1
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -11659,126 +11752,8 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 10 "auto.c" 2
-
-
-
-
-# 1 "./../LIBRERIAS/CONFIG.h" 1
-
-#pragma config WDTEN = OFF
-#pragma config PLLDIV = 3
-#pragma config CFGPLLEN = ON
-#pragma config STVREN = ON
-#pragma config XINST = OFF
-
-
-#pragma config CPUDIV = OSC1
-#pragma config CP0 = OFF
-
-
-#pragma config OSC = HSPLL
-#pragma config SOSCSEL = HIGH
-#pragma config CLKOEC = ON
-#pragma config FCMEN = ON
-#pragma config IESO = ON
-
-
-#pragma config WDTPS = 32768
-
-
-#pragma config DSWDTOSC = INTOSCREF
-#pragma config RTCOSC = T1OSCREF
-#pragma config DSBOREN = OFF
-#pragma config DSWDTEN = OFF
-#pragma config DSWDTPS = G2
-
-
-#pragma config IOL1WAY = ON
-#pragma config ADCSEL = BIT12
-#pragma config MSSP7B_EN = MSK7
-
-
-#pragma config WPFP = PAGE_127
-#pragma config WPCFG = OFF
-
-
-#pragma config WPDIS = OFF
-#pragma config WPEND = PAGE_WPFP
-#pragma config LS48MHZ = SYS48X8
-# 14 "auto.c" 2
-
-# 1 "./../LIBRERIAS/configuracion_auto.h" 1
-
-
-void configurarPuertos(){
-    ANCON0 = 0x7F;
-    ANCON1 = 0x1F;
-    TRISAbits.TRISA0 = 0;
-    TRISAbits.TRISA1 = 0;
-}
-
-void configurarInterrupciones(){
-    TRISBbits.TRISB0 = 1;
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCON2bits.INTEDG0=0;
-    INTCONbits.INT0F = 0;
-    INTCONbits.INT0E = 1;
-
-}
-
-void configurarPWM7(){
-    TRISBbits.TRISB4 = 0;
-    TRISBbits.TRISB7 = 0;
-    CCP7CONbits.CCP7M = 0xC;
-    CCPTMRS1bits.C7TSEL = 0b00;
-
-    T2CON = 0x02;
-    PR2 = 124;
-
-    TMR2 = 0x00;
-}
-
-void configurarRS232(){
-    TRISCbits.TRISC7 = 1;
-    TRISCbits.TRISC6 = 0;
-    TXSTA1 = 0x22;
-    RCSTA1 = 0x90;
-    BAUDCON1bits.BRG16 = 0;
-    SPBRG1 = 77;
-    PIR1bits.RC1IF = 0;
-    PIE1bits.RC1IE = 1;
-}
-
-void configurarTMR5(){
-    TRISDbits.TRISD4 = 0;
-    PORTDbits.RD4 = 0;
-    T5CON = 0x32;
-    TMR5H = 0xFF;
-    TMR5L = 0x6A;
-    PIE5bits.TMR5IE = 1;
-    PIR5bits.TMR5IF = 0;
-}
-
-
-void configurarRS232US100(){
-    TRISDbits.TRISD6 = 0;
-    TRISDbits.TRISD7 = 1;
-    PPSCON = 0;
-    RPOR23 = 6;
-    RPINR16 = 24;
-    TXSTA2 = 0x22;
-    RCSTA2 = 0x90;
-    BAUDCON2bits.BRG16 = 0;
-    SPBRG2 = 77;
-    PIR3bits.RC2IF = 0;
-    PIE3bits.RC2IE = 1;
-}
-# 15 "auto.c" 2
-
-# 1 "./../LIBRERIAS/funciones_auto.h" 1
-# 10 "./../LIBRERIAS/funciones_auto.h"
+# 1 "./../../LIBRERIAS/funciones_auto.h" 2
+# 10 "./../../LIBRERIAS/funciones_auto.h"
 unsigned int cicle_90 = 0x01C2;
 unsigned int velocidad = 0x01C2;
 unsigned char motor = 0;
@@ -11795,7 +11770,7 @@ void rutinaArranque(){
     CCP7CONbits.DC7B = cicle_90 & 0x0003;
     CCPR7L = cicle_90>>2;
     T2CONbits.TMR2ON = 1;
-    _delay((unsigned long)((50)*(48000000/4000.0)));
+    _delay((unsigned long)((10)*(48000000/4000.0)));
 }
 
 void fijarVelocidad(unsigned char speed){
@@ -11838,27 +11813,27 @@ int length(unsigned char *text){
     }
     return longitud;
 }
-# 16 "auto.c" 2
-# 34 "auto.c"
-unsigned int TIME_MAX = 185;
-unsigned char tiempo_anterior_1 = 15, indicador = 0, contador_timer_5 = 0, servo_dirreccion = 0;
-unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
-unsigned char datos[10] = {'\0'}, parar = 0;
-unsigned char bandera_distancia = 0, contador_datos = 0;
-float distancia = 0;
+# 15 "Us-100.c" 2
+
+
+
+
+
+unsigned char bandera_ultra_sonico = 0, time_pulse = 0, contador = 0, bandera = 0, indicador = 0;
+unsigned char datos[10] = {'\0'};
+float distancia;
+unsigned char texto[6] = {'\0'};
 
 void configuracionInicial();
-void terminal(unsigned char *command);
-void cambiarPWM();
-unsigned char estadoDirreccion(unsigned char valor);
-void dirreccion(unsigned char degree);
-void PWMServo();
-void adelante();
-void atras();
-void rutinaEscape(unsigned char type);
 
 void __attribute__((picinterrupt(("")))) rutina(){
-    if(PIR1bits.RC1IF == 1){
+    if(INTCONbits.INT0F == 1){
+        INTCONbits.INT0F = 0;
+        time_pulse = contador * 5;
+        contador = 0;
+        bandera_ultra_sonico = 1;
+    }
+    else if(PIR1bits.RC1IF == 1){
         unsigned char dato = RCREG1;
         if(dato == 'P'){
             bandera = 1;
@@ -11872,257 +11847,43 @@ void __attribute__((picinterrupt(("")))) rutina(){
     }
     else if(PIR5bits.TMR5IF == 1){
         PIR5bits.TMR5IF = 0;
-        contador_timer_5++;
         TMR5H = 0xFF;
         TMR5L = 0x6A;
-        if(contador_timer_5 == TIME_MAX){
-            contador_timer_5 = 0;
-            bandera_servo = 1;
-        }
-    }
-    else if(INTCONbits.INT0F == 1){
-        INTCONbits.INT0F = 0;
-        obstaculo = 1;
-    }
-    else if(PIR3bits.RC2IF == 1){
-        if(contador_datos == 1){
-            bandera_distancia = 1;
-            distancia += (RCREG2)/10;
-            contador_datos = 0;
-        }
-        else{
-            distancia = 256*(RCREG2)/10;
-            contador_datos ++;
-        }
+        contador ++;
     }
 }
 
 void main(void) {
-    unsigned char text[] = "HOLA!";
-    unsigned char texto[8] = {'\0'};
     configuracionInicial();
-    enviarRS232(text);
+    TRISBbits.TRISB1 = 0;
+    TXREG1 = 'H';
     while(1){
         if(bandera == 1){
             bandera = 0;
-            terminal(datos);
-        }
-        if(bandera_servo == 1){
-            bandera_servo = 0;
-            PWMServo();
-        }
-        if(obstaculo == 1){
-            obstaculo = 0;
-            rutinaEscape(2);
-        }
-        if(bandera_distancia == 1){
-            bandera_distancia = 0;
-            sprintf(texto,"%03.1f cm",distancia);
-            enviarRS232(texto);
+            if(datos[0] == 'w'){
+                PORTBbits.RB1 = 0;
+                _delay((unsigned long)((2)*(48000000/4000000.0)));
+                PORTBbits.RB1 = 1;
+                _delay((unsigned long)((10)*(48000000/4000000.0)));
+                PORTBbits.RB1 = 0;
+                contador = 0;
+            }
+
+            if(bandera_ultra_sonico == 1){
+                bandera_ultra_sonico = 0;
+                distancia = time_pulse / 29.1;
+                sprintf(texto, "%3.2f cm",distancia);
+                enviarRS232(texto);
+            }
         }
     }
     return;
 }
 
+
 void configuracionInicial(){
     configurarPuertos();
-    configurarPWM7();
     configurarInterrupciones();
     configurarRS232();
     configurarTMR5();
-    configurarRS232US100();
-}
-
-void terminal(unsigned char *comand){
-    unsigned int medicion = 0;
-    unsigned char degree;
-    unsigned char texto[20] = {'\0'};
-    TXREG2 = 0x55;
-    switch (comand[0]){
-        case 'w':
-            adelante();
-            encenderMotor();
-            enviarRS232("Motores encendidos!");
-            break;
-        case 's':
-            atras();
-            encenderMotor();
-            enviarRS232("Vehiculo en reversa!");
-            break;
-        case 'a':
-            degree = estadoDirreccion(2);
-            dirreccion(degree);
-            break;
-        case 'd':
-            degree = estadoDirreccion(1);
-            dirreccion(degree);
-            break;
-        case 'c':
-            frenarMotor();
-            break;
-        case 'F':
-            medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
-            fijarVelocidad(medicion);
-            cambiarPWM();
-            sprintf(texto, "Velocidad fijada al: %03u%c", medicion, '%');
-            enviarRS232(texto);
-            break;
-        default:
-            break;
-    }
-}
-
-void cambiarPWM(){
-    if(motor == 1){
-        definirVelocidad();
-    }
-}
-
-unsigned char estadoDirreccion(unsigned char valor){
-    unsigned char angulo = 90;
-    switch(servo_dirreccion){
-        case 0:
-            if(valor == 1){
-                servo_dirreccion = 1;
-                angulo = 0;
-            }
-            else{
-                servo_dirreccion = 2;
-                angulo = 180;
-            }
-            break;
-        case 1:
-            if(valor != 1){
-                servo_dirreccion = 0;
-                angulo = 90;
-            }
-            else{
-                angulo = 0;
-            }
-            break;
-        case 2:
-            if(valor == 1){
-                servo_dirreccion = 0;
-                angulo = 90;
-            }
-            else{
-                angulo = 180;
-            }
-            break;
-    }
-    return angulo;
-}
-
-void dirreccion(unsigned char degree){
-    unsigned char tiempo_1 = 14;
-    switch(degree){
-        case 90:
-            tiempo_1 = 14;
-            break;
-        case 0:
-            tiempo_1 = 15;
-            break;
-        case 180:
-            tiempo_1 = 13;
-            break;
-    }
-    if(PORTDbits.RD4 != 1){
-        TIME_MAX = tiempo_1;
-        PORTDbits.RD4 = 1;
-    }
-    else{
-        TIME_MAX = 200 - tiempo_1;
-        PORTDbits.RD4 = 0;
-    }
-    contador_timer_5 = 0;
-    bandera_servo = 0;
-    T5CONbits.TMR5ON = 1;
-}
-
-void PWMServo(){
-    if(PORTDbits.RD4 == 1){
-        PORTDbits.RD4 = 0;
-        tiempo_anterior_1 = TIME_MAX;
-        TIME_MAX = 200 - tiempo_anterior_1;
-    }
-    else{
-        PORTDbits.RD4 = 1;
-        TIME_MAX = tiempo_anterior_1;
-    }
-    if(parar == 30){
-        T5CONbits.TMR5ON = 0;
-        PORTDbits.RD4 = 0;
-        parar = 0;
-    }
-}
-
-void adelante(){
-    PORTAbits.RA0 = 0;
-    PORTAbits.RA1 = 0;
-    PORTAbits.RA0 = 1;
-    PORTAbits.RA1 = 0;
-}
-
-void atras(){
-    PORTAbits.RA0 = 0;
-    PORTAbits.RA1 = 0;
-    PORTAbits.RA0 = 0;
-    PORTAbits.RA1 = 1;
-}
-
-void rutinaEscape(unsigned char type){
-    frenarMotor();
-    switch(type){
-        case 1:
-
-
-            break;
-        case 2:
-            fijarVelocidad(0);
-            atras();
-            encenderMotor();
-            _delay((unsigned long)((1000)*(48000000/4000.0)));
-            adelante();
-            enviarRS232("Girando");
-            fijarVelocidad(50);
-            definirVelocidad();
-            break;
-    }
-}
-
-unsigned char estadoFuego = 0;
-
-void cambiarEstadoEscapeFuego(){
-    switch(estadoFuego){
-        case 0:
-            dirreccion(60);
-            if(PORTBbits.RB0 == 1){
-                dirreccion(120);
-                estadoFuego = 1;
-            }
-            else{
-                estadoFuego = 2;
-            }
-            break;
-        case 1:
-            if(PORTBbits.RB0 == 1){
-                estadoFuego = 3;
-            }
-            else{
-                estadoFuego = 4;
-            }
-            break;
-        case 2:
-            dirreccion(45);
-
-            break;
-        case 3:
-            enviarRS232("No puedo esquivar el fuego! llame a los bomberos");
-
-            break;
-        case 4:
-            dirreccion(135);
-
-            break;
-    }
 }

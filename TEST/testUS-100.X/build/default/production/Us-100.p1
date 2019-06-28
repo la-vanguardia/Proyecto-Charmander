@@ -262,77 +262,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11499
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 11499: extern volatile PIR5bits_t PIR5bits __attribute__((address(0xF98)));
 [v _PIR5bits `VS528 ~T0 @X0 0 e@3992 ]
-"1100
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1100: extern volatile unsigned char PPSCON __attribute__((address(0xEBF)));
-[v _PPSCON `Vuc ~T0 @X0 0 e@3775 ]
-"1260
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1260: extern volatile unsigned char RPOR23 __attribute__((address(0xED7)));
-[v _RPOR23 `Vuc ~T0 @X0 0 e@3799 ]
-"1358
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1358: extern volatile unsigned char RPINR16 __attribute__((address(0xEF7)));
-[v _RPINR16 `Vuc ~T0 @X0 0 e@3831 ]
-"12789
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12789: extern volatile unsigned char TXSTA2 __attribute__((address(0xFA8)));
-[v _TXSTA2 `Vuc ~T0 @X0 0 e@4008 ]
-"11788
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 11788: extern volatile unsigned char RCSTA2 __attribute__((address(0xF9C)));
-[v _RCSTA2 `Vuc ~T0 @X0 0 e@3996 ]
-"8289
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8289:     struct {
-[s S402 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S402 . ABDEN WUE . BRG16 TXCKP RXDTP RCIDL ABDOVF ]
-"8299
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8299:     struct {
-[s S403 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S403 . ABDEN2 WUE2 . BRG162 SCKP2 DTRXP2 RCIDL2 ABDOVF2 ]
-"8309
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8309:     struct {
-[s S404 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S404 . . TXCKP2 RXDTP2 RCMT2 ]
-"8288
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8288: typedef union {
-[u S401 `S402 1 `S403 1 `S404 1 ]
-[n S401 . . . . ]
-"8316
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8316: extern volatile BAUDCON2bits_t BAUDCON2bits __attribute__((address(0xF7C)));
-[v _BAUDCON2bits `VS401 ~T0 @X0 0 e@3964 ]
-"12956
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12956: extern volatile unsigned char SPBRG2 __attribute__((address(0xFAB)));
-[v _SPBRG2 `Vuc ~T0 @X0 0 e@4011 ]
-"12574
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12574:     struct {
-[s S577 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S577 . RTCCIF TMR3GIF CTMUIF TMR4IF TX2IF RC2IF BCL2IF SSP2IF ]
-"12584
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12584:     struct {
-[s S578 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S578 . . RXBNIF . TXBNIF ]
-"12573
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12573: typedef union {
-[u S576 `S577 1 `S578 1 ]
-[n S576 . . . ]
-"12591
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12591: extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
-[v _PIR3bits `VS576 ~T0 @X0 0 e@4004 ]
-"12464
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12464:     struct {
-[s S573 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S573 . RTCCIE TMR3GIE CTMUIE TMR4IE TX2IE RC2IE BCL2IE SSP2IE ]
-"12474
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12474:     struct {
-[s S574 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S574 . RXB0IE RXB1IE TXB0IE TXB1IE TXB2IE ]
-"12481
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12481:     struct {
-[s S575 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S575 . . RXBNIE . TXBNIE ]
-"12463
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12463: typedef union {
-[u S572 `S573 1 `S574 1 `S575 1 ]
-[n S572 . . . . ]
-"12488
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12488: extern volatile PIE3bits_t PIE3bits __attribute__((address(0xFA3)));
-[v _PIE3bits `VS572 ~T0 @X0 0 e@4003 ]
 "1776
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 1776: extern volatile unsigned char CCPR7L __attribute__((address(0xF0A)));
 [v _CCPR7L `Vuc ~T0 @X0 0 e@3850 ]
@@ -355,11 +284,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "183 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18.h
 [v __delay `JF6725 ~T0 @X0 0 e ]
 [p i __delay ]
-"17 ./../LIBRERIAS/funciones_auto.h
-[; ;./../LIBRERIAS/funciones_auto.h: 17: void definirVelocidad();
+"17 ./../../LIBRERIAS/funciones_auto.h
+[; ;./../../LIBRERIAS/funciones_auto.h: 17: void definirVelocidad();
 [v _definirVelocidad `(v ~T0 @X0 0 e? ]
 "20
-[; ;./../LIBRERIAS/funciones_auto.h: 20: int length(unsigned char *text);
+[; ;./../../LIBRERIAS/funciones_auto.h: 20: int length(unsigned char *text);
 [v _length `(i ~T0 @X0 0 ef1`*uc ]
 "13602 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 13602: extern volatile unsigned char TXREG1 __attribute__((address(0xFAE)));
@@ -369,109 +298,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13640
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 13640: extern volatile unsigned char RCREG1 __attribute__((address(0xFAF)));
 [v _RCREG1 `Vuc ~T0 @X0 0 e@4015 ]
-"12936
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12936: extern volatile unsigned char RCREG2 __attribute__((address(0xFAA)));
-[v _RCREG2 `Vuc ~T0 @X0 0 e@4010 ]
 [p mainexit ]
-"41 auto.c
-[; ;auto.c: 41: void configuracionInicial();
+"25 Us-100.c
+[; ;Us-100.c: 25: void configuracionInicial();
 [v _configuracionInicial `(v ~T0 @X0 0 e? ]
-"42
-[; ;auto.c: 42: void terminal(unsigned char *command);
-[v _terminal `(v ~T0 @X0 0 ef1`*uc ]
-"46
-[; ;auto.c: 46: void PWMServo();
-[v _PWMServo `(v ~T0 @X0 0 e? ]
-"49
-[; ;auto.c: 49: void rutinaEscape(unsigned char type);
-[v _rutinaEscape `(v ~T0 @X0 0 ef1`uc ]
-"115 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"12916 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 12916: extern volatile unsigned char TXREG2 __attribute__((address(0xFA9)));
-[v _TXREG2 `Vuc ~T0 @X0 0 e@4009 ]
-"47 auto.c
-[; ;auto.c: 47: void adelante();
-[v _adelante `(v ~T0 @X0 0 e? ]
-"48
-[; ;auto.c: 48: void atras();
-[v _atras `(v ~T0 @X0 0 e? ]
-"44
-[; ;auto.c: 44: unsigned char estadoDirreccion(unsigned char valor);
-[v _estadoDirreccion `(uc ~T0 @X0 0 ef1`uc ]
-"45
-[; ;auto.c: 45: void dirreccion(unsigned char degree);
-[v _dirreccion `(v ~T0 @X0 0 ef1`uc ]
-"43
-[; ;auto.c: 43: void cambiarPWM();
-[v _cambiarPWM `(v ~T0 @X0 0 e? ]
-"2854 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 2854:     struct {
-[s S141 :2 `uc 1 :1 `uc 1 ]
-[n S141 . . NOT_T5SYNC ]
-"2858
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 2858:     struct {
-[s S142 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :2 `uc 1 ]
-[n S142 . TMR5ON RD16 nT5SYNC T5OSCEN T5CKPS TMR5CS ]
-"2866
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 2866:     struct {
-[s S143 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S143 . . T5CKPS0 T5CKPS1 TMR5CS0 TMR5CS1 ]
-"2873
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 2873:     struct {
-[s S144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S144 . . RD165 . SOSCEN5 ]
-"2853
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 2853: typedef union {
-[u S140 `S141 1 `S142 1 `S143 1 `S144 1 ]
-[n S140 . . . . . ]
-"2880
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 2880: extern volatile T5CONbits_t T5CONbits __attribute__((address(0xF22)));
-[v _T5CONbits `VS140 ~T0 @X0 0 e@3874 ]
-"8977
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8977:     struct {
-[s S436 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S436 . RA0 RA1 RA2 RA3 . RA5 RA6 RA7 ]
-"8987
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8987:     struct {
-[s S437 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S437 . AN0 AN1 AN2 AN3 . AN4 OSC2 OSC1 ]
-"8997
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8997:     struct {
-[s S438 :5 `uc 1 :1 `uc 1 ]
-[n S438 . . NOT_SS1 ]
-"9001
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9001:     struct {
-[s S439 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S439 . C1INA C2INA VREF_MINUS VREF_PLUS . nSS1 CLKO CLKI ]
-"9011
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9011:     struct {
-[s S440 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S440 . PMA6 PMA7 CVREF C1INB . HLVDIN ]
-"9019
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9019:     struct {
-[s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S441 . RP0 RP1 C2INB . RCV ]
-"9026
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9026:     struct {
-[s S442 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S442 . ULPWU VBG C1IND . RP2 ]
-"9033
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9033:     struct {
-[s S443 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S443 . . C3INB . C1INC ]
-"9039
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9039:     struct {
-[s S444 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S444 . ULPWUIN . LVDIN . RJPU ]
-"8976
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 8976: typedef union {
-[u S435 `S436 1 `S437 1 `S438 1 `S439 1 `S440 1 `S441 1 `S442 1 `S443 1 `S444 1 ]
-[n S435 . . . . . . . . . . ]
-"9047
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9047: extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
-[v _PORTAbits `VS435 ~T0 @X0 0 e@3968 ]
-"9258
+"9258 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9258:     struct {
 [s S446 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S446 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
@@ -514,6 +345,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9333
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 9333: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
 [v _PORTBbits `VS445 ~T0 @X0 0 e@3969 ]
+"115 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 54: __asm("ADCTRIG equ 0EB8h");
 [; <" ADCTRIG equ 0EB8h ;# ">
@@ -1546,7 +1379,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19385
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h: 19385: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"2 ./../LIBRERIAS/CONFIG.h
+"2 ./../../LIBRERIAS/CONFIG.h
 [p x WDTEN = OFF ]
 "3
 [p x PLLDIV = 3 ]
@@ -1598,1417 +1431,598 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WPEND = PAGE_WPFP ]
 "41
 [p x LS48MHZ = SYS48X8 ]
-"3 ./../LIBRERIAS/configuracion_auto.h
-[; ;./../LIBRERIAS/configuracion_auto.h: 3: void configurarPuertos(){
+"3 ./../../LIBRERIAS/configuracion_auto.h
+[; ;./../../LIBRERIAS/configuracion_auto.h: 3: void configurarPuertos(){
 [v _configurarPuertos `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarPuertos ]
 [f ]
 "4
-[; ;./../LIBRERIAS/configuracion_auto.h: 4:     ANCON0 = 0x7F;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 4:     ANCON0 = 0x7F;
 [e = _ANCON0 -> -> 127 `i `uc ]
 "5
-[; ;./../LIBRERIAS/configuracion_auto.h: 5:     ANCON1 = 0x1F;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 5:     ANCON1 = 0x1F;
 [e = _ANCON1 -> -> 31 `i `uc ]
 "6
-[; ;./../LIBRERIAS/configuracion_auto.h: 6:     TRISAbits.TRISA0 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 6:     TRISAbits.TRISA0 = 0;
 [e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
 "7
-[; ;./../LIBRERIAS/configuracion_auto.h: 7:     TRISAbits.TRISA1 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 7:     TRISAbits.TRISA1 = 0;
 [e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
 "8
-[; ;./../LIBRERIAS/configuracion_auto.h: 8: }
-[e :UE 919 ]
+[; ;./../../LIBRERIAS/configuracion_auto.h: 8: }
+[e :UE 917 ]
 }
 "10
-[; ;./../LIBRERIAS/configuracion_auto.h: 10: void configurarInterrupciones(){
+[; ;./../../LIBRERIAS/configuracion_auto.h: 10: void configurarInterrupciones(){
 [v _configurarInterrupciones `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarInterrupciones ]
 [f ]
 "11
-[; ;./../LIBRERIAS/configuracion_auto.h: 11:     TRISBbits.TRISB0 = 1;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 11:     TRISBbits.TRISB0 = 1;
 [e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
 "12
-[; ;./../LIBRERIAS/configuracion_auto.h: 12:     INTCONbits.GIE = 1;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 12:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "13
-[; ;./../LIBRERIAS/configuracion_auto.h: 13:     INTCONbits.PEIE = 1;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 13:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "14
-[; ;./../LIBRERIAS/configuracion_auto.h: 14:     INTCON2bits.INTEDG0=0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 14:     INTCON2bits.INTEDG0=0;
 [e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
 "15
-[; ;./../LIBRERIAS/configuracion_auto.h: 15:     INTCONbits.INT0F = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 15:     INTCONbits.INT0F = 0;
 [e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
 "16
-[; ;./../LIBRERIAS/configuracion_auto.h: 16:     INTCONbits.INT0E = 1;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 16:     INTCONbits.INT0E = 1;
 [e = . . _INTCONbits 1 4 -> -> 1 `i `uc ]
 "18
-[; ;./../LIBRERIAS/configuracion_auto.h: 18: }
-[e :UE 920 ]
+[; ;./../../LIBRERIAS/configuracion_auto.h: 18: }
+[e :UE 918 ]
 }
 "20
-[; ;./../LIBRERIAS/configuracion_auto.h: 20: void configurarPWM7(){
+[; ;./../../LIBRERIAS/configuracion_auto.h: 20: void configurarPWM7(){
 [v _configurarPWM7 `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarPWM7 ]
 [f ]
 "21
-[; ;./../LIBRERIAS/configuracion_auto.h: 21:     TRISBbits.TRISB4 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 21:     TRISBbits.TRISB4 = 0;
 [e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
 "22
-[; ;./../LIBRERIAS/configuracion_auto.h: 22:     TRISBbits.TRISB7 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 22:     TRISBbits.TRISB7 = 0;
 [e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
 "23
-[; ;./../LIBRERIAS/configuracion_auto.h: 23:     CCP7CONbits.CCP7M = 0xC;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 23:     CCP7CONbits.CCP7M = 0xC;
 [e = . . _CCP7CONbits 0 0 -> -> 12 `i `uc ]
 "24
-[; ;./../LIBRERIAS/configuracion_auto.h: 24:     CCPTMRS1bits.C7TSEL = 0b00;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 24:     CCPTMRS1bits.C7TSEL = 0b00;
 [e = . . _CCPTMRS1bits 0 5 -> -> 0 `i `uc ]
 "26
-[; ;./../LIBRERIAS/configuracion_auto.h: 26:     T2CON = 0x02;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 26:     T2CON = 0x02;
 [e = _T2CON -> -> 2 `i `uc ]
 "27
-[; ;./../LIBRERIAS/configuracion_auto.h: 27:     PR2 = 124;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 27:     PR2 = 124;
 [e = _PR2 -> -> 124 `i `uc ]
 "29
-[; ;./../LIBRERIAS/configuracion_auto.h: 29:     TMR2 = 0x00;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 29:     TMR2 = 0x00;
 [e = _TMR2 -> -> 0 `i `uc ]
 "30
-[; ;./../LIBRERIAS/configuracion_auto.h: 30: }
-[e :UE 921 ]
+[; ;./../../LIBRERIAS/configuracion_auto.h: 30: }
+[e :UE 919 ]
 }
 "32
-[; ;./../LIBRERIAS/configuracion_auto.h: 32: void configurarRS232(){
+[; ;./../../LIBRERIAS/configuracion_auto.h: 32: void configurarRS232(){
 [v _configurarRS232 `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarRS232 ]
 [f ]
 "33
-[; ;./../LIBRERIAS/configuracion_auto.h: 33:     TRISCbits.TRISC7 = 1;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 33:     TRISCbits.TRISC7 = 1;
 [e = . . _TRISCbits 0 5 -> -> 1 `i `uc ]
 "34
-[; ;./../LIBRERIAS/configuracion_auto.h: 34:     TRISCbits.TRISC6 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 34:     TRISCbits.TRISC6 = 0;
 [e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
 "35
-[; ;./../LIBRERIAS/configuracion_auto.h: 35:     TXSTA1 = 0x22;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 35:     TXSTA1 = 0x22;
 [e = _TXSTA1 -> -> 34 `i `uc ]
 "36
-[; ;./../LIBRERIAS/configuracion_auto.h: 36:     RCSTA1 = 0x90;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 36:     RCSTA1 = 0x90;
 [e = _RCSTA1 -> -> 144 `i `uc ]
 "37
-[; ;./../LIBRERIAS/configuracion_auto.h: 37:     BAUDCON1bits.BRG16 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 37:     BAUDCON1bits.BRG16 = 0;
 [e = . . _BAUDCON1bits 0 3 -> -> 0 `i `uc ]
 "38
-[; ;./../LIBRERIAS/configuracion_auto.h: 38:     SPBRG1 = 77;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 38:     SPBRG1 = 77;
 [e = _SPBRG1 -> -> 77 `i `uc ]
 "39
-[; ;./../LIBRERIAS/configuracion_auto.h: 39:     PIR1bits.RC1IF = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 39:     PIR1bits.RC1IF = 0;
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
 "40
-[; ;./../LIBRERIAS/configuracion_auto.h: 40:     PIE1bits.RC1IE = 1;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 40:     PIE1bits.RC1IE = 1;
 [e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
 "41
-[; ;./../LIBRERIAS/configuracion_auto.h: 41: }
-[e :UE 922 ]
+[; ;./../../LIBRERIAS/configuracion_auto.h: 41: }
+[e :UE 920 ]
 }
 "43
-[; ;./../LIBRERIAS/configuracion_auto.h: 43: void configurarTMR5(){
+[; ;./../../LIBRERIAS/configuracion_auto.h: 43: void configurarTMR5(){
 [v _configurarTMR5 `(v ~T0 @X0 1 ef ]
 {
 [e :U _configurarTMR5 ]
 [f ]
 "44
-[; ;./../LIBRERIAS/configuracion_auto.h: 44:     TRISDbits.TRISD4 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 44:     TRISDbits.TRISD4 = 0;
 [e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
 "45
-[; ;./../LIBRERIAS/configuracion_auto.h: 45:     PORTDbits.RD4 = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 45:     PORTDbits.RD4 = 0;
 [e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
 "46
-[; ;./../LIBRERIAS/configuracion_auto.h: 46:     T5CON = 0x32;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 46:     T5CON = 0x32;
 [e = _T5CON -> -> 50 `i `uc ]
 "47
-[; ;./../LIBRERIAS/configuracion_auto.h: 47:     TMR5H = 0xFF;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 47:     TMR5H = 0xFF;
 [e = _TMR5H -> -> 255 `i `uc ]
 "48
-[; ;./../LIBRERIAS/configuracion_auto.h: 48:     TMR5L = 0x6A;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 48:     TMR5L = 0x6A;
 [e = _TMR5L -> -> 106 `i `uc ]
 "49
-[; ;./../LIBRERIAS/configuracion_auto.h: 49:     PIE5bits.TMR5IE = 1;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 49:     PIE5bits.TMR5IE = 1;
 [e = . . _PIE5bits 0 2 -> -> 1 `i `uc ]
 "50
-[; ;./../LIBRERIAS/configuracion_auto.h: 50:     PIR5bits.TMR5IF = 0;
+[; ;./../../LIBRERIAS/configuracion_auto.h: 50:     PIR5bits.TMR5IF = 0;
 [e = . . _PIR5bits 0 2 -> -> 0 `i `uc ]
 "51
-[; ;./../LIBRERIAS/configuracion_auto.h: 51: }
-[e :UE 923 ]
+[; ;./../../LIBRERIAS/configuracion_auto.h: 51: }
+[e :UE 921 ]
 }
-"54
-[; ;./../LIBRERIAS/configuracion_auto.h: 54: void configurarRS232US100(){
-[v _configurarRS232US100 `(v ~T0 @X0 1 ef ]
-{
-[e :U _configurarRS232US100 ]
-[f ]
-"55
-[; ;./../LIBRERIAS/configuracion_auto.h: 55:     TRISDbits.TRISD6 = 0;
-[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
-"56
-[; ;./../LIBRERIAS/configuracion_auto.h: 56:     TRISDbits.TRISD7 = 1;
-[e = . . _TRISDbits 0 7 -> -> 1 `i `uc ]
-"57
-[; ;./../LIBRERIAS/configuracion_auto.h: 57:     PPSCON = 0;
-[e = _PPSCON -> -> 0 `i `uc ]
-"58
-[; ;./../LIBRERIAS/configuracion_auto.h: 58:     RPOR23 = 6;
-[e = _RPOR23 -> -> 6 `i `uc ]
-"59
-[; ;./../LIBRERIAS/configuracion_auto.h: 59:     RPINR16 = 24;
-[e = _RPINR16 -> -> 24 `i `uc ]
-"60
-[; ;./../LIBRERIAS/configuracion_auto.h: 60:     TXSTA2 = 0x22;
-[e = _TXSTA2 -> -> 34 `i `uc ]
-"61
-[; ;./../LIBRERIAS/configuracion_auto.h: 61:     RCSTA2 = 0x90;
-[e = _RCSTA2 -> -> 144 `i `uc ]
-"62
-[; ;./../LIBRERIAS/configuracion_auto.h: 62:     BAUDCON2bits.BRG16 = 0;
-[e = . . _BAUDCON2bits 0 3 -> -> 0 `i `uc ]
-"63
-[; ;./../LIBRERIAS/configuracion_auto.h: 63:     SPBRG2 = 77;
-[e = _SPBRG2 -> -> 77 `i `uc ]
-"64
-[; ;./../LIBRERIAS/configuracion_auto.h: 64:     PIR3bits.RC2IF = 0;
-[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
-"65
-[; ;./../LIBRERIAS/configuracion_auto.h: 65:     PIE3bits.RC2IE = 1;
-[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
-"66
-[; ;./../LIBRERIAS/configuracion_auto.h: 66: }
-[e :UE 924 ]
-}
-"10 ./../LIBRERIAS/funciones_auto.h
-[; ;./../LIBRERIAS/funciones_auto.h: 10: unsigned int cicle_90 = 0x01C2;
+"10 ./../../LIBRERIAS/funciones_auto.h
+[; ;./../../LIBRERIAS/funciones_auto.h: 10: unsigned int cicle_90 = 0x01C2;
 [v _cicle_90 `ui ~T0 @X0 1 e ]
 [i _cicle_90
 -> -> 450 `i `ui
 ]
 "11
-[; ;./../LIBRERIAS/funciones_auto.h: 11: unsigned int velocidad = 0x01C2;
+[; ;./../../LIBRERIAS/funciones_auto.h: 11: unsigned int velocidad = 0x01C2;
 [v _velocidad `ui ~T0 @X0 1 e ]
 [i _velocidad
 -> -> 450 `i `ui
 ]
 "12
-[; ;./../LIBRERIAS/funciones_auto.h: 12: unsigned char motor = 0;
+[; ;./../../LIBRERIAS/funciones_auto.h: 12: unsigned char motor = 0;
 [v _motor `uc ~T0 @X0 1 e ]
 [i _motor
 -> -> 0 `i `uc
 ]
 "22
-[; ;./../LIBRERIAS/funciones_auto.h: 22: void rutinaArranque(){
+[; ;./../../LIBRERIAS/funciones_auto.h: 22: void rutinaArranque(){
 [v _rutinaArranque `(v ~T0 @X0 1 ef ]
 {
 [e :U _rutinaArranque ]
 [f ]
 "23
-[; ;./../LIBRERIAS/funciones_auto.h: 23:     CCP7CONbits.DC7B = cicle_90 & 0x0003;
+[; ;./../../LIBRERIAS/funciones_auto.h: 23:     CCP7CONbits.DC7B = cicle_90 & 0x0003;
 [e = . . _CCP7CONbits 0 1 -> & _cicle_90 -> -> 3 `i `ui `uc ]
 "24
-[; ;./../LIBRERIAS/funciones_auto.h: 24:     CCPR7L = cicle_90>>2;
+[; ;./../../LIBRERIAS/funciones_auto.h: 24:     CCPR7L = cicle_90>>2;
 [e = _CCPR7L -> >> _cicle_90 -> 2 `i `uc ]
 "25
-[; ;./../LIBRERIAS/funciones_auto.h: 25:     T2CONbits.TMR2ON = 1;
+[; ;./../../LIBRERIAS/funciones_auto.h: 25:     T2CONbits.TMR2ON = 1;
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
 "26
-[; ;./../LIBRERIAS/funciones_auto.h: 26:     _delay((unsigned long)((50)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 26:     _delay((unsigned long)((10)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "27
-[; ;./../LIBRERIAS/funciones_auto.h: 27: }
-[e :UE 925 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 27: }
+[e :UE 924 ]
 }
 "29
-[; ;./../LIBRERIAS/funciones_auto.h: 29: void fijarVelocidad(unsigned char speed){
+[; ;./../../LIBRERIAS/funciones_auto.h: 29: void fijarVelocidad(unsigned char speed){
 [v _fijarVelocidad `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _fijarVelocidad ]
 [v _speed `uc ~T0 @X0 1 r1 ]
 [f ]
 "30
-[; ;./../LIBRERIAS/funciones_auto.h: 30:     float DC = 0.006 * speed + 0.6;
+[; ;./../../LIBRERIAS/funciones_auto.h: 30:     float DC = 0.006 * speed + 0.6;
 [v _DC `f ~T0 @X0 1 a ]
 [e = _DC -> + * .0.006 -> -> _speed `i `d .0.6 `f ]
 "31
-[; ;./../LIBRERIAS/funciones_auto.h: 31:     velocidad = 4 * DC * 125;
+[; ;./../../LIBRERIAS/funciones_auto.h: 31:     velocidad = 4 * DC * 125;
 [e = _velocidad -> * * -> -> 4 `i `f _DC -> -> 125 `i `f `ui ]
 "32
-[; ;./../LIBRERIAS/funciones_auto.h: 32: }
-[e :UE 926 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 32: }
+[e :UE 925 ]
 }
 "34
-[; ;./../LIBRERIAS/funciones_auto.h: 34: void encenderMotor(){
+[; ;./../../LIBRERIAS/funciones_auto.h: 34: void encenderMotor(){
 [v _encenderMotor `(v ~T0 @X0 1 ef ]
 {
 [e :U _encenderMotor ]
 [f ]
 "35
-[; ;./../LIBRERIAS/funciones_auto.h: 35:     rutinaArranque();
+[; ;./../../LIBRERIAS/funciones_auto.h: 35:     rutinaArranque();
 [e ( _rutinaArranque ..  ]
 "36
-[; ;./../LIBRERIAS/funciones_auto.h: 36:     definirVelocidad();
+[; ;./../../LIBRERIAS/funciones_auto.h: 36:     definirVelocidad();
 [e ( _definirVelocidad ..  ]
 "37
-[; ;./../LIBRERIAS/funciones_auto.h: 37:     motor = 1;
+[; ;./../../LIBRERIAS/funciones_auto.h: 37:     motor = 1;
 [e = _motor -> -> 1 `i `uc ]
 "38
-[; ;./../LIBRERIAS/funciones_auto.h: 38: }
-[e :UE 927 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 38: }
+[e :UE 926 ]
 }
 "40
-[; ;./../LIBRERIAS/funciones_auto.h: 40: void definirVelocidad(){
+[; ;./../../LIBRERIAS/funciones_auto.h: 40: void definirVelocidad(){
 [v _definirVelocidad `(v ~T0 @X0 1 ef ]
 {
 [e :U _definirVelocidad ]
 [f ]
 "41
-[; ;./../LIBRERIAS/funciones_auto.h: 41:     CCP7CONbits.DC7B = velocidad & 0x0003;
+[; ;./../../LIBRERIAS/funciones_auto.h: 41:     CCP7CONbits.DC7B = velocidad & 0x0003;
 [e = . . _CCP7CONbits 0 1 -> & _velocidad -> -> 3 `i `ui `uc ]
 "42
-[; ;./../LIBRERIAS/funciones_auto.h: 42:     CCPR7L = velocidad>>2;
+[; ;./../../LIBRERIAS/funciones_auto.h: 42:     CCPR7L = velocidad>>2;
 [e = _CCPR7L -> >> _velocidad -> 2 `i `uc ]
 "43
-[; ;./../LIBRERIAS/funciones_auto.h: 43: }
-[e :UE 928 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 43: }
+[e :UE 927 ]
 }
 "45
-[; ;./../LIBRERIAS/funciones_auto.h: 45: void frenarMotor(){
+[; ;./../../LIBRERIAS/funciones_auto.h: 45: void frenarMotor(){
 [v _frenarMotor `(v ~T0 @X0 1 ef ]
 {
 [e :U _frenarMotor ]
 [f ]
 "46
-[; ;./../LIBRERIAS/funciones_auto.h: 46:     CCP7CONbits.DC7B = 0b00;
+[; ;./../../LIBRERIAS/funciones_auto.h: 46:     CCP7CONbits.DC7B = 0b00;
 [e = . . _CCP7CONbits 0 1 -> -> 0 `i `uc ]
 "47
-[; ;./../LIBRERIAS/funciones_auto.h: 47:     CCPR7L = 0x00;
+[; ;./../../LIBRERIAS/funciones_auto.h: 47:     CCPR7L = 0x00;
 [e = _CCPR7L -> -> 0 `i `uc ]
 "48
-[; ;./../LIBRERIAS/funciones_auto.h: 48:     motor = 0;
+[; ;./../../LIBRERIAS/funciones_auto.h: 48:     motor = 0;
 [e = _motor -> -> 0 `i `uc ]
 "49
-[; ;./../LIBRERIAS/funciones_auto.h: 49: }
-[e :UE 929 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 49: }
+[e :UE 928 ]
 }
 "51
-[; ;./../LIBRERIAS/funciones_auto.h: 51: void enviarRS232(unsigned char *valores){
+[; ;./../../LIBRERIAS/funciones_auto.h: 51: void enviarRS232(unsigned char *valores){
 [v _enviarRS232 `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _enviarRS232 ]
 [v _valores `*uc ~T0 @X0 1 r1 ]
 [f ]
 "52
-[; ;./../LIBRERIAS/funciones_auto.h: 52:     unsigned int longitud_texto = length(valores);
+[; ;./../../LIBRERIAS/funciones_auto.h: 52:     unsigned int longitud_texto = length(valores);
 [v _longitud_texto `ui ~T0 @X0 1 a ]
 [e = _longitud_texto -> ( _length (1 _valores `ui ]
 "53
-[; ;./../LIBRERIAS/funciones_auto.h: 53:     for(unsigned char i = 0; i<longitud_texto; i++){
+[; ;./../../LIBRERIAS/funciones_auto.h: 53:     for(unsigned char i = 0; i<longitud_texto; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $U 934  ]
-[e :U 931 ]
+[e $U 933  ]
+[e :U 930 ]
 {
 "54
-[; ;./../LIBRERIAS/funciones_auto.h: 54:         TXREG1 = valores[i];
+[; ;./../../LIBRERIAS/funciones_auto.h: 54:         TXREG1 = valores[i];
 [e = _TXREG1 *U + _valores * -> _i `ux -> -> # *U _valores `ui `ux ]
 "55
-[; ;./../LIBRERIAS/funciones_auto.h: 55:         _delay((unsigned long)((3)*(48000000/4000.0)));
+[; ;./../../LIBRERIAS/funciones_auto.h: 55:         _delay((unsigned long)((3)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "56
-[; ;./../LIBRERIAS/funciones_auto.h: 56:     }
+[; ;./../../LIBRERIAS/funciones_auto.h: 56:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 934 ]
-[e $ < -> _i `ui _longitud_texto 931  ]
-[e :U 932 ]
+[e :U 933 ]
+[e $ < -> _i `ui _longitud_texto 930  ]
+[e :U 931 ]
 }
 "57
-[; ;./../LIBRERIAS/funciones_auto.h: 57: }
-[e :UE 930 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 57: }
+[e :UE 929 ]
 }
 "59
-[; ;./../LIBRERIAS/funciones_auto.h: 59: int length(unsigned char *text){
+[; ;./../../LIBRERIAS/funciones_auto.h: 59: int length(unsigned char *text){
 [v _length `(i ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _length ]
 [v _text `*uc ~T0 @X0 1 r1 ]
 [f ]
 "60
-[; ;./../LIBRERIAS/funciones_auto.h: 60:     unsigned char dato = text[0], i = 1;
+[; ;./../../LIBRERIAS/funciones_auto.h: 60:     unsigned char dato = text[0], i = 1;
 [v _dato `uc ~T0 @X0 1 a ]
 [e = _dato *U + _text * -> -> 0 `i `x -> -> # *U _text `i `x ]
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 1 `i `uc ]
 "61
-[; ;./../LIBRERIAS/funciones_auto.h: 61:     int longitud = 0;
+[; ;./../../LIBRERIAS/funciones_auto.h: 61:     int longitud = 0;
 [v _longitud `i ~T0 @X0 1 a ]
 [e = _longitud -> 0 `i ]
 "62
-[; ;./../LIBRERIAS/funciones_auto.h: 62:     while(dato != '\0'){
-[e $U 936  ]
-[e :U 937 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 62:     while(dato != '\0'){
+[e $U 935  ]
+[e :U 936 ]
 {
 "63
-[; ;./../LIBRERIAS/funciones_auto.h: 63:         dato = text[i];
+[; ;./../../LIBRERIAS/funciones_auto.h: 63:         dato = text[i];
 [e = _dato *U + _text * -> _i `ux -> -> # *U _text `ui `ux ]
 "64
-[; ;./../LIBRERIAS/funciones_auto.h: 64:         i++;
+[; ;./../../LIBRERIAS/funciones_auto.h: 64:         i++;
 [e ++ _i -> -> 1 `i `uc ]
 "65
-[; ;./../LIBRERIAS/funciones_auto.h: 65:         longitud++;
+[; ;./../../LIBRERIAS/funciones_auto.h: 65:         longitud++;
 [e ++ _longitud -> 1 `i ]
 "66
-[; ;./../LIBRERIAS/funciones_auto.h: 66:     }
+[; ;./../../LIBRERIAS/funciones_auto.h: 66:     }
 }
-[e :U 936 ]
+[e :U 935 ]
 "62
-[; ;./../LIBRERIAS/funciones_auto.h: 62:     while(dato != '\0'){
-[e $ != -> _dato `ui -> 0 `ui 937  ]
-[e :U 938 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 62:     while(dato != '\0'){
+[e $ != -> _dato `ui -> 0 `ui 936  ]
+[e :U 937 ]
 "67
-[; ;./../LIBRERIAS/funciones_auto.h: 67:     return longitud;
+[; ;./../../LIBRERIAS/funciones_auto.h: 67:     return longitud;
 [e ) _longitud ]
-[e $UE 935  ]
+[e $UE 934  ]
 "68
-[; ;./../LIBRERIAS/funciones_auto.h: 68: }
-[e :UE 935 ]
+[; ;./../../LIBRERIAS/funciones_auto.h: 68: }
+[e :UE 934 ]
 }
-"34 auto.c
-[; ;auto.c: 34: unsigned int TIME_MAX = 185;
-[v _TIME_MAX `ui ~T0 @X0 1 e ]
-[i _TIME_MAX
--> -> 185 `i `ui
+"20 Us-100.c
+[; ;Us-100.c: 20: unsigned char bandera_ultra_sonico = 0, time_pulse = 0, contador = 0, bandera = 0, indicador = 0;
+[v _bandera_ultra_sonico `uc ~T0 @X0 1 e ]
+[i _bandera_ultra_sonico
+-> -> 0 `i `uc
 ]
-"35
-[; ;auto.c: 35: unsigned char tiempo_anterior_1 = 15, indicador = 0, contador_timer_5 = 0, servo_dirreccion = 0;
-[v _tiempo_anterior_1 `uc ~T0 @X0 1 e ]
-[i _tiempo_anterior_1
--> -> 15 `i `uc
+[v _time_pulse `uc ~T0 @X0 1 e ]
+[i _time_pulse
+-> -> 0 `i `uc
+]
+[v _contador `uc ~T0 @X0 1 e ]
+[i _contador
+-> -> 0 `i `uc
+]
+[v _bandera `uc ~T0 @X0 1 e ]
+[i _bandera
+-> -> 0 `i `uc
 ]
 [v _indicador `uc ~T0 @X0 1 e ]
 [i _indicador
 -> -> 0 `i `uc
 ]
-[v _contador_timer_5 `uc ~T0 @X0 1 e ]
-[i _contador_timer_5
--> -> 0 `i `uc
-]
-[v _servo_dirreccion `uc ~T0 @X0 1 e ]
-[i _servo_dirreccion
--> -> 0 `i `uc
-]
-"36
-[; ;auto.c: 36: unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
-[v _bandera `uc ~T0 @X0 1 e ]
-[i _bandera
--> -> 0 `i `uc
-]
-[v _bandera_servo `uc ~T0 @X0 1 e ]
-[i _bandera_servo
--> -> 0 `i `uc
-]
-[v _obstaculo `uc ~T0 @X0 1 e ]
-[i _obstaculo
--> -> 0 `i `uc
-]
-"37
-[; ;auto.c: 37: unsigned char datos[10] = {'\0'}, parar = 0;
+"21
+[; ;Us-100.c: 21: unsigned char datos[10] = {'\0'};
 [v _datos `uc ~T0 @X0 -> 10 `i e ]
 [i _datos
 :U ..
 -> -> 0 `ui `uc
 ..
 ]
-[v _parar `uc ~T0 @X0 1 e ]
-[i _parar
--> -> 0 `i `uc
-]
-"38
-[; ;auto.c: 38: unsigned char bandera_distancia = 0, contador_datos = 0;
-[v _bandera_distancia `uc ~T0 @X0 1 e ]
-[i _bandera_distancia
--> -> 0 `i `uc
-]
-[v _contador_datos `uc ~T0 @X0 1 e ]
-[i _contador_datos
--> -> 0 `i `uc
-]
-"39
-[; ;auto.c: 39: float distancia = 0;
+"22
+[; ;Us-100.c: 22: float distancia;
 [v _distancia `f ~T0 @X0 1 e ]
-[i _distancia
--> -> 0 `i `f
+"23
+[; ;Us-100.c: 23: unsigned char texto[6] = {'\0'};
+[v _texto `uc ~T0 @X0 -> 6 `i e ]
+[i _texto
+:U ..
+-> -> 0 `ui `uc
+..
 ]
 [v $root$_rutina `(v ~T0 @X0 0 e ]
-"51
-[; ;auto.c: 51: void __attribute__((picinterrupt(("")))) rutina(){
+"27
+[; ;Us-100.c: 27: void __attribute__((picinterrupt(("")))) rutina(){
 [v _rutina `(v ~T11 @X0 1 ef ]
 {
 [e :U _rutina ]
 [f ]
-"52
-[; ;auto.c: 52:     if(PIR1bits.RC1IF == 1){
-[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 940  ]
+"28
+[; ;Us-100.c: 28:     if(INTCONbits.INT0F == 1){
+[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 939  ]
 {
-"53
-[; ;auto.c: 53:         unsigned char dato = RCREG1;
+"29
+[; ;Us-100.c: 29:         INTCONbits.INT0F = 0;
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+"30
+[; ;Us-100.c: 30:         time_pulse = contador * 5;
+[e = _time_pulse -> * -> _contador `i -> 5 `i `uc ]
+"31
+[; ;Us-100.c: 31:         contador = 0;
+[e = _contador -> -> 0 `i `uc ]
+"32
+[; ;Us-100.c: 32:         bandera_ultra_sonico = 1;
+[e = _bandera_ultra_sonico -> -> 1 `i `uc ]
+"33
+[; ;Us-100.c: 33:     }
+}
+[e $U 940  ]
+"34
+[; ;Us-100.c: 34:     else if(PIR1bits.RC1IF == 1){
+[e :U 939 ]
+[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 941  ]
+{
+"35
+[; ;Us-100.c: 35:         unsigned char dato = RCREG1;
 [v _dato `uc ~T0 @X0 1 a ]
 [e = _dato _RCREG1 ]
-"54
-[; ;auto.c: 54:         if(dato == 'P'){
-[e $ ! == -> _dato `ui -> 80 `ui 941  ]
+"36
+[; ;Us-100.c: 36:         if(dato == 'P'){
+[e $ ! == -> _dato `ui -> 80 `ui 942  ]
 {
-"55
-[; ;auto.c: 55:             bandera = 1;
+"37
+[; ;Us-100.c: 37:             bandera = 1;
 [e = _bandera -> -> 1 `i `uc ]
-"56
-[; ;auto.c: 56:             indicador = 0;
+"38
+[; ;Us-100.c: 38:             indicador = 0;
 [e = _indicador -> -> 0 `i `uc ]
-"57
-[; ;auto.c: 57:         }
-}
-[e $U 942  ]
-"58
-[; ;auto.c: 58:         else{
-[e :U 941 ]
-{
-"59
-[; ;auto.c: 59:             TXREG1 = dato;
-[e = _TXREG1 _dato ]
-"60
-[; ;auto.c: 60:             datos[indicador] = dato;
-[e = *U + &U _datos * -> _indicador `ux -> -> # *U &U _datos `ui `ux _dato ]
-"61
-[; ;auto.c: 61:             indicador++;
-[e ++ _indicador -> -> 1 `i `uc ]
-"62
-[; ;auto.c: 62:         }
-}
-[e :U 942 ]
-"63
-[; ;auto.c: 63:     }
+"39
+[; ;Us-100.c: 39:         }
 }
 [e $U 943  ]
-"64
-[; ;auto.c: 64:     else if(PIR5bits.TMR5IF == 1){
-[e :U 940 ]
-[e $ ! == -> . . _PIR5bits 0 2 `i -> 1 `i 944  ]
+"40
+[; ;Us-100.c: 40:         else{
+[e :U 942 ]
 {
-"65
-[; ;auto.c: 65:         PIR5bits.TMR5IF = 0;
+"41
+[; ;Us-100.c: 41:             TXREG1 = dato;
+[e = _TXREG1 _dato ]
+"42
+[; ;Us-100.c: 42:             datos[indicador] = dato;
+[e = *U + &U _datos * -> _indicador `ux -> -> # *U &U _datos `ui `ux _dato ]
+"43
+[; ;Us-100.c: 43:             indicador++;
+[e ++ _indicador -> -> 1 `i `uc ]
+"44
+[; ;Us-100.c: 44:         }
+}
+[e :U 943 ]
+"45
+[; ;Us-100.c: 45:     }
+}
+[e $U 944  ]
+"46
+[; ;Us-100.c: 46:     else if(PIR5bits.TMR5IF == 1){
+[e :U 941 ]
+[e $ ! == -> . . _PIR5bits 0 2 `i -> 1 `i 945  ]
+{
+"47
+[; ;Us-100.c: 47:         PIR5bits.TMR5IF = 0;
 [e = . . _PIR5bits 0 2 -> -> 0 `i `uc ]
-"66
-[; ;auto.c: 66:         contador_timer_5++;
-[e ++ _contador_timer_5 -> -> 1 `i `uc ]
-"67
-[; ;auto.c: 67:         TMR5H = 0xFF;
+"48
+[; ;Us-100.c: 48:         TMR5H = 0xFF;
 [e = _TMR5H -> -> 255 `i `uc ]
-"68
-[; ;auto.c: 68:         TMR5L = 0x6A;
+"49
+[; ;Us-100.c: 49:         TMR5L = 0x6A;
 [e = _TMR5L -> -> 106 `i `uc ]
-"69
-[; ;auto.c: 69:         if(contador_timer_5 == TIME_MAX){
-[e $ ! == -> _contador_timer_5 `ui _TIME_MAX 945  ]
-{
-"70
-[; ;auto.c: 70:             contador_timer_5 = 0;
-[e = _contador_timer_5 -> -> 0 `i `uc ]
-"71
-[; ;auto.c: 71:             bandera_servo = 1;
-[e = _bandera_servo -> -> 1 `i `uc ]
-"72
-[; ;auto.c: 72:         }
+"50
+[; ;Us-100.c: 50:         contador ++;
+[e ++ _contador -> -> 1 `i `uc ]
+"51
+[; ;Us-100.c: 51:     }
 }
 [e :U 945 ]
-"73
-[; ;auto.c: 73:     }
-}
-[e $U 946  ]
-"74
-[; ;auto.c: 74:     else if(INTCONbits.INT0F == 1){
 [e :U 944 ]
-[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 947  ]
-{
-"75
-[; ;auto.c: 75:         INTCONbits.INT0F = 0;
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
-"76
-[; ;auto.c: 76:         obstaculo = 1;
-[e = _obstaculo -> -> 1 `i `uc ]
-"77
-[; ;auto.c: 77:     }
-}
-[e $U 948  ]
-"78
-[; ;auto.c: 78:     else if(PIR3bits.RC2IF == 1){
-[e :U 947 ]
-[e $ ! == -> . . _PIR3bits 0 5 `i -> 1 `i 949  ]
-{
-"79
-[; ;auto.c: 79:         if(contador_datos == 1){
-[e $ ! == -> _contador_datos `i -> 1 `i 950  ]
-{
-"80
-[; ;auto.c: 80:             bandera_distancia = 1;
-[e = _bandera_distancia -> -> 1 `i `uc ]
-"81
-[; ;auto.c: 81:             distancia += (RCREG2)/10;
-[e =+ _distancia -> / -> _RCREG2 `i -> 10 `i `f ]
-"82
-[; ;auto.c: 82:             contador_datos = 0;
-[e = _contador_datos -> -> 0 `i `uc ]
-"83
-[; ;auto.c: 83:         }
-}
-[e $U 951  ]
-"84
-[; ;auto.c: 84:         else{
-[e :U 950 ]
-{
-"85
-[; ;auto.c: 85:             distancia = 256*(RCREG2)/10;
-[e = _distancia -> / * -> 256 `i -> _RCREG2 `i -> 10 `i `f ]
-"86
-[; ;auto.c: 86:             contador_datos ++;
-[e ++ _contador_datos -> -> 1 `i `uc ]
-"87
-[; ;auto.c: 87:         }
-}
-[e :U 951 ]
-"88
-[; ;auto.c: 88:     }
-}
-[e :U 949 ]
-[e :U 948 ]
-[e :U 946 ]
-[e :U 943 ]
-"89
-[; ;auto.c: 89: }
-[e :UE 939 ]
+[e :U 940 ]
+"52
+[; ;Us-100.c: 52: }
+[e :UE 938 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"91
-[; ;auto.c: 91: void main(void) {
+"54
+[; ;Us-100.c: 54: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-[v F7115 `uc ~T0 @X0 -> 6 `i s ]
-[i F7115
-:U ..
-"92
-[; ;auto.c: 92:     unsigned char text[] = "HOLA!";
--> 72 `c
--> 79 `c
--> 76 `c
--> 65 `c
--> 33 `c
--> 0 `c
-..
-]
-[v _text `uc ~T0 @X0 -> 6 `i a ]
-[e = _text F7115 ]
-[v F7117 `uc ~T0 @X0 -> 8 `i s ]
-[i F7117
-:U ..
-"93
-[; ;auto.c: 93:     unsigned char texto[8] = {'\0'};
--> -> 0 `ui `uc
-..
-]
-[v _texto `uc ~T0 @X0 -> 8 `i a ]
-[e = _texto F7117 ]
-"94
-[; ;auto.c: 94:     configuracionInicial();
+"55
+[; ;Us-100.c: 55:     configuracionInicial();
 [e ( _configuracionInicial ..  ]
-"95
-[; ;auto.c: 95:     enviarRS232(text);
-[e ( _enviarRS232 (1 &U _text ]
-"96
-[; ;auto.c: 96:     while(1){
-[e :U 954 ]
+"56
+[; ;Us-100.c: 56:     TRISBbits.TRISB1 = 0;
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+"57
+[; ;Us-100.c: 57:     TXREG1 = 'H';
+[e = _TXREG1 -> -> 72 `ui `uc ]
+"58
+[; ;Us-100.c: 58:     while(1){
+[e :U 948 ]
 {
-"97
-[; ;auto.c: 97:         if(bandera == 1){
-[e $ ! == -> _bandera `i -> 1 `i 956  ]
+"59
+[; ;Us-100.c: 59:         if(bandera == 1){
+[e $ ! == -> _bandera `i -> 1 `i 950  ]
 {
-"98
-[; ;auto.c: 98:             bandera = 0;
+"60
+[; ;Us-100.c: 60:             bandera = 0;
 [e = _bandera -> -> 0 `i `uc ]
-"99
-[; ;auto.c: 99:             terminal(datos);
-[e ( _terminal (1 &U _datos ]
-"100
-[; ;auto.c: 100:         }
-}
-[e :U 956 ]
-"101
-[; ;auto.c: 101:         if(bandera_servo == 1){
-[e $ ! == -> _bandera_servo `i -> 1 `i 957  ]
+"61
+[; ;Us-100.c: 61:             if(datos[0] == 'w'){
+[e $ ! == -> *U + &U _datos * -> -> -> 0 `i `ui `ux -> -> # *U &U _datos `ui `ux `ui -> 119 `ui 951  ]
 {
-"102
-[; ;auto.c: 102:             bandera_servo = 0;
-[e = _bandera_servo -> -> 0 `i `uc ]
-"103
-[; ;auto.c: 103:             PWMServo();
-[e ( _PWMServo ..  ]
-"104
-[; ;auto.c: 104:         }
+"62
+[; ;Us-100.c: 62:                 PORTBbits.RB1 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+"63
+[; ;Us-100.c: 63:                 _delay((unsigned long)((2)*(48000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
+"64
+[; ;Us-100.c: 64:                 PORTBbits.RB1 = 1;
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+"65
+[; ;Us-100.c: 65:                 _delay((unsigned long)((10)*(48000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
+"66
+[; ;Us-100.c: 66:                 PORTBbits.RB1 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+"67
+[; ;Us-100.c: 67:                 contador = 0;
+[e = _contador -> -> 0 `i `uc ]
+"68
+[; ;Us-100.c: 68:             }
 }
-[e :U 957 ]
-"105
-[; ;auto.c: 105:         if(obstaculo == 1){
-[e $ ! == -> _obstaculo `i -> 1 `i 958  ]
+[e :U 951 ]
+"70
+[; ;Us-100.c: 70:             if(bandera_ultra_sonico == 1){
+[e $ ! == -> _bandera_ultra_sonico `i -> 1 `i 952  ]
 {
-"106
-[; ;auto.c: 106:             obstaculo = 0;
-[e = _obstaculo -> -> 0 `i `uc ]
-"107
-[; ;auto.c: 107:             rutinaEscape(2);
-[e ( _rutinaEscape (1 -> -> 2 `i `uc ]
-"108
-[; ;auto.c: 108:         }
-}
-[e :U 958 ]
-"109
-[; ;auto.c: 109:         if(bandera_distancia == 1){
-[e $ ! == -> _bandera_distancia `i -> 1 `i 959  ]
-{
-"110
-[; ;auto.c: 110:             bandera_distancia = 0;
-[e = _bandera_distancia -> -> 0 `i `uc ]
-"111
-[; ;auto.c: 111:             sprintf(texto,"%03.1f cm",distancia);
+"71
+[; ;Us-100.c: 71:                 bandera_ultra_sonico = 0;
+[e = _bandera_ultra_sonico -> -> 0 `i `uc ]
+"72
+[; ;Us-100.c: 72:                 distancia = time_pulse / 29.1;
+[e = _distancia -> / -> -> _time_pulse `i `d .29.1 `f ]
+"73
+[; ;Us-100.c: 73:                 sprintf(texto, "%3.2f cm",distancia);
 [e ( _sprintf (1 , (. , -> &U _texto `*uc :s 1C -> _distancia `d ]
-"112
-[; ;auto.c: 112:             enviarRS232(texto);
+"74
+[; ;Us-100.c: 74:                 enviarRS232(texto);
 [e ( _enviarRS232 (1 &U _texto ]
-"113
-[; ;auto.c: 113:         }
+"75
+[; ;Us-100.c: 75:             }
 }
-[e :U 959 ]
-"114
-[; ;auto.c: 114:     }
+[e :U 952 ]
+"76
+[; ;Us-100.c: 76:         }
 }
-[e :U 953 ]
-[e $U 954  ]
-[e :U 955 ]
-"115
-[; ;auto.c: 115:     return;
-[e $UE 952  ]
-"116
-[; ;auto.c: 116: }
-[e :UE 952 ]
+[e :U 950 ]
+"77
+[; ;Us-100.c: 77:     }
 }
-"118
-[; ;auto.c: 118: void configuracionInicial(){
+[e :U 947 ]
+[e $U 948  ]
+[e :U 949 ]
+"78
+[; ;Us-100.c: 78:     return;
+[e $UE 946  ]
+"79
+[; ;Us-100.c: 79: }
+[e :UE 946 ]
+}
+"82
+[; ;Us-100.c: 82: void configuracionInicial(){
 [v _configuracionInicial `(v ~T0 @X0 1 ef ]
 {
 [e :U _configuracionInicial ]
 [f ]
-"119
-[; ;auto.c: 119:     configurarPuertos();
+"83
+[; ;Us-100.c: 83:     configurarPuertos();
 [e ( _configurarPuertos ..  ]
-"120
-[; ;auto.c: 120:     configurarPWM7();
-[e ( _configurarPWM7 ..  ]
-"121
-[; ;auto.c: 121:     configurarInterrupciones();
+"84
+[; ;Us-100.c: 84:     configurarInterrupciones();
 [e ( _configurarInterrupciones ..  ]
-"122
-[; ;auto.c: 122:     configurarRS232();
+"85
+[; ;Us-100.c: 85:     configurarRS232();
 [e ( _configurarRS232 ..  ]
-"123
-[; ;auto.c: 123:     configurarTMR5();
+"86
+[; ;Us-100.c: 86:     configurarTMR5();
 [e ( _configurarTMR5 ..  ]
-"124
-[; ;auto.c: 124:     configurarRS232US100();
-[e ( _configurarRS232US100 ..  ]
-"125
-[; ;auto.c: 125: }
-[e :UE 960 ]
+"87
+[; ;Us-100.c: 87: }
+[e :UE 953 ]
 }
-"127
-[; ;auto.c: 127: void terminal(unsigned char *comand){
-[v _terminal `(v ~T0 @X0 1 ef1`*uc ]
-{
-[e :U _terminal ]
-[v _comand `*uc ~T0 @X0 1 r1 ]
-[f ]
-"128
-[; ;auto.c: 128:     unsigned int medicion = 0;
-[v _medicion `ui ~T0 @X0 1 a ]
-[e = _medicion -> -> 0 `i `ui ]
-"129
-[; ;auto.c: 129:     unsigned char degree;
-[v _degree `uc ~T0 @X0 1 a ]
-[v F7124 `uc ~T0 @X0 -> 20 `i s ]
-[i F7124
-:U ..
-"130
-[; ;auto.c: 130:     unsigned char texto[20] = {'\0'};
--> -> 0 `ui `uc
-..
-]
-[v _texto `uc ~T0 @X0 -> 20 `i a ]
-[e = _texto F7124 ]
-"131
-[; ;auto.c: 131:     TXREG2 = 0x55;
-[e = _TXREG2 -> -> 85 `i `uc ]
-"132
-[; ;auto.c: 132:     switch (comand[0]){
-[e $U 963  ]
-{
-"133
-[; ;auto.c: 133:         case 'w':
-[e :U 964 ]
-"134
-[; ;auto.c: 134:             adelante();
-[e ( _adelante ..  ]
-"135
-[; ;auto.c: 135:             encenderMotor();
-[e ( _encenderMotor ..  ]
-"136
-[; ;auto.c: 136:             enviarRS232("Motores encendidos!");
-[e ( _enviarRS232 (1 :s 2C ]
-"137
-[; ;auto.c: 137:             break;
-[e $U 962  ]
-"138
-[; ;auto.c: 138:         case 's':
-[e :U 965 ]
-"139
-[; ;auto.c: 139:             atras();
-[e ( _atras ..  ]
-"140
-[; ;auto.c: 140:             encenderMotor();
-[e ( _encenderMotor ..  ]
-"141
-[; ;auto.c: 141:             enviarRS232("Vehiculo en reversa!");
-[e ( _enviarRS232 (1 :s 3C ]
-"142
-[; ;auto.c: 142:             break;
-[e $U 962  ]
-"143
-[; ;auto.c: 143:         case 'a':
-[e :U 966 ]
-"144
-[; ;auto.c: 144:             degree = estadoDirreccion(2);
-[e = _degree ( _estadoDirreccion (1 -> -> 2 `i `uc ]
-"145
-[; ;auto.c: 145:             dirreccion(degree);
-[e ( _dirreccion (1 _degree ]
-"146
-[; ;auto.c: 146:             break;
-[e $U 962  ]
-"147
-[; ;auto.c: 147:         case 'd':
-[e :U 967 ]
-"148
-[; ;auto.c: 148:             degree = estadoDirreccion(1);
-[e = _degree ( _estadoDirreccion (1 -> -> 1 `i `uc ]
-"149
-[; ;auto.c: 149:             dirreccion(degree);
-[e ( _dirreccion (1 _degree ]
-"150
-[; ;auto.c: 150:             break;
-[e $U 962  ]
-"151
-[; ;auto.c: 151:         case 'c':
-[e :U 968 ]
-"152
-[; ;auto.c: 152:             frenarMotor();
-[e ( _frenarMotor ..  ]
-"153
-[; ;auto.c: 153:             break;
-[e $U 962  ]
-"154
-[; ;auto.c: 154:         case 'F':
-[e :U 969 ]
-"155
-[; ;auto.c: 155:             medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
-[e = _medicion -> - + + * - -> *U + _comand * -> -> 1 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 100 `i * - -> *U + _comand * -> -> 2 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 10 `i -> *U + _comand * -> -> 3 `i `x -> -> # *U _comand `i `x `i -> 48 `i `ui ]
-"156
-[; ;auto.c: 156:             fijarVelocidad(medicion);
-[e ( _fijarVelocidad (1 -> _medicion `uc ]
-"157
-[; ;auto.c: 157:             cambiarPWM();
-[e ( _cambiarPWM ..  ]
-"158
-[; ;auto.c: 158:             sprintf(texto, "Velocidad fijada al: %03u%c", medicion, '%');
-[e ( _sprintf (1 , , (. , -> &U _texto `*uc :s 4C _medicion -> 37 `ui ]
-"159
-[; ;auto.c: 159:             enviarRS232(texto);
-[e ( _enviarRS232 (1 &U _texto ]
-"160
-[; ;auto.c: 160:             break;
-[e $U 962  ]
-"161
-[; ;auto.c: 161:         default:
-[e :U 970 ]
-"162
-[; ;auto.c: 162:             break;
-[e $U 962  ]
-"163
-[; ;auto.c: 163:     }
-}
-[e $U 962  ]
-[e :U 963 ]
-[e [\ -> *U + _comand * -> -> 0 `i `x -> -> # *U _comand `i `x `i , $ -> -> 119 `ui `i 964
- , $ -> -> 115 `ui `i 965
- , $ -> -> 97 `ui `i 966
- , $ -> -> 100 `ui `i 967
- , $ -> -> 99 `ui `i 968
- , $ -> -> 70 `ui `i 969
- 970 ]
-[e :U 962 ]
-"164
-[; ;auto.c: 164: }
-[e :UE 961 ]
-}
-"166
-[; ;auto.c: 166: void cambiarPWM(){
-[v _cambiarPWM `(v ~T0 @X0 1 ef ]
-{
-[e :U _cambiarPWM ]
-[f ]
-"167
-[; ;auto.c: 167:     if(motor == 1){
-[e $ ! == -> _motor `i -> 1 `i 972  ]
-{
-"168
-[; ;auto.c: 168:         definirVelocidad();
-[e ( _definirVelocidad ..  ]
-"169
-[; ;auto.c: 169:     }
-}
-[e :U 972 ]
-"170
-[; ;auto.c: 170: }
-[e :UE 971 ]
-}
-"172
-[; ;auto.c: 172: unsigned char estadoDirreccion(unsigned char valor){
-[v _estadoDirreccion `(uc ~T0 @X0 1 ef1`uc ]
-{
-[e :U _estadoDirreccion ]
-[v _valor `uc ~T0 @X0 1 r1 ]
-[f ]
-"173
-[; ;auto.c: 173:     unsigned char angulo = 90;
-[v _angulo `uc ~T0 @X0 1 a ]
-[e = _angulo -> -> 90 `i `uc ]
-"174
-[; ;auto.c: 174:     switch(servo_dirreccion){
-[e $U 975  ]
-{
-"175
-[; ;auto.c: 175:         case 0:
-[e :U 976 ]
-"176
-[; ;auto.c: 176:             if(valor == 1){
-[e $ ! == -> _valor `i -> 1 `i 977  ]
-{
-"177
-[; ;auto.c: 177:                 servo_dirreccion = 1;
-[e = _servo_dirreccion -> -> 1 `i `uc ]
-"178
-[; ;auto.c: 178:                 angulo = 0;
-[e = _angulo -> -> 0 `i `uc ]
-"179
-[; ;auto.c: 179:             }
-}
-[e $U 978  ]
-"180
-[; ;auto.c: 180:             else{
-[e :U 977 ]
-{
-"181
-[; ;auto.c: 181:                 servo_dirreccion = 2;
-[e = _servo_dirreccion -> -> 2 `i `uc ]
-"182
-[; ;auto.c: 182:                 angulo = 180;
-[e = _angulo -> -> 180 `i `uc ]
-"183
-[; ;auto.c: 183:             }
-}
-[e :U 978 ]
-"184
-[; ;auto.c: 184:             break;
-[e $U 974  ]
-"185
-[; ;auto.c: 185:         case 1:
-[e :U 979 ]
-"186
-[; ;auto.c: 186:             if(valor != 1){
-[e $ ! != -> _valor `i -> 1 `i 980  ]
-{
-"187
-[; ;auto.c: 187:                 servo_dirreccion = 0;
-[e = _servo_dirreccion -> -> 0 `i `uc ]
-"188
-[; ;auto.c: 188:                 angulo = 90;
-[e = _angulo -> -> 90 `i `uc ]
-"189
-[; ;auto.c: 189:             }
-}
-[e $U 981  ]
-"190
-[; ;auto.c: 190:             else{
-[e :U 980 ]
-{
-"191
-[; ;auto.c: 191:                 angulo = 0;
-[e = _angulo -> -> 0 `i `uc ]
-"192
-[; ;auto.c: 192:             }
-}
-[e :U 981 ]
-"193
-[; ;auto.c: 193:             break;
-[e $U 974  ]
-"194
-[; ;auto.c: 194:         case 2:
-[e :U 982 ]
-"195
-[; ;auto.c: 195:             if(valor == 1){
-[e $ ! == -> _valor `i -> 1 `i 983  ]
-{
-"196
-[; ;auto.c: 196:                 servo_dirreccion = 0;
-[e = _servo_dirreccion -> -> 0 `i `uc ]
-"197
-[; ;auto.c: 197:                 angulo = 90;
-[e = _angulo -> -> 90 `i `uc ]
-"198
-[; ;auto.c: 198:             }
-}
-[e $U 984  ]
-"199
-[; ;auto.c: 199:             else{
-[e :U 983 ]
-{
-"200
-[; ;auto.c: 200:                 angulo = 180;
-[e = _angulo -> -> 180 `i `uc ]
-"201
-[; ;auto.c: 201:             }
-}
-[e :U 984 ]
-"202
-[; ;auto.c: 202:             break;
-[e $U 974  ]
-"203
-[; ;auto.c: 203:     }
-}
-[e $U 974  ]
-[e :U 975 ]
-[e [\ -> _servo_dirreccion `i , $ -> 0 `i 976
- , $ -> 1 `i 979
- , $ -> 2 `i 982
- 974 ]
-[e :U 974 ]
-"204
-[; ;auto.c: 204:     return angulo;
-[e ) _angulo ]
-[e $UE 973  ]
-"205
-[; ;auto.c: 205: }
-[e :UE 973 ]
-}
-"207
-[; ;auto.c: 207: void dirreccion(unsigned char degree){
-[v _dirreccion `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _dirreccion ]
-[v _degree `uc ~T0 @X0 1 r1 ]
-[f ]
-"208
-[; ;auto.c: 208:     unsigned char tiempo_1 = 14;
-[v _tiempo_1 `uc ~T0 @X0 1 a ]
-[e = _tiempo_1 -> -> 14 `i `uc ]
-"209
-[; ;auto.c: 209:     switch(degree){
-[e $U 987  ]
-{
-"210
-[; ;auto.c: 210:         case 90:
-[e :U 988 ]
-"211
-[; ;auto.c: 211:             tiempo_1 = 14;
-[e = _tiempo_1 -> -> 14 `i `uc ]
-"212
-[; ;auto.c: 212:             break;
-[e $U 986  ]
-"213
-[; ;auto.c: 213:         case 0:
-[e :U 989 ]
-"214
-[; ;auto.c: 214:             tiempo_1 = 15;
-[e = _tiempo_1 -> -> 15 `i `uc ]
-"215
-[; ;auto.c: 215:             break;
-[e $U 986  ]
-"216
-[; ;auto.c: 216:         case 180:
-[e :U 990 ]
-"217
-[; ;auto.c: 217:             tiempo_1 = 13;
-[e = _tiempo_1 -> -> 13 `i `uc ]
-"218
-[; ;auto.c: 218:             break;
-[e $U 986  ]
-"219
-[; ;auto.c: 219:     }
-}
-[e $U 986  ]
-[e :U 987 ]
-[e [\ -> _degree `i , $ -> 90 `i 988
- , $ -> 0 `i 989
- , $ -> 180 `i 990
- 986 ]
-[e :U 986 ]
-"220
-[; ;auto.c: 220:     if(PORTDbits.RD4 != 1){
-[e $ ! != -> . . _PORTDbits 0 4 `i -> 1 `i 991  ]
-{
-"221
-[; ;auto.c: 221:         TIME_MAX = tiempo_1;
-[e = _TIME_MAX -> _tiempo_1 `ui ]
-"222
-[; ;auto.c: 222:         PORTDbits.RD4 = 1;
-[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
-"223
-[; ;auto.c: 223:     }
-}
-[e $U 992  ]
-"224
-[; ;auto.c: 224:     else{
-[e :U 991 ]
-{
-"225
-[; ;auto.c: 225:         TIME_MAX = 200 - tiempo_1;
-[e = _TIME_MAX -> - -> 200 `i -> _tiempo_1 `i `ui ]
-"226
-[; ;auto.c: 226:         PORTDbits.RD4 = 0;
-[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
-"227
-[; ;auto.c: 227:     }
-}
-[e :U 992 ]
-"228
-[; ;auto.c: 228:     contador_timer_5 = 0;
-[e = _contador_timer_5 -> -> 0 `i `uc ]
-"229
-[; ;auto.c: 229:     bandera_servo = 0;
-[e = _bandera_servo -> -> 0 `i `uc ]
-"230
-[; ;auto.c: 230:     T5CONbits.TMR5ON = 1;
-[e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
-"231
-[; ;auto.c: 231: }
-[e :UE 985 ]
-}
-"233
-[; ;auto.c: 233: void PWMServo(){
-[v _PWMServo `(v ~T0 @X0 1 ef ]
-{
-[e :U _PWMServo ]
-[f ]
-"234
-[; ;auto.c: 234:     if(PORTDbits.RD4 == 1){
-[e $ ! == -> . . _PORTDbits 0 4 `i -> 1 `i 994  ]
-{
-"235
-[; ;auto.c: 235:         PORTDbits.RD4 = 0;
-[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
-"236
-[; ;auto.c: 236:         tiempo_anterior_1 = TIME_MAX;
-[e = _tiempo_anterior_1 -> _TIME_MAX `uc ]
-"237
-[; ;auto.c: 237:         TIME_MAX = 200 - tiempo_anterior_1;
-[e = _TIME_MAX -> - -> 200 `i -> _tiempo_anterior_1 `i `ui ]
-"238
-[; ;auto.c: 238:     }
-}
-[e $U 995  ]
-"239
-[; ;auto.c: 239:     else{
-[e :U 994 ]
-{
-"240
-[; ;auto.c: 240:         PORTDbits.RD4 = 1;
-[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
-"241
-[; ;auto.c: 241:         TIME_MAX = tiempo_anterior_1;
-[e = _TIME_MAX -> _tiempo_anterior_1 `ui ]
-"242
-[; ;auto.c: 242:     }
-}
-[e :U 995 ]
-"243
-[; ;auto.c: 243:     if(parar == 30){
-[e $ ! == -> _parar `i -> 30 `i 996  ]
-{
-"244
-[; ;auto.c: 244:         T5CONbits.TMR5ON = 0;
-[e = . . _T5CONbits 1 0 -> -> 0 `i `uc ]
-"245
-[; ;auto.c: 245:         PORTDbits.RD4 = 0;
-[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
-"246
-[; ;auto.c: 246:         parar = 0;
-[e = _parar -> -> 0 `i `uc ]
-"247
-[; ;auto.c: 247:     }
-}
-[e :U 996 ]
-"248
-[; ;auto.c: 248: }
-[e :UE 993 ]
-}
-"250
-[; ;auto.c: 250: void adelante(){
-[v _adelante `(v ~T0 @X0 1 ef ]
-{
-[e :U _adelante ]
-[f ]
-"251
-[; ;auto.c: 251:     PORTAbits.RA0 = 0;
-[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
-"252
-[; ;auto.c: 252:     PORTAbits.RA1 = 0;
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
-"253
-[; ;auto.c: 253:     PORTAbits.RA0 = 1;
-[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
-"254
-[; ;auto.c: 254:     PORTAbits.RA1 = 0;
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
-"255
-[; ;auto.c: 255: }
-[e :UE 997 ]
-}
-"257
-[; ;auto.c: 257: void atras(){
-[v _atras `(v ~T0 @X0 1 ef ]
-{
-[e :U _atras ]
-[f ]
-"258
-[; ;auto.c: 258:     PORTAbits.RA0 = 0;
-[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
-"259
-[; ;auto.c: 259:     PORTAbits.RA1 = 0;
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
-"260
-[; ;auto.c: 260:     PORTAbits.RA0 = 0;
-[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
-"261
-[; ;auto.c: 261:     PORTAbits.RA1 = 1;
-[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
-"262
-[; ;auto.c: 262: }
-[e :UE 998 ]
-}
-"264
-[; ;auto.c: 264: void rutinaEscape(unsigned char type){
-[v _rutinaEscape `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _rutinaEscape ]
-[v _type `uc ~T0 @X0 1 r1 ]
-[f ]
-"265
-[; ;auto.c: 265:     frenarMotor();
-[e ( _frenarMotor ..  ]
-"266
-[; ;auto.c: 266:     switch(type){
-[e $U 1001  ]
-{
-"267
-[; ;auto.c: 267:         case 1:
-[e :U 1002 ]
-"270
-[; ;auto.c: 270:             break;
-[e $U 1000  ]
-"271
-[; ;auto.c: 271:         case 2:
-[e :U 1003 ]
-"272
-[; ;auto.c: 272:             fijarVelocidad(0);
-[e ( _fijarVelocidad (1 -> -> 0 `i `uc ]
-"273
-[; ;auto.c: 273:             atras();
-[e ( _atras ..  ]
-"274
-[; ;auto.c: 274:             encenderMotor();
-[e ( _encenderMotor ..  ]
-"275
-[; ;auto.c: 275:             _delay((unsigned long)((1000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"276
-[; ;auto.c: 276:             adelante();
-[e ( _adelante ..  ]
-"277
-[; ;auto.c: 277:             enviarRS232("Girando");
-[e ( _enviarRS232 (1 :s 5C ]
-"278
-[; ;auto.c: 278:             fijarVelocidad(50);
-[e ( _fijarVelocidad (1 -> -> 50 `i `uc ]
-"279
-[; ;auto.c: 279:             definirVelocidad();
-[e ( _definirVelocidad ..  ]
-"280
-[; ;auto.c: 280:             break;
-[e $U 1000  ]
-"281
-[; ;auto.c: 281:     }
-}
-[e $U 1000  ]
-[e :U 1001 ]
-[e [\ -> _type `i , $ -> 1 `i 1002
- , $ -> 2 `i 1003
- 1000 ]
-[e :U 1000 ]
-"282
-[; ;auto.c: 282: }
-[e :UE 999 ]
-}
-"284
-[; ;auto.c: 284: unsigned char estadoFuego = 0;
-[v _estadoFuego `uc ~T0 @X0 1 e ]
-[i _estadoFuego
--> -> 0 `i `uc
-]
-"286
-[; ;auto.c: 286: void cambiarEstadoEscapeFuego(){
-[v _cambiarEstadoEscapeFuego `(v ~T0 @X0 1 ef ]
-{
-[e :U _cambiarEstadoEscapeFuego ]
-[f ]
-"287
-[; ;auto.c: 287:     switch(estadoFuego){
-[e $U 1006  ]
-{
-"288
-[; ;auto.c: 288:         case 0:
-[e :U 1007 ]
-"289
-[; ;auto.c: 289:             dirreccion(60);
-[e ( _dirreccion (1 -> -> 60 `i `uc ]
-"290
-[; ;auto.c: 290:             if(PORTBbits.RB0 == 1){
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 1008  ]
-{
-"291
-[; ;auto.c: 291:                 dirreccion(120);
-[e ( _dirreccion (1 -> -> 120 `i `uc ]
-"292
-[; ;auto.c: 292:                 estadoFuego = 1;
-[e = _estadoFuego -> -> 1 `i `uc ]
-"293
-[; ;auto.c: 293:             }
-}
-[e $U 1009  ]
-"294
-[; ;auto.c: 294:             else{
-[e :U 1008 ]
-{
-"295
-[; ;auto.c: 295:                 estadoFuego = 2;
-[e = _estadoFuego -> -> 2 `i `uc ]
-"296
-[; ;auto.c: 296:             }
-}
-[e :U 1009 ]
-"297
-[; ;auto.c: 297:             break;
-[e $U 1005  ]
-"298
-[; ;auto.c: 298:         case 1:
-[e :U 1010 ]
-"299
-[; ;auto.c: 299:             if(PORTBbits.RB0 == 1){
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 1011  ]
-{
-"300
-[; ;auto.c: 300:                 estadoFuego = 3;
-[e = _estadoFuego -> -> 3 `i `uc ]
-"301
-[; ;auto.c: 301:             }
-}
-[e $U 1012  ]
-"302
-[; ;auto.c: 302:             else{
-[e :U 1011 ]
-{
-"303
-[; ;auto.c: 303:                 estadoFuego = 4;
-[e = _estadoFuego -> -> 4 `i `uc ]
-"304
-[; ;auto.c: 304:             }
-}
-[e :U 1012 ]
-"305
-[; ;auto.c: 305:             break;
-[e $U 1005  ]
-"306
-[; ;auto.c: 306:         case 2:
-[e :U 1013 ]
-"307
-[; ;auto.c: 307:             dirreccion(45);
-[e ( _dirreccion (1 -> -> 45 `i `uc ]
-"309
-[; ;auto.c: 309:             break;
-[e $U 1005  ]
-"310
-[; ;auto.c: 310:         case 3:
-[e :U 1014 ]
-"311
-[; ;auto.c: 311:             enviarRS232("No puedo esquivar el fuego! llame a los bomberos");
-[e ( _enviarRS232 (1 :s 6C ]
-"313
-[; ;auto.c: 313:             break;
-[e $U 1005  ]
-"314
-[; ;auto.c: 314:         case 4:
-[e :U 1015 ]
-"315
-[; ;auto.c: 315:             dirreccion(135);
-[e ( _dirreccion (1 -> -> 135 `i `uc ]
-"317
-[; ;auto.c: 317:             break;
-[e $U 1005  ]
-"318
-[; ;auto.c: 318:     }
-}
-[e $U 1005  ]
-[e :U 1006 ]
-[e [\ -> _estadoFuego `i , $ -> 0 `i 1007
- , $ -> 1 `i 1010
- , $ -> 2 `i 1013
- , $ -> 3 `i 1014
- , $ -> 4 `i 1015
- 1005 ]
-[e :U 1005 ]
-"319
-[; ;auto.c: 319: }
-[e :UE 1004 ]
-}
-[p f _sprintf 9020420 ]
-[a 6C 78 111 32 112 117 101 100 111 32 101 115 113 117 105 118 97 114 32 101 108 32 102 117 101 103 111 33 32 108 108 97 109 101 32 97 32 108 111 115 32 98 111 109 98 101 114 111 115 0 ]
-[a 5C 71 105 114 97 110 100 111 0 ]
-[a 1C 37 48 51 46 49 102 32 99 109 0 ]
-[a 4C 86 101 108 111 99 105 100 97 100 32 102 105 106 97 100 97 32 97 108 58 32 37 48 51 117 37 99 0 ]
-[a 2C 77 111 116 111 114 101 115 32 101 110 99 101 110 100 105 100 111 115 33 0 ]
-[a 3C 86 101 104 105 99 117 108 111 32 101 110 32 114 101 118 101 114 115 97 33 0 ]
+[p f _sprintf 8495104 ]
+[a 1C 37 51 46 50 102 32 99 109 0 ]

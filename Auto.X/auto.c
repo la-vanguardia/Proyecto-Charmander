@@ -10,7 +10,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pic18f47j53.h>
-#include <math.h>
 
 #include "../LIBRERIAS/CONFIG.h"
 #include "../LIBRERIAS/configuracion_auto.h"
@@ -27,20 +26,28 @@
 #define SERVO_CENTRO 0
 #define SERVO_DERECHA 1
 #define SERVO_IZQUIERDA 2
+#define LEER_DISTANCIA 0x55 //codigo para leer la distancia del us-100
+#define LEER_TEMPERATURA 0x50 //codigo para leer la temperatura del us-100
+
+#define SENSOR_FUEGO PORTBbits.RB0
 
 unsigned int TIME_MAX = 185;
-unsigned int medicion_adc = 0;
 unsigned char tiempo_anterior_1 = 15, indicador = 0, contador_timer_5 = 0, servo_dirreccion = 0;
-unsigned char bandera = 0, bandera_adc = 0, bandera_servo = 0 ,obstaculo = 0;
-unsigned char datos[10] = {'\0'};
+unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
+unsigned char datos[10] = {'\0'}, parar = 0;
+unsigned char bandera_distancia = 0, contador_datos = 0;
+unsigned char estadoFuego = 0;
+float distancia = 0;
 
 void configuracionInicial();
 void terminal(unsigned char *command);
+void cambiarPWM();
 unsigned char estadoDirreccion(unsigned char valor);
 void dirreccion(unsigned char degree);
 void PWMServo();
 void adelante();
 void atras();
+void rutinaEscape(unsigned char type);
 
 void __interrupt() rutina(){
     if(PIR1bits.RC1IF == 1){
@@ -54,11 +61,6 @@ void __interrupt() rutina(){
             datos[indicador] = dato;
             indicador++;
         }
-    }
-    else if(PIR1bits.ADIF == 1){
-        PIR1bits.ADIF = 0;
-        medicion_adc = ADRES;
-        bandera_adc = 1;
     }
     else if(PIR5bits.TMR5IF == 1){
         PIR5bits.TMR5IF = 0;
@@ -74,13 +76,24 @@ void __interrupt() rutina(){
         INTCONbits.INT0F = 0;
         obstaculo = 1;
     }
+    else if(PIR3bits.RC2IF == 1){
+        if(contador_datos == 1){
+            bandera_distancia = 1;
+            distancia += (RCREG2)/10;
+            contador_datos = 0;
+        }
+        else{
+            distancia = 256*(RCREG2)/10;
+            contador_datos ++;
+        }
+    }
 }
 
 void main(void) {
     unsigned char text[] = "HOLA!";
+    unsigned char texto[8] = {'\0'};
     configuracionInicial();
     enviarRS232(text);
-    float caca = sin(36.05465);
     while(1){
         if(bandera == 1){
             bandera = 0;
@@ -90,14 +103,15 @@ void main(void) {
             bandera_servo = 0;
             PWMServo();
         }
-        if(bandera_adc == 1){
-            bandera_adc = 0;
-            
-        }
         if(obstaculo == 1){
             obstaculo = 0;
+            rutinaEscape(OBSTACULO);
         }
-        
+        if(bandera_distancia == 1){
+            bandera_distancia = 0;
+            sprintf(texto,"%03.1f cm",distancia);
+            enviarRS232(texto);
+        }
     }
     return;
 }
@@ -108,12 +122,14 @@ void configuracionInicial(){
     configurarInterrupciones();
     configurarRS232();
     configurarTMR5();
+    configurarRS232US100();
 }
 
 void terminal(unsigned char *comand){
     unsigned int medicion = 0;
     unsigned char degree;
     unsigned char texto[20] = {'\0'};
+    TXREG2 = LEER_DISTANCIA;
     switch (comand[0]){
         case ADELANTE:
             adelante();
@@ -126,11 +142,11 @@ void terminal(unsigned char *comand){
             enviarRS232("Vehiculo en reversa!");
             break;
         case IZQUIERDA:
-            degree = estadoDirreccion(1);
+            degree = estadoDirreccion(2);
             dirreccion(degree);
             break;
         case DERECHA:
-            degree = estadoDirreccion(0);
+            degree = estadoDirreccion(1);
             dirreccion(degree);
             break;
         case STOP:
@@ -139,6 +155,7 @@ void terminal(unsigned char *comand){
         case VELOCIDAD:
             medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
             fijarVelocidad(medicion);
+            cambiarPWM();
             sprintf(texto, "Velocidad fijada al: %03u%c", medicion, '%');
             enviarRS232(texto);
             break;
@@ -147,16 +164,22 @@ void terminal(unsigned char *comand){
     }
 }
 
+void cambiarPWM(){
+    if(motor == 1){
+        definirVelocidad();
+    }
+}
+
 unsigned char estadoDirreccion(unsigned char valor){
-    unsigned char angulo = 0;
+    unsigned char angulo = 90;
     switch(servo_dirreccion){
         case SERVO_CENTRO: 
             if(valor == 1){
                 servo_dirreccion = SERVO_DERECHA;
-                angulo = 180;
+                angulo = 0;
             }
             else{
-                servo_dirreccion = SERVO_DERECHA;
+                servo_dirreccion = SERVO_IZQUIERDA;
                 angulo = 180;
             }
             break;
@@ -165,11 +188,17 @@ unsigned char estadoDirreccion(unsigned char valor){
                 servo_dirreccion = SERVO_CENTRO;
                 angulo = 90;
             }
+            else{
+                angulo = 0;
+            }
             break;
         case SERVO_IZQUIERDA:
             if(valor == 1){
                 servo_dirreccion = SERVO_CENTRO;
                 angulo = 90;
+            }
+            else{
+                angulo = 180;
             }
             break;
     }
@@ -177,16 +206,16 @@ unsigned char estadoDirreccion(unsigned char valor){
 }
 
 void dirreccion(unsigned char degree){
-    unsigned char tiempo_1 = 15;
+    unsigned char tiempo_1 = 14;
     switch(degree){
         case CENTER:
-            tiempo_1 = 15;
+            tiempo_1 = 14;
             break;
         case RIGHT:
-            tiempo_1 = 23;
+            tiempo_1 = 15;
             break;
         case LEFT:
-            tiempo_1 = 5;
+            tiempo_1 = 13;
             break;
     }
     if(SERVO != 1){
@@ -198,6 +227,7 @@ void dirreccion(unsigned char degree){
         SERVO = 0;
     }
     contador_timer_5 = 0;
+    bandera_servo = 0;
     T5CONbits.TMR5ON = 1;
 }
 
@@ -211,39 +241,78 @@ void PWMServo(){
         SERVO = 1;
         TIME_MAX = tiempo_anterior_1;   
     }
+    if(parar == 30){
+        T5CONbits.TMR5ON = 0;
+        SERVO = 0;
+        parar = 0;
+    }
 }
 
 void adelante(){
-    enviarRS232("FALTA IMPLEMENTAR!");
+    PORTAbits.RA0 = 0;
+    PORTAbits.RA1 = 0;
+    PORTAbits.RA0 = 1;
+    PORTAbits.RA1 = 0;
 }
 
 void atras(){
-    enviarRS232("FALTA IMPLEMETAR!");
+    PORTAbits.RA0 = 0;
+    PORTAbits.RA1 = 0;
+    PORTAbits.RA0 = 0;
+    PORTAbits.RA1 = 1;
 }
 
 void rutinaEscape(unsigned char type){
     frenarMotor();
-    unsigned int medicion_1 = 0, medicion_2 = 0;
     switch(type){
         case FUEGO:
-            ADCON0bits.GO_DONE = 1;
-            while(ADCON0bits.GO_DONE);
-            bandera_adc = 0;
-            medicion_1 = medicion_adc;
-            ADCON0bits.GO_DONE = 1;
-            while(ADCON0bits.GO_DONE);
-            bandera_adc = 0;
-            if(medicion_1 > medicion_2){
-                fijarVelocidad(100);
-            }
-            else{
-                fijarVelocidad(50);
-            }
+            
+           
             break;
         case OBSTACULO:
-            fijarVelocidad(80);
+            fijarVelocidad(0);
+            atras();
+            encenderMotor();
+            __delay_ms(1000);
+            adelante();
+            enviarRS232("Girando");
+            fijarVelocidad(50);
+            definirVelocidad();
             break;
     }
-    atras();
-    encenderMotor();
+}
+
+void cambiarEstadoEscapeFuego(){
+    switch(estadoFuego){
+        case 0: //estado inicial indica deteccion de fuego
+            dirreccion(60);
+            if(SENSOR_FUEGO == 1){
+                dirreccion(120);
+                estadoFuego = 1;
+            }
+            else{
+                estadoFuego = 2;
+            }
+            break;
+        case 1: //giro hacia la izquierda
+            if(SENSOR_FUEGO == 1){
+                estadoFuego = 3;
+            }
+            else{
+                estadoFuego = 4;
+            }
+            break;
+        case 2: //giro hacia la derecha
+            dirreccion(45);
+            //encender motor tiempo x y doblar
+            break;
+        case 3: //gire izquierda y no habia fuego
+            enviarRS232("No puedo esquivar el fuego! llame a los bomberos");
+            //hacer marcha atras y irse a la puta
+            break;
+        case 4: //gire derecha y no habia fuego
+            dirreccion(135);
+            //enceder motores y doblar
+            break;   
+    }
 }
