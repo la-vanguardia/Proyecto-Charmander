@@ -9,9 +9,9 @@
 ## Tareas pendientes
 
   - [ ] Definir nombre del grupo y del proyecto
-  - [ ] Integrar el control de adelante y atras
+  - [x] Integrar el control de adelante y atras
   - [ ] Integrar las rutinas por prioridad
-  - [ ] Definir pines para interrupciones
+  - [x] Definir pines para interrupciones
   - [ ] Definir prioridades del vehiculo
   - [ ] Terminar app
   - [ ] Incluir la cancion de Avengers con PWM en el PIC
