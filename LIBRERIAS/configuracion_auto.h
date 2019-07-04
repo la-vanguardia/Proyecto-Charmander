@@ -55,11 +55,18 @@ void configurarTMR5(){
     PIR5bits.TMR5IF = 0;
 }
 
-void configurarTMR4(){
-    T4CONbits.T4CKPS = 0b11;
-    TMR4 = 181;
+void configurarTMR4(){ //interrupcion cada 50us
+    T4CONbits.T4CKPS = 0b11; 
+    TMR4 = 181; //interrupe cada 
     PIR3bits.TMR4IF = 0;
     PIE3bits.TMR4IE= 1;
+}
+
+void configurarTMR8(){ //interrupcion cada 300us
+    T8CONbits.T8CKPS = 0b11 ;
+    TMR8 = 31;
+    PIR5bits.TMR8IF = 0;
+    PIE5bits.TMR8IE = 1;
 }
 
 void configurarRS232US100(){

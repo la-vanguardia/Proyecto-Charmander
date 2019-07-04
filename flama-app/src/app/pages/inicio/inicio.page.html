@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color='tertiary'>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menuId"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-img [src]="path_img"></ion-img>
+      <ion-card-subtitle> {{ names }}</ion-card-subtitle>
+      <ion-card-title class='title-project'>Proyecto Flama</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ratione esse error ut sapiente explicabo? Non explicabo accusantium provident tenetur, consequatur atque quibusdam rerum facilis mollitia inventore animi, modi fugiat.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="onClick()">
+    <ion-icon slot="start" name="bluetooth"></ion-icon>
+    <ion-label>Conectar</ion-label>
+  </ion-button>
+</ion-content>

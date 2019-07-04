@@ -1,0 +1,15 @@
+[{
+    "name": "Inicio",
+    "icon": "pulse",
+    "redirecTo": "/inicio"
+},
+{
+    "name": "Manejo",
+    "icon": "logo-game-controller-a",
+    "redirecTo": "/manejo"
+},
+{
+    "name": "Configuracion",
+    "icon": "construct",
+    "redirecTo": "/configuracion"
+}]
