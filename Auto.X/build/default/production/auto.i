@@ -11740,7 +11740,7 @@ void configurarPWM7(){
     CCPTMRS1bits.C7TSEL = 0b00;
 
     T2CON = 0x02;
-    PR2 = 124;
+    PR2 = 24;
 
     TMR2 = 0x00;
 }
@@ -11796,14 +11796,13 @@ void configurarRS232US100(){
 
 # 1 "./../LIBRERIAS/funciones_auto.h" 1
 # 11 "./../LIBRERIAS/funciones_auto.h"
-unsigned int cicle_90 = 0x01C2;
-unsigned int velocidad = 0x01C2;
+unsigned int cicle_90 = 90;
+unsigned int velocidad = 90;
 unsigned char motor = 0;
-float maximun_constant = 0.006;
+float maximun_constant = 0.009;
 
 void rutinaArranque();
 void fijarVelocidad(unsigned char speed);
-void estadosVelocidad(unsigned char estado);
 void encenderMotor();
 void definirVelocidad();
 void frenarMotor();
@@ -11818,19 +11817,8 @@ void rutinaArranque(){
 }
 
 void fijarVelocidad(unsigned char speed){
-    float DC = maximun_constant * speed + 0.5;
-    velocidad = 4 * DC * 125;
-}
-
-void estadosVelocidad(unsigned char estado){
-    switch(estado){
-        case 1:
-            maximun_constant = 0.006;
-            break;
-        case 2:
-            maximun_constant = 0.003;
-            break;
-    }
+    float DC = maximun_constant * speed + 0.55;
+    velocidad = 4 * DC * 25;
 }
 
 void encenderMotor(){
@@ -11869,14 +11857,14 @@ int length(unsigned char *text){
     return longitud;
 }
 # 16 "auto.c" 2
-# 41 "auto.c"
+# 38 "auto.c"
 unsigned int TIME_MAX = 1000-65, parar= 0, tiempo_anterior_1 = 65, contador_timer_5 = 0;
 unsigned int contador_distancia = 0;
 unsigned char indicador = 0, bandera_fuego = 0, servo_dirreccion = 0;
 unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
 unsigned char datos[10] = {'\0'};
 unsigned char bandera_distancia = 0, contador_datos = 0;
-unsigned char estadoFuego = 0, estado = 0, cambiar_estado_fuego = 0;
+unsigned char estadoFuego = 0, estado = 0, cambiar_estado_rutina_escape = 0;
 float distancia = 0;
 long unsigned int fuego_interrupcion = 0, TIME_FUEGO = 0;
 
@@ -11919,7 +11907,9 @@ void __attribute__((picinterrupt(("")))) rutina(){
         TMR4 = 181;
         if(contador_distancia == 1000){
             contador_distancia = 0;
-            TXREG2 = 0x55;
+            if(estado == 'w'){
+                TXREG2 = 0x55;
+            }
         }
     }
     else if(PIR5bits.TMR8IF == 1){
@@ -11928,7 +11918,7 @@ void __attribute__((picinterrupt(("")))) rutina(){
         fuego_interrupcion++;
         if(fuego_interrupcion == TIME_FUEGO ){
             fuego_interrupcion = 0;
-            cambiar_estado_fuego = 1;
+            cambiar_estado_rutina_escape = 1;
         }
     }
     else if(INTCONbits.INT0F == 1){
@@ -11980,10 +11970,10 @@ void main(void) {
                 rutinaEscape(1);
                 enviarRS232("ESCAPANDO DEL FUEGO...");
             }
-            if(cambiar_estado_fuego == 1){
+            if(cambiar_estado_rutina_escape == 1){
                 T8CONbits.TMR8ON = 0;
                 fuego_interrupcion = 0;
-                cambiar_estado_fuego = 0;
+                cambiar_estado_rutina_escape = 0;
                 cambiarEstadoFuego();
             }
         }
@@ -11992,10 +11982,11 @@ void main(void) {
                 obstaculo = 0;
                 rutinaEscape(2);
             }
-            if(cambiar_estado_fuego == 1){
+            if(cambiar_estado_rutina_escape == 1){
                 T8CONbits.TMR8ON = 0;
                 fuego_interrupcion = 0;
-                cambiar_estado_fuego = 0;
+                cambiar_estado_rutina_escape = 0;
+                estado = 'c';
                 frenarMotor();
             }
         }
@@ -12033,13 +12024,11 @@ void terminal(unsigned char *comand){
             adelante();
             encenderMotor();
             enviarRS232("Motores encendidos!");
-            estadosVelocidad(1);
             break;
         case 's':
             atras();
             encenderMotor();
             enviarRS232("Vehiculo en reversa!");
-            estadosVelocidad(2);
             break;
         case 'a':
             degree = estadoDirreccion(2);
@@ -12211,19 +12200,20 @@ void cambiarEstadoFuego(){
     bandera_fuego = 0;
     switch(estadoFuego){
         case 0:
-            TIME_FUEGO = 10000;
+            TIME_FUEGO = 8000;
             angulo = estadoDirreccion(1);
             dirreccion(angulo);
             estadoFuego = 'w';
             T8CONbits.TMR8ON = 1;
             break;
         case 'w':
-            TIME_FUEGO = 4000;
+            TIME_FUEGO = 6000;
             dirreccion(0);
             estadoFuego = 'a';
             T8CONbits.TMR8ON = 1;
             break;
         case 'a':
+            estado = 'c';
             frenarMotor();
             dirreccion(90);
             break;

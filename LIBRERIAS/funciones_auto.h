@@ -8,14 +8,13 @@
 #define SERVO PORTDbits.RD4
 #define TOTAL_CICLE 200
 
-unsigned int cicle_90 = 0x01C2;
-unsigned int velocidad = 0x01C2;
+unsigned int cicle_90 = 90;
+unsigned int velocidad = 90;
 unsigned char motor = 0;
-float maximun_constant = 0.006;
+float maximun_constant = 0.009;
 
 void rutinaArranque();
 void fijarVelocidad(unsigned char speed);
-void estadosVelocidad(unsigned char estado);
 void encenderMotor();
 void definirVelocidad();
 void frenarMotor();
@@ -30,19 +29,8 @@ void rutinaArranque(){
 }
 
 void fijarVelocidad(unsigned char speed){
-    float DC = maximun_constant * speed + 0.5; //DC - CCPR / (4*(PR2+1))
-    velocidad = 4 * DC * 125;
-}
-
-void estadosVelocidad(unsigned char estado){
-    switch(estado){
-        case 1:
-            maximun_constant = 0.006;
-            break;
-        case 2:
-            maximun_constant = 0.003;
-            break;
-    }
+    float DC = maximun_constant * speed + 0.55; //DC = CCPR / (4*(PR2+1))
+    velocidad = 4 * DC * 25;
 }
 
 void encenderMotor(){

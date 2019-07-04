@@ -28,8 +28,8 @@ void configurarPWM7(){
     CCP7CONbits.CCP7M = 0xC;
     CCPTMRS1bits.C7TSEL = 0b00;
     //TMR2 config
-    T2CON = 0x02;
-    PR2 = 124;
+    T2CON = 0x02; //pre-escalador 16
+    PR2 = 24;
     //Duty cicle(DC) DC = CCPR / (4*(Pr2+1)
     TMR2 = 0x00;
 }

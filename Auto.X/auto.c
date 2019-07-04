@@ -32,9 +32,6 @@
 #define LEER_DISTANCIA 0x55 //codigo para leer la distancia del us-100
 #define LEER_TEMPERATURA 0x50 //codigo para leer la temperatura del us-100
 
-
-
-
 #define SENSOR_OBSTACULOS PORTBbits.RB0
 #define SENSOR_FUEGO PORTBbits.RB1
 
@@ -44,7 +41,7 @@ unsigned char indicador = 0, bandera_fuego = 0,  servo_dirreccion = 0;
 unsigned char bandera = 0, bandera_servo = 0 ,obstaculo = 0;
 unsigned char datos[10] = {'\0'};
 unsigned char bandera_distancia = 0, contador_datos = 0;
-unsigned char estadoFuego = 0, estado = 0, cambiar_estado_fuego = 0;
+unsigned char estadoFuego = 0, estado = 0, cambiar_estado_rutina_escape = 0;
 float distancia = 0;
 long unsigned int fuego_interrupcion = 0, TIME_FUEGO = 0;
 
@@ -87,7 +84,9 @@ void __interrupt() rutina(){
         TMR4 = 181;
         if(contador_distancia == 1000){
             contador_distancia = 0;
-            TXREG2 = LEER_DISTANCIA;
+            if(estado == ADELANTE){
+                TXREG2 = LEER_DISTANCIA;
+            }
         }
     }
     else if(PIR5bits.TMR8IF == 1){
@@ -96,7 +95,7 @@ void __interrupt() rutina(){
         fuego_interrupcion++;
         if(fuego_interrupcion == TIME_FUEGO ){
             fuego_interrupcion = 0;
-            cambiar_estado_fuego = 1;
+            cambiar_estado_rutina_escape = 1;
         }
     }
     else if(INTCONbits.INT0F == 1){
@@ -148,10 +147,10 @@ void main(void) {
                 rutinaEscape(FUEGO);
                 enviarRS232("ESCAPANDO DEL FUEGO...");
             }
-            if(cambiar_estado_fuego == 1){
+            if(cambiar_estado_rutina_escape == 1){
                 T8CONbits.TMR8ON = 0;
                 fuego_interrupcion = 0;
-                cambiar_estado_fuego = 0;
+                cambiar_estado_rutina_escape = 0;
                 cambiarEstadoFuego();
             }
         }
@@ -160,10 +159,11 @@ void main(void) {
                 obstaculo = 0;
                 rutinaEscape(OBSTACULO);
             }    
-            if(cambiar_estado_fuego == 1){
+            if(cambiar_estado_rutina_escape == 1){
                 T8CONbits.TMR8ON = 0;
                 fuego_interrupcion = 0;
-                cambiar_estado_fuego = 0;
+                cambiar_estado_rutina_escape = 0;
+                estado = STOP;
                 frenarMotor();
             }
         }
@@ -201,13 +201,11 @@ void terminal(unsigned char *comand){
             adelante();
             encenderMotor();
             enviarRS232("Motores encendidos!");
-            estadosVelocidad(1);
             break;
         case ATRAS:
             atras();
             encenderMotor();
             enviarRS232("Vehiculo en reversa!");
-            estadosVelocidad(2);
             break;
         case IZQUIERDA:
             degree = estadoDirreccion(2);
@@ -392,6 +390,7 @@ void cambiarEstadoFuego(){
             T8CONbits.TMR8ON = 1;
             break;
         case IZQUIERDA:
+            estado = STOP;
             frenarMotor();
             dirreccion(90);
             break;
