@@ -24,6 +24,7 @@
 #define MODO_PROGRAMACION 'g'
 #define FUEGO 1
 #define OBSTACULO 2
+#define ULTRASONIDO 3
 #define SERVO_CENTRO 0
 #define SERVO_DERECHA 1
 #define SERVO_IZQUIERDA 2
@@ -137,8 +138,8 @@ void main(void) {
             if(bandera_distancia == 1){
                 bandera_distancia = 0;     
                 if((distancia <= 22)){
-                    frenarMotor();
-                    enviarRS232("Auto frenado!");
+                    rutinaEscape(ULTRASONIDO);
+                    enviarRS232("ULTRASONIDO ACTIVADO!");
                 }
             }
             if(bandera_fuego == 1){
@@ -159,6 +160,12 @@ void main(void) {
                 obstaculo = 0;
                 rutinaEscape(OBSTACULO);
             }    
+            if(cambiar_estado_fuego == 1){
+                T8CONbits.TMR8ON = 0;
+                fuego_interrupcion = 0;
+                cambiar_estado_fuego = 0;
+                frenarMotor();
+            }
         }
         if(bandera == 1){
             bandera = 0;
@@ -213,6 +220,7 @@ void terminal(unsigned char *comand){
         case STOP:
             estado = STOP;
             frenarMotor();
+            INTCON3bits.INT1E = 1;
             break;
         case VELOCIDAD:
             medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
@@ -221,8 +229,6 @@ void terminal(unsigned char *comand){
             break;
         case MODO_PROGRAMACION:
             enviarRS232("MODO PROGRAMADOR ACTIVADO!");
-            __delay_ms(1000);
-            enviarRS232("RENDIMOS CAMPOS PAPEEEE!");
             while(1);
             break;
         default:
@@ -348,12 +354,19 @@ void rutinaEscape(unsigned char type){
         case FUEGO:
             enviarRS232("FUEGO!");
             dirreccion(180);
-            fijarVelocidad(0);
+            fijarVelocidad(10);
             adelante();
             encenderMotor();
             TIME_FUEGO = 4000;
             T8CONbits.TMR8ON = 1;
             estadoFuego = GIRO;
+            break;
+        case ULTRASONIDO:
+            TIME_FUEGO = 4000;
+            atras();
+            fijarVelocidad(10);
+            encenderMotor();
+            T8CONbits.TMR8ON = 1;
             break;
         case OBSTACULO:
             frenarMotor();
@@ -366,16 +379,21 @@ void cambiarEstadoFuego(){
     bandera_fuego = 0;
     switch(estadoFuego){
         case GIRO:
-            TIME_FUEGO = 10000;
+            TIME_FUEGO = 8000;
             angulo = estadoDirreccion(1);
             dirreccion(angulo);
             estadoFuego = ADELANTE;
             T8CONbits.TMR8ON = 1;
             break;
         case ADELANTE:
-            estado = STOP;
-            frenarMotor(); 
-            INTCON3bits.INT1E = 1;
+            TIME_FUEGO = 6000;
+            dirreccion(0);
+            estadoFuego = IZQUIERDA;
+            T8CONbits.TMR8ON = 1;
+            break;
+        case IZQUIERDA:
+            frenarMotor();
+            dirreccion(90);
             break;
     }
 }

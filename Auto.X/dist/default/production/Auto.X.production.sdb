@@ -35,29 +35,29 @@
 [v _enviarRS232 enviarRS232 `(v  1 e 1 0 ]
 "73
 [v _length length `(i  1 e 2 0 ]
-"61 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"62 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _rutina rutina `IIH(v  1 e 1 0 ]
-"125
+"126
 [v _main main `(v  1 e 1 0 ]
-"176
+"183
 [v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
-"187
+"194
 [v _terminal terminal `(v  1 e 1 0 ]
-"233
-[v _cambiarPWM cambiarPWM `(v  1 e 1 0 ]
 "239
+[v _cambiarPWM cambiarPWM `(v  1 e 1 0 ]
+"245
 [v _estadoDirreccion estadoDirreccion `(ui  1 e 2 0 ]
-"274
+"280
 [v _dirreccion dirreccion `(v  1 e 1 0 ]
-"309
+"315
 [v _PWMServo PWMServo `(v  1 e 1 0 ]
-"328
+"334
 [v _adelante adelante `(v  1 e 1 0 ]
-"336
+"342
 [v _atras atras `(v  1 e 1 0 ]
-"344
+"350
 [v _rutinaEscape rutinaEscape `(v  1 e 1 0 ]
-"364
+"377
 [v _cambiarEstadoFuego cambiarEstadoFuego `(v  1 e 1 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -99,33 +99,33 @@
 [v _motor motor `uc  1 e 1 0 ]
 "14
 [v _maximun_constant maximun_constant `f  1 e 4 0 ]
-"40 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"41 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _TIME_MAX TIME_MAX `ui  1 e 2 0 ]
 [v _parar parar `ui  1 e 2 0 ]
 [v _tiempo_anterior_1 tiempo_anterior_1 `ui  1 e 2 0 ]
 [v _contador_timer_5 contador_timer_5 `ui  1 e 2 0 ]
-"41
-[v _contador_distancia contador_distancia `ui  1 e 2 0 ]
 "42
+[v _contador_distancia contador_distancia `ui  1 e 2 0 ]
+"43
 [v _indicador indicador `uc  1 e 1 0 ]
 [v _bandera_fuego bandera_fuego `uc  1 e 1 0 ]
 [v _servo_dirreccion servo_dirreccion `uc  1 e 1 0 ]
-"43
+"44
 [v _bandera bandera `uc  1 e 1 0 ]
 [v _bandera_servo bandera_servo `uc  1 e 1 0 ]
 [v _obstaculo obstaculo `uc  1 e 1 0 ]
-"44
-[v _datos datos `[10]uc  1 e 10 0 ]
 "45
+[v _datos datos `[10]uc  1 e 10 0 ]
+"46
 [v _bandera_distancia bandera_distancia `uc  1 e 1 0 ]
 [v _contador_datos contador_datos `uc  1 e 1 0 ]
-"46
+"47
 [v _estadoFuego estadoFuego `uc  1 e 1 0 ]
 [v _estado estado `uc  1 e 1 0 ]
 [v _cambiar_estado_fuego cambiar_estado_fuego `uc  1 e 1 0 ]
-"47
-[v _distancia distancia `f  1 e 4 0 ]
 "48
+[v _distancia distancia `f  1 e 4 0 ]
+"49
 [v _fuego_interrupcion fuego_interrupcion `ul  1 e 4 0 ]
 [v _TIME_FUEGO TIME_FUEGO `ul  1 e 4 0 ]
 "1100 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
@@ -642,23 +642,23 @@
 ]
 [u S92 . 1 `S70 1 . 1 0 `S79 1 . 1 0 `S88 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES92  1 e 1 @4082 ]
-"125 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"126 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _main main `(v  1 e 1 0 ]
 {
-"174
+"181
 } 0
-"187
+"194
 [v _terminal terminal `(v  1 e 1 0 ]
 {
-"190
+"197
 [v terminal@texto texto `[20]uc  1 a 20 71 ]
-"189
+"196
 [v terminal@degree degree `ui  1 a 2 93 ]
-"188
+"195
 [v terminal@medicion medicion `ui  1 a 2 91 ]
-"187
+"194
 [v terminal@comand comand `*.39uc  1 p 2 64 ]
-"231
+"237
 } 0
 "37 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _estadosVelocidad estadosVelocidad `(v  1 e 1 0 ]
@@ -668,23 +668,18 @@
 [v estadosVelocidad@estado estado `uc  1 a 1 2 ]
 "46
 } 0
-"233 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"239 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _cambiarPWM cambiarPWM `(v  1 e 1 0 ]
 {
-"237
+"243
 } 0
-"336
-[v _atras atras `(v  1 e 1 0 ]
-{
-"342
-} 0
-"344
+"350
 [v _rutinaEscape rutinaEscape `(v  1 e 1 0 ]
 {
 [v rutinaEscape@type type `uc  1 a 1 wreg ]
 [v rutinaEscape@type type `uc  1 a 1 wreg ]
 [v rutinaEscape@type type `uc  1 a 1 66 ]
-"362
+"375
 } 0
 "32 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _fijarVelocidad fijarVelocidad `(v  1 e 1 0 ]
@@ -725,17 +720,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1586 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1585 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1591 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1594 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1586 1 fAsBytes 4 0 `S1591 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1594  1 a 4 33 ]
+[s S1590 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1593 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1585 1 fAsBytes 4 0 `S1590 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1593  1 a 4 33 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 28 ]
-[s S1662 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1661 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1665 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1662 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1665  1 a 2 37 ]
+[u S1664 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1661 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1664  1 a 2 37 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
@@ -801,15 +796,20 @@
 {
 "57
 } 0
-"328 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"342 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+[v _atras atras `(v  1 e 1 0 ]
+{
+"348
+} 0
+"334
 [v _adelante adelante `(v  1 e 1 0 ]
 {
-"334
+"340
 } 0
-"176
+"183
 [v _configuracionInicial configuracionInicial `(v  1 e 1 0 ]
 {
-"185
+"192
 } 0
 "65 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/configuracion_auto.h
 [v _configurarTMR8 configurarTMR8 `(v  1 e 1 0 ]
@@ -851,37 +851,37 @@
 {
 "23
 } 0
-"364 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"377 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _cambiarEstadoFuego cambiarEstadoFuego `(v  1 e 1 0 ]
 {
-"365
+"378
 [v cambiarEstadoFuego@angulo angulo `ui  1 a 2 9 ]
-"381
+"399
 } 0
 "59 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _frenarMotor frenarMotor `(v  1 e 1 0 ]
 {
 "63
 } 0
-"239 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"245 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _estadoDirreccion estadoDirreccion `(ui  1 e 2 0 ]
 {
 [v estadoDirreccion@valor valor `uc  1 a 1 wreg ]
-"240
+"246
 [v estadoDirreccion@angulo angulo `ui  1 a 2 4 ]
-"239
+"245
 [v estadoDirreccion@valor valor `uc  1 a 1 wreg ]
 [v estadoDirreccion@valor valor `uc  1 a 1 6 ]
-"272
+"278
 } 0
-"274
+"280
 [v _dirreccion dirreccion `(v  1 e 1 0 ]
 {
-"275
+"281
 [v dirreccion@tiempo_1 tiempo_1 `uc  1 a 1 4 ]
-"274
+"280
 [v dirreccion@degree degree `ui  1 p 2 0 ]
-"307
+"313
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
@@ -890,17 +890,17 @@
 [v ___flge@ff2 ff2 `d  1 p 4 4 ]
 "19
 } 0
-"309 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
+"315 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _PWMServo PWMServo `(v  1 e 1 0 ]
 {
-"326
+"332
 } 0
-"61
+"62
 [v _rutina rutina `IIH(v  1 e 1 0 ]
 {
-"63
+"64
 [v rutina@dato dato `uc  1 a 1 40 ]
-"123
+"124
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\xxtofl.c
 [v i2___xxtofl __xxtofl `(d  1 e 4 0 ]
