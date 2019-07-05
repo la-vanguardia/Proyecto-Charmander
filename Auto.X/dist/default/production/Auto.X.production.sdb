@@ -25,13 +25,13 @@
 [v _fijarVelocidad fijarVelocidad `(v  1 e 1 0 ]
 "36
 [v _encenderMotor encenderMotor `(v  1 e 1 0 ]
-"42
+"44
 [v _definirVelocidad definirVelocidad `(v  1 e 1 0 ]
-"47
+"49
 [v _frenarMotor frenarMotor `(v  1 e 1 0 ]
-"53
+"55
 [v _enviarRS232 enviarRS232 `(v  1 e 1 0 ]
-"61
+"63
 [v _length length `(i  1 e 2 0 ]
 "59 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _rutina rutina `IIH(v  1 e 1 0 ]
@@ -746,43 +746,43 @@
 [v ___fladd@a a `d  1 p 4 43 ]
 "237
 } 0
-"53 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+"55 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _enviarRS232 enviarRS232 `(v  1 e 1 0 ]
 {
-"55
+"57
 [v enviarRS232@i i `uc  1 a 1 14 ]
-"54
+"56
 [v enviarRS232@longitud_texto longitud_texto `ui  1 a 2 12 ]
-"53
+"55
 [v enviarRS232@valores valores `*.32uc  1 p 2 8 ]
-"59
-} 0
 "61
+} 0
+"63
 [v _length length `(i  1 e 2 0 ]
 {
-"63
+"65
 [v length@longitud longitud `i  1 a 2 4 ]
-"62
+"64
 [v length@i i `uc  1 a 1 7 ]
 [v length@dato dato `uc  1 a 1 6 ]
-"61
+"63
 [v length@text text `*.32uc  1 p 2 0 ]
-"70
+"72
 } 0
 "36
 [v _encenderMotor encenderMotor `(v  1 e 1 0 ]
 {
-"40
+"42
 } 0
 "24
 [v _rutinaArranque rutinaArranque `(v  1 e 1 0 ]
 {
 "29
 } 0
-"42
+"44
 [v _definirVelocidad definirVelocidad `(v  1 e 1 0 ]
 {
-"45
+"47
 } 0
 "340 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _atras atras `(v  1 e 1 0 ]
@@ -846,10 +846,10 @@
 [v cambiarEstadoFuego@angulo angulo `ui  1 a 2 9 ]
 "398
 } 0
-"47 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
+"49 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final/LIBRERIAS/funciones_auto.h
 [v _frenarMotor frenarMotor `(v  1 e 1 0 ]
 {
-"51
+"53
 } 0
 "243 C:\Users\Lautaro Saez\Documents\Proyectos Progrmacion\PICS\Laboratorio Final\Auto.X\auto.c
 [v _estadoDirreccion estadoDirreccion `(ui  1 e 2 0 ]

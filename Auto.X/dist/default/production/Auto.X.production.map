@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Auto.X.production.sym \
   --cmf=dist/default/production\Auto.X.production.cmf -z -Q18F47J53 \
-  -oC:\Users\LAUTAR~1\AppData\Local\Temp\sagc.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\LAUTAR~1\AppData\Local\Temp\sd9k.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Auto.X.production.map -E1 -ver=XC8 --acfsm=1493 \
   -ASTACK=0E1h-0EAFh -pstack=STACK -ACODE=00h-01FFF7h -ACONST=00h-01FFF7h \
   -ASMALLCONST=0F00h-0FFFhx496,01FF00h-01FFF7h \
@@ -26,7 +26,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\LAUTAR~1\AppData\Local\Temp\sagc.o \
+  C:\Users\LAUTAR~1\AppData\Local\Temp\sd9k.o \
   dist/default/production\Auto.X.production.o 
 
 Object code version is 3.11
@@ -39,7 +39,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\LAUTAR~1\AppData\Local\Temp\sagc.o
+C:\Users\LAUTAR~1\AppData\Local\Temp\sd9k.o
                 init                                1D2      1D2        4        4       0
                 reset_vec                             0        0        4        0       0
                 config                            1FFF8    1FFF8        8    1FFF8       0
@@ -54,22 +54,22 @@ dist/default/production\Auto.X.production.o
                 text29                             1F8E     1F8E       D2      7E7       0
                 text28                             225A     225A       8E      7E7       0
                 text27                             236C     236C       82      7E7       0
-                text26                             2692     2692       10      7E7       0
+                text26                             26A4     26A4       10      7E7       0
                 text25                             21BC     21BC       9E      7E7       0
                 text24                             2624     2624       20      7E7       0
                 text23                             2604     2604       20      7E7       0
-                text22                             2682     2682       10      7E7       0
+                text22                             2694     2694       10      7E7       0
                 text21                             2644     2644       18      7E7       0
                 text20                             25E2     25E2       22      7E7       0
-                text19                             26CC     26CC        E      7E7       0
+                text19                             26D0     26D0        E      7E7       0
                 text18                             265C     265C       16      7E7       0
-                text17                             2672     2672       10      7E7       0
+                text17                             2684     2684       10      7E7       0
                 text16                             25C0     25C0       22      7E7       0
-                text15                             26BE     26BE        E      7E7       0
-                text14                             26B0     26B0        E      7E7       0
+                text15                             26C2     26C2        E      7E7       0
+                text14                             26B4     26B4        E      7E7       0
                 text13                             255A     255A       3A      7E7       0
                 text12                             2594     2594       2C      7E7       0
-                text11                             26A2     26A2        E      7E7       0
+                text11                             2672     2672       12      7E7       0
                 text10                             24B4     24B4       56      7E7       0
                 text9                              23EE     23EE       64      7E7       0
                 text8                              1322     1322      30E      7E7       0
@@ -78,7 +78,7 @@ dist/default/production\Auto.X.production.o
                 text5                              1ADE     1ADE      144      7E7       0
                 text4                              1EA4     1EA4       EA      7E7       0
                 text3                              211C     211C       A0      7E7       0
-                text2                              26DA     26DA        C      7E7       0
+                text2                              26DE     26DE        C      7E7       0
                 text1                              1C22     1C22      142      7E7       0
                 text0                              193C     193C      1A2      7E7       0
                 cstackCOMRAM                          1        1       29        1       1
@@ -88,8 +88,8 @@ dist/default/production\Auto.X.production.o
                 dataCOMRAM                           4C       4C        6        1       1
                 bssCOMRAM                            2A       2A       22        1       1
                 cinit                              2452     2452       62      7E7       0
-                idataBANK0                         26EC     26EC        6      7E7       0
-                idataCOMRAM                        26E6     26E6        6      7E7       0
+                idataBANK0                         26F0     26F0        6      7E7       0
+                idataCOMRAM                        26EA     26EA        6      7E7       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -105,22 +105,22 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text29                             1F8E     1F8E       D2         0
                 text28                             225A     225A       8E         0
                 text27                             236C     236C       82         0
-                text26                             2692     2692       10         0
+                text26                             26A4     26A4       10         0
                 text25                             21BC     21BC       9E         0
                 text24                             2624     2624       20         0
                 text23                             2604     2604       20         0
-                text22                             2682     2682       10         0
+                text22                             2694     2694       10         0
                 text21                             2644     2644       18         0
                 text20                             25E2     25E2       22         0
-                text19                             26CC     26CC        E         0
+                text19                             26D0     26D0        E         0
                 text18                             265C     265C       16         0
-                text17                             2672     2672       10         0
+                text17                             2684     2684       10         0
                 text16                             25C0     25C0       22         0
-                text15                             26BE     26BE        E         0
-                text14                             26B0     26B0        E         0
+                text15                             26C2     26C2        E         0
+                text14                             26B4     26B4        E         0
                 text13                             255A     255A       3A         0
                 text12                             2594     2594       2C         0
-                text11                             26A2     26A2        E         0
+                text11                             2672     2672       12         0
                 text10                             24B4     24B4       56         0
                 text9                              23EE     23EE       64         0
                 text8                              1322     1322      30E         0
@@ -129,12 +129,12 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text5                              1ADE     1ADE      144         0
                 text4                              1EA4     1EA4       EA         0
                 text3                              211C     211C       A0         0
-                text2                              26DA     26DA        C         0
+                text2                              26DE     26DE        C         0
                 text1                              1C22     1C22      142         0
                 text0                              193C     193C      1A2         0
                 cinit                              2452     2452       62         0
-                idataBANK0                         26EC     26EC        6         0
-                idataCOMRAM                        26E6     26E6        6         0
+                idataBANK0                         26F0     26F0        6         0
+                idataCOMRAM                        26EA     26EA        6         0
 
         CLASS   CONST          
 
@@ -206,7 +206,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 intcode                        000008  0001CE  0001D6         4       0  CODE    
                 cstackBANK0                    000060  000081  0000E1        60       1  BANK0   
                 smallconst                     000F00  0000CE  000FCE       780       0  SMALLCON
-                text7                          000FCE  001724  0026F2       7E7       0  CODE    
+                text7                          000FCE  001728  0026F6       7E7       0  CODE    
                 config                         01FFF8  000008  020000     1FFF8       0  CONFIG  
 
 
@@ -232,16 +232,16 @@ UNUSED ADDRESS RANGES
                          000E1-00EAF             DCF
         CODE             00004-00007               4
                          001D6-00EFF             D2A
-                         026F2-1FFF7           1D906
+                         026F6-1FFF7           1D902
         COMRAM           00053-0005F               D
         CONST            00004-00007               4
                          001D6-00EFF             D2A
-                         026F2-1FFF7           1D906
-        MEDIUMCONST      026F2-0FFFF            D90E
+                         026F6-1FFF7           1D902
+        MEDIUMCONST      026F6-0FFFF            D90A
                          10F00-1FFF7            F0F8
         RAM              000E1-00EAF             100
         SFR              00EB0-00FFF              60
-        SMALLCONST       026F2-1FFF7             100
+        SMALLCONST       026F6-1FFF7             100
         STACK            000E1-00EAF             DCF
 
                                   Symbol Table
@@ -596,26 +596,26 @@ __end_of___flmul                   text7         01322
 __end_of___fltol                   text6         0211C
 __end_of___xxtofl                  text5         01C22
 __end_of__initialization           cinit         024AA
-__end_of_adelante                  text15        026CC
-__end_of_atras                     text14        026BE
+__end_of_adelante                  text15        026D0
+__end_of_atras                     text14        026C2
 __end_of_cambiarEstadoFuego        text25        0225A
-__end_of_cambiarPWM                text2         026E6
+__end_of_cambiarPWM                text2         026EA
 __end_of_configuracionInicial      text16        025E2
 __end_of_configurarInterrupciones  text24        02644
 __end_of_configurarPWM7            text23        02624
-__end_of_configurarPuertos         text22        02692
+__end_of_configurarPuertos         text22        026A4
 __end_of_configurarRS232           text21        0265C
 __end_of_configurarRS232US100      text20        02604
-__end_of_configurarTMR4            text19        026DA
+__end_of_configurarTMR4            text19        026DE
 __end_of_configurarTMR5            text18        02672
-__end_of_configurarTMR8            text17        02682
+__end_of_configurarTMR8            text17        02694
 __end_of_definirVelocidad          text13        02594
 __end_of_dirreccion                text28        022E8
-__end_of_encenderMotor             text11        026B0
+__end_of_encenderMotor             text11        02684
 __end_of_enviarRS232               text9         02452
 __end_of_estadoDirreccion          text27        023EE
 __end_of_fijarVelocidad            text4         01F8E
-__end_of_frenarMotor               text26        026A2
+__end_of_frenarMotor               text26        026B4
 __end_of_length                    text10        0250A
 __end_of_main                      text0         01ADE
 __end_of_rutina                    intcode       001D2
@@ -633,30 +633,30 @@ __pcstackBANK0                     cstackBANK0   00060
 __pcstackCOMRAM                    cstackCOMRAM  00001
 __pdataBANK0                       dataBANK0     000DB
 __pdataCOMRAM                      dataCOMRAM    0004C
-__pidataBANK0                      idataBANK0    026EC
-__pidataCOMRAM                     idataCOMRAM   026E6
+__pidataBANK0                      idataBANK0    026F0
+__pidataCOMRAM                     idataCOMRAM   026EA
 __pintcode                         intcode       00008
 __psmallconst                      smallconst    00F00
 __ptext0                           text0         0193C
 __ptext1                           text1         01C22
 __ptext10                          text10        024B4
-__ptext11                          text11        026A2
+__ptext11                          text11        02672
 __ptext12                          text12        02594
 __ptext13                          text13        0255A
-__ptext14                          text14        026B0
-__ptext15                          text15        026BE
+__ptext14                          text14        026B4
+__ptext15                          text15        026C2
 __ptext16                          text16        025C0
-__ptext17                          text17        02672
+__ptext17                          text17        02684
 __ptext18                          text18        0265C
-__ptext19                          text19        026CC
-__ptext2                           text2         026DA
+__ptext19                          text19        026D0
+__ptext2                           text2         026DE
 __ptext20                          text20        025E2
 __ptext21                          text21        02644
-__ptext22                          text22        02682
+__ptext22                          text22        02694
 __ptext23                          text23        02604
 __ptext24                          text24        02624
 __ptext25                          text25        021BC
-__ptext26                          text26        02692
+__ptext26                          text26        026A4
 __ptext27                          text27        0236C
 __ptext28                          text28        0225A
 __ptext29                          text29        01F8E
@@ -708,25 +708,25 @@ __size_of_terminal                 (abs)         00000
 __size_ofi2___fladd                (abs)         00000
 __size_ofi2___xxtofl               (abs)         00000
 __smallconst                       smallconst    00F00
-_adelante                          text15        026BE
-_atras                             text14        026B0
+_adelante                          text15        026C2
+_atras                             text14        026B4
 _bandera                           bssBANK0      000D9
 _bandera_distancia                 bssBANK0      000D6
 _bandera_fuego                     bssBANK0      000DA
 _bandera_servo                     bssBANK0      000D8
 _cambiarEstadoFuego                text25        021BC
-_cambiarPWM                        text2         026DA
+_cambiarPWM                        text2         026DE
 _cambiar_estado_rutina_escape      bssBANK0      000D5
 _cicle_90                          dataCOMRAM    00050
 _configuracionInicial              text16        025C0
 _configurarInterrupciones          text24        02624
 _configurarPWM7                    text23        02604
-_configurarPuertos                 text22        02682
+_configurarPuertos                 text22        02694
 _configurarRS232                   text21        02644
 _configurarRS232US100              text20        025E2
-_configurarTMR4                    text19        026CC
+_configurarTMR4                    text19        026D0
 _configurarTMR5                    text18        0265C
-_configurarTMR8                    text17        02672
+_configurarTMR8                    text17        02684
 _contador_datos                    bssCOMRAM     0003E
 _contador_distancia                bssCOMRAM     00036
 _contador_timer_5                  bssCOMRAM     00038
@@ -734,14 +734,14 @@ _datos                             bssCOMRAM     00042
 _definirVelocidad                  text13        0255A
 _dirreccion                        text28        0225A
 _distancia                         bssCOMRAM     00032
-_encenderMotor                     text11        026A2
+_encenderMotor                     text11        02672
 _enviarRS232                       text9         023EE
 _estado                            bssCOMRAM     0003C
 _estadoDirreccion                  text27        0236C
 _estadoFuego                       bssCOMRAM     0003D
 _fijarVelocidad                    text4         01EA4
 _fijarVelocidad$1915               cstackBANK0   0009B
-_frenarMotor                       text26        02692
+_frenarMotor                       text26        026A4
 _fuego_interrupcion                bssCOMRAM     0002E
 _indicador                         bssCOMRAM     00040
 _length                            text10        024B4
@@ -1122,7 +1122,7 @@ Total ram usage:       16 bytes
 
  *************** function _enviarRS232 *****************
  Defined at:
-		line 53 in file "./../LIBRERIAS/funciones_auto.h"
+		line 55 in file "./../LIBRERIAS/funciones_auto.h"
  Parameters:    Size  Location     Type
   valores         2    8[BANK0 ] PTR unsigned char 
 		 -> STR_10(7), STR_9(27), STR_8(21), STR_7(20), 
@@ -1158,7 +1158,7 @@ Total ram usage:        7 bytes
 
  *************** function _length *****************
  Defined at:
-		line 61 in file "./../LIBRERIAS/funciones_auto.h"
+		line 63 in file "./../LIBRERIAS/funciones_auto.h"
  Parameters:    Size  Location     Type
   text            2    0[BANK0 ] PTR unsigned char 
 		 -> STR_10(7), STR_9(27), STR_8(21), STR_7(20), 
@@ -1255,7 +1255,7 @@ Total ram usage:        2 bytes
 
  *************** function _definirVelocidad *****************
  Defined at:
-		line 42 in file "./../LIBRERIAS/funciones_auto.h"
+		line 44 in file "./../LIBRERIAS/funciones_auto.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1657,7 +1657,7 @@ Total ram usage:        4 bytes
 
  *************** function _frenarMotor *****************
  Defined at:
-		line 47 in file "./../LIBRERIAS/funciones_auto.h"
+		line 49 in file "./../LIBRERIAS/funciones_auto.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1947,12 +1947,12 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 ./../LIBRERIAS/configuracion_auto.h
-		_configurarTMR4		CODE           	26CC	0000	15
+		_configurarTMR4		CODE           	26D0	0000	15
 		_configurarTMR5		CODE           	265C	0000	23
 		_configurarPWM7		CODE           	2604	0000	33
-		_configurarTMR8		CODE           	2672	0000	17
+		_configurarTMR8		CODE           	2684	0000	17
 		_configurarRS232		CODE           	2644	0000	25
-		_configurarPuertos		CODE           	2682	0000	17
+		_configurarPuertos		CODE           	2694	0000	17
 		_configurarInterrupciones		CODE           	2624	0000	33
 		_configurarRS232US100		CODE           	25E2	0000	35
 
@@ -1987,12 +1987,12 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c esti
 		_rutinaArranque		CODE           	2594	0000	45
 		_fijarVelocidad		CODE           	1EA4	0000	235
 		_definirVelocidad		CODE           	255A	0000	59
-		_frenarMotor   		CODE           	2692	0000	17
-		_encenderMotor 		CODE           	26A2	0000	15
+		_frenarMotor   		CODE           	26A4	0000	17
+		_encenderMotor 		CODE           	2672	0000	19
 		_length        		CODE           	24B4	0000	87
 		_enviarRS232   		CODE           	23EE	0000	101
 
-./../LIBRERIAS/funciones_auto.h estimated size: 559
+./../LIBRERIAS/funciones_auto.h estimated size: 563
 
 shared
 		i2___fladd     		CODE           	1630	0000	781
@@ -2004,12 +2004,12 @@ shared estimated size: 1191
 auto.c
 		_PWMServo      		CODE           	250A	0000	81
 		_rutina        		CODE           	0008	0000	459
-		_cambiarPWM    		CODE           	26DA	0000	13
-		_adelante      		CODE           	26BE	0000	15
+		_cambiarPWM    		CODE           	26DE	0000	13
+		_adelante      		CODE           	26C2	0000	15
 		_estadoDirreccion		CODE           	236C	0000	131
 		_main          		CODE           	193C	0000	419
 		_terminal      		CODE           	1C22	0000	323
-		_atras         		CODE           	26B0	0000	15
+		_atras         		CODE           	26B4	0000	15
 		_rutinaEscape  		CODE           	211C	0000	161
 		_dirreccion    		CODE           	225A	0000	143
 		_cambiarEstadoFuego		CODE           	21BC	0000	159

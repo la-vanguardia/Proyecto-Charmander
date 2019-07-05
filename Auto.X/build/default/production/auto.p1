@@ -1929,136 +1929,144 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _encenderMotor ]
 [f ]
 "37
-[; ;./../LIBRERIAS/funciones_auto.h: 37:     rutinaArranque();
-[e ( _rutinaArranque ..  ]
+[; ;./../LIBRERIAS/funciones_auto.h: 37:     if(motor == 0){
+[e $ ! == -> _motor `i -> 0 `i 930  ]
+{
 "38
-[; ;./../LIBRERIAS/funciones_auto.h: 38:     definirVelocidad();
-[e ( _definirVelocidad ..  ]
+[; ;./../LIBRERIAS/funciones_auto.h: 38:         rutinaArranque();
+[e ( _rutinaArranque ..  ]
 "39
-[; ;./../LIBRERIAS/funciones_auto.h: 39:     motor = 1;
-[e = _motor -> -> 1 `i `uc ]
+[; ;./../LIBRERIAS/funciones_auto.h: 39:     }
+}
+[e :U 930 ]
 "40
-[; ;./../LIBRERIAS/funciones_auto.h: 40: }
+[; ;./../LIBRERIAS/funciones_auto.h: 40:     definirVelocidad();
+[e ( _definirVelocidad ..  ]
+"41
+[; ;./../LIBRERIAS/funciones_auto.h: 41:     motor = 1;
+[e = _motor -> -> 1 `i `uc ]
+"42
+[; ;./../LIBRERIAS/funciones_auto.h: 42: }
 [e :UE 929 ]
 }
-"42
-[; ;./../LIBRERIAS/funciones_auto.h: 42: void definirVelocidad(){
+"44
+[; ;./../LIBRERIAS/funciones_auto.h: 44: void definirVelocidad(){
 [v _definirVelocidad `(v ~T0 @X0 1 ef ]
 {
 [e :U _definirVelocidad ]
 [f ]
-"43
-[; ;./../LIBRERIAS/funciones_auto.h: 43:     CCP7CONbits.DC7B = velocidad & 0x0003;
-[e = . . _CCP7CONbits 0 1 -> & _velocidad -> -> 3 `i `ui `uc ]
-"44
-[; ;./../LIBRERIAS/funciones_auto.h: 44:     CCPR7L = velocidad>>2;
-[e = _CCPR7L -> >> _velocidad -> 2 `i `uc ]
 "45
-[; ;./../LIBRERIAS/funciones_auto.h: 45: }
-[e :UE 930 ]
-}
+[; ;./../LIBRERIAS/funciones_auto.h: 45:     CCP7CONbits.DC7B = velocidad & 0x0003;
+[e = . . _CCP7CONbits 0 1 -> & _velocidad -> -> 3 `i `ui `uc ]
+"46
+[; ;./../LIBRERIAS/funciones_auto.h: 46:     CCPR7L = velocidad>>2;
+[e = _CCPR7L -> >> _velocidad -> 2 `i `uc ]
 "47
-[; ;./../LIBRERIAS/funciones_auto.h: 47: void frenarMotor(){
+[; ;./../LIBRERIAS/funciones_auto.h: 47: }
+[e :UE 931 ]
+}
+"49
+[; ;./../LIBRERIAS/funciones_auto.h: 49: void frenarMotor(){
 [v _frenarMotor `(v ~T0 @X0 1 ef ]
 {
 [e :U _frenarMotor ]
 [f ]
-"48
-[; ;./../LIBRERIAS/funciones_auto.h: 48:     CCP7CONbits.DC7B = 0b00;
-[e = . . _CCP7CONbits 0 1 -> -> 0 `i `uc ]
-"49
-[; ;./../LIBRERIAS/funciones_auto.h: 49:     CCPR7L = 0x00;
-[e = _CCPR7L -> -> 0 `i `uc ]
 "50
-[; ;./../LIBRERIAS/funciones_auto.h: 50:     motor = 0;
-[e = _motor -> -> 0 `i `uc ]
+[; ;./../LIBRERIAS/funciones_auto.h: 50:     CCP7CONbits.DC7B = 0b00;
+[e = . . _CCP7CONbits 0 1 -> -> 0 `i `uc ]
 "51
-[; ;./../LIBRERIAS/funciones_auto.h: 51: }
-[e :UE 931 ]
-}
+[; ;./../LIBRERIAS/funciones_auto.h: 51:     CCPR7L = 0x00;
+[e = _CCPR7L -> -> 0 `i `uc ]
+"52
+[; ;./../LIBRERIAS/funciones_auto.h: 52:     motor = 0;
+[e = _motor -> -> 0 `i `uc ]
 "53
-[; ;./../LIBRERIAS/funciones_auto.h: 53: void enviarRS232(unsigned char *valores){
+[; ;./../LIBRERIAS/funciones_auto.h: 53: }
+[e :UE 932 ]
+}
+"55
+[; ;./../LIBRERIAS/funciones_auto.h: 55: void enviarRS232(unsigned char *valores){
 [v _enviarRS232 `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _enviarRS232 ]
 [v _valores `*uc ~T0 @X0 1 r1 ]
 [f ]
-"54
-[; ;./../LIBRERIAS/funciones_auto.h: 54:     unsigned int longitud_texto = length(valores);
+"56
+[; ;./../LIBRERIAS/funciones_auto.h: 56:     unsigned int longitud_texto = length(valores);
 [v _longitud_texto `ui ~T0 @X0 1 a ]
 [e = _longitud_texto -> ( _length (1 _valores `ui ]
-"55
-[; ;./../LIBRERIAS/funciones_auto.h: 55:     for(unsigned char i = 0; i<longitud_texto; i++){
+"57
+[; ;./../LIBRERIAS/funciones_auto.h: 57:     for(unsigned char i = 0; i<longitud_texto; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $U 936  ]
-[e :U 933 ]
+[e $U 937  ]
+[e :U 934 ]
 {
-"56
-[; ;./../LIBRERIAS/funciones_auto.h: 56:         TXREG1 = valores[i];
-[e = _TXREG1 *U + _valores * -> _i `ux -> -> # *U _valores `ui `ux ]
-"57
-[; ;./../LIBRERIAS/funciones_auto.h: 57:         _delay((unsigned long)((3)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 3 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "58
-[; ;./../LIBRERIAS/funciones_auto.h: 58:     }
+[; ;./../LIBRERIAS/funciones_auto.h: 58:         TXREG1 = valores[i];
+[e = _TXREG1 *U + _valores * -> _i `ux -> -> # *U _valores `ui `ux ]
+"59
+[; ;./../LIBRERIAS/funciones_auto.h: 59:         _delay((unsigned long)((3)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"60
+[; ;./../LIBRERIAS/funciones_auto.h: 60:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 936 ]
-[e $ < -> _i `ui _longitud_texto 933  ]
-[e :U 934 ]
-}
-"59
-[; ;./../LIBRERIAS/funciones_auto.h: 59: }
-[e :UE 932 ]
+[e :U 937 ]
+[e $ < -> _i `ui _longitud_texto 934  ]
+[e :U 935 ]
 }
 "61
-[; ;./../LIBRERIAS/funciones_auto.h: 61: int length(unsigned char *text){
+[; ;./../LIBRERIAS/funciones_auto.h: 61: }
+[e :UE 933 ]
+}
+"63
+[; ;./../LIBRERIAS/funciones_auto.h: 63: int length(unsigned char *text){
 [v _length `(i ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _length ]
 [v _text `*uc ~T0 @X0 1 r1 ]
 [f ]
-"62
-[; ;./../LIBRERIAS/funciones_auto.h: 62:     unsigned char dato = text[0], i = 1;
+"64
+[; ;./../LIBRERIAS/funciones_auto.h: 64:     unsigned char dato = text[0], i = 1;
 [v _dato `uc ~T0 @X0 1 a ]
 [e = _dato *U + _text * -> -> 0 `i `x -> -> # *U _text `i `x ]
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 1 `i `uc ]
-"63
-[; ;./../LIBRERIAS/funciones_auto.h: 63:     int longitud = 0;
+"65
+[; ;./../LIBRERIAS/funciones_auto.h: 65:     int longitud = 0;
 [v _longitud `i ~T0 @X0 1 a ]
 [e = _longitud -> 0 `i ]
-"64
-[; ;./../LIBRERIAS/funciones_auto.h: 64:     while(dato != '\0'){
-[e $U 938  ]
-[e :U 939 ]
-{
-"65
-[; ;./../LIBRERIAS/funciones_auto.h: 65:         dato = text[i];
-[e = _dato *U + _text * -> _i `ux -> -> # *U _text `ui `ux ]
 "66
-[; ;./../LIBRERIAS/funciones_auto.h: 66:         i++;
-[e ++ _i -> -> 1 `i `uc ]
-"67
-[; ;./../LIBRERIAS/funciones_auto.h: 67:         longitud++;
-[e ++ _longitud -> 1 `i ]
-"68
-[; ;./../LIBRERIAS/funciones_auto.h: 68:     }
-}
-[e :U 938 ]
-"64
-[; ;./../LIBRERIAS/funciones_auto.h: 64:     while(dato != '\0'){
-[e $ != -> _dato `ui -> 0 `ui 939  ]
+[; ;./../LIBRERIAS/funciones_auto.h: 66:     while(dato != '\0'){
+[e $U 939  ]
 [e :U 940 ]
+{
+"67
+[; ;./../LIBRERIAS/funciones_auto.h: 67:         dato = text[i];
+[e = _dato *U + _text * -> _i `ux -> -> # *U _text `ui `ux ]
+"68
+[; ;./../LIBRERIAS/funciones_auto.h: 68:         i++;
+[e ++ _i -> -> 1 `i `uc ]
 "69
-[; ;./../LIBRERIAS/funciones_auto.h: 69:     return longitud;
-[e ) _longitud ]
-[e $UE 937  ]
+[; ;./../LIBRERIAS/funciones_auto.h: 69:         longitud++;
+[e ++ _longitud -> 1 `i ]
 "70
-[; ;./../LIBRERIAS/funciones_auto.h: 70: }
-[e :UE 937 ]
+[; ;./../LIBRERIAS/funciones_auto.h: 70:     }
+}
+[e :U 939 ]
+"66
+[; ;./../LIBRERIAS/funciones_auto.h: 66:     while(dato != '\0'){
+[e $ != -> _dato `ui -> 0 `ui 940  ]
+[e :U 941 ]
+"71
+[; ;./../LIBRERIAS/funciones_auto.h: 71:     return longitud;
+[e ) _longitud ]
+[e $UE 938  ]
+"72
+[; ;./../LIBRERIAS/funciones_auto.h: 72: }
+[e :UE 938 ]
 }
 "38 auto.c
 [; ;auto.c: 38: unsigned int TIME_MAX = 1000-65, parar= 0, tiempo_anterior_1 = 65, contador_timer_5 = 0;
@@ -2169,7 +2177,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "60
 [; ;auto.c: 60:     if(PIR1bits.RC1IF == 1){
-[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 942  ]
+[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 943  ]
 {
 "61
 [; ;auto.c: 61:         unsigned char dato = RCREG1;
@@ -2177,7 +2185,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _dato _RCREG1 ]
 "62
 [; ;auto.c: 62:         if(dato == 'P'){
-[e $ ! == -> _dato `ui -> 80 `ui 943  ]
+[e $ ! == -> _dato `ui -> 80 `ui 944  ]
 {
 "63
 [; ;auto.c: 63:             bandera = 1;
@@ -2188,10 +2196,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65
 [; ;auto.c: 65:         }
 }
-[e $U 944  ]
+[e $U 945  ]
 "66
 [; ;auto.c: 66:         else{
-[e :U 943 ]
+[e :U 944 ]
 {
 "67
 [; ;auto.c: 67:             datos[indicador] = dato;
@@ -2202,15 +2210,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "69
 [; ;auto.c: 69:         }
 }
-[e :U 944 ]
+[e :U 945 ]
 "70
 [; ;auto.c: 70:     }
 }
-[e $U 945  ]
+[e $U 946  ]
 "71
 [; ;auto.c: 71:     else if(PIR5bits.TMR5IF == 1){
-[e :U 942 ]
-[e $ ! == -> . . _PIR5bits 0 2 `i -> 1 `i 946  ]
+[e :U 943 ]
+[e $ ! == -> . . _PIR5bits 0 2 `i -> 1 `i 947  ]
 {
 "72
 [; ;auto.c: 72:         PIR5bits.TMR5IF = 0;
@@ -2226,7 +2234,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _TMR5L -> -> 226 `i `uc ]
 "76
 [; ;auto.c: 76:         if(contador_timer_5 == TIME_MAX){
-[e $ ! == _contador_timer_5 _TIME_MAX 947  ]
+[e $ ! == _contador_timer_5 _TIME_MAX 948  ]
 {
 "77
 [; ;auto.c: 77:             contador_timer_5 = 0;
@@ -2237,15 +2245,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "79
 [; ;auto.c: 79:         }
 }
-[e :U 947 ]
+[e :U 948 ]
 "80
 [; ;auto.c: 80:     }
 }
-[e $U 948  ]
+[e $U 949  ]
 "81
 [; ;auto.c: 81:     else if(PIR3bits.TMR4IF == 1){
-[e :U 946 ]
-[e $ ! == -> . . _PIR3bits 0 3 `i -> 1 `i 949  ]
+[e :U 947 ]
+[e $ ! == -> . . _PIR3bits 0 3 `i -> 1 `i 950  ]
 {
 "82
 [; ;auto.c: 82:         PIR3bits.TMR4IF = 0;
@@ -2258,14 +2266,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _TMR4 -> -> 181 `i `uc ]
 "85
 [; ;auto.c: 85:         if(contador_distancia == 1000){
-[e $ ! == _contador_distancia -> -> 1000 `i `ui 950  ]
+[e $ ! == _contador_distancia -> -> 1000 `i `ui 951  ]
 {
 "86
 [; ;auto.c: 86:             contador_distancia = 0;
 [e = _contador_distancia -> -> 0 `i `ui ]
 "87
 [; ;auto.c: 87:             if(estado == 'w'){
-[e $ ! == -> _estado `ui -> 119 `ui 951  ]
+[e $ ! == -> _estado `ui -> 119 `ui 952  ]
 {
 "88
 [; ;auto.c: 88:                 TXREG2 = 0x55;
@@ -2273,19 +2281,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "89
 [; ;auto.c: 89:             }
 }
-[e :U 951 ]
+[e :U 952 ]
 "90
 [; ;auto.c: 90:         }
 }
-[e :U 950 ]
+[e :U 951 ]
 "91
 [; ;auto.c: 91:     }
 }
-[e $U 952  ]
+[e $U 953  ]
 "92
 [; ;auto.c: 92:     else if(PIR5bits.TMR8IF == 1){
-[e :U 949 ]
-[e $ ! == -> . . _PIR5bits 0 4 `i -> 1 `i 953  ]
+[e :U 950 ]
+[e $ ! == -> . . _PIR5bits 0 4 `i -> 1 `i 954  ]
 {
 "93
 [; ;auto.c: 93:         TMR8 = 31;
@@ -2298,7 +2306,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _fuego_interrupcion -> -> -> 1 `i `l `ul ]
 "96
 [; ;auto.c: 96:         if(fuego_interrupcion == TIME_FUEGO ){
-[e $ ! == _fuego_interrupcion _TIME_FUEGO 954  ]
+[e $ ! == _fuego_interrupcion _TIME_FUEGO 955  ]
 {
 "97
 [; ;auto.c: 97:             fuego_interrupcion = 0;
@@ -2309,15 +2317,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "99
 [; ;auto.c: 99:         }
 }
-[e :U 954 ]
+[e :U 955 ]
 "100
 [; ;auto.c: 100:     }
 }
-[e $U 955  ]
+[e $U 956  ]
 "101
 [; ;auto.c: 101:     else if(INTCONbits.INT0F == 1){
-[e :U 953 ]
-[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 956  ]
+[e :U 954 ]
+[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 957  ]
 {
 "102
 [; ;auto.c: 102:         INTCONbits.INT0F = 0;
@@ -2328,15 +2336,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;auto.c: 104:     }
 }
-[e $U 957  ]
+[e $U 958  ]
 "105
 [; ;auto.c: 105:     else if(PIR3bits.RC2IF == 1){
-[e :U 956 ]
-[e $ ! == -> . . _PIR3bits 0 5 `i -> 1 `i 958  ]
+[e :U 957 ]
+[e $ ! == -> . . _PIR3bits 0 5 `i -> 1 `i 959  ]
 {
 "106
 [; ;auto.c: 106:         if(contador_datos == 1){
-[e $ ! == -> _contador_datos `i -> 1 `i 959  ]
+[e $ ! == -> _contador_datos `i -> 1 `i 960  ]
 {
 "107
 [; ;auto.c: 107:             bandera_distancia = 1;
@@ -2350,10 +2358,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "110
 [; ;auto.c: 110:         }
 }
-[e $U 960  ]
+[e $U 961  ]
 "111
 [; ;auto.c: 111:         else{
-[e :U 959 ]
+[e :U 960 ]
 {
 "112
 [; ;auto.c: 112:             distancia = 256*(RCREG2)/10;
@@ -2364,22 +2372,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "114
 [; ;auto.c: 114:         }
 }
-[e :U 960 ]
+[e :U 961 ]
 "115
 [; ;auto.c: 115:     }
 }
-[e $U 961  ]
+[e $U 962  ]
 "116
 [; ;auto.c: 116:     else if(INTCON3bits.INT1F == 1 && INTCON3bits.INT1E == 1){
-[e :U 958 ]
-[e $ ! && == -> . . _INTCON3bits 1 0 `i -> 1 `i == -> . . _INTCON3bits 1 3 `i -> 1 `i 962  ]
+[e :U 959 ]
+[e $ ! && == -> . . _INTCON3bits 1 0 `i -> 1 `i == -> . . _INTCON3bits 1 3 `i -> 1 `i 963  ]
 {
 "117
 [; ;auto.c: 117:         INTCON3bits.INT1F = 0;
 [e = . . _INTCON3bits 1 0 -> -> 0 `i `uc ]
 "118
 [; ;auto.c: 118:         if (estado == 'w'){
-[e $ ! == -> _estado `ui -> 119 `ui 963  ]
+[e $ ! == -> _estado `ui -> 119 `ui 964  ]
 {
 "119
 [; ;auto.c: 119:             INTCON3bits.INT1E = 0;
@@ -2390,20 +2398,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "121
 [; ;auto.c: 121:         }
 }
-[e :U 963 ]
+[e :U 964 ]
 "122
 [; ;auto.c: 122:     }
 }
+[e :U 963 ]
 [e :U 962 ]
-[e :U 961 ]
-[e :U 957 ]
-[e :U 955 ]
-[e :U 952 ]
-[e :U 948 ]
-[e :U 945 ]
+[e :U 958 ]
+[e :U 956 ]
+[e :U 953 ]
+[e :U 949 ]
+[e :U 946 ]
 "123
 [; ;auto.c: 123: }
-[e :UE 941 ]
+[e :UE 942 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "125
@@ -2441,22 +2449,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _T4CONbits 0 1 -> -> 1 `i `uc ]
 "135
 [; ;auto.c: 135:     while(1){
-[e :U 966 ]
+[e :U 967 ]
 {
 "136
 [; ;auto.c: 136:         if(estado == 'w'){
-[e $ ! == -> _estado `ui -> 119 `ui 968  ]
+[e $ ! == -> _estado `ui -> 119 `ui 969  ]
 {
 "137
 [; ;auto.c: 137:             if(bandera_distancia == 1){
-[e $ ! == -> _bandera_distancia `i -> 1 `i 969  ]
+[e $ ! == -> _bandera_distancia `i -> 1 `i 970  ]
 {
 "138
 [; ;auto.c: 138:                 bandera_distancia = 0;
 [e = _bandera_distancia -> -> 0 `i `uc ]
 "139
 [; ;auto.c: 139:                 if((distancia <= 22)){
-[e $ ! <= _distancia -> -> 22 `i `f 970  ]
+[e $ ! <= _distancia -> -> 22 `i `f 971  ]
 {
 "140
 [; ;auto.c: 140:                     rutinaEscape(3);
@@ -2467,14 +2475,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "142
 [; ;auto.c: 142:                 }
 }
-[e :U 970 ]
+[e :U 971 ]
 "143
 [; ;auto.c: 143:             }
 }
-[e :U 969 ]
+[e :U 970 ]
 "144
 [; ;auto.c: 144:             if(bandera_fuego == 1){
-[e $ ! == -> _bandera_fuego `i -> 1 `i 971  ]
+[e $ ! == -> _bandera_fuego `i -> 1 `i 972  ]
 {
 "145
 [; ;auto.c: 145:                 bandera_fuego = 0;
@@ -2491,10 +2499,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "149
 [; ;auto.c: 149:             }
 }
-[e :U 971 ]
+[e :U 972 ]
 "150
 [; ;auto.c: 150:             if(cambiar_estado_rutina_escape == 1){
-[e $ ! == -> _cambiar_estado_rutina_escape `i -> 1 `i 972  ]
+[e $ ! == -> _cambiar_estado_rutina_escape `i -> 1 `i 973  ]
 {
 "151
 [; ;auto.c: 151:                 T8CONbits.TMR8ON = 0;
@@ -2511,18 +2519,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "155
 [; ;auto.c: 155:             }
 }
-[e :U 972 ]
+[e :U 973 ]
 "156
 [; ;auto.c: 156:         }
 }
-[e :U 968 ]
+[e :U 969 ]
 "157
 [; ;auto.c: 157:         if(estado == 's'){
-[e $ ! == -> _estado `ui -> 115 `ui 973  ]
+[e $ ! == -> _estado `ui -> 115 `ui 974  ]
 {
 "158
 [; ;auto.c: 158:             if(obstaculo == 1){
-[e $ ! == -> _obstaculo `i -> 1 `i 974  ]
+[e $ ! == -> _obstaculo `i -> 1 `i 975  ]
 {
 "159
 [; ;auto.c: 159:                 obstaculo = 0;
@@ -2533,10 +2541,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "161
 [; ;auto.c: 161:             }
 }
-[e :U 974 ]
+[e :U 975 ]
 "162
 [; ;auto.c: 162:             if(cambiar_estado_rutina_escape == 1){
-[e $ ! == -> _cambiar_estado_rutina_escape `i -> 1 `i 975  ]
+[e $ ! == -> _cambiar_estado_rutina_escape `i -> 1 `i 976  ]
 {
 "163
 [; ;auto.c: 163:                 T8CONbits.TMR8ON = 0;
@@ -2556,14 +2564,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "168
 [; ;auto.c: 168:             }
 }
-[e :U 975 ]
+[e :U 976 ]
 "169
 [; ;auto.c: 169:         }
 }
-[e :U 973 ]
+[e :U 974 ]
 "170
 [; ;auto.c: 170:         if(bandera == 1){
-[e $ ! == -> _bandera `i -> 1 `i 976  ]
+[e $ ! == -> _bandera `i -> 1 `i 977  ]
 {
 "171
 [; ;auto.c: 171:             bandera = 0;
@@ -2574,10 +2582,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "173
 [; ;auto.c: 173:         }
 }
-[e :U 976 ]
+[e :U 977 ]
 "174
 [; ;auto.c: 174:         if(bandera_servo == 1){
-[e $ ! == -> _bandera_servo `i -> 1 `i 977  ]
+[e $ ! == -> _bandera_servo `i -> 1 `i 978  ]
 {
 "175
 [; ;auto.c: 175:             bandera_servo = 0;
@@ -2588,19 +2596,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "177
 [; ;auto.c: 177:         }
 }
-[e :U 977 ]
+[e :U 978 ]
 "179
 [; ;auto.c: 179:     }
 }
-[e :U 965 ]
-[e $U 966  ]
-[e :U 967 ]
+[e :U 966 ]
+[e $U 967  ]
+[e :U 968 ]
 "180
 [; ;auto.c: 180:     return;
-[e $UE 964  ]
+[e $UE 965  ]
 "181
 [; ;auto.c: 181: }
-[e :UE 964 ]
+[e :UE 965 ]
 }
 "183
 [; ;auto.c: 183: void configuracionInicial(){
@@ -2634,7 +2642,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _configurarRS232US100 ..  ]
 "192
 [; ;auto.c: 192: }
-[e :UE 978 ]
+[e :UE 979 ]
 }
 "194
 [; ;auto.c: 194: void terminal(unsigned char *comand){
@@ -2665,11 +2673,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _estado -> -> 99 `ui `uc ]
 "199
 [; ;auto.c: 199:     switch (comand[0]){
-[e $U 981  ]
+[e $U 982  ]
 {
 "200
 [; ;auto.c: 200:         case 'w':
-[e :U 982 ]
+[e :U 983 ]
 "201
 [; ;auto.c: 201:             adelante();
 [e ( _adelante ..  ]
@@ -2681,10 +2689,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _enviarRS232 (1 :s 7C ]
 "204
 [; ;auto.c: 204:             break;
-[e $U 980  ]
+[e $U 981  ]
 "205
 [; ;auto.c: 205:         case 's':
-[e :U 983 ]
+[e :U 984 ]
 "206
 [; ;auto.c: 206:             atras();
 [e ( _atras ..  ]
@@ -2696,10 +2704,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _enviarRS232 (1 :s 8C ]
 "209
 [; ;auto.c: 209:             break;
-[e $U 980  ]
+[e $U 981  ]
 "210
 [; ;auto.c: 210:         case 'a':
-[e :U 984 ]
+[e :U 985 ]
 "211
 [; ;auto.c: 211:             degree = estadoDirreccion(2);
 [e = _degree ( _estadoDirreccion (1 -> -> 2 `i `uc ]
@@ -2708,10 +2716,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _dirreccion (1 _degree ]
 "213
 [; ;auto.c: 213:             break;
-[e $U 980  ]
+[e $U 981  ]
 "214
 [; ;auto.c: 214:         case 'd':
-[e :U 985 ]
+[e :U 986 ]
 "215
 [; ;auto.c: 215:             degree = estadoDirreccion(1);
 [e = _degree ( _estadoDirreccion (1 -> -> 1 `i `uc ]
@@ -2720,10 +2728,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _dirreccion (1 _degree ]
 "217
 [; ;auto.c: 217:             break;
-[e $U 980  ]
+[e $U 981  ]
 "218
 [; ;auto.c: 218:         case 'c':
-[e :U 986 ]
+[e :U 987 ]
 "219
 [; ;auto.c: 219:             estado = 'c';
 [e = _estado -> -> 99 `ui `uc ]
@@ -2735,10 +2743,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCON3bits 1 3 -> -> 1 `i `uc ]
 "222
 [; ;auto.c: 222:             break;
-[e $U 980  ]
+[e $U 981  ]
 "223
 [; ;auto.c: 223:         case 'F':
-[e :U 987 ]
+[e :U 988 ]
 "224
 [; ;auto.c: 224:             medicion = (comand[1] - 0x30)*100 + (comand[2] - 0x30)*10 + comand[3] - 0x30;
 [e = _medicion -> - + + * - -> *U + _comand * -> -> 1 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 100 `i * - -> *U + _comand * -> -> 2 `i `x -> -> # *U _comand `i `x `i -> 48 `i -> 10 `i -> *U + _comand * -> -> 3 `i `x -> -> # *U _comand `i `x `i -> 48 `i `ui ]
@@ -2750,45 +2758,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _cambiarPWM ..  ]
 "227
 [; ;auto.c: 227:             break;
-[e $U 980  ]
+[e $U 981  ]
 "228
 [; ;auto.c: 228:         case 'g':
-[e :U 988 ]
+[e :U 989 ]
 "229
 [; ;auto.c: 229:             enviarRS232("MODO PROGRAMADOR ACTIVADO!");
 [e ( _enviarRS232 (1 :s 9C ]
 "230
 [; ;auto.c: 230:             while(1);
-[e :U 990 ]
-[e :U 989 ]
-[e $U 990  ]
 [e :U 991 ]
+[e :U 990 ]
+[e $U 991  ]
+[e :U 992 ]
 "231
 [; ;auto.c: 231:             break;
-[e $U 980  ]
+[e $U 981  ]
 "232
 [; ;auto.c: 232:         default:
-[e :U 992 ]
+[e :U 993 ]
 "233
 [; ;auto.c: 233:             break;
-[e $U 980  ]
+[e $U 981  ]
 "234
 [; ;auto.c: 234:     }
 }
-[e $U 980  ]
+[e $U 981  ]
+[e :U 982 ]
+[e [\ -> *U + _comand * -> -> 0 `i `x -> -> # *U _comand `i `x `i , $ -> -> 119 `ui `i 983
+ , $ -> -> 115 `ui `i 984
+ , $ -> -> 97 `ui `i 985
+ , $ -> -> 100 `ui `i 986
+ , $ -> -> 99 `ui `i 987
+ , $ -> -> 70 `ui `i 988
+ , $ -> -> 103 `ui `i 989
+ 993 ]
 [e :U 981 ]
-[e [\ -> *U + _comand * -> -> 0 `i `x -> -> # *U _comand `i `x `i , $ -> -> 119 `ui `i 982
- , $ -> -> 115 `ui `i 983
- , $ -> -> 97 `ui `i 984
- , $ -> -> 100 `ui `i 985
- , $ -> -> 99 `ui `i 986
- , $ -> -> 70 `ui `i 987
- , $ -> -> 103 `ui `i 988
- 992 ]
-[e :U 980 ]
 "235
 [; ;auto.c: 235: }
-[e :UE 979 ]
+[e :UE 980 ]
 }
 "237
 [; ;auto.c: 237: void cambiarPWM(){
@@ -2798,7 +2806,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "238
 [; ;auto.c: 238:     if(motor == 1){
-[e $ ! == -> _motor `i -> 1 `i 994  ]
+[e $ ! == -> _motor `i -> 1 `i 995  ]
 {
 "239
 [; ;auto.c: 239:         definirVelocidad();
@@ -2806,10 +2814,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "240
 [; ;auto.c: 240:     }
 }
-[e :U 994 ]
+[e :U 995 ]
 "241
 [; ;auto.c: 241: }
-[e :UE 993 ]
+[e :UE 994 ]
 }
 "243
 [; ;auto.c: 243: unsigned int estadoDirreccion(unsigned char valor){
@@ -2824,14 +2832,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _angulo -> -> 90 `i `ui ]
 "245
 [; ;auto.c: 245:     switch(servo_dirreccion){
-[e $U 997  ]
+[e $U 998  ]
 {
 "246
 [; ;auto.c: 246:         case 0:
-[e :U 998 ]
+[e :U 999 ]
 "247
 [; ;auto.c: 247:             if(valor == 1){
-[e $ ! == -> _valor `i -> 1 `i 999  ]
+[e $ ! == -> _valor `i -> 1 `i 1000  ]
 {
 "248
 [; ;auto.c: 248:                 servo_dirreccion = 1;
@@ -2842,10 +2850,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "250
 [; ;auto.c: 250:             }
 }
-[e $U 1000  ]
+[e $U 1001  ]
 "251
 [; ;auto.c: 251:             else{
-[e :U 999 ]
+[e :U 1000 ]
 {
 "252
 [; ;auto.c: 252:                 servo_dirreccion = 2;
@@ -2856,16 +2864,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "254
 [; ;auto.c: 254:             }
 }
-[e :U 1000 ]
+[e :U 1001 ]
 "255
 [; ;auto.c: 255:             break;
-[e $U 996  ]
+[e $U 997  ]
 "256
 [; ;auto.c: 256:         case 1:
-[e :U 1001 ]
+[e :U 1002 ]
 "257
 [; ;auto.c: 257:             if(valor != 1){
-[e $ ! != -> _valor `i -> 1 `i 1002  ]
+[e $ ! != -> _valor `i -> 1 `i 1003  ]
 {
 "258
 [; ;auto.c: 258:                 servo_dirreccion = 0;
@@ -2876,10 +2884,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "260
 [; ;auto.c: 260:             }
 }
-[e $U 1003  ]
+[e $U 1004  ]
 "261
 [; ;auto.c: 261:             else{
-[e :U 1002 ]
+[e :U 1003 ]
 {
 "262
 [; ;auto.c: 262:                 angulo = 0;
@@ -2887,16 +2895,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "263
 [; ;auto.c: 263:             }
 }
-[e :U 1003 ]
+[e :U 1004 ]
 "264
 [; ;auto.c: 264:             break;
-[e $U 996  ]
+[e $U 997  ]
 "265
 [; ;auto.c: 265:         case 2:
-[e :U 1004 ]
+[e :U 1005 ]
 "266
 [; ;auto.c: 266:             if(valor == 1){
-[e $ ! == -> _valor `i -> 1 `i 1005  ]
+[e $ ! == -> _valor `i -> 1 `i 1006  ]
 {
 "267
 [; ;auto.c: 267:                 servo_dirreccion = 0;
@@ -2907,10 +2915,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "269
 [; ;auto.c: 269:             }
 }
-[e $U 1006  ]
+[e $U 1007  ]
 "270
 [; ;auto.c: 270:             else{
-[e :U 1005 ]
+[e :U 1006 ]
 {
 "271
 [; ;auto.c: 271:                 angulo = 180;
@@ -2918,27 +2926,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "272
 [; ;auto.c: 272:             }
 }
-[e :U 1006 ]
+[e :U 1007 ]
 "273
 [; ;auto.c: 273:             break;
-[e $U 996  ]
+[e $U 997  ]
 "274
 [; ;auto.c: 274:     }
 }
-[e $U 996  ]
+[e $U 997  ]
+[e :U 998 ]
+[e [\ -> _servo_dirreccion `i , $ -> 0 `i 999
+ , $ -> 1 `i 1002
+ , $ -> 2 `i 1005
+ 997 ]
 [e :U 997 ]
-[e [\ -> _servo_dirreccion `i , $ -> 0 `i 998
- , $ -> 1 `i 1001
- , $ -> 2 `i 1004
- 996 ]
-[e :U 996 ]
 "275
 [; ;auto.c: 275:     return angulo;
 [e ) _angulo ]
-[e $UE 995  ]
+[e $UE 996  ]
 "276
 [; ;auto.c: 276: }
-[e :UE 995 ]
+[e :UE 996 ]
 }
 "278
 [; ;auto.c: 278: void dirreccion(unsigned int degree){
@@ -2959,11 +2967,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _parar -> -> 0 `i `ui ]
 "282
 [; ;auto.c: 282:     switch(degree){
-[e $U 1009  ]
+[e $U 1010  ]
 {
 "283
 [; ;auto.c: 283:         case 85:
-[e :U 1010 ]
+[e :U 1011 ]
 "284
 [; ;auto.c: 284:             tiempo_1 = 57;
 [e = _tiempo_1 -> -> 57 `i `uc ]
@@ -2972,10 +2980,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _servo_dirreccion -> -> 0 `i `uc ]
 "286
 [; ;auto.c: 286:             break;
-[e $U 1008  ]
+[e $U 1009  ]
 "287
 [; ;auto.c: 287:         case 90:
-[e :U 1011 ]
+[e :U 1012 ]
 "288
 [; ;auto.c: 288:             tiempo_1 = 57;
 [e = _tiempo_1 -> -> 57 `i `uc ]
@@ -2984,10 +2992,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _servo_dirreccion -> -> 0 `i `uc ]
 "290
 [; ;auto.c: 290:             break;
-[e $U 1008  ]
+[e $U 1009  ]
 "291
 [; ;auto.c: 291:         case 0:
-[e :U 1012 ]
+[e :U 1013 ]
 "292
 [; ;auto.c: 292:             tiempo_1 = 65;
 [e = _tiempo_1 -> -> 65 `i `uc ]
@@ -2996,10 +3004,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _servo_dirreccion -> -> 1 `i `uc ]
 "294
 [; ;auto.c: 294:             break;
-[e $U 1008  ]
+[e $U 1009  ]
 "295
 [; ;auto.c: 295:         case 180:
-[e :U 1013 ]
+[e :U 1014 ]
 "296
 [; ;auto.c: 296:             tiempo_1 = 50;
 [e = _tiempo_1 -> -> 50 `i `uc ]
@@ -3008,21 +3016,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _servo_dirreccion -> -> 2 `i `uc ]
 "298
 [; ;auto.c: 298:             break;
-[e $U 1008  ]
+[e $U 1009  ]
 "299
 [; ;auto.c: 299:     }
 }
-[e $U 1008  ]
+[e $U 1009  ]
+[e :U 1010 ]
+[e [\ _degree , $ -> -> 85 `i `ui 1011
+ , $ -> -> 90 `i `ui 1012
+ , $ -> -> 0 `i `ui 1013
+ , $ -> -> 180 `i `ui 1014
+ 1009 ]
 [e :U 1009 ]
-[e [\ _degree , $ -> -> 85 `i `ui 1010
- , $ -> -> 90 `i `ui 1011
- , $ -> -> 0 `i `ui 1012
- , $ -> -> 180 `i `ui 1013
- 1008 ]
-[e :U 1008 ]
 "300
 [; ;auto.c: 300:     if(PORTDbits.RD4 != 1){
-[e $ ! != -> . . _PORTDbits 0 4 `i -> 1 `i 1014  ]
+[e $ ! != -> . . _PORTDbits 0 4 `i -> 1 `i 1015  ]
 {
 "301
 [; ;auto.c: 301:         TIME_MAX = tiempo_1;
@@ -3033,10 +3041,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "303
 [; ;auto.c: 303:     }
 }
-[e $U 1015  ]
+[e $U 1016  ]
 "304
 [; ;auto.c: 304:     else{
-[e :U 1014 ]
+[e :U 1015 ]
 {
 "305
 [; ;auto.c: 305:         TIME_MAX = 1000 - tiempo_1;
@@ -3047,7 +3055,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "307
 [; ;auto.c: 307:     }
 }
-[e :U 1015 ]
+[e :U 1016 ]
 "308
 [; ;auto.c: 308:     contador_timer_5 = 0;
 [e = _contador_timer_5 -> -> 0 `i `ui ]
@@ -3059,7 +3067,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
 "311
 [; ;auto.c: 311: }
-[e :UE 1007 ]
+[e :UE 1008 ]
 }
 "313
 [; ;auto.c: 313: void PWMServo(){
@@ -3072,7 +3080,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _contador_timer_5 -> -> 0 `i `ui ]
 "315
 [; ;auto.c: 315:     if(PORTDbits.RD4 == 1){
-[e $ ! == -> . . _PORTDbits 0 4 `i -> 1 `i 1017  ]
+[e $ ! == -> . . _PORTDbits 0 4 `i -> 1 `i 1018  ]
 {
 "316
 [; ;auto.c: 316:         parar++;
@@ -3089,10 +3097,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "320
 [; ;auto.c: 320:     }
 }
-[e $U 1018  ]
+[e $U 1019  ]
 "321
 [; ;auto.c: 321:     else{
-[e :U 1017 ]
+[e :U 1018 ]
 {
 "322
 [; ;auto.c: 322:         PORTDbits.RD4 = 1;
@@ -3103,10 +3111,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "324
 [; ;auto.c: 324:     }
 }
-[e :U 1018 ]
+[e :U 1019 ]
 "325
 [; ;auto.c: 325:     if(parar == 30){
-[e $ ! == _parar -> -> 30 `i `ui 1019  ]
+[e $ ! == _parar -> -> 30 `i `ui 1020  ]
 {
 "326
 [; ;auto.c: 326:         T5CONbits.TMR5ON = 0;
@@ -3120,10 +3128,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "329
 [; ;auto.c: 329:     }
 }
-[e :U 1019 ]
+[e :U 1020 ]
 "330
 [; ;auto.c: 330: }
-[e :UE 1016 ]
+[e :UE 1017 ]
 }
 "332
 [; ;auto.c: 332: void adelante(){
@@ -3148,7 +3156,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
 "338
 [; ;auto.c: 338: }
-[e :UE 1020 ]
+[e :UE 1021 ]
 }
 "340
 [; ;auto.c: 340: void atras(){
@@ -3173,7 +3181,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
 "346
 [; ;auto.c: 346: }
-[e :UE 1021 ]
+[e :UE 1022 ]
 }
 "348
 [; ;auto.c: 348: void rutinaEscape(unsigned char type){
@@ -3190,11 +3198,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _estado -> -> 99 `ui `uc ]
 "351
 [; ;auto.c: 351:     switch(type){
-[e $U 1024  ]
+[e $U 1025  ]
 {
 "352
 [; ;auto.c: 352:         case 1:
-[e :U 1025 ]
+[e :U 1026 ]
 "353
 [; ;auto.c: 353:             enviarRS232("FUEGO!");
 [e ( _enviarRS232 (1 :s 10C ]
@@ -3221,10 +3229,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _estadoFuego -> -> 0 `i `uc ]
 "361
 [; ;auto.c: 361:             break;
-[e $U 1023  ]
+[e $U 1024  ]
 "362
 [; ;auto.c: 362:         case 3:
-[e :U 1026 ]
+[e :U 1027 ]
 "363
 [; ;auto.c: 363:             TIME_FUEGO = 4000;
 [e = _TIME_FUEGO -> -> -> 4000 `i `l `ul ]
@@ -3242,29 +3250,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _T8CONbits 0 1 -> -> 1 `i `uc ]
 "368
 [; ;auto.c: 368:             break;
-[e $U 1023  ]
+[e $U 1024  ]
 "369
 [; ;auto.c: 369:         case 2:
-[e :U 1027 ]
+[e :U 1028 ]
 "370
 [; ;auto.c: 370:             frenarMotor();
 [e ( _frenarMotor ..  ]
 "371
 [; ;auto.c: 371:             break;
-[e $U 1023  ]
+[e $U 1024  ]
 "372
 [; ;auto.c: 372:     }
 }
-[e $U 1023  ]
+[e $U 1024  ]
+[e :U 1025 ]
+[e [\ -> _type `i , $ -> 1 `i 1026
+ , $ -> 3 `i 1027
+ , $ -> 2 `i 1028
+ 1024 ]
 [e :U 1024 ]
-[e [\ -> _type `i , $ -> 1 `i 1025
- , $ -> 3 `i 1026
- , $ -> 2 `i 1027
- 1023 ]
-[e :U 1023 ]
 "373
 [; ;auto.c: 373: }
-[e :UE 1022 ]
+[e :UE 1023 ]
 }
 "375
 [; ;auto.c: 375: void cambiarEstadoFuego(){
@@ -3281,11 +3289,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _bandera_fuego -> -> 0 `i `uc ]
 "378
 [; ;auto.c: 378:     switch(estadoFuego){
-[e $U 1030  ]
+[e $U 1031  ]
 {
 "379
 [; ;auto.c: 379:         case 0:
-[e :U 1031 ]
+[e :U 1032 ]
 "380
 [; ;auto.c: 380:             TIME_FUEGO = 8000;
 [e = _TIME_FUEGO -> -> -> 8000 `i `l `ul ]
@@ -3303,10 +3311,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _T8CONbits 0 1 -> -> 1 `i `uc ]
 "385
 [; ;auto.c: 385:             break;
-[e $U 1029  ]
+[e $U 1030  ]
 "386
 [; ;auto.c: 386:         case 'w':
-[e :U 1032 ]
+[e :U 1033 ]
 "387
 [; ;auto.c: 387:             TIME_FUEGO = 6000;
 [e = _TIME_FUEGO -> -> -> 6000 `i `l `ul ]
@@ -3321,10 +3329,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _T8CONbits 0 1 -> -> 1 `i `uc ]
 "391
 [; ;auto.c: 391:             break;
-[e $U 1029  ]
+[e $U 1030  ]
 "392
 [; ;auto.c: 392:         case 'a':
-[e :U 1033 ]
+[e :U 1034 ]
 "393
 [; ;auto.c: 393:             estado = 'c';
 [e = _estado -> -> 99 `ui `uc ]
@@ -3336,20 +3344,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _dirreccion (1 -> -> 90 `i `ui ]
 "396
 [; ;auto.c: 396:             break;
-[e $U 1029  ]
+[e $U 1030  ]
 "397
 [; ;auto.c: 397:     }
 }
-[e $U 1029  ]
+[e $U 1030  ]
+[e :U 1031 ]
+[e [\ -> _estadoFuego `i , $ -> 0 `i 1032
+ , $ -> -> 119 `ui `i 1033
+ , $ -> -> 97 `ui `i 1034
+ 1030 ]
 [e :U 1030 ]
-[e [\ -> _estadoFuego `i , $ -> 0 `i 1031
- , $ -> -> 119 `ui `i 1032
- , $ -> -> 97 `ui `i 1033
- 1029 ]
-[e :U 1029 ]
 "398
 [; ;auto.c: 398: }
-[e :UE 1028 ]
+[e :UE 1029 ]
 }
 [a 4C 80 111 114 32 70 97 118 111 114 44 32 99 97 108 105 98 114 101 32 101 108 32 115 101 110 115 111 114 0 ]
 [a 2C 77 105 32 110 111 109 98 114 101 32 101 115 32 67 104 97 114 109 97 110 100 101 114 0 ]

@@ -11822,7 +11822,9 @@ void fijarVelocidad(unsigned char speed){
 }
 
 void encenderMotor(){
-    rutinaArranque();
+    if(motor == 0){
+        rutinaArranque();
+    }
     definirVelocidad();
     motor = 1;
 }

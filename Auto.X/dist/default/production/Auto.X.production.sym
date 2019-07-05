@@ -53,7 +53,7 @@ __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
 __Hrparam 0 0 COMRAM 1
 __Lrparam 0 0 COMRAM 1
-_adelante 26BE 0 CODE 0
+_adelante 26C2 0 CODE 0
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
 __Hcomram 0 0 ABS 0
@@ -66,7 +66,7 @@ _velocidad DF 0 BANK0 1
 __Hbss 0 0 RAM 1
 __CFG_STVREN$ON 0 0 ABS 0
 __Lbss 0 0 RAM 1
-_atras 26B0 0 CODE 0
+_atras 26B4 0 CODE 0
 ___param_bank 0 0 ABS 0
 __Hnvrram 0 0 COMRAM 1
 __Lnvrram 0 0 COMRAM 1
@@ -105,12 +105,12 @@ _PIE5bits F91 0 ABS 0
 _PIR1bits F9E 0 ABS 0
 _PIR3bits FA4 0 ABS 0
 _PIR5bits F98 0 ABS 0
-__end_of_configurarTMR4 26DA 0 CODE 0
+__end_of_configurarTMR4 26DE 0 CODE 0
 __end_of_configurarTMR5 2672 0 CODE 0
 __Hintsave_regs 0 0 BIGRAM 1
 __Lintsave_regs 0 0 BIGRAM 1
 __end_of_configurarPWM7 2624 0 CODE 0
-__end_of_configurarTMR8 2682 0 CODE 0
+__end_of_configurarTMR8 2694 0 CODE 0
 _PWMServo 250A 0 CODE 0
 _CCPR7L F0A 0 ABS 0
 __Hbigbss 0 0 BIGRAM 1
@@ -128,7 +128,7 @@ __Hmediumconst 0 0 MEDIUMCONST 0
 __Lmediumconst 0 0 MEDIUMCONST 0
 __size_of_configurarInterrupciones 0 0 ABS 0
 __Hfarbss 0 0 FARRAM 0
-__end_of_cambiarPWM 26E6 0 CODE 0
+__end_of_cambiarPWM 26EA 0 CODE 0
 __Lfarbss 0 0 FARRAM 0
 __Hintcode 1D2 0 CODE 0
 __Lintcode 8 0 CODE 0
@@ -140,7 +140,7 @@ __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
 _PPSCON EBF 0 ABS 0
 _configuracionInicial 25C0 0 CODE 0
-__end_of_adelante 26CC 0 CODE 0
+__end_of_adelante 26D0 0 CODE 0
 cambiarEstadoFuego@angulo 69 0 BANK0 1
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
@@ -179,7 +179,7 @@ __end_of_configurarRS232 265C 0 CODE 0
 __Hrbss 0 0 COMRAM 1
 __end_of_main 1ADE 0 CODE 0
 __Lrbss 0 0 COMRAM 1
-_configurarTMR8 2672 0 CODE 0
+_configurarTMR8 2684 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 __HdataBANK0 0 0 ABS 0
@@ -191,7 +191,7 @@ _RPINR16 EF7 0 ABS 0
 end_of_initialization 24AA 0 CODE 0
 __size_ofi2___fladd 0 0 ABS 0
 ___awdiv@sign 6 0 COMRAM 1
-__end_of_frenarMotor 26A2 0 CODE 0
+__end_of_frenarMotor 26B4 0 CODE 0
 __size_of_terminal 0 0 ABS 0
 _indicador 40 0 COMRAM 1
 _obstaculo D7 0 BANK0 1
@@ -224,7 +224,7 @@ __Hbank0 0 0 ABS 0
 __Lbank0 0 0 ABS 0
 __Hbank1 0 0 ABS 0
 __Lbank1 0 0 ABS 0
-__end_of_encenderMotor 26B0 0 CODE 0
+__end_of_encenderMotor 2684 0 CODE 0
 _fijarVelocidad$1915 9B 0 BANK0 1
 __Hbank2 0 0 ABS 0
 __Lbank2 0 0 ABS 0
@@ -254,7 +254,7 @@ __Ltext1 0 0 ABS 0
 __ptext0 193C 0 CODE 0
 _INTCON2bits FF1 0 ABS 0
 ___flmul@grs 7C 0 BANK0 1
-__end_of_configurarPuertos 2692 0 CODE 0
+__end_of_configurarPuertos 26A4 0 CODE 0
 __Htext2 0 0 ABS 0
 __Ltext2 0 0 ABS 0
 __ptext1 1C22 0 CODE 0
@@ -262,7 +262,7 @@ _INTCON3bits FF0 0 ABS 0
 __Htext3 0 0 ABS 0
 __Ltext3 0 0 ABS 0
 i2___xxtofl@sign 11 0 COMRAM 1
-__ptext2 26DA 0 CODE 0
+__ptext2 26DE 0 CODE 0
 __Htext4 0 0 ABS 0
 __Ltext4 0 0 ABS 0
 __ptext3 211C 0 CODE 0
@@ -297,7 +297,7 @@ terminal@degree BD 0 BANK0 1
 ___rparam_used 1 0 ABS 0
 estadoDirreccion@angulo 64 0 BANK0 1
 length@i 67 0 BANK0 1
-_encenderMotor 26A2 0 CODE 0
+_encenderMotor 2672 0 CODE 0
 _cambiar_estado_rutina_escape D5 0 BANK0 1
 length@longitud 64 0 BANK0 1
 __size_of___flge 0 0 ABS 0
@@ -344,13 +344,13 @@ __Lnvbit 0 0 COMRAM 1
 i2___fladd@bexp 25 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-_cambiarPWM 26DA 0 CODE 0
+_cambiarPWM 26DE 0 CODE 0
 __pcinit 2452 0 CODE 0
 __CFG_DSBOREN$OFF 0 0 ABS 0
 ___awdiv 22E8 0 CODE 0
 __ramtop F00 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
-_configurarPuertos 2682 0 CODE 0
+_configurarPuertos 2694 0 CODE 0
 __size_of_main 0 0 ABS 0
 _configurarInterrupciones 2624 0 CODE 0
 __size_of___flmul 0 0 ABS 0
@@ -362,13 +362,13 @@ __size_of_configurarRS232 0 0 ABS 0
 __CFG_CFGPLLEN$ON 0 0 ABS 0
 enviarRS232@longitud_texto 6C 0 BANK0 1
 ___fltol@exp1 90 0 BANK0 1
-__end_of_atras 26BE 0 CODE 0
-_frenarMotor 2692 0 CODE 0
+__end_of_atras 26C2 0 CODE 0
+_frenarMotor 26A4 0 CODE 0
 __HidataBANK0 0 0 ABS 0
 __LidataBANK0 0 0 ABS 0
 _fijarVelocidad 1EA4 0 CODE 0
 i2___xxtofl 1D64 0 CODE 0
-__pidataBANK0 26EC 0 CODE 0
+__pidataBANK0 26F0 0 CODE 0
 __CFG_DSWDTEN$OFF 0 0 ABS 0
 rutina@dato 29 0 COMRAM 1
 __end_of_rutinaEscape 21BC 0 CODE 0
@@ -413,7 +413,7 @@ __CFG_PLLDIV$3 0 0 ABS 0
 __ptext20 25E2 0 CODE 0
 __Htext21 0 0 ABS 0
 __Ltext21 0 0 ABS 0
-__ptext11 26A2 0 CODE 0
+__ptext11 2672 0 CODE 0
 __ptext30 250A 0 CODE 0
 __Htext12 0 0 ABS 0
 __Ltext12 0 0 ABS 0
@@ -428,7 +428,7 @@ __Htext13 0 0 ABS 0
 __Ltext32 0 0 ABS 0
 __Ltext13 0 0 ABS 0
 __size_of_frenarMotor 0 0 ABS 0
-__ptext22 2682 0 CODE 0
+__ptext22 2694 0 CODE 0
 __Htext23 0 0 ABS 0
 __Ltext23 0 0 ABS 0
 __end_of_length 250A 0 CODE 0
@@ -442,7 +442,7 @@ __ptext23 2604 0 CODE 0
 __size_of___awdiv 0 0 ABS 0
 __Htext24 0 0 ABS 0
 __Ltext24 0 0 ABS 0
-__ptext14 26B0 0 CODE 0
+__ptext14 26B4 0 CODE 0
 __ptext33 1630 0 CODE 0
 __Htext34 0 0 ABS 0
 __Htext15 0 0 ABS 0
@@ -451,7 +451,7 @@ __Ltext15 0 0 ABS 0
 __ptext24 2624 0 CODE 0
 __Htext25 0 0 ABS 0
 __Ltext25 0 0 ABS 0
-__ptext15 26BE 0 CODE 0
+__ptext15 26C2 0 CODE 0
 __ptext34 22E8 0 CODE 0
 ___inthi_sp 0 0 STACK 2
 __Htext16 0 0 ABS 0
@@ -462,11 +462,11 @@ __Ltext26 0 0 ABS 0
 __ptext16 25C0 0 CODE 0
 __Htext17 0 0 ABS 0
 __Ltext17 0 0 ABS 0
-__ptext26 2692 0 CODE 0
+__ptext26 26A4 0 CODE 0
 _rutinaEscape 211C 0 CODE 0
 __Htext27 0 0 ABS 0
 __Ltext27 0 0 ABS 0
-__ptext17 2672 0 CODE 0
+__ptext17 2684 0 CODE 0
 __Htext18 0 0 ABS 0
 __Ltext18 0 0 ABS 0
 __ptext27 236C 0 CODE 0
@@ -483,7 +483,7 @@ __ptext28 225A 0 CODE 0
 __CFG_WDTEN$OFF 0 0 ABS 0
 __Htext29 0 0 ABS 0
 __Ltext29 0 0 ABS 0
-__ptext19 26CC 0 CODE 0
+__ptext19 26D0 0 CODE 0
 ___intlo_sp 0 0 STACK 2
 __ptext29 1F8E 0 CODE 0
 _INTCONbits FF2 0 ABS 0
@@ -493,7 +493,7 @@ __HidataCOMRAM 0 0 ABS 0
 __LidataCOMRAM 0 0 ABS 0
 _contador_distancia 36 0 COMRAM 1
 __end_of_cambiarEstadoFuego 225A 0 CODE 0
-__pidataCOMRAM 26E6 0 CODE 0
+__pidataCOMRAM 26EA 0 CODE 0
 __size_of___fladd 0 0 ABS 0
 __Hjflash_buffer 1F800 0 CODE 0
 _configurarPWM7 2604 0 CODE 0
@@ -539,7 +539,7 @@ ___awdiv@quotient 7 0 COMRAM 1
 _configurarRS232 2644 0 CODE 0
 __end_of___xxtofl 1C22 0 CODE 0
 ___fladd@a 8B 0 BANK0 1
-_configurarTMR4 26CC 0 CODE 0
+_configurarTMR4 26D0 0 CODE 0
 ___fladd@b 87 0 BANK0 1
 ___flmul@aexp 7B 0 BANK0 1
 _configurarRS232US100 25E2 0 CODE 0
@@ -563,11 +563,11 @@ smallconst F00 FCD SMALLCONST F00 0
 config 1FFF8 1FFFF CONFIG 1FFF8 0
 cstackCOMRAM 1 52 COMRAM 1 1
 cstackBANK0 60 E0 BANK0 60 1
-text7 FCE 26F1 CODE FCE 0
+text7 FCE 26F5 CODE FCE 0
 %locals
 dist/default/production\Auto.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f47j53.h
-C:\Users\LAUTAR~1\AppData\Local\Temp\sagc.
+C:\Users\LAUTAR~1\AppData\Local\Temp\sd9k.
 1276 2452 0 CODE 0
 1278 2452 0 CODE 0
 1281 2452 0 CODE 0
@@ -690,10 +690,10 @@ auto.c
 230 1D1C 0 CODE 0
 234 1D1E 0 CODE 0
 auto.c
-237 26DA 0 CODE 0
-238 26DA 0 CODE 0
-239 26E0 0 CODE 0
-241 26E4 0 CODE 0
+237 26DE 0 CODE 0
+238 26DE 0 CODE 0
+239 26E4 0 CODE 0
+241 26E8 0 CODE 0
 auto.c
 348 211C 0 CODE 0
 349 2120 0 CODE 0
@@ -976,29 +976,30 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 236 161E 0 CODE 0
 237 162E 0 CODE 0
 ./../LIBRERIAS/funciones_auto.h
-53 23EE 0 CODE 0
-54 23EE 0 CODE 0
-55 2402 0 CODE 0
-56 240A 0 CODE 0
-57 2428 0 CODE 0
-58 243A 0 CODE 0
+55 23EE 0 CODE 0
+56 23EE 0 CODE 0
+57 2402 0 CODE 0
+58 240A 0 CODE 0
+59 2428 0 CODE 0
+60 243A 0 CODE 0
 ./../LIBRERIAS/funciones_auto.h
-61 24B4 0 CODE 0
-62 24B4 0 CODE 0
-63 24CC 0 CODE 0
-64 24D4 0 CODE 0
-65 24D6 0 CODE 0
-66 24F4 0 CODE 0
-67 24F6 0 CODE 0
-64 24FA 0 CODE 0
-69 2500 0 CODE 0
-70 2508 0 CODE 0
+63 24B4 0 CODE 0
+64 24B4 0 CODE 0
+65 24CC 0 CODE 0
+66 24D4 0 CODE 0
+67 24D6 0 CODE 0
+68 24F4 0 CODE 0
+69 24F6 0 CODE 0
+66 24FA 0 CODE 0
+71 2500 0 CODE 0
+72 2508 0 CODE 0
 ./../LIBRERIAS/funciones_auto.h
-36 26A2 0 CODE 0
-37 26A2 0 CODE 0
-38 26A6 0 CODE 0
-39 26AA 0 CODE 0
-40 26AE 0 CODE 0
+36 2672 0 CODE 0
+37 2672 0 CODE 0
+38 2676 0 CODE 0
+40 267A 0 CODE 0
+41 267E 0 CODE 0
+42 2682 0 CODE 0
 ./../LIBRERIAS/funciones_auto.h
 24 2594 0 CODE 0
 25 2594 0 CODE 0
@@ -1007,26 +1008,26 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
 28 25A4 0 CODE 0
 29 25BE 0 CODE 0
 ./../LIBRERIAS/funciones_auto.h
-42 255A 0 CODE 0
-43 255A 0 CODE 0
-44 2576 0 CODE 0
-45 2592 0 CODE 0
+44 255A 0 CODE 0
+45 255A 0 CODE 0
+46 2576 0 CODE 0
+47 2592 0 CODE 0
 auto.c
-340 26B0 0 CODE 0
-341 26B0 0 CODE 0
-342 26B4 0 CODE 0
-343 26B6 0 CODE 0
-344 26B8 0 CODE 0
-345 26BA 0 CODE 0
-346 26BC 0 CODE 0
+340 26B4 0 CODE 0
+341 26B4 0 CODE 0
+342 26B8 0 CODE 0
+343 26BA 0 CODE 0
+344 26BC 0 CODE 0
+345 26BE 0 CODE 0
+346 26C0 0 CODE 0
 auto.c
-332 26BE 0 CODE 0
-333 26BE 0 CODE 0
-334 26C2 0 CODE 0
-335 26C4 0 CODE 0
-336 26C6 0 CODE 0
-337 26C8 0 CODE 0
-338 26CA 0 CODE 0
+332 26C2 0 CODE 0
+333 26C2 0 CODE 0
+334 26C6 0 CODE 0
+335 26C8 0 CODE 0
+336 26CA 0 CODE 0
+337 26CC 0 CODE 0
+338 26CE 0 CODE 0
 auto.c
 183 25C0 0 CODE 0
 184 25C0 0 CODE 0
@@ -1039,12 +1040,12 @@ auto.c
 191 25DC 0 CODE 0
 192 25E0 0 CODE 0
 ./../LIBRERIAS/configuracion_auto.h
-65 2672 0 CODE 0
-66 2672 0 CODE 0
-67 2678 0 CODE 0
-68 267C 0 CODE 0
-69 267E 0 CODE 0
-70 2680 0 CODE 0
+65 2684 0 CODE 0
+66 2684 0 CODE 0
+67 268A 0 CODE 0
+68 268E 0 CODE 0
+69 2690 0 CODE 0
+70 2692 0 CODE 0
 ./../LIBRERIAS/configuracion_auto.h
 48 265C 0 CODE 0
 49 265C 0 CODE 0
@@ -1056,12 +1057,12 @@ auto.c
 55 266E 0 CODE 0
 56 2670 0 CODE 0
 ./../LIBRERIAS/configuracion_auto.h
-58 26CC 0 CODE 0
-59 26CC 0 CODE 0
-60 26D0 0 CODE 0
-61 26D4 0 CODE 0
-62 26D6 0 CODE 0
-63 26D8 0 CODE 0
+58 26D0 0 CODE 0
+59 26D0 0 CODE 0
+60 26D4 0 CODE 0
+61 26D8 0 CODE 0
+62 26DA 0 CODE 0
+63 26DC 0 CODE 0
 ./../LIBRERIAS/configuracion_auto.h
 72 25E2 0 CODE 0
 73 25E2 0 CODE 0
@@ -1087,12 +1088,12 @@ auto.c
 45 2658 0 CODE 0
 46 265A 0 CODE 0
 ./../LIBRERIAS/configuracion_auto.h
-3 2682 0 CODE 0
-4 2682 0 CODE 0
-5 2688 0 CODE 0
-6 268C 0 CODE 0
-7 268E 0 CODE 0
-8 2690 0 CODE 0
+3 2694 0 CODE 0
+4 2694 0 CODE 0
+5 269A 0 CODE 0
+6 269E 0 CODE 0
+7 26A0 0 CODE 0
+8 26A2 0 CODE 0
 ./../LIBRERIAS/configuracion_auto.h
 25 2604 0 CODE 0
 26 2604 0 CODE 0
@@ -1139,11 +1140,11 @@ auto.c
 396 2234 0 CODE 0
 397 2236 0 CODE 0
 ./../LIBRERIAS/funciones_auto.h
-47 2692 0 CODE 0
-48 2692 0 CODE 0
-49 2698 0 CODE 0
-50 269C 0 CODE 0
-51 26A0 0 CODE 0
+49 26A4 0 CODE 0
+50 26A4 0 CODE 0
+51 26AA 0 CODE 0
+52 26AE 0 CODE 0
+53 26B2 0 CODE 0
 auto.c
 243 236C 0 CODE 0
 244 2370 0 CODE 0
