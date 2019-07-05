@@ -8,7 +8,7 @@
 
 ## Tareas pendientes
 
-  - [ ] Definir nombre del grupo y del proyecto
+  - [x] Definir nombre del grupo y del proyecto
   - [x] Integrar el control de adelante y atras
   - [ ] Integrar las rutinas por prioridad
   - [x] Definir pines para interrupciones
