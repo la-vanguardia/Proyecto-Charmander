@@ -1,4 +1,4 @@
-# Proyecto Final Tecnicas Digitales II
+# Proyecto Charmander
 
 ### Integrantes del grupo
 
@@ -6,7 +6,7 @@
   * Gatica, Isaias
   * Saez, Lautaro
 
-## Tareas pendientes
+## Tareas pendientes 
 
   - [x] Definir nombre del grupo y del proyecto
   - [x] Integrar el control de adelante y atras
